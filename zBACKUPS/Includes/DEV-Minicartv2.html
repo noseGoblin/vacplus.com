@@ -1,0 +1,118 @@
+<!-- BEGIN MINICART INCLUDE -->
+<div id="rightcolumn" class="mainpanels">
+    <div id="cart">
+        <div id="cart-inner1">
+          <div id="cart-inner2">
+            <a href="[-- SHOPPING_CART_URL --]" class="yourcart">Your Shopping Cart</a>
+
+<script language="javascript" type="text/javascript">
+var subtotal = "$00.00"
+var qty = "0 [-- STORE.Items --]";
+var qty0 = true;
+
+var products = new Array();
+var cookies=document.cookie;  //read in all cookies
+//cookies = "ss_cart_[-- STORE_Serial_Number --]=|LineCnt:1|QntyTotal:12|SubTotal:$372.00|12:$372.00:sample kit with 5 different safety cards|";
+var start = cookies.indexOf("ss_cart_[-- STORE_Serial_Number --]="); 
+var cartvalues = "";
+var linecount = 0;
+var start1;
+var end1;
+var tmp;
+
+if (start == -1)  //No cart cookie
+{}
+else   //cart cookie is present
+{
+  start = cookies.indexOf("=", start) +1;
+  var end = cookies.indexOf(";", start);
+  if (end == -1)
+  {
+    end = cookies.length;
+  }
+
+  cartvalues = unescape(cookies.substring(start,end)); //read in just the cookie data
+
+  start = 0;
+  while ((start = cartvalues.indexOf("|", start)) != -1)
+  {
+    start++;
+    end = cartvalues.indexOf("|", start);
+    if (end != -1)
+    {
+      linecount++;
+  
+      if (linecount == 2) // Total Quantity of Items
+      {
+        qty0 = false;
+        tmp = cartvalues.substring(start,end);
+        colon = tmp.indexOf(":", 0);
+         
+        qty = tmp.substring(colon+1,end - start);
+        if ((tmp.substring(colon+1,end - start)) == 1 )
+        {
+          qty += " [-- STORE.Item --]";
+        }
+        else
+        {
+           qty += " [-- STORE.Items --]";
+        }
+      }
+      if (linecount == 3)  // Product Subtotal
+      {
+        tmp = cartvalues.substring(start,end);
+        colon = tmp.indexOf(":", 0);
+        subtotal = tmp.substring(colon+1,end - start)
+      }
+  if(linecount > 3){
+    tmp = cartvalues.substring(start, end);
+    colon = tmp.indexOf(":", 0);
+    var q = tmp.substring(0, colon);
+    tmp = tmp.substring(colon+1, end-start)
+    colon = tmp.indexOf(":", 0);
+    var price = tmp.substring(0, colon);
+    var name = tmp.substring(colon+1)
+    products[products.length] = new Array(name, price)
+  }
+      start = end;
+    }
+    else
+      break;
+    }
+  }
+  
+  for(var i = 0; i < products.length; i++){
+  /*  document.write('<div class="prodname">')
+    document.write(products[i][0])
+    document.write('</div>') */
+    if(products[i].length == 2){
+      /*document.write('<div class="price">')
+      document.write(products[i][1])
+      document.write('</div>') */
+    }else{
+      document.write('<div class="price">')
+      document.write('<span class="oldprice">')
+      document.write(products[i][1])
+      document.write('</span> <span class="newprice">')
+      document.write(products[i][2])
+      document.write('</span></div>')
+    }
+    
+  }
+  if(qty0 == false){
+    document.write('<div class="qty">Qty: ' + qty + "</div>")
+    document.write('<div class="subtotal">Subtotal: ' + subtotal + "</div>")
+    document.write('<div>')
+  }else{
+    document.write('<div class="no-display">')
+  }
+</script>
+
+
+<a href="[-- SHOPPING_CART_URL --]">Checkout</a>   </div>         
+          </div>
+        </div>
+      </div>
+
+
+<!-- END MINICART INCLUDE -->

@@ -1,0 +1,47 @@
+[--DEFINE LINK_TO_PAGE--]
+
+[--IF PAGE.NumItems 0--]
+[--ELSE--]
+[-- IF VAR.counter "0" --]
+     <tr>
+  [-- END_IF --]
+  [-- VAR.counter INC --]
+<td width="25%">
+[--IF PAGE.LinkGraphic--]
+<a href="[--OUTPUT_DIRECTORY_URL--]/[--Page.FileName--]"><img [-- PAGE.LinkGraphic  REMOVE_HTML --]></a><br>
+<a href="[--OUTPUT_DIRECTORY_URL--]/[--Page.FileName--]"><b>[--PAGE.LinkName--]</b></a><br>
+[--ELSE--]
+<a href="[--OUTPUT_DIRECTORY_URL--]/[--Page.FileName--]"><b>[--PAGE.LinkName--]</b></a>
+[--END_IF--]
+</td>
+ [-- IF VAR.counter "4" --]
+     </tr>
+     [-- VAR.counter "0" --]
+  [-- END_IF --]
+[--END_IF--]
+[--END_DEFINE LINK_TO_PAGE--]
+
+
+[--DEFINE PAGE--]
+<table width="100%" border="0" cellspacing="1" cellpadding="1">
+  <tr> 
+   <td>
+[-- IF PAGE.DisplayName --] 
+<h2> [-- PAGE.LinkName --]</h2>
+[--ELSE--]
+[-- END_IF --]
+[--IF PAGE.Text1--][--PAGE.Text1--]<br>[-- END_IF --]
+<table width="100%" cellspacing="3" cellpadding="3">
+[-- VAR.counter "0" --]
+[-- LOOP LINKS --]
+[-- LINK --]
+[-- END_LOOP LINKS --]
+[-- IF VAR.counter "0" --]
+[-- ELSE --]
+ </tr>
+[-- END_IF --]
+</table>
+</td>
+</tr>
+</table>
+[--END_DEFINE PAGE--]

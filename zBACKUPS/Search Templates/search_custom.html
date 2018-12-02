@@ -1,0 +1,246 @@
+[-- DEFINE SEARCH_RESULTS --]
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>[--Store.SearchResults --]: [-- SearchString --]</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+  <meta name="rating" content="General" />
+[-- INCLUDE newSEARCH PROCESS--]
+
+
+
+<style type="text/css">
+
+a.search-name {
+  font-family:inherit;
+  font-size:14px;
+  font-weight:bold;
+}
+a.search-name:visited {
+  font-family:inherit;
+  font-size:14px;
+  font-weight:bold;
+}
+a.search-name:hover {
+  font-family:inherit;
+  font-size:14px;
+  font-weight:bold;
+}
+a.search-name:active {
+  font-family:inherit;
+  font-size:14px;
+  font-weight:bold;
+}
+
+.search-name{
+  font-family:inherit;
+  font-size:14px;
+  font-weight:bold;
+}
+
+.search-description{
+  font-family:inherit;
+  font-size:12px;}
+  
+.search-foundin{
+  font-family:inherit;
+  font-size:11px;
+  font-weight:bold;
+  color:#000000;
+  background-color:#EFEFEF;
+  padding:3px;}
+
+a.foundin{
+  font-family:inherit;
+  font-size:11px;
+  font-weight:normal;
+  color:#0000FF;
+  padding:3px;}
+
+a.foundin:hover{
+  font-family:inherit;
+  font-size:11px;
+  font-weight:normal;
+  color:#0000FF;
+  padding:3px;}
+
+.search-pipeline{
+  font-family:inherit;
+  font-size:11px;
+  font-weight:bold;}
+
+.search-priceblock{
+  font-family:inherit;
+  padding-right:12px;
+  padding-left:12px;
+  font-size:12px;}
+
+.search-oldprice{
+  font-family:inherit;
+  text-decoration:line-through;}
+
+.search-onsale{
+  font-family:inherit;
+  color:#FF0000;
+  font-weight:bold;}
+
+.search-price{
+  font-family:inherit;
+  font-weight:bold;}
+
+div.search-line{
+  background-color:#CCCCCC;
+  width:560px;
+  height:2px;}
+td.cnt-bg{
+  padding: 10px 8px !important;
+}
+  
+</style>
+<link href="/css/sewing-machines.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="/includes/sewing-machines.js" type="text/javascript"></script>
+</head>
+<body>
+<table width="760" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="2" class="pdbtm6">[-- INCLUDE header.txt --] </td>
+  </tr>
+  <tr>
+    <td width="160" style="height: 100%;">
+      <table cellpadding="0" cellspacing="0" style="height: 100%">
+        <tr style="height: 1px;">
+          <td style="height: 1px;">
+              <div id="cart">
+                <div id="cart-inner1">
+                  <div id="cart-inner2">
+                    <a href="[-- SHOPPING_CART_URL --]" class="yourcart">Your Shopping Cart</a>
+[--INCLUDE MINICART PROCESS--]
+                    <a href="[-- SHOPPING_CART_URL --]">Checkout</a>  
+</div>          </div>
+                </div>
+              </div><img src="/images/quick-links.gif" alt="" width="160" height="39" border="0" /></td>
+        </tr>
+        <tr>
+          <td class="redbg">[-- INCLUDE navigation.txt --]
+              </td>
+          </tr>
+      </table>
+    </td>
+    <td width="602" class="pdl6">
+    
+<table cellspacing="0" cellpadding="0" width="596" border="0">
+    <tr ><td>
+    <img src="/images/shipping-header.gif" alt="Sewing Machines Plus Free Shipping" width="596" height="39" border="0" style="margin: 0px; padding: 0px; height: 39; display: block; overflow: hidden;" />
+    </td></tr>
+        <tr>
+          <td class="cnt-bg">
+
+#Search form at top of page
+
+<h1>[--Store.SearchResults --]: [-- SearchString --]</h1>
+
+[-- IF PAGE.TEXT1 --]
+ <br>[-- PAGE.TEXT1 --]<br>
+[-- END_IF --]
+# set layout variable - save time looking up value repeatedly from the database
+
+[-- VAR.LAYOUT PAGE.LAYOUT --]
+
+#Start of the loop to output the search results - Products with associated Links
+[-- SEARCHRESULT_FORM FORM_ONLY --]
+
+<!-- Start New Search Block -->
+<br>
+<div class="search_info">
+<table width="560" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td nowrap class="search-count" width="100%">[-- IF SearchResultCount --]<strong>Showing:</strong> [-- SearchResultCount --][-- ELSE --]&nbsp;[-- END_IF --]</td>
+    <td nowrap class="results-page" align="right">[-- SearchResultsPerPage --]</td>
+ </tr>
+ <tr>
+  <td width="100%" align="left">[-- IF SearchResultPrevNext --][-- SearchPrevNext --][-- ELSE --]&nbsp;[-- END_IF --]</td>
+  <td align="left" nowrap>[-- IF SearchSortBy --]<strong>[-- SearchSortBy --]</strong>[-- ELSE --]&nbsp;[-- END_IF --]</td>
+ </tr>
+</table>
+</div>
+</form>
+<!-- End New Search Block -->
+
+<table border="0" cellpadding="0" width="500" border="1">
+[-- VAR.pa_search_result "false" --]
+[-- LOOP SEARCH --]
+
+[-- IF SEARCHLINK --]
+
+ [-- END_IF --]
+  [-- SEARCHRESULT --]
+
+
+  [-- IF SEARCHLINK --]
+
+ [-- END_IF --]
+
+[-- VAR.pa_search_result "true" --]
+
+
+[-- END_LOOP SEARCH--]
+
+[-- IF VAR.pa_search_result "false" --]
+  <tr>
+  <td align="left" valign="top">[-- STORE.88 --] [-- SEARCHSTRING --]</td>
+  </tr>
+[-- END_IF --]
+</table>
+
+#Search form at bottom of page
+<table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:6px; margin-bottom:12px;">
+  <tr>
+    <td><div class="search-line"><img src="[-- VAR.MyImages --]/images/trans.gif" width="1" height="2" /></div></td>
+  </tr>
+</table>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>
+
+
+
+
+  </tr>
+</table>
+
+[-- IF PAGE.TEXT2 --]
+  <br>[--PAGE.TEXT2 --]<br>
+[-- END_IF --]
+
+
+[-- IF PAGE.TEXT3 --]
+  [-- PAGE.TEXT3 --]
+[-- END_IF --]
+</td>
+    </tr>
+         <tr>
+          <td><img src="/images/main-btm.gif" width="596" height="9" /></td>
+        </tr>
+      </table>    
+    </td>
+  </tr>
+      <tr>
+        <td rowspan="2" bgcolor="#990000"><div align="center"><br />
+            <img src="/media/multiple_payment_logo.gif" width="150" height="50" /><br />
+            <img src="/media/site/credit-cards.gif" width="140" height="17" /></div></td>
+        <td><img src="/images/foottp.gif" width="602" height="14" /></td>
+      </tr>
+      <tr>
+        <td class="foot-bg">[-- INCLUDE footer.txt --]</td>
+      </tr>
+      <tr>
+        <td><img src="/images/footccbtm.gif" width="160" height="8" /></td>
+        <td><img src="/images/footbtm.gif" width="602" height="8" /></td>
+      </tr>
+  </table>
+</body>
+</html>
+
+[-- END_DEFINE SEARCH_RESULTS --]

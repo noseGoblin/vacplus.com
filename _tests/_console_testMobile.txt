@@ -1,0 +1,7 @@
+Switch to Mobile:
+sessionStorage.setItem(‘ux’,’mobile’);
+
+Switch to Desktop:
+                sessionStorage.setItem(‘ux’,’desktop’);
+
+run it in console and refresh page

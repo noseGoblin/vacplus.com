@@ -1,0 +1,1259 @@
+#
+# Sign In
+#
+[-- DEFINE SIGN_IN --]
+  <html>
+  <head>
+  <title>[-- STORE.SignIn --]</title>
+  <script type="text/javascript">
+  <!--
+  [-- CR_JAVASCRIPT --]
+  // -->
+  </script>
+
+        [-- INCLUDE DEV-header-search-results PROCESS --]
+      [-- INCLUDE DEV-leftbar --]
+            
+      <div style="font-size: 8pt; margin: 3px 10px 20px 5px;">
+      
+  [-- CR_FORM --]
+
+  <center>
+
+  [-- CR_Header --]
+
+  <h1>[-- STORE.SignIn --]</h1>
+
+  [-- CR_ShopSiteMessages --]
+
+  <p>[-- STORE.UseSignInEmail --]</p>
+
+  [-- CR_Signin_Email_Password --]
+
+  <p align="center">[-- BUTTON SignIn --] [-- BUTTON BackToCart --]</p>
+
+  [-- CR_Footer --]
+
+  </form>
+  </center>
+
+    </div>
+    
+  [-- INCLUDE DEV-minicart PROCESS --]   
+  [-- INCLUDE DEV-rightbar --]
+  [-- INCLUDE DEV-footer --]
+
+  </html>
+[-- END_DEFINE SIGN_IN --]
+#
+# NEW REGISTRATION
+#
+[-- DEFINE NEW_REGISTRATION --]
+  <html>
+  <head>
+  <title>[-- STORE.NewRegistration --]</title>
+  <script type="text/javascript">
+  <!--
+  [-- CR_JAVASCRIPT --]
+  // -->
+  </script>
+
+        [-- INCLUDE DEV-header-search-results PROCESS --]
+      [-- INCLUDE DEV-leftbar --]
+            
+      <div style="font-size: 8pt; margin: 3px 10px 20px 5px;">
+
+  [-- CR_FORM --]
+
+  <center>
+
+  [-- CR_Header --]
+
+  <h1>[-- STORE.NewRegistration --]</h1>
+
+  [-- CR_ShopSiteMessages --]
+
+  <table align="center" cellspacing="10">
+    <tr>
+      <td align="left">
+        [-- CR_Name --]
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        [-- CR_Email_Password --]
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        [-- CR_Challenge --]
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        [-- CR_email_type --]
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        [-- CR_Save_Payment --]
+      </td>
+    </tr>
+  </table>
+
+  <p align="center">[-- BUTTON Save --] [-- BUTTON Cancel --]</p>
+
+  [-- CR_Footer --]
+
+  </form>
+  </center>
+    
+    </div>
+    
+  [-- INCLUDE DEV-minicart PROCESS --]   
+  [-- INCLUDE DEV-rightbar --]
+  [-- INCLUDE DEV-footer --]
+    
+    </html>
+    
+[-- END_DEFINE NEW_REGISTRATION --]
+#
+# Sign out Confirmation
+#
+[-- DEFINE SIGN_OUT_CONFIRMATION --]
+  <html>
+  <head>
+  <title>[-- STORE.SignOutConfirmation --]</title>
+  <script type="text/javascript">
+  <!--
+  [-- CR_JAVASCRIPT --]
+  // -->
+  </script>
+
+        [-- INCLUDE DEV-header-search-results PROCESS --]
+      [-- INCLUDE DEV-leftbar --]
+            
+      <div style="font-size: 8pt; margin: 3px 10px 20px 5px;">
+      
+  [-- CR_FORM --]
+
+  <center>
+
+  [-- CR_Header --]
+
+  <h1>[-- STORE.SignOutConfirmation --]</h1>
+
+  [-- CR_ShopSiteMessages --]
+
+  <p>[-- STORE.SignOut? --]</p>
+
+  <p align="center">[-- BUTTON Yes --] [-- BUTTON No --]</p>
+
+  [-- CR_Footer --]
+
+  </form>
+  </center>
+
+    </div>
+    
+  [-- INCLUDE DEV-minicart PROCESS --]   
+  [-- INCLUDE DEV-rightbar --]
+  [-- INCLUDE DEV-footer --]
+
+  </html>
+[-- END_DEFINE SIGN_OUT_CONFIRMATION --]
+#
+# Forgot Password
+#
+[-- DEFINE FORGOT_PASSWORD --]
+  <html>
+  <head>
+
+  <title>[-- STORE.ForgotPassword --]</title>
+
+  <script type="text/javascript">
+  <!--
+  [-- CR_JAVASCRIPT --]
+  // -->
+  </script>
+
+        [-- INCLUDE DEV-header-search-results PROCESS --]
+      [-- INCLUDE DEV-leftbar --]
+            
+      <div style="font-size: 8pt; margin: 3px 10px 20px 5px;">
+
+  [-- CR_Header --]
+
+  [-- CR_FORM --]
+
+  <center>
+
+  <h1>[-- STORE.ForgotPassword --]</h1>
+
+  [-- CR_ShopSiteMessages --]
+
+  <p>[-- STORE.RequestPassword --]</p>
+
+  [-- CR_Email --]
+
+  <p align="center">[-- BUTTON Submit --] [-- BUTTON Cancel --]</p>
+
+  [-- CR_Footer --]
+
+  </center>
+  </form>
+
+    </div>
+    
+  [-- INCLUDE DEV-minicart PROCESS --]   
+  [-- INCLUDE DEV-rightbar --]
+  [-- INCLUDE DEV-footer --]
+    
+  </html>
+[-- END_DEFINE FORGOT_PASSWORD --]
+#
+# Email Define
+#
+[-- DEFINE FORGOT_PASSWORD_EMAIL --]
+  <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+  <html>
+  <body>
+  <p>[-- STORE.EmailClickLink --]</p>
+  <p>[-- CR_Forgot_Password_Link --]</p>
+  <p><b>[-- STORE.Name --]</b></p>
+  </body>
+  </html>
+[-- END_DEFINE FORGOT_PASSWORD_EMAIL --]
+#
+# Email for Not A registered customer Define
+#
+[-- DEFINE FORGOT_PASSWORD_NOEMAIL --]
+  <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+  <html>
+  <body>
+
+  <p>[-- STORE.NotRegisteredEmail --]</p>
+
+  <p><b><a href="[-- STORE.Output_URL --]/index.html">[-- STORE.Name --]</a></b></p>
+
+  </body>
+  </html>
+[-- END_DEFINE FORGOT_PASSWORD_NOEMAIL --]
+#
+# Forgot Password Email Sent
+#
+[-- DEFINE FORGOT_EMAIL_SENT --]
+  <html>
+  <head>
+
+  <title>[-- STORE.ForgotEmailSent --]</title>
+
+  <script type="text/javascript">
+  <!--
+  [-- CR_JAVASCRIPT --]
+  // -->
+  </script>
+
+        [-- INCLUDE DEV-header-search-results PROCESS --]
+      [-- INCLUDE DEV-leftbar --]
+            
+      <div style="font-size: 8pt; margin: 3px 10px 20px 5px;">
+
+  [-- CR_Header --]
+
+  [-- CR_FORM --]
+
+  <center>
+
+  <h1>[-- STORE.ForgotEmailSent --]</h1>
+
+  [-- CR_ShopSiteMessages --]
+
+  <p>[-- STORE.SentPasswordEmail --]</p>
+
+  <p align="center">[--BUTTON BackToCart --]</p>
+
+  [-- CR_Footer --]
+
+  </center>
+  </form>
+
+    </div>
+    
+  [-- INCLUDE DEV-minicart PROCESS --]   
+  [-- INCLUDE DEV-rightbar --]
+  [-- INCLUDE DEV-footer --]
+
+  </html>
+[-- END_DEFINE FORGOT_EMAIL_SENT --]
+#
+# Get Answer
+#
+[-- DEFINE GET_ANSWER --]
+  <html>
+  <head>
+
+  <title>[-- STORE.GetAnswer--]</title>
+
+  <script type="text/javascript">
+  <!--
+  [-- CR_JAVASCRIPT --]
+  // -->
+  </script>
+
+        [-- INCLUDE DEV-header-search-results PROCESS --]
+      [-- INCLUDE DEV-leftbar --]
+            
+      <div style="font-size: 8pt; margin: 3px 10px 20px 5px;">
+
+  [-- CR_Header --]
+
+  [-- CR_FORM --]
+
+  <center>
+
+  <h1>[-- STORE.GetAnswer--]</h1>
+
+  [-- CR_ShopSiteMessages --]
+
+  <p>[-- CR_Email_Name --]</p>
+
+  <p>[-- STORE.ResetPassword --]</p>
+
+  [-- CR_ChallengeQuestion --]
+
+  <p align="center">[-- BUTTON Submit --] [-- BUTTON Cancel --]</p>
+
+  [-- CR_Footer --]
+
+  </center>
+  </form>
+
+    </div>
+    
+  [-- INCLUDE DEV-minicart PROCESS --]   
+  [-- INCLUDE DEV-rightbar --]
+  [-- INCLUDE DEV-footer --]
+
+  </html>
+[-- END_DEFINE GET_ANSWER --]
+#
+# Set Answer Password
+#
+[-- DEFINE SET_ANSWER_PASSWORD --]
+  <html>
+  <head>
+
+  <title>[-- STORE.SetAnswerPassword --]</title>
+
+  <script type="text/javascript">
+  <!--
+  [-- CR_JAVASCRIPT --]
+  // -->
+  </script>
+
+      [-- INCLUDE DEV-header-search-results PROCESS --]
+    [-- INCLUDE DEV-leftbar --]
+            
+      <div style="font-size: 8pt; margin: 3px 10px 20px 5px;">
+
+  [-- CR_Header --]
+
+  [-- CR_FORM --]
+
+  <center>
+
+  <h1>[-- STORE.SetAnswerPassword --]</h1>
+
+  [-- CR_ShopSiteMessages --]
+
+  <p><b>[-- STORE.EnterNewPassword --]</b></p>
+
+  [-- CR_Password --]
+
+  <p align="center">[-- BUTTON Submit --] [-- BUTTON Cancel --]</p>
+
+  [-- CR_Footer --]
+
+  </center>
+  </form>
+
+    </div>
+    
+  [-- INCLUDE DEV-minicart PROCESS --]   
+  [-- INCLUDE DEV-rightbar --]
+  [-- INCLUDE DEV-footer --]
+
+  </html>
+[-- END_DEFINE SET_ANSWER_PASSWORD --]
+#
+#  Main account screen
+#
+[-- DEFINE VIEW_EDIT --]
+  <html>
+  <head>
+
+  <title>[-- STORE.AccountInformation --]</title>
+
+  <script type="text/javascript">
+  <!--
+  [-- CR_JAVASCRIPT --]
+  // -->
+  </script>
+
+      [-- INCLUDE DEV-header-search-results PROCESS --]
+    [-- INCLUDE DEV-leftbar --]
+            
+      <div style="font-size: 8pt; margin: 3px 10px 20px 5px;">
+
+  [-- CR_Header --]
+
+  [-- CR_FORM --]
+
+  <center>
+
+  <h1>[-- STORE.AccountInformation --]</h1>
+
+  [-- CR_ShopSiteMessages --]
+
+  <p align="center"><b>[-- CR_Customer_Name --]</b></p>
+
+  <p>[-- STORE.ViewInformation --]</p>
+
+  <table class="view_edit">
+    <tr>
+      <td class="view_edit">[-- BUTTON Orders --]</td>
+      <td class="view_edit">[-- BUTTON Preferences --]</td>
+    </tr>
+    <tr>
+      <td class="view_edit">[-- BUTTON ShipTo --]</td>
+      <td class="view_edit">[-- BUTTON Payment --]</td>
+    </tr>
+    <tr>
+      <td class="view_edit">[-- BUTTON Password --]</td>
+      <td class="view_edit"> </td>
+    </tr>
+  </table>
+
+  <p align="center">[-- BUTTON BackToCart --]</p>
+
+  [-- CR_Footer --]
+
+  </form>
+  </center>
+
+    </div>
+    
+  [-- INCLUDE DEV-minicart PROCESS --]   
+  [-- INCLUDE DEV-rightbar --]
+  [-- INCLUDE DEV-footer --]
+
+  </html>
+[-- END_DEFINE VIEW_EDIT --]
+#
+# Preferences
+#
+[-- DEFINE PREFERENCES --]
+  <html>
+  <head>
+
+  <title>[-- STORE.Preferences --]</title>
+
+  <script type="text/javascript">
+  <!--
+  [-- CR_JAVASCRIPT --]
+  // -->
+  </script>
+      
+        [-- INCLUDE DEV-header-search-results PROCESS --]
+    [-- INCLUDE DEV-leftbar --]
+            
+      <div style="font-size: 8pt; margin: 3px 10px 20px 5px;">
+      
+  [-- CR_Header --]
+
+  [-- CR_FORM --]
+
+  <center>
+
+  <h1>[-- STORE.Preferences --]</h1>
+
+  [-- CR_ShopSiteMessages --]
+
+  <table align="center" cellspacing="10" width="600">
+    <tr>
+      <td align="left">
+        [-- CR_Email --]
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        [-- STORE.EmailSecurity --]
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        [-- CR_Name --]
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        [-- CR_Email_Type --]
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        [-- CR_Save_Payment --]
+      </td>
+    </tr>
+  </table>
+
+  <p align="center">[-- BUTTON Save --] [-- BUTTON Cancel --]</p>
+
+  [-- CR_Footer --]
+
+  </center>
+  </form>
+
+    </div>
+    
+  [-- INCLUDE DEV-minicart PROCESS --]   
+  [-- INCLUDE DEV-rightbar --]
+  [-- INCLUDE DEV-footer --]
+
+  </html>
+[-- END_DEFINE PREFERENCES --]
+#
+# Edit Challenge
+#
+[-- DEFINE EDIT_CHALLENGE --]
+  <html>
+  <head>
+
+  <title>[-- STORE.EditChallenge --]</title>
+
+  <script type="text/javascript">
+  <!--
+  [-- CR_JAVASCRIPT --]
+  // -->
+  </script>
+
+      [-- INCLUDE DEV-header-search-results PROCESS --]
+    [-- INCLUDE DEV-leftbar --]
+            
+      <div style="font-size: 8pt; margin: 3px 10px 20px 5px;">
+
+  [-- CR_Header --]
+
+  [-- CR_FORM --]
+
+  <center>
+
+  <h1>[-- STORE.EditChallenge --]</h1>
+
+  [-- CR_ShopSiteMessages --]
+
+  <p>[-- STORE.EditChallengeText --]</p>
+
+  [-- CR_Edit_Challenge --]
+
+  <p align="center">[-- BUTTON Change_Challenge --] [-- BUTTON Cancel --]</p>
+
+  [-- CR_Footer --]
+
+  </center>
+  </form>
+
+    </div>
+    
+  [-- INCLUDE DEV-minicart PROCESS --]   
+  [-- INCLUDE DEV-rightbar --]
+  [-- INCLUDE DEV-footer --]
+
+  </html>
+[-- END_DEFINE EDIT_CHALLENGE --]
+#
+# Edit Password
+#
+[-- DEFINE EDIT_PASSWORD --]
+  <html>
+  <head>
+
+  <title>[-- STORE.EditPassword --]</title>
+
+  <script type="text/javascript">
+  <!--
+  [-- CR_JAVASCRIPT --]
+  // -->
+  </script>
+
+    [-- INCLUDE DEV-header-search-results PROCESS --]
+    [-- INCLUDE DEV-leftbar --]
+            
+      <div style="font-size: 8pt; margin: 3px 10px 20px 5px;">
+
+  [-- CR_Header --]
+
+  [-- CR_FORM --]
+
+  <center>
+
+  <h1>[-- STORE.EditPassword --]</h1>
+
+  [-- CR_ShopSiteMessages --]
+
+  [-- CR_Edit_Password --]
+
+  <p>[-- BUTTON Change_Password --] [-- BUTTON Cancel --]</p>
+
+  <h2>[-- STORE.ChallengeQuestion --]</h2>
+
+  <p>[-- STORE.ChangeChallengeText --]</p>
+
+  <p align="center">[-- BUTTON Change_Challenge --]</p>
+
+  [-- CR_Footer --]
+
+  </center>
+  </form>
+    
+    </div>
+    
+  [-- INCLUDE DEV-minicart PROCESS --]   
+  [-- INCLUDE DEV-rightbar --]
+  [-- INCLUDE DEV-footer --]
+    
+  </html>
+[-- END_DEFINE EDIT_PASSWORD --]
+#
+# Payment Account
+#
+[-- DEFINE PAYMENT_ACCOUNTS --]
+  <html>
+  <head>
+
+  <title>[-- STORE.PaymentAccounts --]</title>
+
+  <script type="text/javascript">
+  <!--
+  [-- CR_JAVASCRIPT --]
+  // -->
+  </script>
+
+    [-- INCLUDE DEV-header-search-results PROCESS --]
+    [-- INCLUDE DEV-leftbar --]
+            
+      <div style="font-size: 8pt; margin: 3px 10px 20px 5px;">
+
+  [-- CR_Header --]
+
+  [-- CR_FORM --]
+
+  <center>
+
+  <h1>[-- STORE.PaymentAccounts --]</h1>
+
+  [-- CR_ShopSiteMessages --]
+
+  <p>[-- STORE.PaymentText --]</p>
+
+  <table cellspacing="10">
+    <tr>
+      <td>[-- CR_Payment_List --]</td>
+      <td>[-- BUTTON Edit --]
+      <br>[-- BUTTON Delete --]
+      </td>
+    </tr>
+  </table>
+
+  <p>[-- STORE.PaymentAdd --]</p>
+
+  <p align="center">[-- BUTTON Done --]</p>
+
+  [-- CR_Footer --]
+
+  </center>
+  </form>
+
+    </div>
+    
+  [-- INCLUDE DEV-minicart PROCESS --]   
+  [-- INCLUDE DEV-rightbar --]
+  [-- INCLUDE DEV-footer --]
+
+  </html>
+[-- END_DEFINE PAYMENT_ACCOUNTS --]
+#
+# Edit Payment Option
+#
+[-- DEFINE EDIT_PAYMENT_ACCOUNT --]
+  <html>
+  <head>
+
+  <title>[-- STORE.EditPaymentAccount --]</title>
+
+  <script type="text/javascript">
+  <!--
+  [-- CR_JAVASCRIPT --]
+  // -->
+  </script>
+
+      [-- INCLUDE DEV-header-search-results PROCESS --]
+    [-- INCLUDE DEV-leftbar --]
+            
+      <div style="font-size: 8pt; margin: 3px 10px 20px 5px;">
+
+  [-- CR_Header --]
+
+  [-- CR_FORM --]
+
+  <center>
+
+  <h1>[-- STORE.EditPaymentAccount --]</h1>
+
+  [-- CR_ShopSiteMessages --]
+
+  <table width="470">
+    <tr>
+      <td align="center"><b>[-- STORE.DisplayName --]:</b> [-- CR_DisplayName --]</td>
+    </tr>
+    <tr>
+      <td>[-- STORE.EditPaymentText --]</td>
+    </tr>
+  </table>
+
+  <h2>[-- STORE.EditPaymentInformation --]</h2>
+
+  [-- CR_Edit_Payment_Info --]
+
+  <h2>[-- STORE.EditPaymentBilling --]</h2>
+
+  [-- CR_Edit_Payment_Address --]
+
+  <p align="center">[-- BUTTON Save --] [-- BUTTON Cancel --]</p>
+
+  [-- CR_Footer --]
+
+  </center>
+  </form>
+
+    </div>
+    
+  [-- INCLUDE DEV-minicart PROCESS --]   
+  [-- INCLUDE DEV-rightbar --]
+  [-- INCLUDE DEV-footer --]
+    
+  </html>
+[-- END_DEFINE EDIT_PAYMENT_ACCOUNT --]
+#
+# Delete Payment Option
+#
+[-- DEFINE DELETE_PAYMENT_ACCOUNT --]
+  <html>
+  <head>
+
+  <title>[-- STORE.DeletePaymentAccount --]</title>
+
+  <script type="text/javascript">
+  <!--
+  [-- CR_JAVASCRIPT --]
+  // -->
+  </script>
+
+      [-- INCLUDE DEV-header-search-results PROCESS --]
+    [-- INCLUDE DEV-leftbar --]
+            
+      <div style="font-size: 8pt; margin: 3px 10px 20px 5px;">
+
+  [-- CR_Header --]
+
+  [-- CR_FORM --]
+
+  <center>
+
+  <h1>[-- STORE.DeletePaymentAccount --]</h1>
+
+  [-- CR_ShopSiteMessages --]
+
+  <p>[-- STORE.DeletePaymentText --]</p>
+
+  <p><b>[-- CR_Delete_Payment --]</b></p>
+
+  <p>[-- STORE.DeletePaymentNote --]</p>
+
+  <p align="center">[-- BUTTON Yes --] [-- BUTTON No --]</p>
+
+  [-- CR_Footer --]
+
+  </center>
+  </form>
+
+    </div>
+    
+  [-- INCLUDE DEV-minicart PROCESS --]   
+  [-- INCLUDE DEV-rightbar --]
+  [-- INCLUDE DEV-footer --]
+
+  </html>
+[-- END_DEFINE DELETE_PAYMENT_ACCOUNT --]
+#
+# List Orders
+#
+[-- DEFINE ORDERS --]
+  <html>
+  <head>
+
+  <title>[-- STORE.Orders --]</title>
+
+  <script type="text/javascript">
+  <!--
+  [-- CR_JAVASCRIPT --]
+  // -->
+  </script>
+
+      [-- INCLUDE DEV-header-search-results PROCESS --]
+    [-- INCLUDE DEV-leftbar --]
+            
+      <div style="font-size: 8pt; margin: 3px 10px 20px 5px;">
+
+  [-- CR_Header --]
+
+  [-- CR_FORM --]
+
+  <center>
+
+  <h1>[-- STORE.Orders --]</h1>
+
+  [-- CR_ShopSiteMessages --]
+
+  <p>[-- STORE.OrdersText --]</p>
+
+  <table cellspacing="10">
+    <tr>
+      <td>[-- CR_Order_List --]</td>
+      <td>[-- BUTTON View --]
+      <br>[-- BUTTON Delete --]</td>
+    </tr>
+  </table>
+
+  <p>[-- STORE.OrdersNote --]</p>
+
+  <p align="center">[-- BUTTON Done --]</p>
+
+  [-- CR_Footer --]
+
+  </center>
+  </form>
+
+    </div>
+    
+  [-- INCLUDE DEV-minicart PROCESS --]   
+  [-- INCLUDE DEV-rightbar --]
+  [-- INCLUDE DEV-footer --]
+
+  </html>
+[-- END_DEFINE ORDERS --]
+#
+# View an order
+#
+[-- DEFINE VIEW_ORDER --]
+  <html>
+  <head>
+
+  <title>[-- STORE.ViewOrder --]</title>
+
+  <script type="text/javascript">
+  <!--
+  [-- CR_JAVASCRIPT --]
+  // -->
+  </script>
+
+      [-- INCLUDE DEV-header-search-results PROCESS --]
+    [-- INCLUDE DEV-leftbar --]
+            
+      <div style="font-size: 8pt; margin: 3px 10px 20px 5px;">
+
+  [-- CR_Header --]
+
+  [-- CR_FORM --]
+
+  <center>
+
+  <h1>[-- STORE.ViewOrder --]</h1>
+
+  [-- CR_ShopSiteMessages --]
+
+  <table cellspacing="10" style="border: thin black solid">
+    <tr>
+      <td align="left"><b>[-- STORE.SC_OrderNumber --] [-- CR_OrderNum --]</b></td>
+      <td align="right"><b>[-- CR_OrderDate --]</b></td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        [-- CR_Cart --]
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        [-- CR_Totals --]
+      </td>
+    </tr>
+    <tr><td colspan="2"><hr width="90%"></td></tr>
+
+    <tr>
+      <td colspan="2">
+        [-- CR_OrderingInstructions --]
+        [-- CR_Comments --]
+      </td>
+    </tr>
+
+    <tr>
+      <td align="center" colspan="2">
+        <table>
+          <tr>
+      <td align="left" valign="top">[-- CR_ShipTo_Addr --]</td>
+      <td width="40px"> </td>
+      <td align="left" valign="top">[-- CR_BillTo_Addr --]</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr><td colspan="2"><hr width="90%"></td></tr>
+    <tr>
+      <td colspan="2" align="center">
+        [-- CR_Payment_Info --]
+      </td>
+    </tr>
+  </table>
+
+  <p align="center">[-- BUTTON Done --]</p>
+
+  [-- CR_Footer --]
+
+  </center>
+  </form>
+
+    </div>
+    
+  [-- INCLUDE DEV-minicart PROCESS --]   
+  [-- INCLUDE DEV-rightbar --]
+  [-- INCLUDE DEV-footer --]
+
+  </html>
+[-- END_DEFINE VIEW_ORDER --]
+#
+# Delete orders
+#
+[-- DEFINE DELETE_ORDER --]
+  <html>
+  <head>
+
+  <title>[-- STORE.DeleteOrder --]</title>
+
+  <script type="text/javascript">
+  <!--
+  [-- CR_JAVASCRIPT --]
+  // -->
+  </script>
+
+      [-- INCLUDE DEV-header-search-results PROCESS --]
+    [-- INCLUDE DEV-leftbar --]
+            
+      <div style="font-size: 8pt; margin: 3px 10px 20px 5px;">
+
+  [-- CR_Header --]
+
+  [-- CR_FORM --]
+
+  <center>
+
+  <h1>[-- STORE.DeleteOrder --]</h1>
+
+  [-- CR_ShopSiteMessages --]
+
+  <p>[-- STORE.DeleteOrderText --]</p>
+
+  [-- CR_Delete_Order_List --]
+
+  <p>[-- STORE.OrdersNote --]</p>
+
+  <p align="center">[-- BUTTON Yes --] [-- BUTTON No --]</p>
+
+  [-- CR_Footer --]
+
+  </center>
+  </form>
+
+    </div>
+    
+  [-- INCLUDE DEV-minicart PROCESS --]   
+  [-- INCLUDE DEV-rightbar --]
+  [-- INCLUDE DEV-footer --]
+
+  </html>
+[-- END_DEFINE DELETE_ORDER --]
+#
+# List Shipping Options
+#
+[-- DEFINE SHIPPING_OPTIONS --]
+  <html>
+  <head>
+
+  <title>[-- STORE.ShippingOptions --]</title>
+
+  <script type="text/javascript">
+  <!--
+  [-- CR_JAVASCRIPT --]
+  // -->
+  </script>
+
+      [-- INCLUDE DEV-header-search-results PROCESS --]
+    [-- INCLUDE DEV-leftbar --]
+            
+      <div style="font-size: 8pt; margin: 3px 10px 20px 5px;">
+
+  [-- CR_Header --]
+
+  [-- CR_FORM --]
+
+  <center>
+
+  <h1>[-- STORE.ShippingOptions --]</h1>
+
+  [-- CR_ShopSiteMessages --]
+
+  <p>[-- STORE.ShippingOptionsText --]</p>
+
+  <table cellspacing="10">
+    <tr>
+      <td>[-- CR_Shipping_List --]</td>
+      <td>[-- BUTTON Edit --]
+      <br>[-- BUTTON Delete --]</td>
+    </tr>
+  </table>
+
+  <p>[-- STORE.ShippingOptionsNote --]</p>
+
+  <p align="center">[-- BUTTON Done --]</p>
+
+  [-- CR_Footer --]
+
+  </center>
+  </form>
+
+    </div>
+    
+  [-- INCLUDE DEV-minicart PROCESS --]   
+  [-- INCLUDE DEV-rightbar --]
+  [-- INCLUDE DEV-footer --]
+
+  </html>
+[-- END_DEFINE SHIPPING_OPTIONS --]
+#
+# Edit Shipping Option
+#
+[-- DEFINE EDIT_SHIPPING --]
+  <html>
+  <head>
+
+  <title>[-- STORE.EditShipping --]</title>
+
+  <script type="text/javascript">
+  <!--
+  [-- CR_JAVASCRIPT --]
+  // -->
+  </script>
+      
+        [-- INCLUDE DEV-header-search-results PROCESS --]
+    [-- INCLUDE DEV-leftbar --]
+            
+      <div style="font-size: 8pt; margin: 3px 10px 20px 5px;">
+      
+  [-- CR_Header --]
+
+  [-- CR_FORM --]
+
+  <center>
+
+  <h1>[-- STORE.EditShipping --]</h1>
+
+  [-- CR_ShopSiteMessages --]
+
+  <table width="470">
+    <tr>
+      <td align="center"><b>[-- STORE.DisplayName --]:</b> [-- CR_Ship_DisplayName --]</td>
+    </tr>
+    <tr>
+      <td align="center">[-- STORE.EditShippingText --]</td>
+    </tr>
+  </table>
+
+  <h2>[-- STORE.SC_ShippingAddress --]</h2>
+
+  [-- CR_Edit_Shipping_Address --]
+
+  <p align="center">[-- BUTTON Save --] [-- BUTTON Cancel --]</p>
+
+  [-- CR_Footer --]
+
+  </center>
+  </form>
+
+    </div>
+    
+  [-- INCLUDE DEV-minicart PROCESS --]   
+  [-- INCLUDE DEV-rightbar --]
+  [-- INCLUDE DEV-footer --]
+
+  </html>
+[-- END_DEFINE EDIT_SHIPPING --]
+#
+# Delete Shipping Option
+#
+[-- DEFINE DELETE_SHIPPING --]
+  <html>
+  <head>
+
+  <title>[-- STORE.DeleteShipping --]</title>
+
+  <script type="text/javascript">
+  <!--
+  [-- CR_JAVASCRIPT --]
+  // -->
+  </script>
+
+      [-- INCLUDE DEV-header-search-results PROCESS --]
+    [-- INCLUDE DEV-leftbar --]
+            
+      <div style="font-size: 8pt; margin: 3px 10px 20px 5px;">
+
+  [-- CR_Header --]
+
+  [-- CR_FORM --]
+
+  <center>
+
+  <h1>[-- STORE.DeleteShipping --]</h1>
+
+  [-- CR_ShopSiteMessages --]
+
+  <p>[-- STORE.DeleteShippingText --]</p>
+
+  <p><b>[-- CR_Delete_Shipping --]</b></p>
+
+  <p>[-- STORE.DeleteShippingNote --]</p>
+
+  <p align="center">[-- BUTTON Yes --] [-- BUTTON No --]</p>
+
+  [-- CR_Footer --]
+
+  </center>
+  </form>
+
+    </div>
+    
+  [-- INCLUDE DEV-minicart PROCESS --]   
+  [-- INCLUDE DEV-rightbar --]
+  [-- INCLUDE DEV-footer --]
+
+  </html>
+[-- END_DEFINE DELETE_SHIPPING --]
+#
+# Customer Registration Error Screen
+#
+[-- DEFINE CR_ERROR --]
+  <html>
+  <head>
+
+  <title>[-- STORE.ErrorMessages --]</title>
+
+  <script type="text/javascript">
+  <!--
+  [-- CR_JAVASCRIPT --]
+  // -->
+  </script>
+
+      [-- INCLUDE DEV-header-search-results PROCESS --]
+    [-- INCLUDE DEV-leftbar --]
+            
+      <div style="font-size: 8pt; margin: 3px 10px 20px 5px;">
+
+  [-- CR_Header --]
+
+  [-- CR_FORM --]
+
+  <center>
+
+  <h1>[-- STORE.ErrorMessages --]</h1>
+
+  [-- CR_ShopSiteMessages --]
+
+  <p align="center">[--BUTTON BackToCart --]</p>
+
+  [-- CR_Footer --]
+
+  </center>
+  </form>
+
+    </div>
+    
+  [-- INCLUDE DEV-minicart PROCESS --]   
+  [-- INCLUDE DEV-rightbar --]
+  [-- INCLUDE DEV-footer --]
+
+  </html>
+[-- END_DEFINE CR_ERROR --]
+#
+# Email address has changed
+#
+[-- DEFINE EMAIL_ADDRESS_NEW --]
+  <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+  <html>
+  <body>
+
+  <p><b>[-- STORE.Name --]</b></p>
+  <p>[-- STORE.EmailAddressChangedText --]</p>
+  <p>[-- Store.NewSignInAddress --]: [-- CR_Email_Address --]</p>
+  <p>[-- Store.URL --] <a href="[-- MyStoreURL --]">[-- MyStoreURL --]</a></p>
+
+  </body>
+  </html>
+[-- END_DEFINE EMAIL_ADDRESS_NEW --]
+#
+# Email address has changed - OLD
+#
+[-- DEFINE EMAIL_ADDRESS_CHANGED --]
+  <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+  <html>
+  <body>
+
+  <p><b>[-- STORE.Name --]</b></p>
+  <p>[-- STORE.EmailAddressChangedText --]</p>
+  <p>[-- Store.NewSignInAddress --]: [-- CR_Email_Address --]</p>
+  <p>[-- Store.URL --] <a href="[-- MyStoreURL --]">[-- MyStoreURL --]</a></p>
+
+  </body>
+  </html>
+[-- END_DEFINE EMAIL_ADDRESS_CHANGED --]
+#
+# Email for when account information changes
+#
+[-- DEFINE EMAIL_ACCOUNT_CHANGE --]
+  [-- IF CR_HTML_Email --]
+  <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+  <html>
+  <head>
+  </head>
+  <body>
+  [-- STORE.EmailAccountChangeText --] [-- STORE.Name --]
+  [-- CR_ShopSiteMessages --]
+  </body>
+  </html>
+
+  [-- ELSE --]
+
+  [-- STORE.EmailAccountChangeText --] [-- STORE.Name --]
+  [-- CR_ShopSiteMessages --]
+
+  [-- END_IF --]
+[-- END_DEFINE EMAIL_ACCOUNT_CHANGE --]

@@ -1,0 +1,29 @@
+<div id="prd[-- PRODUCT.RecordNumber --]" class="item[-- IF PRODUCT.ImageAlignment "Center" --] centered[-- END_IF --]">
+[-- IF PRODUCT.Graphic --][-- IF PRODUCT.DisplayGraphic --][-- IF PRODUCT.DisplayMoreInformationPage --]<a href="[-- PRODUCT.MoreInfoURL --]" title="[-- IF PRODUCT.MoreInformationTitle --][-- PRODUCT.MoreInformationTitle --][-- ELSE --][-- PRODUCT.Name REMOVE_HTML --][-- END_IF --]" class="prodimg">[-- PRODUCT.Graphic ONLY_ALT_TAG --]</a>[-- ELSE --]<span class="prodimg">[-- PRODUCT.Graphic ONLY_ALT_TAG --]</span>[-- END_IF --][-- END_IF --][-- END_IF --]
+<div class="proddesc">
+[-- IF PRODUCT.VariableName? --][-- ELSE_IF PRODUCT.DisplayName --][-- IF PRODUCT.DisplayMoreInformationPage --]<a class="prodnme" href="[-- PRODUCT.MoreInfoURL --]" title="[-- IF PRODUCT.MoreInformationTitle --][-- PRODUCT.MoreInformationTitle --][-- ELSE --][-- PRODUCT.Name REMOVE_HTML --][-- END_IF --]">[-- PRODUCT.Name REMOVE_HTML --]</a>[-- ELSE --]<span class="prodnme">[-- PRODUCT.Name REMOVE_HTML --]</span>[-- END_IF --][-- END_IF --]
+[-- IF REVIEWS --][-- IF Reviews_Count_Number LT 1 --]<span class="write-review">[-- REVIEWS_WRITE_FIRST --]</span>[-- ELSE --]<span class="reviews-brief">[-- REVIEWS_STARS --]</span>[-- END_IF --][-- END_IF --]
+[-- IF PRODUCT.ProductDescription --]<div class="productdesc [-- PRODUCT.DescriptionStyle --] [-- PRODUCT.DescriptionSize --]">[-- PRODUCT.ProductDescription --]</div>[-- END_IF --]
+[-- IF PRODUCT.VariableSku? --][-- ELSE_IF PRODUCT.DisplaySku --][-- IF PRODUCT.Sku --]<span class="prodsku [-- PRODUCT.SkuStyle --] [-- PRODUCT.SkuSize --]">[-- STORE.Sku --] [-- PRODUCT.Sku --]</span>[-- END_IF --][-- END_IF --]
+[-- IF PRODUCT.DisplayMoreInformationPage --][-- ELSE --]<a class="see-more" onClick="listTypeSelect('item showall','prd[-- PRODUCT.RecordNumber --]');">[-- Store.MoreDetails --]<span>+</span></a>[-- END_IF --]
+[-- IF PRODUCT.VariablePrice? --][-- ELSE_IF PRODUCT.Subproduct --][-- ELSE_IF PRODUCT.DisplayPrice --]<span class="product-price [-- PRODUCT.PriceStyle --] [-- PRODUCT.PriceSize --]">[-- IF PRODUCT.SaleAmount --][-- IF PRODUCT.SaleOn --]<span class="price-reg">[-- Store.RegPrice --] [-- PRODUCT.Price --] [-- IF PRODUCT.AltPrice --] <span class="lighter">[-- PRODUCT.AltPrice --]</span>[-- END_IF --]</span><span class="price-sale">[-- PRODUCT.SaleAmount --] [-- STORE.OnSaleText --][-- IF PRODUCT.AltSaleAmount --] <span class="lighter">[-- PRODUCT.AltSaleAmount --]</span>[-- END_IF --]</span>[-- ELSE --]<span class="price">[-- STORE.Price --] [-- PRODUCT.Price --][-- IF PRODUCT.AltPrice --] <span class="lighter">[-- PRODUCT.AltPrice --]</span>[-- END_IF --]</span>[-- END_IF --][-- ELSE --]<span class="price">[-- STORE.Price --] [-- PRODUCT.Price --][-- IF PRODUCT.AltPrice --] <span class="lighter">[-- PRODUCT.AltPrice --]</span>[-- END_IF --]</span>[-- END_IF --]</span>[-- END_IF --]
+[-- VAR.DisplayAddToCart "yes" --][-- IF PRODUCT.DisplayAddtoCart "Not Displayed" --][-- VAR.DisplayAddToCart "no" --][-- ELSE_IF PRODUCT.DisplayAddtoCart "MoreInfo Page" --][-- IF PRODUCT.DisplayMoreInformationPage --][-- VAR.DisplayAddToCart "no" --][-- END_IF --][-- END_IF --]
+[-- IF VAR.DisplayAddToCart "yes" --]
+<form id="form[-- PRODUCT.RecordNumber --]" action="[-- SHOPPING_CART_URL Base --]/order.cgi" method="post"><input type="hidden" name="storeid" value="[-- STORE.ID --]"><input type="hidden" name="dbname" value="products"><input type="hidden" name="function" value="add">
+[-- IF PRODUCT.NumSubproducts "0" --][-- IF PRODUCT.UseMultiMenus checked --][-- ELSE --] 
+[-- IF PRODUCT.VariableName? --]<span class="var-name"><b>[-- STORE.VP_CompanyName --]:</b> <input name="[--PRODUCT.RecordNumber--]:name" size="20" value="" type="text"></span>[-- END_IF --]
+[-- IF PRODUCT.VariableSku? --]<span class="var-sku"><b>[-- STORE.VP_InvoiceNumber --]:</b> <input name="[--PRODUCT.RecordNumber--]:sku" size="10" value="" type="text"></span>[-- END_IF --]
+[-- IF PRODUCT.VariablePrice? --]<span class="var-price"><b>[-- STORE.VP_InvoiceAmount --]:</b> [-- STORE.CurrencySymbol --]<input name="[--PRODUCT.RecordNumber--]:price" size="4" value="" type="text"></span>[-- END_IF --]
+<input type="hidden" name="itemnum" value="[-- PRODUCT.RecordNumber --]">
+[-- IF PRODUCT.DisplayOrderingOptions --][-- IF PRODUCT.OptionText --]<span class="product-option-text">[-- PRODUCT.OptionText --]</span>[-- END_IF --][-- Order_Option_Menu Column --][-- IF PRODUCT.OptionsBoxHeader --]<span class="product-option-header">[-- PRODUCT.OptionsBoxHeader --]</span>[-- END_IF --][-- IF PRODUCT.OptionsBox --]<textarea name="[-- PRODUCT.Recordnumber --]:freeopt" cols="[-- PRODUCT.OptionsBoxColumns --]" rows="[-- PRODUCT.OptionsBoxRows --]"></textarea>[-- END_IF --][-- END_IF --]
+[-- IF PRODUCT.DisplayOrderQuantity --]<span class="product-quantity">Qty: <input type="text" size="3" value="[-- IF PRODUCT.MinimumQuantity GT 1 --][-- PRODUCT.MinimumQuantity --][-- ELSE --]1[-- END_IF --]" name="[-- PRODUCT.RecordNumber --]:qnty"></span>[-- END_IF --]
+[-- END_IF --]
+[-- ELSE --]
+[-- LOOP SUBPRODUCTS --][-- SUBPRODUCT Full-Product.sst --][-- END_LOOP SUBPRODUCTS --]<br>
+[-- END_IF --]
+[-- IF PRODUCT.UseMultiMenus checked --][-- ELSE_IF ADDIMAGE? --]<input type="image" [--ADDIMAGE--][-- IF PRODUCT.SubProduct --] onClick="return(checkChecker('form[-- PRODUCT.RecordNumber --]', '[-- STORE.SelectProduct --]')); disabled=true;this.form.submit();"[-- ELSE --] [-- END_IF --]>[-- ELSE --]<input class="add" type="submit" value="[-- ADDTEXT --]"[-- IF PRODUCT.SubProduct --] [-- ELSE --] [-- END_IF --]>[-- END_IF --]
+</form>
+[-- IF WishList --][-- IF VAR.DefineProduct "full" --][-- WishList --][-- END_IF --][-- END_IF --]
+[-- END_IF --]
+</div>
+</div>

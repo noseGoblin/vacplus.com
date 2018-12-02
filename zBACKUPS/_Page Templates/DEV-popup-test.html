@@ -1,0 +1,209 @@
+<?php
+// Start the session
+session_start();
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php
+$_SESSION["NUMBER".$_SESSION["gclid"]] = "8004018151";
+$_SESSION["LOCAL".$_SESSION["gclid"]] = "7607398222";
+
+if(empty($_COOKIE["triviumgclid"])) {
+  if (!isset($_SESSION["gclid"])) {
+    $_SESSION["gclid"] = $_GET["gclid"];
+      $_SESSION["keyword"] =$_GET["keyword"];
+  }
+  if (!empty($_SESSION["gclid"])) {     
+    $file = file_get_contents("http://64.73.241.122:8090/SonicView/callAnalytics/getAdwordsPhoneNumber?number=8004018151&gclid=".$_SESSION["gclid"]."&keyword=".$_SESSION["keyword"]);
+    $_SESSION["NUMBER".$_SESSION["gclid"]]=$file;
+    $_SESSION["LOCAL".$_SESSION["gclid"]] = "7604663195";
+    setcookie("triviumgclid", $_SESSION["gclid"], time()+2592000);
+  }
+} else {
+  if(empty($_GET["gclid"])) {
+    $_SESSION["gclid"] = $_COOKIE["triviumgclid"];
+    $file = file_get_contents("http://64.73.241.122:8090/SonicView/callAnalytics/getAdwordsPhoneNumber?number=8004018151&gclid=".$_SESSION["gclid"]."&keyword=".$_SESSION["keyword"]);
+    $_SESSION["NUMBER".$_SESSION["gclid"]]=$file;
+    $_SESSION["LOCAL".$_SESSION["gclid"]] = "7604663195";
+  } else {
+    $_SESSION["gclid"] = $_GET["gclid"];
+    $file = file_get_contents("http://64.73.241.122:8090/SonicView/callAnalytics/getAdwordsPhoneNumber?number=8004018151&gclid=".$_SESSION["gclid"]."&keyword=".$_SESSION["keyword"]);
+    $_SESSION["NUMBER".$_SESSION["gclid"]]=$file;
+    $_SESSION["LOCAL".$_SESSION["gclid"]] = "7604663195";
+    setcookie("triviumgclid", $_SESSION["gclid"], time()+2592000);
+  }
+}
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php
+$domain='sewingmachinesplus.com';
+$host  = $_SERVER['HTTP_HOST'];
+$uri = $_SERVER['PHP_SELF'];
+function domainCheck($host, $uri, $domain){
+  $dir_name = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+  if($host==$domain){
+    $formattedUrl=$domain.$uri;
+    Header( "HTTP/1.1 301 Moved Permanently" );
+    Header( "Location: http://www.$formattedUrl" );
+    exit; 
+  }
+}
+domainCheck($host, $uri, $domain);
+?>
+[--DEFINE LINK_TO_PAGE--]
+  [--IF PAGE.NumItems 0--]
+        [-- IF PAGE.Field1 "no" --]
+              <!-- IGNORE PAGE LINK IF IT HAS NO ITEMS AND IS NOT A SUBDIRECTORY -->
+            [-- END_IF --]
+            
+            [-- IF PAGE.Field1 "yes" --]
+            [-- IF VAR.counter "0" --]
+          <tr>
+        [-- END_IF --]
+        [-- VAR.counter INC --]
+        <td class="pageLink">
+        [--IF PAGE.LinkGraphic--]
+          <a href="[--OUTPUT_DIRECTORY_URL--]/[--Page.FileName--]">
+                      <center>
+                          <img [-- PAGE.LinkGraphic REMOVE_HTML --] /><br>
+              [--PAGE.LinkName--]
+                        </center>
+                    </a>
+        [--ELSE--]
+          <a href="[--OUTPUT_DIRECTORY_URL--]/[--Page.FileName--]"><center><b>[--PAGE.LinkName--]</b></center></a>
+        [--END_IF--]
+        </td>
+        [-- IF VAR.counter "5" --]
+            </tr>
+            [-- VAR.counter "0" --]
+        [-- END_IF --]
+            [-- END_IF --]
+  [--ELSE--]
+    [-- IF VAR.counter "0" --]
+         <tr>
+    [-- END_IF --]
+    [-- VAR.counter INC --]
+    <td class="pageLink">
+    [--IF PAGE.LinkGraphic--]
+      <a href="[--OUTPUT_DIRECTORY_URL--]/[--Page.FileName--]">
+              <center>
+                <img [-- PAGE.LinkGraphic REMOVE_HTML --]><br>
+          <b>[--PAGE.LinkName--]</b>
+                </center>
+            </a>
+    [--ELSE--]
+      <a href="[--OUTPUT_DIRECTORY_URL--]/[--Page.FileName--]"><center><b>[--PAGE.LinkName--]</b></center></a>
+    [--END_IF--]
+    </td>
+    [-- IF VAR.counter "5" --]
+        </tr>
+        [-- VAR.counter "0" --]
+    [-- END_IF --]
+  [--END_IF--]
+[--END_DEFINE LINK_TO_PAGE--]
+
+
+
+[-- DEFINE PAGE --]
+<!-- test page -->
+
+<html>
+
+<head>
+
+    [--IF PAGE.Title --]
+    <title>[--PAGE.Title REMOVE_HTML --]</title>
+  [--ELSE--]
+    <title>[-- PAGE.Name REMOVE_HTML --]</title>
+  [--END_IF--]
+
+  [-- IF PAGE.MetaKeywords --]
+    <meta name="Keywords" content="[-- PAGE.MetaKeywords --]" />
+  [--ELSE--]
+    <meta name="Keywords" content="[-- PAGE.Name REMOVE_HTML --]" />
+  [--END_IF--]
+
+  [--IF PAGE.MetaDescription --]
+    <meta name="Description" content="[-- PAGE.MetaDescription --]" />
+  [--ELSE--]
+    <meta name="Description" content="[--PAGE.Name REMOVE_HTML --]" />
+  [--END_IF--]
+    
+    [-- IF PAGE.Field5 --]
+      [-- PAGE.Field5 --]
+    [--END_IF--]
+    
+    <META NAME="GOOGLEBOT" CONTENT="INDEX, FOLLOW">
+  <META NAME="Robots" content="index,follow"> 
+  <meta name="rating" content="General" />
+
+<!-- Start Google Remarleting Code for Category -->
+<script type="text/javascript">
+var google_tag_params = {
+ecomm_prodid: : '',
+ecomm_pagetype: 'category',
+ecomm_totalvalue: ''
+};
+</script>
+<!-- End Google Remarketing Code for Category -->
+[-- INCLUDE LexiConnAACSimpleHeadDialog PROCESS --]<!--AJAX CART-->
+        [-- INCLUDE DEV-header-popup-test --]
+
+      [-- INCLUDE DEV-leftbar --]
+
+
+<div style="font-size: 8pt; margin: 3px 10px 20px 5px; vertical-align:top;">
+
+[-- IF PAGE.Field2 --]
+  <div align="center">[-- PAGE.Field2 --]</div>
+[--END_IF--]
+
+[-- IF PAGE.Text1 --]
+  <p>[-- PAGE.Text1 --]</p>
+[-- END_IF --]
+
+[-- IF PAGE.Field4 --]
+  [-- PAGE.Field4 --]
+[--END_IF--]
+
+  [-- IF PAGE.NumLinks 0 --]
+  [-- ELSE --]
+      <center><table cellpadding="4">
+    [-- VAR.counter "0" --]
+    [-- LOOP LINKS --]
+      [-- LINK --]
+    [-- END_LOOP LINKS --]
+        </table></center>
+    [-- IF VAR.counter "0" --]
+    [-- ELSE --]
+    [-- END_IF --]
+        
+        [-- IF PAGE.NumProducts 0 --]
+        [-- ELSE --]
+          <br /><hr width="50%" /><br />
+    [-- END_IF --]    
+  [-- END_IF --]
+                
+                
+  [-- IF PAGE.NumProducts 0 --]
+  [-- ELSE --]
+      <table style="margin: 0px;" cellspacing="1">
+        [--LOOP PRODUCTS 4--]
+          <td class="productListing">
+            <div style="height: 215px;"><center>[--PRODUCT--]</center></div>
+            </td>
+        [--END_LOOP PRODUCTS--]  
+        </table>
+    [--END_IF--]
+    
+   </div>
+
+  [-- INCLUDE LexiConnAACSimpleBody_Dialog PROCESS --]<!--AJAX CART-->
+  [-- INCLUDE LexiConnSimpleMinicart PROCESS --]    <!--AJAX CART-->   
+  [-- INCLUDE DEV-rightbar-holiday --]
+  [-- INCLUDE DEV-footer --]
+
+</html>
+[-- END_DEFINE PAGE --]

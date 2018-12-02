@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?php
+$domain='sewingmachinesplus.com';
+$host  = $_SERVER['HTTP_HOST'];
+$uri = $_SERVER['PHP_SELF'];
+function domainCheck($host, $uri, $domain){
+  $dir_name = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+  if($host==$domain){
+    $formattedUrl=$domain.$uri;
+    Header( "HTTP/1.1 301 Moved Permanently" );
+    Header( "Location: http://www.$formattedUrl" );
+    exit; 
+  }
+}
+domainCheck($host, $uri, $domain);
+?>
+
+
+[--DEFINE LINK_TO_PAGE--]
+  [--IF PAGE.NumItems 0--]
+        [-- IF PAGE.Field1 "no" --]
+              <!-- IGNORE PAGE LINK IF IT HAS NO ITEMS AND IS NOT A SUBDIRECTORY -->
+            [-- END_IF --]
+            
+            [-- IF PAGE.Field1 "yes" --]
+            [-- IF VAR.counter "0" --]
+          <tr>
+        [-- END_IF --]
+        [-- VAR.counter INC --]
+        <td class="pageLink">
+        [--IF PAGE.LinkGraphic--]
+          <a href="[--OUTPUT_DIRECTORY_URL--]/[--Page.FileName--]">
+                      <center>
+                          <img [-- PAGE.LinkGraphic REMOVE_HTML --] /><br>
+              [--PAGE.LinkName--]
+                        </center>
+                    </a>
+        [--ELSE--]
+          <a href="[--OUTPUT_DIRECTORY_URL--]/[--Page.FileName--]"><center><b>[--PAGE.LinkName--]</b></center></a>
+        [--END_IF--]
+        </td>
+        [-- IF VAR.counter "5" --]
+            </tr>
+            [-- VAR.counter "0" --]
+        [-- END_IF --]
+            [-- END_IF --]
+  [--ELSE--]
+    [-- IF VAR.counter "0" --]
+         <tr>
+    [-- END_IF --]
+    [-- VAR.counter INC --]
+    <td class="pageLink">
+    [--IF PAGE.LinkGraphic--]
+      <a href="[--OUTPUT_DIRECTORY_URL--]/[--Page.FileName--]">
+              <center>
+                <img [-- PAGE.LinkGraphic REMOVE_HTML --]><br>
+          <b>[--PAGE.LinkName--]</b>
+                </center>
+            </a>
+    [--ELSE--]
+      <a href="[--OUTPUT_DIRECTORY_URL--]/[--Page.FileName--]"><center><b>[--PAGE.LinkName--]</b></center></a>
+    [--END_IF--]
+    </td>
+    [-- IF VAR.counter "5" --]
+        </tr>
+        [-- VAR.counter "0" --]
+    [-- END_IF --]
+  [--END_IF--]
+[--END_DEFINE LINK_TO_PAGE--]
+
+
+
+[-- DEFINE PAGE --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- test page -->
+
+<html>
+
+<head>
+  
+    [--IF PAGE.Title --]
+    <title>[--PAGE.Title REMOVE_HTML --]</title>
+  [--ELSE--]
+    <title>[-- PAGE.Name REMOVE_HTML --]</title>
+  [--END_IF--]
+
+  [-- IF PAGE.MetaKeywords --]
+    <meta name="Keywords" content="[-- PAGE.MetaKeywords --]" />
+  [--ELSE--]
+    <meta name="Keywords" content="[-- PAGE.Name REMOVE_HTML --]" />
+  [--END_IF--]
+
+  [--IF PAGE.MetaDescription --]
+    <meta name="Description" content="[-- PAGE.MetaDescription --]" />
+  [--ELSE--]
+    <meta name="Description" content="[--PAGE.Name REMOVE_HTML --]" />
+  [--END_IF--]
+    
+    [-- IF PAGE.Field5 --]
+      [-- PAGE.Field5 --]
+    [--END_IF--]
+    
+    <META NAME="GOOGLEBOT" CONTENT="INDEX, FOLLOW">
+  <META NAME="Robots" content="index,follow"> 
+  <meta name="rating" content="General" />
+
+<!-- Start Google Remarleting Code for Category -->
+<script type="text/javascript">
+var google_tag_params = {
+ecomm_prodid: : '',
+ecomm_pagetype: 'category',
+ecomm_totalvalue: ''
+};
+</script>
+<!-- End Google Remarketing Code for Category -->
+        [-- INCLUDE DEV-header-xtian --]
+<br clear="all">
+<!--variable for overlay-->[-- VAR.HomePage "yes" --]<!--homepage variable for overlay end-->
+<center>
+<table cellpadding="0" cellspacing="0" border="0" width="1024px">
+    <tr>
+        <td width="824px" valign="top">
+            [-- IF PAGE.Field2 --]
+                <div align="center">[-- PAGE.Field2 --]</div>
+            [--END_IF--]
+            
+            [-- IF PAGE.Text1 --]
+                <p>[-- PAGE.Text1 --]</p>
+            [-- END_IF --]
+        </td>
+        <td width="200px" valign="top">
+            [-- INCLUDE DEV-minicart-xtian PROCESS --]
+            [-- INCLUDE DEV-rightbar-xtian --]
+        </td>
+    </tr>
+    <tr>
+      [-- IF PAGE.Field4 --]
+      <td colspan="2">
+                [-- PAGE.Field4 --]
+        </td>
+        [--END_IF--]
+
+      
+        <td colspan="2">
+            [-- IF PAGE.NumLinks 0 --]
+                [-- ELSE --]
+                    <center><table cellpadding="4">
+                [-- VAR.counter "0" --]
+                [-- LOOP LINKS --]
+                    [-- LINK --]
+                [-- END_LOOP LINKS --]
+                </table></center>
+                [-- IF VAR.counter "0" --]
+                [-- ELSE --]
+                [-- END_IF --]
+
+                [-- IF PAGE.NumProducts 0 --]
+                [-- ELSE --]
+                    <br /><hr width="50%" /><br />
+                [-- END_IF --]    
+            [-- END_IF --]
+        
+        
+            [-- IF PAGE.NumProducts 0 --]
+            [-- ELSE --]
+                <table style="margin: 0px;" cellspacing="1">
+                [--LOOP PRODUCTS 4--]
+                    <td class="productListing">
+                    <div style="height: 215px;"><center>[--PRODUCT--]</center></div>
+                    </td>
+                [--END_LOOP PRODUCTS--]  
+                </table>
+            [--END_IF--]
+        </td>
+    </tr>
+</table>
+</center>
+<div style="width:100%; background-image:url('/images/test/images/footer-bg.jpg'); background-repeat:repeat-x; position:relative; margin-top:10px; top:10px;">
+  <div style="width:1024px; margin:0px auto;">
+    [-- INCLUDE DEV-footer-xtian --]
+  </div>
+</div>
+[-- END_DEFINE PAGE --]

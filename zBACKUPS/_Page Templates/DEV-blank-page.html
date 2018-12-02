@@ -1,0 +1,44 @@
+[-- DEFINE PAGE --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+[-- IF PAGE.Field5 --]
+  [-- PAGE.Field5 --]
+[--END_IF--]
+    [--IF PAGE.Title --]
+    <title>[--PAGE.Title REMOVE_HTML --]</title>
+  [--ELSE--]
+    <title>[-- PAGE.Name REMOVE_HTML --]</title>
+  [--END_IF--]
+
+  [-- IF PAGE.MetaKeywords --]
+    <meta name="Keywords" content="[-- PAGE.MetaKeywords --]" />
+  [--ELSE--]
+    <meta name="Keywords" content="[-- PAGE.Name REMOVE_HTML --]" />
+  [--END_IF--]
+
+  [--IF PAGE.MetaDescription --]
+    <meta name="Description" content="[-- PAGE.MetaDescription --]" />
+  [--ELSE--]
+    <meta name="Description" content="[--PAGE.Name REMOVE_HTML --]" />
+  [--END_IF--]
+    
+    <META NAME="GOOGLEBOT" CONTENT="INDEX, FOLLOW">
+  <META NAME="Robots" content="index,follow"> 
+  <meta name="rating" content="General" />
+
+</head>
+
+[-- IF PAGE.Text1 --]
+  [-- PAGE.Text1 --]
+[-- END_IF --]
+
+[-- IF PAGE.Field4 --]
+  [-- PAGE.Field4 --]
+[--END_IF--]
+                
+
+
+</html>
+[-- END_DEFINE PAGE --]

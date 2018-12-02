@@ -1,0 +1,19 @@
+<script type="text/javascript" src="/ss_suggest/script/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="/ss_suggest/script/jquery-ui.js"></script>
+
+[-- CALL LexiConn_ss_suggest.php --]
+
+<script type="text/javascript">
+
+window.results_url = null;
+
+$("form[name='search_form']").submit(function(e){
+  if(window.results_url != null && window.results_url.length > 0){
+      e.preventDefault();
+      window.location.href = window.moreinfo_url;
+  } else{
+    //Process normal search
+  }
+});  
+
+</script>

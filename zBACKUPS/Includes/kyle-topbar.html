@@ -1,0 +1,29 @@
+<!--top bar-->
+  <div class="top-bar">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <?php
+          if (substr($_SESSION["NUMBER".$_SESSION["gclid"]], 0, 3)!= '844') {
+            $_SESSION["NUMBER".$_SESSION["gclid"]] = "8004018151";
+            $_SESSION["LOCAL".$_SESSION["gclid"]] = "7607398222";
+          }
+          ?>
+          <ul class="phone-numbers">
+            <li><?php echo "Toll Free: <a href=\"tel:".substr($_SESSION["NUMBER".$_SESSION["gclid"]], 0, 3)."-".substr($_SESSION["NUMBER".$_SESSION["gclid"]], 3, 3)."-".substr($_SESSION["NUMBER".$_SESSION["gclid"]],6)."\">".substr($_SESSION["NUMBER".$_SESSION["gclid"]], 0, 3)."-".substr($_SESSION["NUMBER".$_SESSION["gclid"]], 3, 3)."-".substr($_SESSION["NUMBER".$_SESSION["gclid"]],6)."</a>";?></li>
+            <li><?php echo "Local: <a href=\"tel:".substr($_SESSION["LOCAL".$_SESSION["gclid"]], 0, 3)."-".substr($_SESSION["LOCAL".$_SESSION["gclid"]], 3, 3)."-".substr($_SESSION["LOCAL".$_SESSION["gclid"]],6)."\">".substr($_SESSION["LOCAL".$_SESSION["gclid"]], 0, 3)."-".substr($_SESSION["LOCAL".$_SESSION["gclid"]], 3, 3)."-".substr($_SESSION["LOCAL".$_SESSION["gclid"]],6)."</a>";?></li>
+          </ul>
+        </div>
+        <div class="col-md-8">
+          <ul class="list-inline top-links">
+            <li><a href="/contact-us.php" class="showroom-text">Visit our San Marcos, CA Showroom</a></li>
+            <li><a href="/Events.php" class="events">Events</a></li>                              
+            <li><a href="/martins.php" class="classes">Classes</a></li>
+            <li><a href="/free-projects.php" class="free-projects">Free Projects</a></li>
+            <li class="chat"><a href="/trackorder.php">Order Status</a></li>                                
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--top bar end-->

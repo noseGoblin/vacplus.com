@@ -1,0 +1,170 @@
+<div id="out_of_stock_notice_[-- PRODUCT.RecordNumber --]" style="display: none;">
+  <div>This item is currently out of stock. If you would like us to email you when it is back in stock, send along your email address...</div>
+       <br />
+           <form action="#" name="out_of_stock_notification_[-- PRODUCT.RecordNumber --]" id="out_of_stock_notification_[-- PRODUCT.RecordNumber --]" method="post">
+                <input type="hidden" name="product_id" id="product_id" value="[-- PRODUCT.RecordNumber --]" />
+                <input type="hidden" name="product_name" id="product_name" value="[-- PRODUCT.Name --]" />
+                <input type="hidden" name="advanced_options" id="advanced_options" value="0" />
+                <input type="hidden" name="option_value" id="option_value" value="" />
+                <input type="hidden" name="ip" id="ip" value="<?php echo getenv('REMOTE_ADDR'); ?>" />
+                <input type="hidden" name="product_url" id="product_url" value="<?php echo "http://" . $_SERVER['HTTP_HOST'] .  $_SERVER['REQUEST_URI']; ?>" />
+                <label for="email">Email Address: </label>
+                   <input type="email" name="email" id="email" value="" />
+                <br />
+                <input type="submit" name="submit" value="Submit" />
+           </form>
+</div>
+
+
+[-- IF PRODUCT.UseNewOption --]
+  [-- IF PRODUCT.UseMultiMenus --]
+      <?php 
+          $p_id = '[-- PRODUCT.RecordNumber --]';
+          echo exec("/usr/local/bin/php /www/vacplus/isnm/inventory_advanced.php $p_id");
+      ?>
+       
+
+    <script type="text/javascript">
+      var timer;
+      window.iteration = 0;
+      window.opt_value = null;
+      window.last_level = glevel;
+      window.trigger_level = glevel - 1;
+      window.select_size = null;
+      window.out_of_stock_regex = /.*;n/;
+
+      function enableOptions(){
+    $("#menu_" + max_level + " > select > option:disabled").each(function(i){
+        $(this).removeAttr("disabled");
+    });
+
+    $("select[name='[-- PRODUCT.RecordNumber --]:finopt:" + window.last_level + "']").change(function(event){
+        window.opt_value = $("select[name='[-- PRODUCT.RecordNumber --]:finopt:" + window.last_level + "']").val();
+        if(window.out_of_stock_regex.test(window.opt_value)){
+          if(window.notification_type == 'inline'){
+            $("#out_of_stock_notice_[-- PRODUCT.RecordNumber --]").show();
+          } else{
+            $("#out_of_stock_notice_[-- PRODUCT.RecordNumber --]").dialog({ title: "Out of Stock"});
+          }
+                                                $("#form[-- PRODUCT.RecordNumber --]").bind("submit", function(){
+                                                      return false;
+                                                });
+            var opt_count = $("input[name='[-- PRODUCT.RecordNumber --]:finoptnum']").val();
+                                                var option_values = '';
+                                                for(n=0; n<opt_count; n++){
+                                                   option_values += $("select[name='[-- PRODUCT.RecordNumber --]:finopt:"+n+"']").val() + ' ';
+                                                }
+                                                var ov = $.trim(option_values);
+                                                $("#option_value").val(ov);
+             var adv_opt = (advanced_options==true) ? 1 : 0;
+            $("#advanced_options").val(adv_opt);
+        } else{
+          if(window.notification_type == 'inline'){ 
+            $("#out_of_stock_notice_[-- PRODUCT.RecordNumber --]").hide();
+                                                 $("#form[-- PRODUCT.RecordNumber --]").unbind();
+          } else{
+            $("#out_of_stock_notice_[-- PRODUCT.RecordNumber --]").dialog("close");
+            $("#form[-- PRODUCT.RecordNumber --]").unbind();
+          }
+        }
+    });
+
+
+    clearInterval(timer);
+}
+
+function domUpdateTest(sender_name){
+    window.iteration++;
+    if(window.select_size != $("#menu_" + max_level).html().length){
+      enableOptions();
+    }
+    if(window.iteration >= 25){
+                    clearInterval(timer);
+    }
+}
+
+
+$("#form[-- PRODUCT.RecordNumber --]").delegate("select", "change", function(event) {
+    window.select_size = window.select_size = $("#menu_" + max_level).html().length;
+    window.sender_name = event.target.name;
+        timer = setInterval(domUpdateTest, 100);
+        window.iteration = 0;
+});
+
+
+$("#out_of_stock_notification_[-- PRODUCT.RecordNumber --]").submit(function(){
+    var post_data = $("#out_of_stock_notification_[-- PRODUCT.RecordNumber --]").serialize();
+
+    $.ajax({
+        type: "POST",
+        url: "/isnm/out_of_stock.php",
+        data: post_data,
+        dataType: 'html',
+        async: false,
+        success: function(msg){
+          if(window.notification_type=="popup"){
+             $("#out_of_stock_notice_[-- PRODUCT.RecordNumber --]").html(msg);
+          } else{
+             alert(msg);
+          }
+
+        }
+    });
+});
+</script>
+
+   [-- ELSE --]
+   
+   [-- END_IF --]
+[-- ELSE --]
+  <script type="text/javascript" src="[-- ShopSite_Images --]/javascript/jquery/jquery.js"> </script>
+<?php 
+   $p_id = '[-- PRODUCT.RecordNumber --]';
+   echo exec("/usr/local/bin/php /www/vacplus/isnm/inventory_basic_options.php $p_id");
+?>
+<script type="text/javascript">
+
+if(quantity_on_hand <= 0){
+   $("#form[-- PRODUCT.RecordNumber --]").bind("submit", function(){
+        if(window.notification_type=="popup"){
+             $("#out_of_stock_notice_[-- PRODUCT.RecordNumber --]").dialog({title:'Out of Stock'});
+             return false;
+        } else{
+       $("#out_of_stock_notice_[-- PRODUCT.RecordNumber --]").show();
+             return false;
+        }
+   });
+}
+
+$("#out_of_stock_notification_[-- PRODUCT.RecordNumber --]").submit(function(){
+    [-- IF PRODUCT.DisplayOrderingOptions --]
+     var opt_count = $("input[name='[-- PRODUCT.RecordNumber --]:finoptnum']").val();
+     var option_values = '';
+     for(n=0; n<opt_count; n++){
+          option_values += $("select[name='[-- PRODUCT.RecordNumber --]:finopt:"+n+"']").val();
+          if(n != (opt_count - 1)){
+             option_values += '|';
+          }
+     }
+     $("#option_value").val(option_values);
+    [-- END_IF --]
+    var post_data = $("#out_of_stock_notification_[-- PRODUCT.RecordNumber --]").serialize();
+
+    $.ajax({
+        type: "POST",
+        url: "/isnm/out_of_stock.php",
+        data: post_data,
+        dataType: 'html',
+        async: false,
+        success: function(msg){
+          
+            if(window.notification_type=="popup"){
+               $("#out_of_stock_notice_[-- PRODUCT.RecordNumber --]").html(msg);
+      } else{
+               alert(msg); 
+            }
+        }
+    });
+});
+</script>
+[-- END_IF --]

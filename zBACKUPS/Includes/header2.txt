@@ -1,0 +1,48 @@
+<a name="header_top"></a>
+  <table border="0" cellspacing="0" cellpadding="0" width="100%">
+  
+  <tr>
+    <td width="11" rowspan="3"><img src="/images/header/endcap-left.gif" width="11" height="118" alt="" /></td>
+    <td width="311" bgcolor="#990000" rowspan="2"><a href="https://www.vacplus.com/" title="sewing supplies - home"><img src="/images/header/store-logo.gif" width="311" height="84" alt="sewing machines plus" class="storelogo" /></a></td>
+    <td rowspan="2" bgcolor="#990000" class="callUs" width="180">
+        Call Us: <b>800 401 8151</b><br />
+                Local: <b>760 739 8222</b>
+    </td>
+    <td class="nav" bgcolor="#990000" width="255"><a href="/cgi-vacplus/sb/order.cgi?storeid=*2049a2454d08f453cdf01e4e655c988cacca&function=show" class="wt">View Cart</a> | <a href="/track-your-package.php" class="wt">Track Order</a> | <a href="/sitemap_sewingmachineplus.php" title="sewing machines plus - sitemap" class="wt">Site Map</a> | <a href="/links/index.htm" class="wt">Links</a><br />
+            <a href="/about-us.php" title="about sewing machines plus" class="wt">About Us</a> | <a href="/contact-us.php" title="contact sewing machines plus" class="wt">Contact Us</a> | <a href="/customer-service.php" title="sewing machines plus customer service" class="wt">Store Policies</a> | <a href="/kbase/users/kb.php" class="wt">FAQ</a>
+    </td>
+    <td width="11" rowspan="3"><img src="/images/header/endcap-right.gif" width="11" height="118" alt="" /></td>  
+  </tr>
+  
+  
+  <tr>
+    <td bgcolor="#990000">
+      <table width="0" border="0" align="right" cellpadding="0" cellspacing="0">
+              <form action="/cgi-vacplus/sb/productsearch.cgi?storeid=*2496f57e14d8a0ef8decc151feac6905cd454c8b">
+                <input type=hidden name="storeid" value="*2496f57e14d8a0ef8decc151feac6905cd454c8b">
+                <tr>
+                  <td><img src="/images/btn-search.gif" width="46" height="16" hspace="10" vspace="4"></td>
+                  <td><input type="text" size="18" class="search" name="search_field" /></td>
+                  <td><input type="image" src="/images/btn-go.gif" width="34" height="16" border="0" class="go" name="search2" alt="Search our Site"></td>
+                </tr>
+              </form>
+            </table>
+    </td>
+  </tr>
+  
+  
+  <tr>
+    <td colspan="3" bgcolor="#750000" height="34">
+      <table width="100%" cellpadding="0" cellspacing="0"><tr>
+      <td class="topnav"><a href="/sewing-machines.php" title="sewing machines" class="toplink">Sewing Machines</a></td>
+      <td class="topnav"><a href="/sewing-accessories.php" title="sewing accessories" class="toplink">Sewing Accessories</a></td>
+      <td class="topnav"><a href="/sewing-furniture.php" title="sewing furniture" class="toplink">Sewing Furniture</a></td>
+      <td class="topnav"><a href="/embroidery-supplies.php" title="embroidery supplies" class="toplink">Embroidery Supplies</a></td>
+      <td class="topnav"><a href="/quilting-supplies.php" title="quilting supplies" class="toplink">Quilting Supplies</a></td>
+      <td class="topnav"><a href="/vacuum-cleaners.php" title="vacuum cleaners" class="toplink">Vacuum Cleaners</a></td>
+      <td class="topnav"><a href="/irons-and-presses.php" title="irons and presses" class="toplink">Irons & Presses</a></td>
+      </tr></table>
+    </td>
+  </tr> 
+  
+  </table>

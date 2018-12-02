@@ -1,0 +1,13 @@
+
+# <!-- search_link -->
+# <!-- this is designed to emulate the appearance of a link from the 7.0 search pages -->
+
+[-- DEFINE LINK_TO_PAGE --]
+
+[--IF PAGE.LinkName--]
+<a href="[-- OUTPUT_DIRECTORY_URL --]/[-- PAGE.FileName --][-- SEARCHPRODUCTLINK --]" class="foundin">[--PAGE.LinkName--]</a><span class="search-pipeline">|</span>
+[-- ELSE --]
+<a href="[-- OUTPUT_DIRECTORY_URL --]/[-- PAGE.FileName --][-- SEARCHPRODUCTLINK --]" class="foundin">[-- PAGE.Name --]</a><span class="search-pipeline">|</span>
+[-- END_IF --]
+
+[-- END_DEFINE LINK_TO_PAGE --]

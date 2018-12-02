@@ -1,0 +1,284 @@
+[-- DEFINE SUBPRODUCT --]
+
+<!-- Start Sub Product #1 -->
+
+[-- IF VAR.SubproductType "options" --]
+[-- IF PRODUCT.Field9 "options" --]
+<tr valign="top">
+    <td><input type="checkbox" name="itemnum" value="[-- PRODUCT.RECORDNUMBER --]"></td>
+    <td>[-- PRODUCT.Name --] -  [-- IF PRODUCT.SaleOn--]<strike>[--PRODUCT.Price--]</strike> <b class="txrd">[--PRODUCT.SaleAmount--]</b>[--ELSE--][--PRODUCT.Price--][--END_IF--]</td>
+</tr>
+[--END_IF--]
+[--END_IF--]
+
+<!-- End Sub Product #1-->
+
+<!-- Start Sub Product #2 -->
+
+[-- IF VAR.SubproductType "cross-sell" --]
+  [-- IF PRODUCT.Field9 "cross-sell" --]
+
+[--IF PRODUCT.DisplayMoreInformationPage--]<a href="[-- PRODUCT.MoreInformationFILENAME --]"><img src="/media/[-- IMAGE PRODUCT.Graphic --]" alt="" vspace="4" border="0" /></a><br />
+<a href="[-- PRODUCT.MoreInformationFILENAME --]"><img src="media/more-info.gif" alt="Click for more information" border="0" /></a><br />
+<a href="[-- PRODUCT.MoreInformationFILENAME --]"><b>[-- PRODUCT.Name --]</b></a><br />
+[--ELSE--] <img src="/media/[-- IMAGE PRODUCT.Graphic --]" alt="" vspace="4" border="0" /><br />
+     <b>[-- PRODUCT.Name --]</b><br />
+     [--END_IF--] [--IF PRODUCT.SaleOn--]<strike>[-- PRODUCT.Price --]</strike><b class="txrd">[-- PRODUCT.SaleAmount --]</b><br />
+[--ELSE--]<b class="txrd">[-- PRODUCT.Price --]</b><br />
+[--END_IF--]<a href="[--PRODUCT.AddToCartURL--]"><b>ADD TO CART</b></a>
+ 
+[--END_IF--]
+[--END_IF--]
+
+<!-- End Sub Product #2 -->
+
+
+
+
+
+[-- END_DEFINE SUBPRODUCT --]
+
+[--DEFINE PRODUCT--]
+<div align="center">
+[--IF PRODUCT.DisplayMoreInformationPage--]<a href="[-- PRODUCT.MoreInfoURL --]"><img src="/media/[-- IMAGE PRODUCT.Graphic --]" alt="" vspace="4" border="0" /></a><br />
+<a href="[-- PRODUCT.MoreInfoURL --]"><img src="media/more-info.gif" alt="Click for more info" border="0" /></a><br />
+<a href="[-- PRODUCT.MoreInfoURL --]"><b>[-- PRODUCT.Name --]</b></a><br />
+[--ELSE--] <img src="/media/[-- IMAGE PRODUCT.Graphic --]" alt="" vspace="4" border="0" /><br />
+     <b>[-- PRODUCT.Name --]</b><br />
+     [--END_IF--] [-- IF PRODUCT.DisplayPrice --] [--IF PRODUCT.SaleOn--]<strike>[-- PRODUCT.Price --]</strike><b class="txrd">[-- PRODUCT.SaleAmount --]</b><br />
+[--ELSE--]<b class="txrd">[-- PRODUCT.Price --]</b><br />
+[--END_IF--][-- IF PRODUCT.AddToCartButton --]<a href="[--PRODUCT.AddToCartURL--]">[-- PRODUCT.AddToCartButton --]</a>[--END_IF--][--ELSE--]Call for details<br />
+[--END_IF--]
+
+[--IF Product.Field3--]<b><font color="green">12mos 0% interest</b></font><br />[--END_IF--]
+
+[--IF Product.Field6--]<b>[--Product.Field6--]</b><br />[--END_IF--]
+
+[--IF Product.Field1--]<b>[--Product.Field1--]</b>[--END_IF--]
+</div>
+[-- END_DEFINE PRODUCT--]
+
+
+[-- DEFINE MORE_INFO_PAGE--]
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+[--IF PRODUCT.MoreInformationTitle --]
+<title>[--PRODUCT.MoreInformationTitle REMOVE_HTML --]</title>
+[--ELSE--]
+<title>[-- PRODUCT.Name REMOVE_HTML --]</title>
+[--END_IF--]
+
+[--IF PRODUCT.MoreInformationMetaKeywords --]
+<meta name="Keywords" content="[-- PRODUCT.MoreInformationMetaKeywords --]" />
+[--ELSE--]
+<meta name="Keywords" content="[--Product.Name REMOVE_HTML --]" />
+[--END_IF--]
+
+[--IF PRODUCT.MoreInformationMetaDescription --]
+<meta name="Description" content="[-- PRODUCT.MoreInformationMetaDescription --]" />
+[--ELSE--]
+<meta name="Description" content="[--Product.Name REMOVE_HTML --]" />
+[--END_IF--]
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<META NAME="GOOGLEBOT" CONTENT="INDEX, FOLLOW">
+<META NAME="Robots" content="index,follow">
+<meta name="rating" content="General" />
+<meta name="language" content="pt, en, es" />
+<link href="/css/sewing-machines.css" rel="stylesheet" type="text/css" />
+<link href="/css/lightbox.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/lightbox.js"></script>
+<script language="JavaScript" src="/includes/sewing-machines.js" type="text/javascript"></script>
+</head>
+<body>
+<table width="760" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="2" class="pdbtm6">[-- INCLUDE header.txt --] </td>
+  </tr>
+  <tr>
+    <td style="height: 100%;">
+      <table cellpadding="0" cellspacing="0" style="height: 100%">
+      <tr><td style="height: 1px; padding-bottom: 8px;">
+      <center>
+      <!-- START SCANALERT CODE -->
+<a target="_blank" href="https://www.mcafeesecure.com/RatingVerify?ref=www.sewingmachinesplus.com"><img width="115" height="32" border="0" src="//images.scanalert.com/meter/www.sewingmachinesplus.com/12.gif" alt="McAfee Secure sites help keep you safe from identity theft, credit card fraud, spyware, spam, viruses and online scams" oncontextmenu="alert('Copying Prohibited by Law - McAfee Secure is a Trademark of McAfee, Inc.'); return false;"></a>
+<!-- END SCANALERT CODE --> 
+      </center>
+      </td></tr>
+        <tr style="height: 1px;">
+          <td style="height: 1px;">       
+            <div id="cart">
+                <div id="cart-inner1">
+                  <div id="cart-inner2">
+                    <a href="[-- SHOPPING_CART_URL --]" class="yourcart">Your Shopping Cart</a>
+                    [--INCLUDE MINICART PROCESS--]
+                    <a href="[-- SHOPPING_CART_URL --]">Checkout</a></div>            
+                  </div>
+                </div>
+              </div><img src="/images/shop-by-category.gif" alt="" width="160" height="39" border="0" /></td>
+        </tr>
+        <tr>
+            <td class="redbg">
+            [-- INCLUDE navigation.txt --]</td>
+          </tr>
+      </table>    
+    </td>
+    <td class="pdl6">
+      <table cellspacing="0" cellpadding="0" width="596" border="0">
+      <tr>
+        <td>
+            <img src="/images/baby-lock-head.gif" alt="Babylock Header Image" width="596" height="39" border="0" style="margin: 0px; padding: 0px; height: 39; display: block; overflow: hidden;" />
+        </td>
+      </tr>     
+      <tr>
+        <td class="cnt-bg">
+          <table width="100%" border="0" cellspacing="4" cellpadding="4" class="products">
+            <tr>
+              <td colspan="2">
+                <table width="110"  border="0" align="right" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="right"><!-- START SCANALERT CODE --> <!--
+<a target="_blank" href="https://www.scanalert.com/RatingVerify?ref=www.sewingmachinesplus.com"><img src="//images.scanalert.com/meter/www.sewingmachinesplus.com/13.gif" alt="HACKER SAFE certified sites prevent over 99.9% of hacker crime." width="94" height="54" border="0" oncontextmenu="alert('Copying Prohibited by Law - HACKER SAFE is a Trademark of ScanAlert'); return false;" /></a> -->
+<!-- END SCANALERT CODE -->
+                    </td>
+                    </tr>
+                </table>
+<h1>[-- IF PRODUCT.Name --][-- PRODUCT.Name --][--ELSE--][-- PRODUCT.MoreInformationTitle --][--END_IF--]</h1></td>
+                    </tr>
+                    <tr>
+                     <!-- START ZOOM + POPUP -->
+                      <td width="312">
+                     [-- IF PRODUCT.Field5 --]
+                      [--CALL popupv2.php PRODUCT.Field5 popuptemplate.tpl 3--][-- ELSE --][-- IF PRODUCT.MoreInformationGraphic --]<img [-- PRODUCT.MoreInformationGraphic REMOVE_HTML--] border="0">[--ELSE--]<img src="[-- VAR.MyImages --]/images/more_comingsoon.gif" hspace="0" vspace="0"> [-- END_IF --][-- END_IF --]     </td>
+                      <td><!-- END ZOOM + POPUP --><p><a name="sewing_top" id="sewing_top"></a>
+            [-- IF PRODUCT.DisplayPrice --] 
+          [--IF PRODUCT.SaleOn--] 
+          <b>List Price:&nbsp;<strike>[-- PRODUCT.Price --]</strike></b><br />
+                  <b class="txrd">Your Price:&nbsp;[-- PRODUCT.SaleAmount --]</b><br />
+[--ELSE--] <b class="txrd">Price: [-- PRODUCT.Price --]</b><br />
+[--END_IF--]
+[--ELSE--]
+</p><h2>Call 1-800-401-8151 <br />
+for details</h2>
+[--END_IF--] 
+[--IF Product.Field2--] <p><b>[--Product.Field2--]</b></p>[--END_IF--]
+
+<!-- START Add accessories BLOCK -->
+
+[-- IF PRODUCT.DisplayPrice --]
+
+<form action="[-- SHOPPING_CART_URL BASE --]/order.cgi" method="post">
+<input type=hidden name="storeid" value="[--Store.id--]">
+<input type=hidden name="dbname" value="products">
+<input type="hidden" name="itemnum" value="[-- PRODUCT.RecordNumber --]">
+<input type=hidden name="function" value="add">
+
+<input src="images/addtocart.gif" name="Add to Cart" type="image" />
+
+[-- IF PRODUCT.Field9 --]
+<h3 id="addaccessories">Add accessories to your order:</h3>
+<table cellpadding="0" cellspacing="0" class="acctbl">
+[--LOOP SUBPRODUCTS --]
+ [-- VAR.SubproductType "options" --]
+[--SUBPRODUCTS--]
+[-- VAR.SubproductType "" --]
+[--END_LOOP SUBPRODUCTS--]
+</table>
+[-- END_IF --]
+<br />
+[--Order_Option_Menu Column--]
+<br />
+
+</form>
+
+[--END_IF--]
+
+<!-- END Add accessories BLOCK -->
+
+[-- IF Product.Field7--]<div id="freight"><a href="/images/freight-policies.gif" rel="lightbox"><img src="images/freight-button.gif" width="221" height="57" alt="unknown" /></a></div>[--END_IF--]
+
+
+[--IF Product.Field1--] <p><b>[--Product.Field1--]</b></p>[--END_IF--]
+
+
+[--IF Product.Field3--] <p><b>[--Product.Field3--]</b></p>[--END_IF--]
+
+
+[-- IF Product.Field4--]<p>[-- Product.Field4--]</p>[--END_IF--]
+
+[-- IF Product.Field6--]<p>[-- Product.Field6--]</p>[--END_IF--]
+[-- IF Product.Field8--]<p>[-- Product.Field8--]</p>[--END_IF--]
+
+[-- IF PRODUCT.DisplayPrice --]
+<p>
+<form method="POST" action="low-price-compare.php">
+
+Have you seen this product cheaper?
+
+<input type="hidden" name="product" value="[-- PRODUCT.Name --]" />
+<input type="hidden" name="SKU" value="[-- PRODUCT.SKU --]" />
+<input type="hidden" name="productURL" value="[-- PRODUCT.MoreInfoURL --]" />
+<input type="hidden" name="image" value='[-- IMAGE PRODUCT.Graphic --]' />
+<input type="hidden" name="ourPrice" value="[-- IF PRODUCT.SaleAmount --] [-- PRODUCT.SaleAmount --] [-- ELSE --] [-- PRODUCT.Price --] [-- END_IF --]" />
+
+<input type="submit" name="submit" value="Yes!" />
+</form>
+</p>
+[--END_IF--] 
+
+<p><a href="#" onClick="window.open('https://www.vacplus.com/cgi-vacplus/sb/tellfriend.cgi?storeid=*1a55e44c507dba9e1cc062cfd94a85&str=Product%20Link&from=http%3A%2F%2Fwww.sewingmachinesplus.com%2Findex.php','tellfriend','width=560,height=560,resizable=yes,scrollbars=yes, status=yes');return false;"><img src="https://www.vacplus.com/images/send-to-friend1.gif" width="142" height="23" alt="e-mail this product to a friend" border="0" /></a></p>                        </td>
+                    </tr>
+                    <tr>
+                      <td colspan="2">
+            
+            <h3>[--IF PRODUCT.MoreInformationTitle --][-- PRODUCT.MoreInformationTitle --][--ELSE--][-- PRODUCT.Name --][--END_IF--] Product Details</h3>
+            <span class="tx10bk">[-- PRODUCT.MoreInformationText --]</span> 
+                        
+                        <br clear="all"></span>
+
+<!-- Review start -->
+<h2 class="prodreviews">Product Reviews:</h2>
+<div>
+<?php readfile("https://www.vacplus.com/reviews/summary.php/[-- PRODUCT.SKU --]"); ?>
+</div>
+<!-- Reviews end -->
+[-- IF PRODUCT.Field10 --]
+<hr size="1" width="100%"/>
+<h4 align="center">You may also be interested in the product(s) below: </h4>
+<hr size="1" width="100%" align="center" />
+<table width="100%" cellspacing="1" cellpadding="1" class="links">
+[-- Loop SUBPRODUCTS 3 --]
+ [-- VAR.SubproductType "cross-sell" --]
+<td width="33%" align="center"> [-- SUBPRODUCTS --] </td>
+[-- VAR.SubproductType "" --]
+[-- END_LOOP SUBPRODUCTS --]
+</table>
+[--END_IF--]
+<p>&gt; <a href="#sewing_top">Back to Top </a></p>                      </td>
+                    </tr>
+                  </table>      </td>
+        </tr>
+        <tr>
+          <td><img src="/images/main-btm.gif" width="596" height="9" /></td>
+        </tr>
+    </table></td></tr>
+  <tr>
+    <td rowspan="2" bgcolor="#990000"><div align="center"><br />
+        <img src="/media/multiple_payment_logo.gif" width="150" height="50" /><br />
+        <img src="/media/site/credit-cards.gif" width="140" height="17" /></div></td>
+    <td><img src="/images/foottp.gif" width="602" height="14" /></td>
+  </tr>
+  <tr>
+    <td class="foot-bg">[-- INCLUDE footer.txt --]</td>
+  </tr>
+  <tr>
+    <td><img src="/images/footccbtm.gif" width="160" height="8" /></td>
+    <td><img src="/images/footbtm.gif" width="602" height="8" /></td>
+  </tr>
+</table>
+
+</body>
+</html>
+[-- END_DEFINE MORE_INFO_PAGE--]

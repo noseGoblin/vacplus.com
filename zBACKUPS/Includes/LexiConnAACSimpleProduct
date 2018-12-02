@@ -1,0 +1,5 @@
+<input type="hidden" name="product_name_[-- PRODUCT.RecordNumber --]" value="[-- PRODUCT.Name --]">
+<input type="hidden" name="media_url_[-- PRODUCT.RecordNumber --]" value="[-- OUTPUT_DIRECTORY_URL --]/media/">
+<input type="hidden" name="product_graphic_[-- PRODUCT.RecordNumber --]" value="[-- IMAGE PRODUCT.Graphic --]" />
+
+<div id="cart_message_[-- PRODUCT.RecordNumber --]" style="display: none"></div>

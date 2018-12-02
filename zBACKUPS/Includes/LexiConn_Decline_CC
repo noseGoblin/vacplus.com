@@ -1,0 +1,100 @@
+<script type="text/javascript" src="https://www.vacplus.com/declinecc/script/jquery.js"></script>
+<script type="text/javascript">
+jQuery.noConflict();
+
+jQuery(function(){
+
+ if(jQuery(".checkout_err").get().length > 0){
+                        var ip = '[-- CALL ip.php --]';
+                        var html = jQuery(".checkout_err").html();
+                        
+                        var h = escape(html);
+                        var rg = new RegExp("%3Chr%3E", "gim");
+                        var em_1 = h.split(rg);
+
+                        var last = (em_1.length/1) - 1;
+                        var rg2 = new RegExp("%3C\/td%3E", "gim");
+                        var em_2 = em_1[last].split(rg2);
+ 
+                        if(em_2.length > 1){
+                           var msg = unescape(em_2[0]);
+                        } else{
+                           var msg = unescape(em_2);
+                        }
+
+      var email = (document.billing.Email != undefined) ? document.billing.Email.value : '';
+                        var billing_first = (document.billing.First != undefined) ? document.billing.First.value : '';
+                        var billing_last = (document.billing.Last != undefined) ? document.billing.Last.value : '';
+                        var billing_company = (document.billing.Company != undefined) ? document.billing.Company.value : '';
+                        var billing_address = (document.billing.Address != undefined) ? document.billing.Address.value : '';
+                        var billing_address_1 = (document.billing.Address2 != undefined) ? document.billing.Address2.value : '';
+                        var billing_city = (document.billing.City != undefined) ? document.billing.City.value : '';
+
+                        var billing_state = (document.billing.State != undefined) ? document.billing.State.value : '';
+                        var billing_zip = (document.billing.Zip != undefined) ? document.billing.Zip.value : '';
+      var billing_country = (document.billing.Country != undefined) ? document.billing.Country.value : '';  
+      var billing_phone = (document.billing.Phone != undefined) ? document.billing.Phone.value : '';    
+
+      if(window.Prototype != undefined){
+                                var p_product = JSON.stringify(ss_name);
+                                var p_sku = JSON.stringify(ss_sku);
+                                var p_quantity = JSON.stringify(ss_quantity);
+                                var p_order_options = JSON.stringify(ss_finite_options);
+                                var p_price = JSON.stringify(ss_price);
+                                var p_total_price = JSON.stringify(ss_total_price);
+                                var p_free_options = JSON.stringify(ss_freeform_options);
+
+                        } else{
+                                var p_product = JSON.stringify(ss_name);
+                                var p_sku = JSON.stringify(ss_sku);
+                                var p_quantity = JSON.stringify(ss_quantity);
+                                var p_order_options = JSON.stringify(ss_finite_options);
+                                var p_price = JSON.stringify(ss_price);
+                                var p_total_price = JSON.stringify(ss_total_price);
+                                var p_free_options = JSON.stringify(ss_freeform_options);
+                        }
+
+      var dataObj = {
+                                action: "cc_error",
+                                ip: ip,
+                                ss_sbid: ss_sbid,
+                                cc_error: msg,
+                                email: email,
+                                order_total: ss_ordertotal,
+                                subtotal: ss_subtotal,
+                                tax_total: ss_taxtotal,
+                                ship_total: ss_shiptotal,
+                                product_count: number_products,
+                                billing_first: billing_first,
+                                billing_last: billing_last,
+                                billing_company: billing_company,
+                                billing_address: billing_address,
+                                billing_address_1: billing_address_1,
+                                billing_city: billing_city,
+                                billing_state: billing_state,
+        billing_country: billing_country,
+                                billing_zip: billing_zip,
+                                billing_phone: billing_phone,
+                                p_product: p_product,
+                                p_sku: p_sku,
+                                p_quantity: p_quantity,
+                                p_order_options: p_order_options,
+                                p_price: p_price,
+                                p_total_price: p_total_price,
+                                p_free_options: p_free_options
+                        }
+
+                        var data = jQuery.param(dataObj, false);
+  
+                        jQuery.ajax({
+                                   type: "POST",
+                                   url: "https://www.vacplus.com/declinecc/includes/controller.php",
+                                   data: data,
+           success: function(msg){
+                                          // alert( "Data Saved: " + msg );
+                                   }
+                   });
+        }
+
+});
+</script>

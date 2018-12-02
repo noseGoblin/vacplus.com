@@ -1,0 +1,1776 @@
+[-- DEFINE ShoppingCart --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<script src="https://cdn.optimizely.com/js/3534250896.js"></script>
+
+<link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Cabin:400italic" rel="stylesheet" type="text/css">
+
+<title>[-- STORE.SC_YourShoppingCart Remove_Html --]</title>
+<meta name="verify-v1" content="LgvDD+yKZW1ULvHkUzBRAUu5UnP/88OMGXnfr/0DQao=" />
+<script type="text/javascript" src="https://www.vacplus.com/jquery/js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="https://www.vacplus.com/jquery/js/jquery-ui-1.8.2.custom.min.js"></script>
+<script type="text/javascript" language="JavaScript">
+<!-- 
+[-- SC_JAVASCRIPT extras --]
+// -->
+</script>
+
+<!--disable enter key-->
+<script type="text/javascript">
+
+function stopRKey(evt) {
+  var evt = (evt) ? evt : ((event) ? event : null);
+  var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+  if ((evt.keyCode == 13) && (node.type=="text"))  {return false;}
+}
+
+document.onkeypress = stopRKey;
+
+</script> 
+
+<!--end disable enter-->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-487443-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+<script type="text/javascript" src="//static.criteo.net/js/ld/ld.js" async="true"></script>
+<script type="text/javascript">
+window.criteo_q = window.criteo_q || [];
+var deviceType = /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Silk/.test(navigator.userAgent) ? "m" : /iPad/.test(navigator.userAgent) ? "t" : "d";
+var itemArray = new Array;
+for(x=0;x<ss_sku.length;x++){
+    var items = {
+        id: ss_field13[x],
+        price: ss_total_price[x].replace(/\,/g,''),
+        quantity: ss_quantity[x]
+    };
+    itemArray.push(items);
+}
+window.criteo_q.push(
+{ event: "setAccount", account: 19481},
+{ event: "setSiteType", type: deviceType},
+{ event: "setHashedEmail", email: [""]},
+{ event: "viewBasket", item: itemArray}
+/* add a line for each item in the user's cart */
+);
+</script>
+
+
+<style type="text/css">
+
+table.totals tbody tr td {
+  text-align: right;
+  line-height: 150%;
+}
+
+table.cart tbody tr td {
+  padding: 3px;
+}
+</style>
+[-- VAR.Secure "yes" --]
+[-- INCLUDE sc_cart.css PROCESS --]
+
+[-- INCLUDE DEV-checkout-header PROCESS --]
+[-- INCLUDE DEV-checkout-leftbar --]
+
+<div style="font-size: 8pt; margin: 3px 10px 20px 5px;">
+
+[-- ShopSiteMessages --]
+
+[-- IF ShoppingCartHeader --]
+  <p>[-- ShoppingCartHeader --]</p>
+[-- END_IF --]
+
+<center>[-- SC_Registration --]</center>
+
+
+[-- SC_Form --]
+<table width="0" align="center" style="min-width:650px;">
+
+   [-- IF Cart_Cross_Sell --]
+  <tr>
+  <td colspan="2" style="font-size:14px; font-weight:bold; padding-top:1px; 
+
+padding-
+
+bottom:1px; font-family:Arial, Helvetica, sans-serif;">Items frequently purchased with products in your cart:</td>
+  </tr>
+  <tr>
+    <td colspan="2"><table>
+      <tr>
+        [-- LOOP Cart_Cross_Sell 3 --]
+        <td>[-- CART_CROSS_SELL --]</td>
+        [-- END_LOOP Cart_Cross_Sell --]
+      </tr>
+    </table></td>
+  </tr>
+  [-- END_IF --]
+  
+  <!-- Global Cross-sell in Cart -->
+  [-- IF Global_Cross_Sell --]
+  <tr>
+    <td colspan="2" class="gcs_table"><table class="gcs_table">
+      <caption>[-- STORE.GlobalCrossSellHeader --]</caption>
+      <tr>
+        <td class="gcs_table_blank">&nbsp;</td>
+        [-- LOOP GLOBAL_Cross_Sell --]
+        <td class="gcs_table_content">[-- GLOBAL_CROSS_SELL --]</td>
+        [-- END_LOOP Global_Cross_Sell --]
+        <td class="gcs_table_blank">&nbsp;</td>
+      </tr>
+    </table></td>
+  </tr>
+  [-- END_IF --]
+
+
+  <tr>
+    <td colspan="2">
+<!--banner if over 1k / cz 6/23/2014-->
+<script type="text/javascript">
+    /* CUSTOM BANNERS*/
+    $(function(){
+      var amnt=49-ss_subtotal;
+      amnt=amnt.toFixed(2);
+      if(ss_subtotal<49.00){
+        document.getElementById("js-banner").style.height="104px";
+        document.getElementById("js-banner").style.display="block";
+        document.getElementById("js-banner").style.background="url('https://www.vacplus.com/media/images/cart/free-shipping.jpg') no-repeat";
+        document.getElementById("to-free").style.visibility="visible";
+        document.getElementById("to-free").innerHTML="ADD <span style='color:#000000;'>$"+amnt+"</span> MORE!";
+      }else{
+        if((ss_subtotal>49.00) && (ss_subtotal<1000.00)){
+          document.getElementById("to-free").style.visibility="hidden";
+          document.getElementById("js-banner").style.height="104px";
+          document.getElementById("js-banner").style.background="url('https://www.vacplus.com/media/images/cart/awards.jpg') no-repeat";
+        }else{
+          if(ss_subtotal>1000.00){
+            document.getElementById("to-free").style.visibility="hidden";
+            document.getElementById("js-banner").style.height="104px";
+            document.getElementById("js-banner").style.background="url('https://www.vacplus.com/media/images/cart/financing.jpg') no-repeat";
+          }
+        }
+      }
+    });
+  </script>
+  <!-- 4 tell -->
+<div id="data_4Tell" data-customer="" data-cart=""></div>
+<script type="text/javascript">
+window.onload = function() {
+  document.getElementById("data_4Tell").setAttribute("data-cart", ss_sku.toString()); 
+}
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+    }
+    return "";
+}
+var fourTellCookieContents = getCookie("fourtellemail");
+document.getElementById("data_4Tell").setAttribute("data-customer", fourTellCookieContents);
+if(fourTellCookieContents) {
+  document.getElementById("emailSend").src='http://email.sewingmachinesplus.com/public/?q=direct_add&fn=Public_DirectAddForm&id=avzsfstznvdkdkabikpbbgcqhpwfbid&email='+fourTellCookieContents+'&list1=0bbe03ec0000000000000000000000042efe';
+}
+</script>
+<!---------------- END 4 TELL CART PAGE --------------------->
+
+
+
+  
+<!--<a href="https://www.vacplus.com/promotions-clearance.php"><img src="https://www.vacplus.com/media/promotions/2014-october/page-banner.jpg" border="0"></a>-->
+  <!--<div id="js-banner" style="margin-bottom:15px;">
+        <div id="to-free" style="text-align:center; font-family:Arial, Helvetica, sans-serif; font-size:26px; color:#ffffff; position:relative; top:68%; visibility:hidden;"></div> </div>-->
+<!--END banner if over 1k-->
+
+      </div>
+      <div align="left">[-- BUTTON ContinueShopping --]</div>
+        [-- SC_ShowBasket --]
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+        [-- SC_Cart --]
+        <div style="visibility:hidden;"><input type="text" name="reloadPos" id="reloadPos"></div>
+    </td>
+  </tr>
+  <tr>
+    <td style="line-height: 150%; padding-top: 10px; padding-bottom: 10px;" align="center">
+    [-- SC_Tax_Shipping --]
+    [-- SC_Surcharge --]
+
+    <!--delay alert for Qnique 8/7/2015-->
+    <script>
+    $('td.cart_sku:contains("smp-786478376")').append('<br><span style="color:#dc0c0a;font-weight:bold;">Due to delay, this product will ship in 1-2 weeks</span>');
+    </script>
+    <!--end delay alert for Qnique-->
+
+    <!--check if shipping or product option has been changed then recalculate / cz 6/20/2014-->
+    <script>
+    $("input[name=shipping]").change(function(){
+      $("#Recalculate").click();
+      document.cookie="reloadPos=yes";
+    });
+
+    //fix for enter on input fields cz 10/15/2014
+    /*$('input').keypress(function(event){
+      if (event.keyCode == 10 || event.keyCode == 13){
+          event.preventDefault();
+        }
+    });
+
+      $('input[name=coupon_code]').keypress(function(event){
+        if (event.keyCode == 10 || event.keyCode == 13) {
+          $(".button152").click();
+        }
+      });
+
+    $('input[name=giftcert_code]').keypress(function(event){
+        if (event.keyCode == 10 || event.keyCode == 13) {
+          $(".button375").click();
+        }
+      });
+
+    $('input[name=giftcert_pin]').keypress(function(event){
+        if (event.keyCode == 10 || event.keyCode == 13) {
+          $(".button375").click();
+        }
+      });*/
+    //end fix
+
+    $("select").change(function(){
+      $("#Recalculate").click();
+    });
+
+    /*$("input").click(function(){
+      $(".taxnship").change();
+    });*/
+
+    </script>
+
+
+    <!--END check if shipping or product option has been changed then recalculate / cz 6/20/2014-->
+
+    <!--zip reload cz 7/8/2014-->
+    <script>
+
+    $('#ss_zip2').append('<div id="loadgif" style="visibility:hidden; float:right;"><img src="https://www.vacplus.com/media/loading.gif"/></div>');
+
+    $("input[name=zip_code]").ready(function(){
+      //
+      var scrollPos=document.cookie;
+      if(scrollPos.indexOf("reloadPos=yes")===-1){
+        document.cookie="reloadPos=no";
+      }else{
+        var scrollVal=$("input[name=reloadPos]").position();
+        $(window).scrollTop(scrollVal.top);
+        document.cookie="reloadPos=no";
+      }
+      //
+      var zipLength=$("input[name=zip_code]").val();
+      if((zipLength.length>1)&&(zipLength!="Enter Zip")){
+        $("input[name=zip_code]").attr('value', zipLength);
+      }else{
+        if((zipLength.length<1)||(zipLength="Enter Zip")){
+          $("input[name=zip_code]").attr('value', 'Enter Zip');
+          $(".taxnship").css("visibility","hidden");
+        }
+      }
+
+    });
+    
+    $("input[name=zip_code]").focusin(function(){
+      var zipValue=$("input[name=zip_code]").val();
+      if(zipValue=="Enter Zip"){
+        $("input[name=zip_code]").attr('value', '');
+      }
+    });
+
+    $("input[name=zip_code]").keyup(function(event){
+      if (event.keyCode == 10 || event.keyCode == 13){
+          event.preventDefault();
+      }else{
+        var zipLength=$("input[name=zip_code]").val();
+
+        if((zipLength.length>=5)&&(isNaN(zipLength))){
+          if(zipLength.indexOf(" ")===-1){
+            var canZip=6;  
+          }else{
+            var canZip=7;
+          }
+          if(zipLength.length>=canZip){
+            $(this).blur();
+            //$("#reloadPos").attr('value', 'yes');
+            document.cookie="reloadPos=yes";
+            $('#loadgif').css("visibility", "visible");
+          }
+        }else{
+          if((zipLength.length>=5)&&(!isNaN(zipLength))){
+            $(this).blur();
+            //$("#reloadPos").attr("value", "yes");
+            document.cookie="reloadPos=yes";
+            $('#loadgif').css("visibility", "visible");
+          }
+        }
+      }
+    });
+
+    </script>
+    <!--END zip reload-->
+
+    <!--Hidden Empty Cart for Staff cz 7/22/2014-->
+    <script>
+      $('.side').click(function(){
+        $('.button9').click();
+      });
+    </script>
+
+    <div align="left" style="margin-top:10px; padding-left:50px; visibility:hidden;">[-- BUTTON Recalculate --]</div>
+  </td>
+  <td style="vertical-align: top; line-height: 150%; padding-top: 5px; padding-bottom: 10px;" align="right">
+    <!-- Table for totals, etc. -->
+    [-- SC_Totals --]
+    <table cellspacing="0" cellpadding="0" border="0">
+        <tr>
+            <td colspan="2" style="padding-bottom: 10px; padding-top: 10px;" align="right">
+                [-- SC_PaymentSelection --]
+            </td>
+        </tr>
+        <tr>
+            <td width="140" valign="top"><span style="margin-right:10px;" id="_GUARANTEE_Kicker" name="_GUARANTEE_Kicker" type="Kicker Custom 1"></span></td>
+            <td>
+                [-- BUTTON Checkout --]
+            </td>
+        </tr>
+    </table>
+  </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-bottom:10px;"><div style="min-height: 100px; overflow: hidden;" class="shopperapproved_widget sa_rotate sa_horizontal sa_count3 sa_showdate sa_rounded sa_fill sa_large sa_showlinks sa_borderGray sa_bgWhite sa_colorBlack sa_jMY"></div><script type="text/javascript">var sa_interval = 5000;function saLoadScript(src) { var js = window.document.createElement('script'); js.src = src; js.type = 'text/javascript'; document.getElementsByTagName("head")[0].appendChild(js); } if (typeof(shopper_first) == 'undefined') saLoadScript('//www.shopperapproved.com/widgets/testimonial/3.0/21959.js'); shopper_first = true; </script><div style="text-align:right;"><a href="http://www.shopperapproved.com/reviews/SewingMachinesPlus.com/" target="_blank" rel="nofollow" class="sa_footer"><img class="sa_widget_footer" alt="" src="https://www.shopperapproved.com/widgets/widgetfooter-darklogo.png" style="border: 0;"></a></div>
+</td>
+  </tr>
+  [-- IF SC_Coupon --]
+  <tr>
+    <td colspan="2" style="padding-bottom: 10px;" align="center">
+        <table><tr>
+          <td style="padding-right: 10px;">[-- STORE.CouponCaption --]</td>
+          <td style="padding-right: 10px;">[-- SC_Coupon --]</td>
+          <td>
+              [-- IF SC_Coupon_Button --]
+                [-- BUTTON ApplyCoupon --]
+              [-- ELSE --]
+                [-- STORE.EnterCoupon --]
+              [-- END_IF --]
+          </td>
+        </tr></table>
+    </td>
+  </tr>
+  [-- END_IF --]
+  <tr><td width="100%" colspan="2" style="padding-bottom: 5px;"><hr noshade="noshade" size="2" /></td></tr>
+  <tr>
+    <td colspan="2" style="padding-bottom: 10px;" align="center">
+      <!--paypal banner-->
+      <script type="text/javascript" data-pp-pubid="de7ad006aa" data-pp-placementtype="468x60"> (function (d, t) {
+      "use strict";
+      var s = d.getElementsByTagName(t)[0], n = d.createElement(t);
+      n.src = "//paypal.adtag.where.com/merchant.js";
+      s.parentNode.insertBefore(n, s);
+      }(document, "script"));
+      </script>
+
+      <!--<small style="font-size:13px; color:#820000;"><i>Freight charges may vary if shipping outside of the Continental United States of America. For actual shipping charges call us at (800) 401-8151.</i></small>-->
+      <!--<small><i>[-- STORE.SC_AnyChanges --]</i></small>-->
+    </td>
+  </tr>
+
+  [-- IF SC_GiftCert --]
+  <tr>
+    <td colspan="2" align="center" style="padding-bottom: 10px; border: 1px solid #AAAAAA;">
+      <table cellpadding="3" cellspacing="0">
+          <tr>
+              <td colspan="3" style="padding: 5px;">
+               [-- STORE.EnterGiftCert --]
+               [-- IF SC_GiftCert_Button --]
+                 [-- STORE.GiftCert_Redeem --] 
+               [-- ELSE --]
+                 [-- STORE.GiftCert_Recalculate --] 
+               [-- END_IF --]
+               </td>
+            </tr>
+            <tr>
+         <td style="padding: 5px; font-weight: bold; font-size: 10pt;">[-- STORE.GiftCertCaption --]</td>
+          <td style="padding: 5px;">[-- SC_GiftCert --]</td>
+      <td style="padding: 5px;">
+            [-- IF SC_GiftCert_Button --]
+              [-- BUTTON ApplyGiftCert --]
+            [-- END_IF --]
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  [-- END_IF --]
+  
+  [-- IF SC_OrderingInstructions --]
+  <tr>
+    <td colspan="2" style="padding-bottom: 10px;">
+      [-- SC_OrderingInstructions 4 60 --]
+    </td>
+  </tr>
+  [-- END_IF --]
+
+  <!--<tr>
+    <td colspan="2" style="padding-bottom: 10px;" align="center">
+      [-- BUTTON Checkout --]&nbsp;
+    </td>
+  </tr>-->
+<tr>
+    <td colspan="2" style="padding-bottom: 10px;" align="center">
+      <div style="visibility:hidden;">[-- BUTTON EmptyCart --]</div>
+    </td>
+  </tr>
+<tr><td width="100%" colspan="2" style="padding-bottom: 5px;"><hr noshade="noshade" size="2" /></td></tr>
+</table>
+
+<div align="center">
+<!-- Start Norton Secured Powered by Verisign -->
+<table width="135" border="0" cellpadding="2" cellspacing="0" title="Click to Verify - This site chose Symantec SSL for secure e-commerce and confidential communications.">
+<tr>
+<td width="135" align="center" valign="top"><script type="text/javascript" src="https://seal.verisign.com/getseal?host_name=www.sewingmachinesplus.com&amp;size=L&amp;use_flash=NO&amp;use_transparent=NO&amp;lang=en"></script><br />
+<a href="http://www.symantec.com/ssl-certificates" target="_blank"  style="color:#000000; text-decoration:none; font:bold 7px verdana,sans-serif; letter-spacing:.5px; text-align:center; margin:0px; padding:0px;">ABOUT SSL  CERTIFICATES</a></td>
+</tr>
+</table>
+<!-- End Norton Secured Powered by Verisign -->
+</div>
+</div>
+
+<script src="https://www.vacplus.com/js/cartaband.js" language="javascript" type="text/javascript"></script>
+
+<script language="JavaScript">
+<!--
+        psyCartAbandonmentNotify('sewmachshop', '/cartaband/tracker.cgi');
+-->
+</script>
+
+<script type="text/javascript">
+
+ss_jQuery(function(){ 
+   if(parseFloat(ss_subtotal) <= 49){
+        ss_jQuery("input[value='api_Free Ground Shipping']").removeAttr("checked");
+        ss_jQuery("input[value='api_Free Ground Shipping']").parent().parent().hide();
+   }
+
+   window.show_usps = true;
+    ss_jQuery.each(ss_field15, function(index, value){
+        if(value=='no-usps'){
+            window.show_usps = false;
+        }
+    
+    });
+    
+    
+    if(window.show_usps==false){
+        ss_jQuery("input[value^='usps']").removeAttr("checked");
+        ss_jQuery("input[value^='usps']").parent().parent().hide();
+    }
+
+});
+
+</script>
+
+  [-- INCLUDE DEV-checkout-rightbar --]
+  <!-- BEGIN: Google Trusted Stores -->
+<script type="text/javascript">
+  var gts = gts || [];
+
+  gts.push(["id", "231386"]);
+  gts.push(["badge_position", "BOTTOM_RIGHT"]);
+  gts.push(["locale", "en_US"]);
+  gts.push(["google_base_subaccount_id", "1548534"]);
+  gts.push(["google_base_country", "US"]);
+  gts.push(["google_base_language", "en"]);
+
+  (function() {
+    var gts = document.createElement("script");
+    gts.type = "text/javascript";
+    gts.async = true;
+    gts.src = "https://www.googlecommerce.com/trustedstores/api/js";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(gts, s);
+  })();
+</script>
+<!-- END: Google Trusted Stores -->
+  [-- INCLUDE DEV-footer --]
+  [-- INCLUDE hide-shipping-options --]
+
+</html>
+[-- END_DEFINE ShoppingCart --]
+
+
+[-- DEFINE SHIPPING --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="https://cdn.optimizely.com/js/3534250896.js"></script>
+<title>[-- STORE.Ship_CheckOut Remove_Html --]</title>
+<meta name="verify-v1" content="LgvDD+yKZW1ULvHkUzBRAUu5UnP/88OMGXnfr/0DQao=" />
+
+[-- INCLUDE LexiConn_Decline_CC PROCESS --]
+
+<script type="text/javascript" language="JavaScript">
+<!-- 
+[-- SC_JAVASCRIPT extras --]
+// -->
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-487443-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+<style type="text/css">
+table.totals tbody tr td {
+  text-align: right;
+  line-height: 150%;
+}
+
+table.cart tbody tr td {
+  padding: 3px;
+}
+table.bill_addr{
+  padding-right: 10px;
+}
+table.ship_addr{
+  padding-left: 10px;
+}
+td.addr_val{
+  text-align: left;!important
+}
+td.addr{
+  text-align: left;!important
+}
+td.bill_addr_hdr{
+  text-align: left;
+  font-weight:bold;!important
+}
+td.ship_addr_hdr{
+  text-align: left;
+  font-weight:bold;!important
+}
+</style>
+<style type="text/css">
+.myButton {
+ background-color:#44c767 !important;
+ -moz-border-radius:8px !important;
+ -webkit-border-radius:8px !important;
+ border-radius:8px !important;
+ border:1px solid #18ab29 !important;
+ display:inline-block !important;
+ cursor:pointer !important;
+ color:#ffffff !important;
+ font-family:Arial !important;
+ font-size:17px !important;
+ padding:16px 31px !important;
+ text-decoration:none !important;
+ text-shadow:0px 1px 0px #2f6627 !important;
+}
+.myButton:hover {
+ background-color:#5cbf2a !important;
+}
+.myButton:active {
+ position:relative !important;
+ top:1px !important;
+}
+</style>
+[-- INCLUDE sc_cart.css PROCESS --]
+
+[-- INCLUDE DEV-checkout-header PROCESS --]
+[-- INCLUDE DEV-checkout-leftbar --]
+
+<div style="font-size: 8pt; margin: 3px 10px 20px 5px;">
+
+[-- ShopSiteMessages --]
+#<div>[-- ShippingHeader --]</div>
+
+[-- SC_Form --]
+<table border="0" width="0" align="center">
+[-- IF CustomHTML --]
+  <tr>
+    <td>
+      <div><font color="#FF0000"><b>[-- SHIP_CustomHTML 1 --]</b></font></div>
+    </td>
+  </tr>
+[-- END_IF --]
+
+  <tr>
+    <td>
+      [-- SC_Cart --]
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      [-- SC_Totals --]
+    </td>
+  </tr>
+
+[-- IF CustomHTML --]
+  <tr>
+    <td>
+      <div>[-- SHIP_CustomHTML 2 --]</div>
+    </td>
+  </tr>
+[-- END_IF --]
+
+[-- IF CustomHTML --]
+  <tr>
+    <td>
+      <div>[-- SHIP_CustomHTML 3 --]</div>
+    </td>
+  </tr>
+[-- END_IF --]
+
+[-- IF VAR.HR "yes" --]
+  <tr><td align="center"><hr noshade size="2" /></td></tr>
+[-- END_IF --]
+  <tr><td align="center"><hr noshade size="2" /></td></tr>
+
+  <tr>
+    <td align="center">
+      [-- SC_Payment --]
+    </td>
+  </tr>
+  <!-- cz synchrony financing header link 06/22/2015 -->
+<script type="text/javascript">
+window.onload = function() {
+  var financehdr = document.getElementsByClassName('payment_hdr')[0].innerHTML;
+  if(financehdr.indexOf("Financing") > -1) {
+    document.getElementById("sync-fin-banner").style.display="block";
+  }
+}
+</script>
+<!--end cz synchrony link-->
+  <tr id="sync-fin-banner" style="display:none;">
+    <td align="center">
+      <p><span style="font-weight:normal;">SewingMachinesPlus.com is proud to offer interest free financing through Synchrony Financial on any purchase over $150. To 
+
+apply for financing simply follow the link below to complete the application page and submit it to Synchrony Financial. Your information is kept secure and private as 
+
+Synchrony reviews your application.<br/><br/>After completing the application you will be provided with an application key. Enter your application key into the textbox 
+
+listed above and SewingMachinesPlus.com will take care of the rest. You will receive 0% APR financing with minimal payments due each month. If your application is declined please call us as soon as possible to speak about other payment methods!<br/><br/><a target="_blank" 
+
+href="https://etail.mysynchrony.com/eapply/eapply.action?uniqueId=D2895D9FF3CADB4EF670CD22E0CF1A52D5A064E2C1629DFE&client=Sewing%20Machines%20Plus" class="myButton">Get approved through Synchrony Financial</a>
+<!--<span style="font-size:20px;color:green;">CALL (800) 401-8151 TO APPLY FOR FINANCING TODAY!</span>-->
+</span></p>
+    </td>
+    </tr>
+  <tr><td align="center"><hr noshade size="2" /></td></tr>
+  <tr>
+    <td align="center">
+      [-- SC_Address--]
+    </td>
+  </tr>
+
+[-- IF CustomHTML --]
+  <tr>
+    <td>
+      <div>[-- SHIP_CustomHTML 4 --]</div>
+    </td>
+  </tr>
+[-- END_IF --]
+
+
+[-- IF CustomHTML --]
+  <tr>
+    <td>
+      <div>[-- SHIP_CustomHTML 5 --]</div>
+    </td>
+  </tr>
+[-- END_IF --]
+
+  <tr><td align="center"><hr noshade size="2" /></td></tr>
+
+[-- VAR.HR "no" --]
+[-- IF SC_Comments --]
+  <tr>
+    <td align="center">
+      [-- SC_Comments --]
+  [-- VAR.HR "yes" --]
+    </td>
+  </tr>
+[-- END_IF --]
+[-- IF Email_List --]
+  <tr>
+    <td align="center">
+      [-- Email_List --]
+    </td>
+  </tr>
+[-- END_IF --]
+[-- IF SECURITYIMAGE --]
+  <tr>
+    <td align="center" class="secureimage">
+      [-- SHIPSECURITYIMAGE --]
+    </td>
+  </tr>
+[-- END_IF --]
+    
+  
+  <tr>
+    <td align="center">
+<table>
+<tr>
+<td><span style="margin-right:10px;" id="_GUARANTEE_Kicker" name="_GUARANTEE_Kicker" type="Kicker Custom 1"></span></td><td valign="top">[-- BUTTON SubmitOrder --]</td>
+</tr>
+</table>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  jQuery(function(){
+      if(ss_ordertotal == "0.00"){
+         jQuery(".payment").hide();
+      }
+  });
+</script>
+
+</div>
+
+<script src="https://www.vacplus.com/js/cartaband.js" language="javascript" type="text/javascript"></script>
+
+<script language="JavaScript">
+<!--
+        psyCartAbandonmentNotify('sewmachshop', '/cartaband/tracker.cgi');
+-->
+</script>
+
+  [-- INCLUDE DEV-checkout-rightbar --]
+  <!-- BEGIN: Google Trusted Stores -->
+<script type="text/javascript">
+  var gts = gts || [];
+
+  gts.push(["id", "231386"]);
+  gts.push(["badge_position", "BOTTOM_RIGHT"]);
+  gts.push(["locale", "en_US"]);
+  gts.push(["google_base_subaccount_id", "1548534"]);
+  gts.push(["google_base_country", "US"]);
+  gts.push(["google_base_language", "en"]);
+
+  (function() {
+    var gts = document.createElement("script");
+    gts.type = "text/javascript";
+    gts.async = true;
+    gts.src = "https://www.googlecommerce.com/trustedstores/api/js";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(gts, s);
+  })();
+</script>
+<!-- END: Google Trusted Stores -->
+  [-- INCLUDE DEV-footer --]
+
+</html>
+[-- END_DEFINE SHIPPING --]
+
+
+[-- DEFINE CONFIRMATION --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="https://cdn.optimizely.com/js/3534250896.js"></script>
+<title>Confirm Your Order</title>
+<meta name="verify-v1" content="LgvDD+yKZW1ULvHkUzBRAUu5UnP/88OMGXnfr/0DQao=" />
+
+[-- INCLUDE LexiConn_Decline_CC PROCESS --]
+
+<script type="text/javascript" language="JavaScript">
+<!-- 
+[-- SC_JAVASCRIPT extras --]
+// -->
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-487443-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+<style type="text/css">
+table.totals tbody tr td {
+  text-align: right;
+  line-height: 150%;
+}
+
+table.cart tbody tr td {
+  padding: 3px;
+}
+</style>
+
+[-- INCLUDE sc_cart.css PROCESS --]
+
+[-- INCLUDE DEV-checkout-header PROCESS --]
+[-- INCLUDE DEV-checkout-leftbar --]
+
+<div style="font-size: 8pt; margin: 3px 10px 20px 5px;">
+
+
+[-- ShopSiteMessages --]
+
+#<div class="header">[-- ConfirmationHeader --]</div>
+
+[-- SC_Form --]
+<table border="0" width="0" align="center">
+  <tr>
+    <td>
+      [-- SC_Cart --]
+    </td>
+  </tr>
+  <tr>
+    <td>
+      [-- SC_Totals --]
+    </td>
+  </tr>
+
+  <tr><td align="center"><hr noshade size="2" /></td></tr>
+
+  <tr>
+    <td align="center">
+      [-- SC_Address --]
+    </td>
+  </tr>
+
+  <tr><td align="center"><hr noshade size="2" /></td></tr>
+
+  <tr>
+    <td align="center">
+      [-- SC_Payment --]
+    </td>
+  </tr>
+
+  <tr><td align="center"><hr noshade size="2" /></td></tr>
+
+[-- VAR.HR No --]
+
+ [-- IF SC_OrderingInstructions_Text --]
+  <tr>
+    <td align="center">
+      [-- SC_OrderingInstructions --]
+    </td>
+  </tr>
+  [-- VAR.HR Yes --]
+[-- END_IF --]
+
+[-- IF SC_Comments_Text --]
+  <tr>
+    <td align="center">
+      [-- SC_Comments --]
+    </td>
+  </tr>
+  [-- VAR.HR Yes --]
+[-- END_IF --]
+
+[-- IF CustomHTML_Values --]
+  <tr>
+    <td align="center">
+      <table class="CustomHTML">
+        <tr>
+          <td>
+            [-- CustomHTML_Values --]
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  [-- VAR.HR Yes --]
+[-- END_IF --]
+
+[-- IF Email_List --]
+  <tr>
+    <td class="email">
+      [-- Email_List --]
+    </td>
+  </tr>
+  [-- VAR.HR Yes --]
+[-- END_IF --]
+
+[-- IF VAR.HR Yes --]
+  <tr><td align="center"><hr noshade size="2" /></td></tr>
+[-- END_IF --]
+
+  <tr>
+    <td class="buttons">
+      [-- BUTTON Confirmation --]&nbsp;[-- BUTTON MakeChanges --]
+    </td>
+  </tr>
+
+</table>
+
+#<div class="footer">[-- ConfirmationFooter --]</div>
+
+
+
+
+
+
+</div>
+
+<script src="https://www.vacplus.com/js/cartaband.js" language="javascript" type="text/javascript"></script>
+
+<script language="JavaScript">
+<!--
+        psyCartAbandonmentNotify('sewmachshop', '/cartaband/tracker.cgi');
+-->
+</script>
+
+  [-- INCLUDE DEV-checkout-rightbar --]
+  <!-- BEGIN: Google Trusted Stores -->
+<script type="text/javascript">
+  var gts = gts || [];
+
+  gts.push(["id", "231386"]);
+  gts.push(["badge_position", "BOTTOM_RIGHT"]);
+  gts.push(["locale", "en_US"]);
+  gts.push(["google_base_subaccount_id", "1548534"]);
+  gts.push(["google_base_country", "US"]);
+  gts.push(["google_base_language", "en"]);
+
+  (function() {
+    var gts = document.createElement("script");
+    gts.type = "text/javascript";
+    gts.async = true;
+    gts.src = "https://www.googlecommerce.com/trustedstores/api/js";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(gts, s);
+  })();
+</script>
+<!-- END: Google Trusted Stores -->
+  [-- INCLUDE DEV-footer --]
+
+</html>
+[-- END_DEFINE CONFIRMATION --]
+
+
+[-- DEFINE THANKYOU --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="https://cdn.optimizely.com/js/3534250896.js"></script>
+<title>[-- STORE.SC_ThankYou Remove_Html --]</title>
+<meta name="verify-v1" content="LgvDD+yKZW1ULvHkUzBRAUu5UnP/88OMGXnfr/0DQao=" />
+
+<script type="text/javascript" language="JavaScript">
+<!-- 
+[-- SC_JAVASCRIPT extras --]
+// -->
+</script>
+<script>
+var valueInCents = ss_ordertotal * 100;
+window.optimizely = window.optimizely || [];
+window.optimizely.push(['trackEvent', 'purchasesamount', {'revenue': valueInCents}]);
+</script>
+<!-- PHONE ORDER COOKIE TRACKING -->
+<script type="text/javascript">
+var d = new Date();
+d.setTime(d.getTime()+(29*24*60*60*1000));
+var expires = "expires="+d.toGMTString();
+document.cookie = "onlinepurchase=yes;" + expires + ";domain=.sewingmachinesplus.com;path=/";
+</script>
+<!-- PHONE ORDER COOKIE TRACKING END -->
+<script type="text/javascript" src="//static.criteo.net/js/ld/ld.js" async="true"></script>
+<script type="text/javascript">
+window.criteo_q = window.criteo_q || [];
+var deviceType = /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Silk/.test(navigator.userAgent) ? "m" : /iPad/.test(navigator.userAgent) ? "t" : "d";
+var itemArray = new Array;
+for(x=0;x<ss_sku.length;x++){
+    var items = {
+        id: ss_field13[x],
+        price: ss_total_price[x].replace(/\,/g,''),
+        quantity: ss_quantity[x]
+    };
+    itemArray.push(items);
+}
+window.criteo_q.push(
+{ event: "setAccount", account: 19481},
+{ event: "setSiteType", type: deviceType},
+{ event: "setHashedEmail", email: [ss_email]},
+{ event: "trackTransaction", id: ss_ordernum, item: itemArray}
+/* add a line for each item in the user's cart */
+);
+</script>
+
+<style type="text/css">
+table.totals tbody tr td {
+  text-align: right;
+  line-height: 150%;
+}
+
+table.cart tbody tr td {
+  padding: 3px;
+}
+</style>
+
+[-- INCLUDE sc_cart.css PROCESS --]
+
+[-- INCLUDE DEV-checkout-header PROCESS --]
+[-- INCLUDE DEV-checkout-leftbar --]
+<!------------------ 4 TELL CONVERSION TRACKING PAGE ----------------> 
+<div id="data_4Tell" data-page="ord" data-customer="" data-orderId="" data-orderDetails="" ></div>
+<script type="text/javascript">
+var ft = "[";
+for(t=0;t<ss_sku.length;t++) {
+  ft += "["+ss_sku[t]+","+ss_quantity[t]+"]";
+  if(t==ss_sku.length-1) {
+    ft += "]";
+  } else {
+    ft += ",";
+  }
+}
+document.getElementById("data_4Tell").setAttribute("data-orderDetails", ft);
+document.getElementById("data_4Tell").setAttribute("data-orderId", ss_ordernum);
+document.getElementById("data_4Tell").setAttribute("data-customer", ss_email);
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+    }
+    return "";
+}
+var fourTellCookieContents = getCookie("fourtellemail");
+if(fourTellCookieContents != ""){
+  document.getElementById("data_4Tell").setAttribute("data-customer", fourTellCookieContents);  
+}
+</script>
+<!------------------ 4 TELL CONVERSION TRACKING PAGE ---------------->
+                
+<div style="font-size: 8pt; margin: 3px 10px 20px 5px;">
+
+<center>
+[-- ThankYouReturnStore --]
+</center>
+<div class="header">[-- ThankYouHeader --]</div>
+<table border="0" width="0" align="center">
+  <tr>
+    <td>
+      [-- STORE.SC_YourReceipt --]<br />&nbsp;
+    </td>
+  </tr>
+
+  <tr>
+    <td align="center">
+    <b>[--Store.SC_OrderNumber--]&nbsp;<span id="idforbronto">[-- ThankYouOrderNumber --]</span></b>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+    [-- SC_Cart --]
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+    [-- SC_Totals --]
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><img src="https://www.vacplus.com/specialdiscount.jpg"/></td>
+  </tr>
+  <tr><td align="center"><hr noshade size="2" /></td></tr>
+
+  <tr>
+    <td align="center">
+      [-- SC_Address --]
+    </td>
+  </tr>
+
+  <tr><td align="center"><hr noshade size="2" /></td></tr>
+
+  <tr>
+    <td align="center">
+      [-- SC_Payment --]
+    </td>
+  </tr>
+
+  <tr><td align="center"><hr noshade size="2" /></td></tr>
+
+[-- VAR.HR No --]
+
+ [-- IF SC_OrderingInstructions_Text --]
+  <tr>
+    <td align="center">
+      [-- SC_OrderingInstructions --]
+    </td>
+  </tr>
+  [-- VAR.HR Yes --]
+[-- END_IF --]
+
+[-- IF SC_Comments_Text --]
+  <tr>
+    <td align="center">
+      [-- SC_Comments --]
+    </td>
+  </tr>
+  [-- VAR.HR Yes --]
+[-- END_IF --]
+
+[-- IF CustomHTML_Values --]
+  <tr>
+    <td align="center">
+      <table class="CustomHTML">
+        <tr>
+          <td>
+            [-- CustomHTML_Values --]
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  [-- VAR.HR Yes --]
+[-- END_IF --]
+
+[-- IF Email_List --]
+  <tr>
+    <td class="email" id="brontoonboarding">
+      [-- Email_List --]
+    </td>
+  </tr>
+  [-- VAR.HR Yes --]
+[-- END_IF --]
+<script type="text/javascript">
+if(document.getElementById("brontoonboarding").innerHTML.trim() != "")
+{
+  document.write("<img src='https://app.bronto.com/public/?q=direct_add&fn=Public_DirectAddForm&id=avzsfstznvdkdkabikpbbgcqhpwfbid&email="+ss_email+"&list1=0bbe03ec000000000000000000000002bfff' width='0' height='0' border='0' alt=''/>");
+}
+</script>
+[-- IF VAR.HR Yes --]
+  <tr><td align="center"><hr noshade size="2" /></td></tr>
+[-- END_IF --]
+
+</table>
+
+<!--<div align="center"><a href="https://www.vacplus.com/lifetime-needles-subscription.php"><img src="https://www.vacplus.com/media/images/cart/take-survey.jpg" border="0" /></a></div>-->
+<div class="footer-checkout">[-- ThankYouFooter --]</div>
+
+
+</div>
+
+  [-- INCLUDE DEV-checkout-rightbar --]
+
+<!-- Facebook Conversion Code for serger cruise conversions -->
+<script>(function() {
+var _fbq = window._fbq || (window._fbq = []);
+if (!_fbq.loaded) {
+var fbds = document.createElement('script');
+fbds.async = true;
+fbds.src = '//connect.facebook.net/en_US/fbds.js';
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(fbds, s);
+_fbq.loaded = true;
+}
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', '6018314597551', {'value':ss_subtotal,'currency':'USD'}]);
+</script>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6018314597551&amp;cd[value]="+ss_subtotal+"&amp;cd[currency]=USD&amp;noscript=1" /></noscript>
+
+
+<SCRIPT language="JavaScript" type="text/javascript">
+<!-- Yahoo! Inc.
+window.ysm_customData = new Object();
+window.ysm_customData.conversion = "transId=,currency=,amount=";
+var ysm_accountid  = "1PTE9V37NVPFJ08QFFS8Q8RR2P4";
+document.write("<SCR" + "IPT language='JavaScript' type='text/javascript' " 
++ "SRC=//" + "srv2.wa.marketingsolutions.yahoo.com" + "/script/ScriptServlet" + "?aid=" + ysm_accountid + "></SCR" + "IPT>");
+// -->
+</SCRIPT>
+<Script language="JavaScript" type="text/javascript">
+document.write("<IMG SRC='https://tracking.searchmarketing.com/thankyou.asp?SMCID=1260&oVal="+ss_subtotal+"&OrderID="+ss_ordernum+"&ProductID="+ss_sku.join()+"' WIDTH='1' HEIGHT='1' BORDER='0'>");
+</script>
+
+<!-- Google Code for Purchase/Sale Conversion Page -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1070299738;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "3XsUCM7wQxDa9K3-Aw";
+var google_conversion_order_id = ss_ordernum;
+var google_conversion_value = "USD"+ss_ordertotal;
+var google_remarketing_only = false;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/1070299738/?value=1.00&amp;currency_code=USD&amp;label=3XsUCM7wQxDa9K3-Aw&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+
+<!-- Google Trusted Stores Code -->
+<!-- *** Merchant details section: update gts-o-domain, gts-o-country, gts-o-currency, ship_offset -->
+<!-- "ship_offset" = number of days after the orders date you want to set the "ship date" to. ex: 7 -->
+<!-- *** Product loop section: update gts-i-prodsearch-store-id, gts-i-prodsearch-country, gts-i-prodsearch-language -->
+<!-- *** Product loop section: update gts-i-prodsearch-id to the correct extra field for the PID (ex: ss_field25) -->
+
+<div id="gts-order" style="display:none;">
+
+<!-- merchant details -->
+<span id="gts-o-domain">www.sewingmachinesplus.com</span>
+<span id="gts-o-country">US</span>
+<span id="gts-o-currency">USD</span>
+<script language="javascript" type="text/javascript">var ship_offset = 2;</script>
+
+<!-- order details -->
+<script language="javascript" type="text/javascript">if (ss_ordernum.indexOf("Pending approval by Amazon")>0){ ss_ordernum=ss_ordernum.substring(46); }</script>
+<script language="javascript" type="text/javascript">document.write('<span id="gts-o-id">' + ss_ordernum + '</span>');</script>
+<script language="javascript" type="text/javascript">document.write('<span id="gts-o-email">' + ss_email + '</span>');</script>
+<script language="javascript" type="text/javascript">document.write('<span id="gts-o-total">' + ss_ordertotal + '</span>'); </script>
+<script language="javascript" type="text/javascript">document.write('<span id="gts-o-shipping-total">' + ss_shiptotal + '</span>');</script>
+<script language="javascript" type="text/javascript">document.write('<span id="gts-o-tax-total">' + ss_taxtotal + '</span>');</script>
+<span id="gts-o-has-preorder">N</span>
+<span id="gts-o-has-digital">N</span>
+
+<script language="javascript" type="text/javascript">
+if(typeof(ss_coupon_discount)=="object"){
+if (ss_coupon_discount[0]) {
+document.write('<span id="gts-o-discounts">' + ss_coupon_discount[0] + '</span>');
+}
+else {
+document.write('<span id="gts-o-discounts">0.00</span>');
+}
+} else{
+document.write('<span id="gts-o-discounts">0.00</span>');
+}
+</script>
+
+<script language="javascript" type="text/javascript">
+var currentTime = new Date();
+currentTime.setDate(currentTime.getDate()+ ship_offset);
+var month = ("0" + (currentTime.getMonth() + 1)).slice(-2);
+var day = ("0" + currentTime.getDate()).slice(-2);
+var year = currentTime.getFullYear();
+document.write ("<span id=\"gts-o-est-ship-date\">" + year + "-" + month + "-" + day + "</span>"); </script>
+
+<!-- Loop through product data -->
+<span class="gts-item">
+<script language="javascript" type="text/javascript">
+for (var p = 0 ; p < number_products ; p++) {
+document.write("<span class='gts-i-name'>" + ss_name[p] + "</span>");
+document.write("<span class='gts-i-price'>" + ss_price[p] + "</span>");
+document.write("<span class='gts-i-quantity'>" + ss_quantity[p] + "</span>");
+document.write("<span class='gts-i-prodsearch-id'>" + ss_field13[p] + "</span>");
+}
+</script>
+<span class="gts-i-prodsearch-store-id">1548534</span>
+<span class="gts-i-prodsearch-country">US</span>
+<span class="gts-i-prodsearch-language">en</span>
+</span>
+
+</div>
+<!-- END Google Trusted Stores --> 
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-487443-1', 'auto');
+  ga('send', 'pageview');
+  ga('require', 'ecommerce');
+  ga('ecommerce:addTransaction', {
+  'id': ss_ordernum,                     // Transaction ID. Required.
+  'revenue': ss_ordertotal,               // Grand Total.
+  'shipping': ss_shiptotal,                  // Shipping.
+  'tax': ss_taxtotal                     // Tax.
+  });
+  for(x=0;x<ss_sku.length;x++) {
+    ga('ecommerce:addItem', {
+    'id': ss_ordernum,                     // Transaction ID. Required.
+    'name': ss_name[x],    // Product name. Required.
+    'sku': ss_sku[x],                 // SKU/code.
+    'price': ss_price[x],                 // Unit price.
+    'quantity': ss_quantity[x]                   // Quantity.
+    });
+  }
+  ga('ecommerce:send');
+</script>
+
+<script type="text/javascript"> if (!window.mstag) mstag = {loadTag : function(){},time : (new Date()).getTime()};</script> <script id="mstag_tops" type="text/javascript" src="//flex.msn.com/mstag/site/ec83f463-252e-4290-88cd-df5a772537ae/mstag.js"></script> <script type="text/javascript"> mstag.loadTag("analytics", {dedup:"1",domainId:"46379",type:"1",revenue:ss_ordertotal,actionid:"229607"})</script> <noscript> <iframe src="//flex.msn.com/mstag/tag/ec83f463-252e-4290-88cd-df5a772537ae/analytics.html?dedup=1&domainId=46379&type=1&revenue=&actionid=229607" frameborder="0" scrolling="no" width="1" height="1" style="visibility:hidden;display:none"> </iframe> </noscript>
+
+<script type="text/javascript"> var sa_values = { 'site':21959, 'orderid':ss_ordernum, 'name':ss_billname, 'email':ss_email, 'forcecomments':1, 'gts':1, 'emailAll':1 };  function saLoadScript(src) { var js = window.document.createElement("script"); js.src = src; js.type = "text/javascript"; document.getElementsByTagName("head")[0].appendChild(js); } var d = new Date(); if (d.getTime() - 172800000 > 1464044293000) saLoadScript("//www.shopperapproved.com/thankyou/rate/21959.js"); else saLoadScript("//direct.shopperapproved.com/thankyou/rate/21959.js?d=" + d.getTime()); </script>
+
+<script type="text/javascript">
+/* Include all products in the object below 'product id':'Product Name' */
+var sa_products = {};
+var newKey;
+var newValue;
+for(x=0;x<ss_sku.length;x++){
+  newKey = ss_sku[x];
+  newValue = ss_name[x];
+  sa_products[newKey] = newValue;
+}
+</script>
+
+<script type="text/javascript">
+<!--
+    /* NexTag ROI Optimizer Data */
+    var id = '5393398';
+    var rev = ss_ordertotal;
+    var order = ss_ordernum;
+//-->
+</script>
+<script type="text/javascript" src="https://imgsrv.nextag.com/imagefiles/includes/roitrack.js"></script>
+
+<!-- Become Sales Tracking Script V 1.0.0 - All rights reserved -->
+<script language="JavaScript">
+  var pg_pangora_merchant_id='106927';
+var pg_order_id=ss_ordernum;
+var pg_cart_size='';
+var pg_cart_value=ss_ordertotal;
+var pg_currency='USD';
+var pg_customer_flag='';
+var pg_product_id='';
+var pg_product_name='';
+var pg_product_price='';
+var pg_product_units='';
+</script>
+<script language="JavaScript" src="https://clicks.pangora.com/sales-tracking/salesTracker.js">
+</script>
+<noscript>
+<img src="https://clicks.pangora.com/sales-tracking/106927/salesPixel.do"/>
+</noscript>
+
+<!-- GoDataFeed code for conversion page -->
+<script language="javascript" type="text/javascript">    var gdf_orderTotal = ss_ordertotal;</script>
+<script language="javascript" type="text/javascript" src="https://tracking.godatafeed.com/gdf_conversion.js"></script>
+
+<!-- BEGIN: NSG_GUARANTEE -->
+<span id="_GUARANTEE_GuaranteeSpan"></span>
+<script type="text/javascript" src="//nsg.symantec.com/private/rollover/rollover.js">
+</script><script type="text/javascript">
+if(window.buySAFE && buySAFE.Loaded) {
+   _GUARANTEE.Hash = 'x7%2FMzbgvjqCmhA7lp5x6FU7wMwkpQ36bB1EltmszD3devhKhlTwFP5q9X12sk2mPtEhZF3HnE%2BJ3viGbs4HPmw%3D%3D';
+   _GUARANTEE.Guarantee.order = ss_ordernum;
+   _GUARANTEE.Guarantee.subtotal = ss_ordertotal;
+   _GUARANTEE.Guarantee.email = ss_email;
+   _GUARANTEE.Guarantee.hidden = 1;
+   _GUARANTEE.WriteGuarantee("JavaScript", "_GUARANTEE_GuaranteeSpan");
+}
+</script>
+<!-- END: NSG_GUARANTEE -->
+<!-- BEGIN: Google Trusted Stores -->
+<script type="text/javascript">
+  var gts = gts || [];
+
+  gts.push(["id", "231386"]);
+  gts.push(["badge_position", "BOTTOM_RIGHT"]);
+  gts.push(["locale", "en_US"]);
+  gts.push(["google_base_subaccount_id", "1548534"]);
+  gts.push(["google_base_country", "US"]);
+  gts.push(["google_base_language", "en"]);
+
+  (function() {
+    var gts = document.createElement("script");
+    gts.type = "text/javascript";
+    gts.async = true;
+    gts.src = "https://www.googlecommerce.com/trustedstores/api/js";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(gts, s);
+  })();
+</script>
+<!-- END: Google Trusted Stores -->
+  [-- INCLUDE DEV-footer --]
+<script type='text/javascript' data-cfasync='false'>
+for(x=0;x<ss_sku.length;x++){
+  GoDataFeedAnalytics.TrackOrderItem(ss_sku[x], ss_price[x], ss_quantity[x]);
+}
+GoDataFeedAnalytics.TrackNewOrder(ss_ordernum, ss_ordertotal, ss_subtotal, ss_taxtotal, ss_shiptotal);
+</script>
+</html>
+[-- END_DEFINE THANKYOU --]
+
+
+[-- DEFINE THANKYOU_EMAIL --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<script src="https://cdn.optimizely.com/js/3534250896.js"></script>
+<title>[-- STORE.SC_ThankYou Remove_Html --]</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<style type="text/css">
+body {color: #000000; background-color: #FFFFFF; width: 100%; margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif;}
+p {font-family: Arial, Helvetica, sans-serif;}
+p.disclaim {font-family: Arial, Helvetica, sans-serif; font-size:9px;}
+img {boder: 0;}
+div.divider {display: block; margin: 1.5em 0 1.5em 0;}
+div.divider2 {display: block; margin-top: 1.5em;}
+table #Table_01 {border: 0; border-collapse: collapse;}
+a:link, a:hover {color: #A10B0B;}
+a:visited {color: #BA0C0C;}
+a:active {color: #CC0001;}
+div#set-width {width: 100%; max-width: 960px; margin: 0px auto; padding: 0px;}
+table.cart {width: 100%; padding-top: 1.5em; border-collapse: separate; border-spacing: 1px; font-family: Arial, Helvetica, sans-serif;}
+table.cart td {padding: 3px; background-color: #EAEAEA;}
+.cart_quantity, .cart_cp_quantity, .cart_image, .cart_cp_image {text-align: center;}
+.cart_name, .cart_cp_name, .cart_sku, .cart_cp_sku, .cart_op {text-align: left;}
+.cart_price, .cart_cp_price {font-style: italic; text-align: right;}
+.cart_total, .cart_cp_total {text-align: right;}
+table.totals {line-height: 150%;}
+td.totals_txt, td.totals_saved_txt, td.totals_blank, td.totals_all_txt {text-align: right; padding-right: 15px;}
+td.totals, td.totals_saved, td.totals_all {text-align: right; padding-right: 3px;}
+td.totals_all, td.totals_all_txt {font-weight: bold;}
+td.comm_hdr, td.instruct_hdr, td.bill_addr_hdr, td.ship_addr_hdr {font-weight: bold; text-align: left;}
+
+td.comm_hdr {padding-top: 1.5em;}
+table.bill_addr, table.ship_addr {margin-left: auto; margin-right: 0px; padding: 0px; font-family: Arial, Helvetica, sans-serif;}
+table.addr_name {margin-left: -4px; margin-right: auto; font-family: Arial, Helvetica, sans-serif;}
+td.addr {text-align: right; padding-right: 5px;}
+td.addr_val, td.ship_check {text-align:left; font-family: Arial, Helvetica, sans-serif;}
+td.sql_addr {padding-right: 15px;}
+table.payment, table.pay_holder {font-family: Arial, Helvetica, sans-serif;}
+td.payment_hdr {font-weight: bold; text-align: left; padding: 0; font-family: Arial, Helvetica, sans-serif;}
+td.payment, td.payment_value {text-align: left; font-family: Arial, Helvetica, sans-serif;}
+td.sql_pay {padding-right: 15px;}
+div.footer {padding-top: 1.5em; padding-bottom: 1.5em; text-align: center;}
+</style>
+
+</head>
+
+<body>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" id="background-table" style="background-color: #FFFFFF;">
+  <tbody>
+    <tr>
+      <td align="center" bgcolor="#FFFFFF">
+
+<p class="buttons">[-- ThankYouReturnStore --]</p>
+<div class="header">[-- ThankYouHeader --]</div>
+
+<table id="Table_01" width="650" height="1201" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="center" colspan="7">
+      <img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_01.jpg" width="650" height="119" alt="https://www.vacplus.com/"></td>
+  </tr>
+  <tr>
+    <td align="center" colspan="7">
+      <img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_02.jpg" width="650" height="126" alt=""></td>
+  </tr>
+  <tr>
+  <td align="center" colspan="7"><img src="https://www.vacplus.com/specialdiscount.jpg"/></td>
+  </tr>
+  <tr>
+    <td colspan="7">
+        
+        
+<table style="background-color: #FFFFFF; margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif;" cellpadding="0" cellspacing="0" border="0" width="100%" align="left">
+  <tr>
+    <td style="padding-top: 1.5em; font-family: Arial, Helvetica, sans-serif;">
+      <strong>[--Store.SC_OrderNumber--]&nbsp;[-- ThankYouOrderNumber --]</strong>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+    [-- SC_Cart --]
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+    [-- SC_Totals --]
+    </td>
+  </tr>
+
+  <tr><td><div class="divider"><img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_hr.jpg" width="650" height="3"  alt="https://www.vacplus.com/"></div></td></tr>
+
+  <tr>
+    <td>
+      [-- SC_Address --]
+    </td>
+  </tr>
+
+  <tr><td><div class="divider"><img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_hr.jpg" width="650" height="3"  alt="https://www.vacplus.com/"></div></td></tr>
+
+
+  <tr>
+    <td>
+      [-- SC_Payment --]
+    </td>
+  </tr>
+
+  <tr><td><div class="divider"><img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_hr.jpg" width="650" height="3"  alt="https://www.vacplus.com/"></div></td></tr>
+
+[-- VAR.HR No --]
+
+ [-- IF SC_OrderingInstructions_Text --]
+  <tr>
+    <td>
+      [-- SC_OrderingInstructions --]
+    </td>
+  </tr>
+  [-- VAR.HR Yes --]
+[-- END_IF --]
+
+
+[-- IF SC_Comments_Text --]
+  <tr>
+    <td>
+      [-- SC_Comments --]
+    </td>
+  </tr>
+  <tr><td><div class="divider"><img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_hr.jpg" width="650" height="3"  alt="https://www.vacplus.com/"></div></td></tr>
+  [-- VAR.HR Yes --]
+[-- END_IF --]
+
+[-- IF CustomHTML_Values --]
+  <tr>
+    <td>
+      <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td>
+            [-- CustomHTML_Values --]
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  [-- VAR.HR Yes --]
+[-- END_IF --]
+
+[-- IF Email_List --]
+  <tr>
+    <td>
+      [-- Email_List --]
+    </td>
+  </tr>
+  [-- VAR.HR Yes --]
+[-- END_IF --]
+
+[-- IF VAR.HR Yes --]
+[-- END_IF --]
+
+</table>        
+        
+        
+        
+        
+        
+        </td>
+  </tr>
+  <tr>
+    <td align="center" colspan="7">
+      <div class="divider2"><img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_04.jpg" width="650" height="300" alt="Receive $10 OFF your next purchase of $50 or more!"></div></td>
+  </tr>
+  <tr>
+    <td align="center" colspan="7">
+      <img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_05.jpg" width="650" height="43" alt=""></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.facebook.com/pages/SewingMachinesPluscom/132223788425"><img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_06.jpg" width="108" height="85" alt="Like us on Facebook"></a></td>
+    <td><a href="https://plus.google.com/101008794122420421463/posts"><img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_07.jpg" width="109" height="85" alt="Follow us on Google+"></a></td>
+    <td colspan="2"><a href="http://instagram.com/sewingmachinesplusdotcom"><img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_08.jpg" width="108" height="85" alt="Follow us on Instagram"></a></td>
+    <td><a href="http://www.pinterest.com/sewmachplus/"><img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_09.jpg" width="108" height="85" alt="Follow us on Pinterest"></a></td>
+    <td><a href="https://twitter.com/Sewmachinesplus"><img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_10.jpg" width="109" height="85" alt="Follow us on Twitter"></a></td>
+    <td><a href="http://www.youtube.com/user/SeamsAmazing"><img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_11.jpg" width="108" height="85" alt="Check out our YouTube Channel"></a></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.facebook.com/pages/SewingMachinesPluscom/132223788425"><img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_12.jpg" width="108" height="65" alt="Like us on Facebook"></a></td>
+    <td><a href="https://plus.google.com/101008794122420421463/posts"><img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_13.jpg" width="109" height="65" alt="Follow us on Google+"></a></td>
+    <td colspan="2"><a href="http://instagram.com/sewingmachinesplusdotcom"><img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_14.jpg" width="108" height="65" alt="Follow us on Instagram"></a></td>
+    <td><a href="http://www.pinterest.com/sewmachplus/"><img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_15.jpg" width="108" height="65" alt="Follow us on Pinterest"></a></td>
+    <td><a href="https://twitter.com/Sewmachinesplus"><img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_16.jpg" width="109" height="65" alt="Follow us on Twitter"></a></td>
+    <td><a href="http://www.youtube.com/user/SeamsAmazing"><img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_17.jpg" width="108" height="65" alt="Check out our YouTube Channel"></a></td>
+  </tr>
+    <tr>
+    <td colspan="7">
+    <table width="650" border="0" cellpadding="0" cellspacing="0" align="center">
+  <tr>
+    <td>
+      <img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_18.jpg" width="260" height="140" alt="0% Financing up to 60 Months!"></td>
+    <td>
+      <img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_19.jpg" width="390" height="140" alt="https://www.vacplus.com/"></td>
+  </tr>
+    </table>
+    </td>
+    </tr>
+  <tr>
+    <td align="center" colspan="7">
+      <img src="https://www.vacplus.com/media/email/thankyou_email/images/spacer.gif" width="650" height="20" alt=""></td>
+  </tr>
+    <tr>
+    <td align="center" colspan="7">
+        <p style="padding: 1em 0 1em 0;">Click <a href="https://www.vacplus.com/trackorder.php">HERE</a> to check your Order Status.</p></td>
+  </tr>
+  <tr>
+    <td align="center" colspan="7">
+      <img src="https://www.vacplus.com/media/email/thankyou_email/images/spacer.gif" width="650" height="20" alt=""></td>
+  </tr>
+  <tr>
+    <td align="center" colspan="7">
+    <table width="650" border="0" cellpadding="0" cellspacing="0" align="center">
+  <tr>
+    <td align="right" width="65%">
+      <div id="yelp-biz-badge-yelp-rsDumHUQOcoMXjJPA9LR_w"><a href="http://www.yelp.com/biz/sewing-machines-plus-san-marcos-5">Check out Sewing Machines Plus on Yelp</a>&nbsp;&nbsp;</div><script type="text/javascript">(function(d, t) {var g = d.createElement(t);var s = d.getElementsByTagName(t)[0];g.id = "yelp-biz-badge-script-yelp-rsDumHUQOcoMXjJPA9LR_w";g.src = "//dyn.yelpcdn.com/biz_badge_js/en_US/yelp/rsDumHUQOcoMXjJPA9LR_w.js";s.parentNode.insertBefore(g, s);}(document, 'script'));</script>
+         </td>
+    <td align="left" width="35%">
+      <div id="yelp-biz-badge-yelp-rsDumHUQOcoMXjJPA9LR_w">&nbsp;&nbsp;<a href="http://www.yelp.com/biz/sewing-machines-plus-san-marcos-5"><img src="https://www.vacplus.com/media/email/thankyou_email/images/yelp.gif" alt="Check out Sewing Machines Plus on Yelp"/></a></div><script type="text/javascript">(function(d, t) {var g = d.createElement(t);var s = d.getElementsByTagName(t)[0];g.id = "yelp-biz-badge-script-yelp-rsDumHUQOcoMXjJPA9LR_w";g.src = "//dyn.yelpcdn.com/biz_badge_js/en_US/yelp/rsDumHUQOcoMXjJPA9LR_w.js";s.parentNode.insertBefore(g, s);}(document, 'script'));</script>
+         </td>
+    </tr>
+    </table> 
+            </td>
+  </tr>
+  <tr>
+    <td align="center" colspan="7">
+      <img src="https://www.vacplus.com/media/email/thankyou_email/images/spacer.gif" width="650" height="20" alt=""></td>
+  </tr>
+</table>
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+
+</html>
+[-- END_DEFINE THANKYOU_EMAIL --]
+
+
+#<!-- Global Cross-sell in Cart -->#
+[-- DEFINE GLOBAL_CROSS_SELL --]
+#<!-- HTML Snippet -->#
+<table class="gcs_product_table">
+  <tbody>
+  [-- IF PRODUCT.Graphic --]
+    [-- IF PRODUCT.DisplayName --]
+    <tr>
+      [-- IF CROSS_SELL_LINK --]
+      <td class="gcs_product_name"><a class="gcs_product_name" href="[-- CROSS_SELL_LINK --]">[-- PRODUCT.Name --]</a></td>
+      [-- ELSE --]
+      <td class="gcs_product_name">[-- PRODUCT.Name --]</td>
+      [-- END_IF --]
+    </tr>
+    [-- END_IF --]
+    <tr>
+    [-- IF CROSS_SELL_LINK --]
+      <td class="gcs_product_image"><a class="gcs_product_graphic" href="[-- CROSS_SELL_LINK --]"><img class="gcs_product_graphic" [-- PRODUCT.Graphic REMOVE_HTML --] alt="[-- PRODUCT.Name REMOVE_HTML --]"></a></td>
+
+    [-- ELSE --]
+      <td class="gcs_product_image"><img class="gcs_product_graphic" [-- PRODUCT.Graphic REMOVE_HTML --] alt="[-- PRODUCT.Name REMOVE_HTML --]"></td>
+    [-- END_IF --]
+    </tr>
+    [-- IF PRODUCT.DisplayPrice --]
+    <tr>
+      [-- IF PRODUCT.SaleOn --]
+      <td class="gcs_product_price">[-- PRODUCT.SaleAmount --]</td>
+      [-- ELSE --]
+      <td class="gcs_product_price">[-- PRODUCT.Price --]</td>
+      [-- END_IF --]
+    </tr>
+    [-- END_IF --]
+    <tr>
+    [-- IF AddImage? --]
+       <td class="gcs_product_add_to_cart"><a class="gcs_addtocart_button" href="[-- PRODUCT.AddToCartURL --]"><img class="pcs_addtocart_button" alt="Add to Cart" [-- AddImage --] border="0"></a></td>
+    [-- ELSE --]
+       <td class="gcs_product_add_to_cart"><a class="gcs_addtocart_button" href="[-- PRODUCT.AddToCartURL --]">[-- AddText --]</a></td>
+    [-- END_IF --]
+    </tr>
+  [-- ELSE --]
+  <!-- No Product Graphic -->
+    [-- IF PRODUCT.DisplayName --]
+    <tr>
+      [-- IF CROSS_SELL_LINK --]
+      <td class="gcs_product_name"><a class="gcs_product_name" href="[-- CROSS_SELL_LINK --]">[-- PRODUCT.Name --]</a></td>
+      [-- ELSE --]
+      <td class="gcs_product_name">[-- PRODUCT.Name --]</td>
+      [-- END_IF --]
+    </tr>
+    [-- END_IF --]
+    [-- IF PRODUCT.DisplayPrice --]
+    <tr>
+      [-- IF PRODUCT.SaleOn --]
+      <td class="gcs_product_price">[-- PRODUCT.SaleAmount --]</td>
+      [-- ELSE --]
+      <td class="gcs_product_price">[-- PRODUCT.Price --]</td>
+      [-- END_IF --]
+    </tr>
+    [-- END_IF --]
+    <tr>
+    [-- IF AddImage? --]
+      <td class="gcs_product_add_to_cart"><a class="gcs_addtocart_button" href="[-- PRODUCT.AddToCartURL --]"><img class="pcs_addtocart_button" alt="Add to Cart" [-- AddImage --] border="0"></a></td>
+    [-- ELSE --]
+      <td class="gcs_product_add_to_cart"><a class="gcs_addtocart_button" href="[-- PRODUCT.AddToCartURL --]">[-- AddText --]</a></td>
+    [-- END_IF --]
+    </tr>
+  [-- END_IF --]
+  </tbody>
+</table>
+[-- END_DEFINE GLOBAL_CROSS_SELL --]
+
+
+#<!-- Per-Product Cross-sell in Cart -->#
+[-- DEFINE CART_CROSS_SELL --]
+#<!-- HTML Snippet -->#
+<table cellpadding="0" cellspacing="0" width="180">
+  <tr valign="middle">
+    <td align="center">
+       
+    [-- IF PRODUCT.Graphic --]
+        <div align="center">
+        <a href="[-- CROSS_SELL_LINK --]">
+        <img border="0" hspace="0" vspace="0" [--PRODUCT.Graphic REMOVE_HTML--]></a>
+        </div>
+        [-- END_IF --]
+    </td>
+  </tr>
+  <tr>
+    <td align="center" valign="top">
+    [-- IF PRODUCT.DisplayName --]
+        <div align="center">
+        <a href="[-- CROSS_SELL_LINK --]" class="cart_name">[-- PRODUCT.Name --]</a>
+        </div>
+        [-- END_IF --]
+
+        
+        </td>
+  </tr>
+</table>
+[-- END_DEFINE CART_CROSS_SELL --]

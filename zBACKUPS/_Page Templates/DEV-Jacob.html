@@ -1,0 +1,37 @@
+[--DEFINE LINK_TO_PAGE--]
+# This define is used to control how the link to this page will
+#     look on other pages
+[--END_DEFINE LINK_TO_PAGE--]
+
+<head>
+    [--IF PAGE.Title --]
+    <title>[--PAGE.Title REMOVE_HTML --]</title>
+  [--ELSE--]
+    <title>[-- PAGE.Name REMOVE_HTML --]</title>
+  [--END_IF--]
+
+  [-- IF PAGE.MetaKeywords --]
+    <meta name="Keywords" content="[-- PAGE.MetaKeywords --]" />
+  [--ELSE--]
+    <meta name="Keywords" content="[-- PAGE.Name REMOVE_HTML --]" />
+  [--END_IF--]
+
+  [--IF PAGE.MetaDescription --]
+    <meta name="Description" content="[-- PAGE.MetaDescription --]" />
+  [--ELSE--]
+    <meta name="Description" content="[--PAGE.Name REMOVE_HTML --]" />
+  [--END_IF--]
+    
+    <META NAME="GOOGLEBOT" CONTENT="INDEX, FOLLOW">
+  <META NAME="Robots" content="index,follow"> 
+  <meta name="rating" content="General" />
+
+[-- PAGE.Field5 --]
+
+</head>
+
+[-- DEFINE PAGE --]
+<html>
+# This define is used to control how the page will look
+</html>
+[-- END_DEFINE PAGE --]

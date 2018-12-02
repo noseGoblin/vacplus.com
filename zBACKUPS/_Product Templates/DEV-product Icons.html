@@ -1,0 +1,773 @@
+<!-- DEFINE the SUBPRODUCT LISTINGS -->
+[-- DEFINE SUBPRODUCT --]
+<tr>
+  <td class="subproduct-image">
+    <a href="[-- PRODUCT.MoreInfoURL --]" target="_blank">
+      <img src="https://www.vacplus.com/media/[-- IMAGE PRODUCT.Graphic --]" />
+    </a>
+  </td>
+  <td class="selection">
+    <input type="checkbox" name="itemnum" value="[-- PRODUCT.RECORDNUMBER --]">
+  </td>
+  <td class="titleofsubproduct">
+    <a class="subproduct-title" href="[-- PRODUCT.MoreInfoURL --]" target="_blank">[-- PRODUCT.Name --]</a>
+    [-- IF PRODUCT.SaleOn--]
+      <ul>
+        <li class='regularprice'>[--PRODUCT.Price--]</li> 
+        <li class='saleprice'>[--PRODUCT.SaleAmount--]</li>
+      </ul>
+    [--ELSE--]
+      <ul>
+      [-- IF PRODUCT.DisplayPrice --]
+        <li class='regularprice'>[--PRODUCT.Price--]</li>
+      [-- END_IF --]
+      </ul>
+    [--END_IF--]
+  </td>
+</tr>
+[-- END_DEFINE SUBPRODUCT --]
+
+<!-- END the SUBPRODUCT LISTINGS -->
+
+<!-- START the SMALL PRODUCT -->
+[-- DEFINE PRODUCT --]
+  [--IF PRODUCT.DisplayMoreInformationPage--]
+      <a href="[-- PRODUCT.MoreInfoURL --]" style="color: #000000; text-decoration: none;">
+        <div class="productLinkName">[-- PRODUCT.Name --]</div>
+        <img src="/media/[-- IMAGE PRODUCT.Graphic --]" class="productLinkImg" />
+    </a>
+  [--ELSE--]
+      <div class="productLinkName">[-- PRODUCT.Name --]</div><br />
+      <img src="/media/[-- IMAGE PRODUCT.Graphic --]" class="productLinkImg" />
+    [--END_IF--]
+    
+    <br clear="all" />
+    [-- IF PRODUCT.DisplayPrice --]
+      [--IF PRODUCT.SaleOn--]
+          <strike>[-- PRODUCT.Price --]</strike> 
+      <span class="productLinkPrice">[-- PRODUCT.SaleAmount --]</span>
+
+    [--ELSE--]
+          <span class="productLinkPrice">[-- PRODUCT.Price --]</span>
+    [--END_IF--]
+    [--ELSE--]
+      Call for details
+  [--END_IF--]<br />
+    [--IF Product.Field10 "free"--]
+      <span style="color: #2A1FFF;"><strong>Free Delivery</strong></span>
+    [-- END_IF --]
+    [--IF Product.Field10 "free3day"--]
+      <span style="color: #2A1FFF;"><strong>Free 3-Day Delivery</strong></span>
+    [-- END_IF --]
+[-- END_DEFINE PRODUCT --]
+
+<!-- START the PRODUCT MORE INFO PAGE-->
+[-- DEFINE MORE_INFO_PAGE --]
+<html>
+
+<head>
+    [--IF PRODUCT.MoreInformationTitle --]
+    <title>[--PRODUCT.MoreInformationTitle REMOVE_HTML --]</title>
+  [--ELSE--]
+    <title>[-- PRODUCT.Name REMOVE_HTML --]</title>
+  [--END_IF--]
+
+  [--IF PRODUCT.MoreInformationMetaKeywords --]
+    <meta name="Keywords" content="[-- PRODUCT.MoreInformationMetaKeywords --]" />
+  [--ELSE--]
+    <meta name="Keywords" content="[--Product.Name REMOVE_HTML --]" />
+  [--END_IF--]
+
+  [--IF PRODUCT.MoreInformationMetaDescription --]
+    <meta name="Description" content="[-- PRODUCT.MoreInformationMetaDescription --]" />
+  [--ELSE--]
+    <meta name="Description" content="[--Product.Name REMOVE_HTML --]" />
+  [--END_IF--]
+    
+    <META NAME="GOOGLEBOT" CONTENT="INDEX, FOLLOW">
+  <META NAME="Robots" content="index,follow"> 
+  <meta name="rating" content="General" />
+      
+    <link rel="stylesheet" href="css/productpage.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+  <script>
+    !window.jQuery && document.write('<script src="js/jquery-1.4.3.min.js"><\/script>');
+  </script>
+  <script type="text/javascript" src="js/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+  <script type="text/javascript" src="js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+  <link rel="stylesheet" type="text/css" href="js/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+  <script type="text/javascript">
+    /*FANCYBOX Javascript call*/
+    $(document).ready(function() {  
+      $("a[rel=example_group2]").fancybox({
+        'transitionIn'    : 'none',
+        'transitionOut'   : 'none',
+        'titlePosition'   : 'over',
+        'titleFormat'   : function(title, currentArray, currentIndex, currentOpts) {
+          return '<span id="fancybox-title-over">Image ' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';
+        }
+      });
+      
+      $("a#image-enlarge").fancybox();
+      
+      $("#customerpromise").fancybox({
+        'titlePosition'   : 'inside',
+        'transitionIn'    : 'none',
+        'transitionOut'   : 'none'
+      });
+      
+    });
+    
+    /*TOOL TIP Javascript call*/
+    $(function(){
+      $(".product-icons").tipTip({defaultPosition:"top"});
+    });
+  </script>
+  <script type="text/javascript" src="js/jquery.tipTip.js"></script>
+  <script type="text/javascript" src="js/jquery.tipTip.minified.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/tipTip.css" media="screen" />
+    
+  <link rel="stylesheet" href="css/base.css">
+  <meta name="language" content="pt, en, es" />
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <script language="JavaScript" src="/includes/smp.js" type="text/javascript"></script>
+</head> 
+<body>
+<div id="container">
+  <!-- TOP PROMOTION -->
+  <div id="globalpromo">
+    <div class="wrap">
+      <p><span>New Year Sale</span> : 20% Off All Orders: Sewing, Embroidery and Quilting Machines plus Sewing Supplies, Vacuums and Household Items!</p>
+    </div>
+  </div>
+  <!-- HEADER -->
+  <div id="globalheader" class="wrap">
+    <a class="logo" title="SewingMachinesPlus.com: Sewing Machines Plus a Whole Lot More" href="/">
+      <img src="images/icons/SMP_Logo.jpg" alt="SewingMachinesPlus.com: Sewing Machines Plus a Whole Lot More..." />
+    </a>
+    <div id="utilitynavigation">
+      <ul id="admin">
+        <li id="ga-signin"><a href="#">Sign In</a>|</li>
+        <li id="ga-myaccount"><a href="#">My Account & Orders</a>|</li>
+        <li id="ga-wishlist"><a href="#">Wishlist</a>|</li>
+        <li id="ga-emailsignup"><a href="#">Email Sign Up</a>|</li>
+        <li id="ga-needhelp"><a href="#">Need Help?</a>|</li>
+        <li id="ga-shoppingcart"><a href="#">Shopping Cart</a></li>
+      </ul>
+      <div class="clear"></div>
+      
+      <ul id="utilitylinks">
+        <li id="gl-classes-events"><a href="#">Classes & Events</a>|</li>
+        <li id="gl-aboutus"><a href="#">About Us</a>|</li>
+        <li id="gl-phonenumber"><a href="#"><span class="phone">Call Toll-free (800) 401-8151</span></a></li>
+      </ul>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+  <!-- NAVIGATION -->
+  <div id="globalnavigation" class="wrap">
+    <ul id="mega">
+      <li id="gn-whatsnew"><a href="#" >New!</span></a>
+      </li>
+      <li id="gn-householdsewing"><a href="#">Sewing</a>
+        
+      </li>
+      <li id="gn-embroidery"><a href="#">Embroidery</a>
+        
+      </li>
+      <li id="gn-quilting"><a href="#">Quilting</a>
+        
+      </li>
+      <li id="gn-notions"><a href="#">Notions</a>
+        
+      </li>
+      <li id="gn-furniture"><a href="#">Furniture</a>
+        
+      </li>
+      <li id="gn-garmentcare"><a href="#">Household</a>
+        
+      </li>
+      <li id="gn-vacuum"><a href="#">Vacuums</a>
+        
+      </li>
+      <li id="gn-offers"><a href="#">Specials</a>
+        
+      </li>
+
+    </ul>
+    <!-- SEARCH -->
+    <div id="gn-search">
+      <form id="search_form" method="get" action="">
+        <input id="search" class="input-text" type="text" value="- Product Search -" name="" size="25">
+      </form>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+
+  <!-- HORIZONTAL ADS -->
+  <div id="exclusive_ads" class="content wrap">
+    <img src="images/icons/banner-normal.jpg" alt="SewingMachinesPlus.com: Exclusive Ads" />
+  </div>
+  <div class="clear"></div>
+  <!-- CONTENT -->  
+<div id="main" class="content wrap">
+  <div id="narrow-search-category">
+    <p>Narrow Search</p>
+  </div>
+  <div id="product-content">  
+    <div class="product-info">
+      <div id="product-sending">
+        [-- IF PRODUCT.Field5 --]
+          <?php
+            $field5img = explode("|", "[-- PRODUCT.Field5 --]");
+            $medImgLarge = "https://www.vacplus.com/media/" . $field5img[0];
+            $pos = strrpos($medImgLarge, '.');
+            $medImg = substr_replace($medImgLarge, '_size2.', $pos, 1);
+            $medImg = substr_replace($medImg, '/resized/', strrpos($medImg, '/'), 1);
+            //Image product dimensions
+            echo "<img src='".$medImg."' id='product-image' alt ='".$imagename."'/>";
+            echo "<a id='image-enlarge' href='".$medImgLarge."' title='Details of your next machine!'><img class='enlarge-photo' src='https://www.vacplus.com/images/icons//imageenlarge.jpg' /></a>";
+          ?>
+        [-- ELSE --]
+          [-- IF PRODUCT.MoreInformationGraphic --]
+            <?php
+            //Image product dimensions
+            echo "<img [-- PRODUCT.MoreInformationGraphic REMOVE_HTML--] id='product-image' alt ='[-- PRODUCT.MoreInformationTitle --]'>";
+            ?>
+          [--ELSE--]
+            <?php
+            //Image product dimensions
+            echo "<img src='[-- VAR.MyImages --]/images/more_comingsoon.gif' id='product-image' alt ='[-- PRODUCT.MoreInformationTitle --]'>";
+            ?>
+          [-- END_IF --]
+         [-- END_IF --]
+         <div clear="all" /></div>
+      </div>
+      <!-- End of Product-Send Section -->
+      
+      <!-- Product information: Price, condition, associated shipping -->
+      <div id="product-details">
+        <div class="product-header">
+          <h1>
+            [-- IF PRODUCT.MoreInformationTitle --]
+              [-- PRODUCT.MoreInformationTitle --]
+            [-- ELSE --]
+              [-- PRODUCT.Name REMOVE_HTML --]
+            [-- END_IF --]
+          </h1>
+          <div class="reviews">
+            <a href="#reviewLink" onClick="contentDisplay('reviews')">
+              <?php readfile("https://www.vacplus.com/reviews/summary2.php/[-- PRODUCT.SKU --]"); ?>
+            </a>
+          </div>
+          <div class="bookmarking">
+            <a href="#" onClick="window.open('https://www.vacplus.com/cgi-vacplus/sb/tellfriend.cgi?storeid=*1a55e44c50fd5a9e18c062cfd94a5c&str=[-- PRODUCT.Name --]&from=[-- PRODUCT.MoreInfoURL --]','tellfriend','width=560,height=560,resizable=yes,scrollbars=yes, status=yes');return false;">
+              <img src="https://www.vacplus.com/images/icons//email.jpg" id="emailtofriend"/>
+            </a>
+            <!-- AddThis Button BEGIN -->
+            <div class="addthis_toolbox addthis_default_style">
+            <a class="addthis_button_facebook" style="cursor:pointer"></a>
+            <a class="addthis_button_twitter" style="cursor:pointer"></a>
+            <a class="addthis_button_stumbleupon" style="cursor:pointer"></a>
+            <a class="addthis_button_myspace" style="cursor:pointer"></a>
+            <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub=xa-4a78769c7cc46f3b"></script>
+            </div>
+            <!-- AddThis Button END -->
+          </div>
+          
+          <div class="clear"></div>
+        </div>
+        <!-- End of Product Title Section -->
+        <div class="clear"></div>
+        
+        <div class="product-price-condition">
+          <?php
+            $listprice = "[-- PRODUCT.Price --]"; 
+            $listprice = ltrim($listprice, "$");
+            $listprice = str_replace(",", "", $listprice);
+            $saleprice = "[-- PRODUCT.SaleAmount --]";
+            $saleprice = ltrim($saleprice, "$");
+            $saleprice = str_replace(",", "", $saleprice);
+            $saving = $listprice - $saleprice;
+            $percentage = ($saving / $listprice)*100;
+            $percentage = number_format($percentage);
+          ?>
+          [-- IF PRODUCT.DisplayPrice --]
+            <form method="POST" action="price-comparison.php" id="pricecomparison">
+              <input type="hidden" name="product" value="[-- PRODUCT.Name --]" />
+              <input type="hidden" name="SKU" value="[-- PRODUCT.SKU --]" />
+              <input type="hidden" name="productURL" value="[-- PRODUCT.MoreInfoURL --]" />
+              <input type="hidden" name="image" value='[-- IMAGE PRODUCT.Graphic --]' />
+              <input type="hidden" name="ourPrice" value="[-- IF PRODUCT.SaleAmount --][-- PRODUCT.SaleAmount --][-- ELSE --][-- PRODUCT.Price --][-- END_IF --]" />
+              <input src="https://www.vacplus.com/images/icons//pricematchguaranteed.jpg" class="product-icons" title="WE WILL BEAT ANY PRICE GUARANTEED! CALL 800-401-8151!" name="submit" type="image" value="Yes!" >
+            </form>
+            [--IF PRODUCT.SaleOn--]
+            <!-- Sale Price is on --> 
+              <table id='product-prices' class='product-detail-info'>
+                <tr>
+                  <td class="category">List Price:</td> 
+                  <td class='regularprice'>[-- PRODUCT.Price --]</td>
+                </tr>
+                <tr>
+                  <td class="category">Sale Price:</td> 
+                  <td class='saleprice'>[-- PRODUCT.SaleAmount --]</td>
+                </tr>
+                <tr>
+                  <td class="category">You Save:</td> 
+                  <td class='savings'>
+                  <?php
+                    echo ("$".$saving." (".$percentage."%)");
+                  ?>
+                  </td>
+                </tr>
+              </table>
+              <div class="clear"></div>
+            <!-- Regular Prices set -->   
+            [--ELSE--]
+              <table id='product-prices' class='product-detail-info'>
+                <tr>
+                  <td class="category">Price:</td> 
+                  <td class='regularprice' id='regularprice-nosale'>[-- PRODUCT.Price --]</td>
+                </tr>
+              </table>
+              <div class="clear"></div>
+            [--END_IF--]
+            <!-- Check for Financing -->  
+            [-- IF Product.Field6 --]
+              [--IF PRODUCT.SaleOn--]
+                <?php $price = "[-- PRODUCT.SaleAmount --]"; ?>
+              [--ELSE--]
+                <?php $price = "[-- PRODUCT.Price --]"; ?>
+              [--END_IF--]
+              <?php
+                $price = ltrim($price, "$");
+                $price = str_replace(",", "", $price);
+              ?>
+              <table id='product-financing' class='product-detail-info'>
+                <tr>
+                  <td class="category">Financing:</td> 
+                  <td class="financingprice">
+                  [--IF Product.Field6 "12"--]
+                        <?php
+                          $price = round($price / 12, 2);
+                          echo ("$".$price."/mo for 12 mos, 0% interest");
+                        ?>
+                  [-- END_IF --]
+                  [--IF Product.Field6 "18"--]
+                        <?php
+                          $price = round($price / 18, 2);
+                          echo ("$".$price."/mo for 18 mos, 0% interest");
+                        ?>
+                  [-- END_IF --]
+                  [--IF Product.Field6 "48"--]
+                        <?php
+                          $price = round($price / 48, 2);
+                          echo ("$".$price."/mo for 48 mos, 0% interest");
+                        ?>
+                  [-- END_IF --]
+                  </td>
+                </tr>
+              </table>
+              <div class="clear"></div>
+            [-- END_IF --]
+          <!-- NO prices checked -->            
+          [--ELSE--]
+            <h3 class="call_store_noprice">Call SewingMachinesPlus.com 1-800-401-8151 for product details and pricing!</h3>
+            <div class="clear"></div>
+          [-- END_IF --]
+          
+          <form action="[-- SHOPPING_CART_URL BASE --]/order.cgi" method="post">
+          <!-- Check for Returns -->  
+          [-- IF Product.Field7 --]
+            <table id='product-returns' class='product-detail-info'>
+              <tr>
+                <td class="category">Returns:</td> 
+                <td class="returnpolicy">
+                [--IF Product.Field7 "no"--]
+                  No returns are accepted on this item, <a href="/customer-service.php#returns" target="_blank">more info...</a>
+                [-- END_IF --]
+                [--IF Product.Field7 "15"--]
+                  Returns are subject to a 15% restocking fee, <a href="/customer-service.php#returns" target="_blank">more info...</a>
+                [-- END_IF --]
+                [--IF Product.Field7 "20"--]
+                  Returns are subject to a 20% restocking fee, <a href="/customer-service.php#returns" target="_blank">more info...</a>
+                [-- END_IF --]
+                [--IF Product.Field7 "open"--]
+                  No returns are allowed if item is opened, <a href="/customer-service.php#returns" target="_blank">more info...</a>
+                [-- END_IF --]
+                </td>
+              </tr>
+            </table>
+            <div class="clear"></div>
+          [-- END_IF --]
+          
+          <!-- Important Message -->  
+          [-- IF Product.Field1 --]
+            <table id='product-important' class='product-detail-info'>
+              <tr>
+                <td class="category">Attention:</td> 
+                <td class="important-message">
+                  [-- Product.Field1 --]
+                </td>
+              </tr>
+            </table>
+            <div class="clear"></div>
+          [-- END_IF --]
+            
+            <ul class="product-availability">
+            <!-- FIELD: CONDITION -->
+            [--IF Product.Field2--]
+              <li class='product-icons' id='product_condition'>
+                <!-- Condition: Brand New -->
+                [--IF Product.Field2 "new"--]
+                  <img class="product-icons" src='https://www.vacplus.com/images/icons//brandnew.jpg' title='Condition: Brand NEW!'>
+                [-- END_IF --]
+                <!-- Condition: Factory Service -->
+                [--IF Product.Field2 "fs"--]
+                  <img class="product-icons" src='https://www.vacplus.com/images/icons//factoryserviced.jpg' title='Condition: Factory Serviced!'>
+                [-- END_IF --]
+                <!-- Condition: Download -->
+                [--IF Product.Field2 "dl"--]
+                  <img class="product-icons" src='https://www.vacplus.com/images/icons//download.jpg' title='File Download (No physical item will be sent)'>
+                [-- END_IF --]
+              </li>
+            [-- END_IF --]
+            
+            [--IF Product.Field3--]
+              <li class='product-icons' id='product_availability'>
+                <!-- Availability: Same Day -->
+                [--IF Product.Field3 "sameday"--]
+                  <img class="product-icons" src='https://www.vacplus.com/images/icons//shipsnextday.jpg' title="Item ships same day if ordered before 1pm PST">
+                [-- END_IF --]
+                <!-- Availability: Drop Ship -->
+                [--IF Product.Field3 "ds"--]
+                  <img class="product-icons" src='https://www.vacplus.com/images/icons//dropship.jpg' title="Item ships from another facility. Expedited shipping is not available.">
+                [-- END_IF --]
+                <!-- Availability: Ship from Store -->
+                [--IF Product.Field3 "store"--]
+                  <img class="product-icons" src='https://www.vacplus.com/images/icons//instock.jpg' title="Availability: In Stock & Ready to Ship from our Store! Ground Shipments arrive within 3 to 7 days!">
+                [-- END_IF --]
+                <!-- Availability: Ship from Supplier -->
+                [--IF Product.Field3 "sup"--]
+                  <img class="product-icons" src='https://www.vacplus.com/images/icons//supplier.jpg' title="Item ships from manufacturer. Expect 5-7 days for delivery.">
+                [-- END_IF --]
+                <!-- Availability: Ship by UPS -->
+                [--IF Product.Field3 "ups"--]
+                  <img class="product-icons" src='https://www.vacplus.com/images/icons//upssupplier.jpg' title="Item ships from manufacturer via UPS only.">
+                [-- END_IF --]
+                <!-- Availability: Ship in USA -->
+                [--IF Product.Field3 "usa"--]
+                  <img class="product-icons" src='https://www.vacplus.com/images/icons//stockusa.jpg' title="Ships from our facility, ONLY to destinations in the USA.">
+                [-- END_IF --]
+                <!-- Availability: Out of Stock! -->
+                [--IF Product.Field3 "out"--]
+                  <img class="product-icons" src='https://www.vacplus.com/images/icons//outstock.jpg' title="OUT OF STOCK">
+                [-- END_IF --]
+                <!-- Availability: Download Only -->
+                [--IF Product.Field3 "dl"--]
+                  A link to download this file will appear on the "thank you" page after ordering. An e-mail will also be sent.
+                [-- END_IF --]
+                <!-- Availability: Local only -->
+                [--IF Product.Field3 "local"--]
+                  <img class="product-icons" src='https://www.vacplus.com/images/icons//locallyretail.jpg' title="This item can only be purchased locally at our retail location.">
+                [-- END_IF --]
+              </li>
+            [-- END_IF --]
+            
+            [--IF Product.Field4--]
+              <li class='product-icons' id='product_shipping'>
+                <!-- Shipping: Free Shipping -->
+                [--IF Product.Field4 "free"--]
+                  <img class="product-icons" src='https://www.vacplus.com/images/icons//freeshipping.jpg' title="FREE 3 Business Day Ground Shipping to the Lower 48 States!">
+                [-- END_IF --]
+                <!-- Shipping: Free Shipping for Drop Ship-->
+                [--IF Product.Field4 "freedropship"--]
+                  <img class="product-icons" src='https://www.vacplus.com/images/icons//freeshipping.jpg' title="FREE Shipping with dropship items">
+                [-- END_IF --]
+                <!-- Shipping: Free 3 Day Shipping -->
+                [--IF Product.Field4 "3day"--]
+                  <img class="product-icons" src='https://www.vacplus.com/images/icons//freeshipping3day.jpg' title="Free upgrade to 3 business day shipping when you choose ground to the continental USA!">
+                [-- END_IF --]
+                <!-- Shipping: Free 2 Day Shipping -->
+                [--IF Product.Field4 "2day"--]
+                  <img class="product-icons" src='https://www.vacplus.com/images/icons//freeshipping2day.jpg' title="Free upgrade to 2 business day shipping when you choose ground to the continental USA!">
+                [-- END_IF --]
+                <!-- Shipping: Freight -->
+                [--IF Product.Field4 "freight"--]
+                  <img class="product-icons" src='https://www.vacplus.com/images/icons//freightcharges.jpg' title="Freight shipping charges will apply on this item.">
+                [-- END_IF --]
+              </li>
+            [-- END_IF --]
+                <li><a id="customerpromise" href="#inline1" title="SewingMachinesPlus.com Customer Promise"><img src="https://www.vacplus.com/images/icons//customerpromise.png"></a></li>
+                
+                <div style="display: none;">
+                <div id="inline1">
+                  <ul>
+                    <li>Our years of experience in the business has taught our family some very important lessons. We are proud to bring you the most competitive pricing but also aim to provide the right products suited to your individual needs.</li>
+                    <li>Our mission is to supply thorough information to you so you can choose the products that are right for you. We offer a satisfaction guarantee and treat every customer like family. It is our pleasure to serve you, both in our store and on the internet.</li>
+                    <li>Shop With Confidence - enjoy the protection of the SewingMachinesPlus.com's Friend Advantage before and after the sale!</li>
+                    <li>We'll beat any verifiable advertised price before or after the sale. Call 1-800-401-8151 for an unbeatable price quote.</li>
+                    <li>If you find a lower advertised price within 45 days of your purchase, we'll refund the difference after verification. Some products are excluded.</li>
+                    <li>If you are not completely satisfied with any product, return it for a full refund of the product purchase price, full credit, or exchange of your choice with no hassles!</li>
+                    <li>If you don't get your machine or notion on time, shipping is free and you get 20% off your next order</li>
+                    <li>Questions or comments? Email info@SewingMachinesPlus.com or call us at 1-800-401-8151.</li>
+                  <ul>
+                </div>
+              </div>
+                
+            </ul>
+            <div class="clear"></div>
+            
+          <!-- BEGIN ADD TO CART FORM -->         
+              
+            
+            <!-- Options for this product --> 
+            [-- IF PRODUCT.DisplayOrderingOptions --]
+              <div id="orderingoptions">
+                <h4>Product Options:</h4>
+                <p>Add these to make it a package!</p>
+                [-- PRODUCT.OptionText --]
+                [--Order_Option_Menu Column--]
+              </div>
+              <div class="clear"></div> 
+            [-- END_IF --]      
+
+
+            [-- IF PRODUCT.DisplayPrice --]
+            <div class="action-buttons">
+              <!--Add to Cart Button -->
+              <!--
+              <input type=hidden name="storeid" value="[--Store.id--]">
+              <input type=hidden name="dbname" value="products">
+              <input type="hidden" name="itemnum" value="[-- PRODUCT.RecordNumber --]">
+              <input type=hidden name="function" value="add">
+              
+              <input class="button" src="https://www.vacplus.com/images/icons//SMP-Button.png" name="Add to Cart" type="image">
+              -->
+              <img src="https://www.vacplus.com/images/icons//SMP-Button.png">
+              <!--Wishlist Button-->
+              <a href="/wishlist/listmanage.php/add/i_[-- PRODUCT.SKU --]">
+                <img class="button" alt="Add To Your Wish List" src="https://www.vacplus.com/images/icons//SMP-Wishlist-Button.png">
+              </a>
+            </div>
+            [-- ELSE --]
+            <div class="action-buttons">
+              <img class="button nopurchase" alt="Can't Be Purchased" src="https://www.vacplus.com/images/icons//cantbepurchased.jpg">
+            </div>
+            [-- END_IF --]
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div class="clear"></div>
+    
+    <!-- TABBED BLOCKS GO HERE: MORE INFO, IMAGES, REVIEWS, & ADD-ON ACCESSORIES -->
+    <!-- BEGIN TABS -->
+    
+    <div class="tab" onClick="contentDisplay('moreInfo')" id="infoLink" style="background-color: #FFFFFF; border-bottom-color: #FFFFFF;">
+      <img src="https://www.vacplus.com/images/icons//productinfo.png">Product Info
+    </div>
+
+    <!-- Deprecated Tab -->
+     <div class="tab" onClick="contentDisplay('images')" id="imageLink" style="display: none;" >
+      Images
+    </div>
+
+    <div class="tab" onClick="contentDisplay('reviews')" id="reviewLink">
+      <img src="https://www.vacplus.com/images/icons//reviews.png">Customer Reviews
+    </div>
+    
+    <div class="tab" onClick="contentDisplay('acc')" id="accLink" 
+      [-- IF PRODUCT.NumSubProducts 0 --] 
+        style="display: none;" 
+      [-- END_IF --]>
+      <img src="https://www.vacplus.com/images/icons//accessories.png">Accessories
+    </div>
+    
+    <!-- END TABS -->
+
+    <br clear="all" style="height: 0px;" />
+
+    <div class="info-sections"> 
+    
+    <span id="moreInfo" [-- IF PRODUCT.NumSubProducts 0 --] style="display: block;" [--END_IF--]>
+      [-- IF PRODUCT.Field5 --]
+      <div class="imagegallery">
+        <h4>Get introduced by viewing some pictures!</h4>
+        <p>Sew like a pro with the [-- PRODUCT.Name --]. View these images to get a better idea of the awesome machine you'll love! Click on the thumbnail to enlarge!</p>
+        <?
+          $field5img = explode("|", "[-- PRODUCT.Field5 --]");
+          foreach ($field5img as &$image) {
+              $medImg = "https://www.vacplus.com/media/" . $image;
+              $pos = strrpos($medImg, '.');
+              $medImg = substr_replace($medImg, '_size3.', $pos, 1);
+              $medImg = substr_replace($medImg, '/resized/', strrpos($medImg, '/'), 1);
+              echo "<a rel='example_group2' href='https://www.vacplus.com/media/".$image."' title='".$sampleproduct['Name']."' ><img class='thumbnails' alt='' src='".$medImg."' /></a>";
+            }
+        ?>  
+      </div>
+      [-- END_IF --]
+      [-- PRODUCT.MoreInformationText --]
+    </span>
+
+    <!-- IMAGES BLOCK - INVISIBLE-->
+    <span id="images" style="display: none;">
+      <center>    
+        [-- IF PRODUCT.Field5 --]
+          [--CALL popupv2.php PRODUCT.Field5 imagePopUp.tpl 5--]
+        [-- ELSE --]
+          (More images coming later.)
+        [-- END_IF --]
+      </center>
+    <br clear="all" />
+    </span>
+
+
+    <span id="reviews" style="display: none;">
+      <!-- REVIEWS BLOCK -->
+      <h4>SewingMachinesPlus.com Reviews on [-- PRODUCT.Name --]</h4>
+      <p>Read some product reviews from some SewingMachinesPlus.com customers! Also, you can read and write reviews on the thousands of sewing, quilting and embroidery units and accessories! </p>
+      <h4>Overall Rating</h4>
+      <?php readfile("https://www.vacplus.com/reviews/summary.php/[-- PRODUCT.SKU --]"); ?>
+    </span>
+
+    <span id="acc" style="display: none;">
+      <!-- ADD-ONS BLOCK -->
+      <h4>Add some essential supplies to [-- PRODUCT.Name --]</h4>
+      <p>Need more supplies? Check the boxes of items you want, then click "Add to Cart" to pick up everything at once!</p>
+
+      <table cellpadding="0" cellspacing="0">
+        [--LOOP SUBPRODUCTS --]
+        [--SUBPRODUCTS--]
+        [--END_LOOP SUBPRODUCTS--]
+      </table>    
+    </span>
+    </form>
+  </div>
+  <div class="clear"></div>
+  <!-- END BLOCK -->
+</div>
+<div class="clear"></div>
+</div>
+<!-- MAIN AD -->
+<div id="globalfooter" >
+  <div id="directorynav" class="wrap">
+    <div id="info-contactus" class="column">
+      <div class="infobox">
+        <h5>SewingMachinesPlus.com's Story</h5>
+        <p>We are a family owned company and have been involved in the sewing and vacuum business for over 40 years. We run a successful sewing machine and vacuum sales and service business in San Marcos, California. Thanks to our wonderful customers, we have expanded our sales floor to over 10,000 square feet and are working daily on updating our online shopping site. <a href="#">More details...</a></p>
+      </div>
+      <div class="infobox">
+        <h5>Customer Service</h5>
+        <ul>
+          <li>Toll Free: <span class="phone">800-401-8151</span></li>
+          <li>Local: <span class="phone">760-739-8222</span></li>
+          <li>Email: info@sewingmachinesplus.com</li> 
+        </ul>
+      </div>
+      
+      <div class="infobox">
+      <h5>Come Visit Our Store!</h5>
+      <ul>
+        <li>Address: 713 Center Drive San Marcos, CA 92069</li>
+
+        <li>Monday-Friday: 9:30AM - 6:00PM PST</li>
+        <li>Saturday: 10:00AM to 5:00PM PST </li>
+        <li>Sunday: Closed </li> 
+      </ul>
+      </div>
+      
+      <div class="infobox">
+      <h5>Find Us Online!</h5>
+      <ul class="icons" id="socialmedia">
+        <li><a href="http://www.facebook.com/pages/SewingMachinesPluscom"><img src="images/icons/facebook.png"></a></li>
+        <li><a href="http://twitter.com/Sewmachinesplus"><img src="images/icons/twitter.png"></a></li>
+        <li><a href="https://www.vacplus.com/blog/"><img src="images/icons/wordpress.png"></a></li>
+        <li><a href="http://www.youtube.com/user/seamsamazing"><img src="images/icons/youtube.png"></a></li>
+        <li><a href="http://www.flickr.com/photos/SeamsAmazing"><img src="images/icons/flickr.png"></a></li>
+        <li><a href="http://www.linkedin.com/company/1204948"><img src="images/icons/linkedin.png"></a></li>
+        <li><a href="http://stores.ebay.com/Sewing-Machines-Plus-More"><img src="images/icons/ebay.png"></a></li>
+      </ul>
+      </div>
+    </div>
+    <div id="aboutus-policy" class="column">
+      <div class="infobox">
+        <h5>We accept the following payments:</h5>
+        <p>We offer various ways for you to pay for your order! Please note we will only ship goods once cleared payment has been received. <a href="#">More details...</a></p>
+        <ul class="icons" id="payment">
+          <li><img src="images/icons/visa-curved-32px.png"></li>
+          <li><img src="images/icons/american-express-curved-32px.png"></li>
+          <li><img src="images/icons/discover-curved-32px.png"></li>
+          <li><img src="images/icons/mastercard-curved-32px.png"></li>
+          <li><img src="images/icons/paypal-curved-32px.png"></li>
+          <li><img src="images/icons/google-checkout-curved-32px.png"></li>
+        </ul>
+      </div>
+      <div class="infobox">
+        <h5>Your Security is our Highest Priority!</h5>
+        <p>We want you to feel safe and secure when shopping online and below are just some of the services we provide. <a href="#">More details...</a></p>
+        <ul id="security">
+          <li><img src="images/icons/GeoTrust.jpg"></li>
+          <li><img src="images/icons/McafeeSecure.png"></li>
+          <li><img src="images/icons/BuySafe.jpg"></li>
+        </ul>
+      </div>
+      <div class="infobox" id="aboutus">
+        <h5>More About Us!</h5>
+        <ul>
+          <li><a href="#">The Martin Family</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Security Policy</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Delivery Charges</a></li>
+          <li><a href="#">Returns Procedure</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">SMP.com Staff</a></li>
+          <li><a href="#">Low Price Guarantee</a></li>
+          <li><a href="#">Refund Policy</a></li>
+          <li><a href="#">Payment Options</a></li>
+          <li><a href="#">Freight Shipping Policy</a></li>
+          <li><a href="#">Order Processing</a></li>
+          <li><a href="#">Site Map</a></li>
+        </ul>
+        <div class="clear"></div>
+        
+      </div>
+      <div class="clear"></div>
+    </div>
+    
+    <div id="info-email" class="column">
+      <div class="infobox">
+        <h5>Subscribe to our Mailing List!</h5>
+        <p>Receive special offers, weekly coupons, daily machine specials up to 60% OFF and more!</p>
+        <img src="images/icons/emailsignup.png">
+        <form action="form_action.asp" method="get">
+          <p>Your Email Address</p>
+          <input id="emailtextarea" type="text" name="email" value="jesse@sewingmachinesplus.com"/>
+          <input id="emailsubmit" type="submit"/>
+          <div class="clear"></div>
+        </form>
+      </div>
+    
+      <div class="infobox" id="tweet">
+        <h5><img src="images/icons/Twitter_bird_icon2-100x100.png">Recent Tweets</h5>
+        <ul>
+          <li class="odd">Grand Opening Sale all weekend! </li>
+          <li class="even">Sewing Machines Plus has all of the quilting accessories you need to complete your quilt with ease. </li>
+          <li class="odd">We will ship to locations within the United States and Canada.</li>
+          <li class="even">We accept Visa, MasterCard, American Express, Discover, Paypal</li>
+        </ul>
+
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+</div>
+</body>
+</html>
+[-- END_DEFINE MORE_INFO_PAGE --]

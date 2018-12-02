@@ -1,0 +1,37 @@
+<html>
+<head>
+
+[-- IF Store.Name --]
+  <title>[-- STORE.Name --] - [-- VAR.Title --]</title>
+[-- ELSE --]
+  <title>[-- VAR.Title --]</title>
+[-- END_IF --]
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"> 
+<META NAME="robots" CONTENT="noindex,nofollow">
+<script type="text/javascript" language="JavaScript">
+<!--
+[-- CR_JAVASCRIPT --]
+// -->
+</script>
+
+[-- INCLUDE cr.css PROCESS --]
+</head>
+
+<body
+[-- IF STORE.SC_BackgroundImage --]
+  background="[--STORE.SC_BackgroundImage--]"
+[-- END_IF --]
+>
+
+<center>
+
+<p id="header">[-- CR_Header --]</p>
+
+<h1>[-- VAR.Title --]</h1>
+
+<div id="messages">
+[-- CR_ShopSiteMessages --]
+</div>
+[-- CR_FORM --]
+
+

@@ -1,0 +1,40 @@
+<script type="text/javascript">
+
+ss_jQuery(function(){
+
+  var restricted_sku = false;
+
+  var freight_option = false;
+
+
+  ss_jQuery("input[name='shipping']").each(function(i){
+    if(ss_jQuery(this).val()=='api_Freight Shipping'){
+      freight_option=true;
+    }
+
+  });
+
+  if(freight_option==true){
+    ss_jQuery("input[name='shipping']").each(function(i){
+      if(ss_jQuery(this).val()!='api_Freight Shipping'){
+        ss_jQuery(this).removeAttr("checked");
+        ss_jQuery(this).parent().parent().remove();
+      }
+    });
+  }
+
+      if(freight_option==true){
+  ss_jQuery("input[name='shipping']").each(function(i){
+    if(ss_jQuery(this).val()!="api_Freight Shipping"){
+      ss_jQuery(this).removeAttr("checked");
+      ss_jQuery(this).remove();
+    } else{
+      ss_jQuery(this).attr("checked", true);
+    }
+
+  });
+
+    }
+});
+
+</script>

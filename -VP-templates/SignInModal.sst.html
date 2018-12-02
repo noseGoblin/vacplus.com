@@ -1,0 +1,53 @@
+<div class="modal fade" id="mySignIn" tabindex="-1" role="dialog" aria-labelledby="mySignInForm">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title" id="myModalLabel">[-- STORE.SignInButtonText --]</h4>
+      </div>
+      <div class="cr_warning"></div>
+      <form id="sign-in-form" name="cr" class="cr" action="https://www.vacplus.com/cgi-vacplus/sb/registration.cgi" method="post">
+        <div class="modal-body">
+          [-- IF CR_FACEBOOK_CONNECT --]
+          <input type="hidden" name="storeid" value="[-- STORE.Id --]">
+          <div class="center">
+            <div id="aj-fbconnect" class="padb padst">
+              [-- CR_FACEBOOK_CONNECT --]
+            </div>
+          </div>
+          [-- END_IF --]
+          <div id="sign-in-form-div">
+            [-- CR_Signin_Email_Password div --]
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="inline float-left">
+            <a class="small italic" href="https://www.vacplus.com/cgi-vacplus/sb/order.cgi?storeid=*121deeb48a92086890509d&html_reg=html&func=5" title="I forgot my password">I forgot my password</a>
+          </div>
+          <button type="button" class="btn btn-default" data-dismiss="modal">[-- STORE.ContinueShoppingText --]</button>
+          <input type="submit" name="function" class="btn btn-primary" value="Sign In">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<style type="text/css">div#user-links {display: none;}</style>
+<script src="[-- OUTPUT_DIRECTORY_URL --]/publish/crsignin.js"></script>
+<script type="text/javascript">
+  $('#mySignIn').modal({backdrop:'static',keyboard:false,show:false});
+  ss_jQuery('#sign-in-links,#signinlink').ss_CRSignIn({sign_in_form_id:'sign-in-form',
+  show_sign_in_callback:function(link_id){
+    $('div.cr_warning').html('').hide();
+    $('#mySignIn').modal('show');
+  },
+  post_sign_in_callback:function(data){
+    var v=data.cr_status;
+    $('div.cr_warning').html('').hide();
+    $('#mySignIn').modal('hide');
+    $('#accountHolder').html(data.cr_name);
+    $('#sign-in-links').hide();
+    $('#user-links').attr("style","display:inline-block");
+  },
+  error_message_callback:function(error){$('div.cr_warning').html(error).show();}
+  });
+</script>

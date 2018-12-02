@@ -1,0 +1,2135 @@
+[-- DEFINE ShoppingCart --]
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <style>.async-hide { opacity: 0 !important} </style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,
+{'GTM-KTCLFC5':true});</script>
+      <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-487443-1', 'auto');
+  ga('require', 'GTM-KTCLFC5');
+  // Optimizely Universal Analytics Integration
+ window.optimizely = window.optimizely || [];
+ window.optimizely.push("activateUniversalAnalytics");
+  ga('send', 'pageview');
+
+</script>
+      <meta charset="ISO-8859-1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>[-- STORE.SC_YourShoppingCart Remove_Html --]</title>
+  <meta name="verify-v1" content="LgvDD+yKZW1ULvHkUzBRAUu5UnP/88OMGXnfr/0DQao=" />
+  <script type="text/javascript" src="/jquery/js/jquery-1.4.2.min.js"></script> 
+  <script type="text/javascript" src="/jquery/js/jquery-ui-1.8.2.custom.min.js"></script>
+  <script type="text/javascript" language="JavaScript">
+  <!-- 
+  [-- SC_JAVASCRIPT extras --]
+  // -->
+  </script>
+
+  <!--disable enter key-->
+  <script type="text/javascript">
+  function stopRKey(evt) {
+    var evt = (evt) ? evt : ((event) ? event : null);
+    var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+    if ((evt.keyCode == 13) && (node.type=="text"))  {return false;}
+  }
+  document.onkeypress = stopRKey;
+  </script> 
+  <!--end disable enter-->
+
+  <!-- Google Code for Shopping Cart Remarketing List -->
+  <script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 1070299738;
+    var google_conversion_language = "en";
+    var google_conversion_format = "3";
+    var google_conversion_color = "666666";
+    var google_conversion_label = "97l9CPj2iAIQ2vSt_gM";
+    var google_conversion_value = 0;
+    /* ]]> */
+  </script>
+  <script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+  </script>
+  <noscript>
+  <div style="display:inline;">
+  <img height="1" width="1" style="border-style:none;" alt="" src="https://www.googleadservices.com/pagead/conversion/1070299738/?label=97l9CPj2iAIQ2vSt_gM&amp;guid=ON&amp;script=0"/>
+  </div>
+  </noscript>
+  <!-- END Google Code for Shopping Cart Remarketing List -->
+  <!-- Start Google Remarketing Code for Shopping Cart -->
+  <script type="text/javascript">
+  var google_tag_params = {
+  ecomm_prodid: '',
+  ecomm_pagetype: 'cart',
+  ecomm_totalvalue: ''
+  };
+  </script>
+  <!-- End Google Remarketing Code for Shopping Cart -->
+  <script type="text/javascript" src="//static.criteo.net/js/ld/ld.js" async="true"></script>
+<script type="text/javascript">
+window.criteo_q = window.criteo_q || [];
+var deviceType = /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Silk/.test(navigator.userAgent) ? "m" : /iPad/.test(navigator.userAgent) ? "t" : "d";
+var itemArray = new Array;
+for(x=0;x<ss_sku.length;x++){
+    var items = {
+        id: ss_field13[x],
+        price: ss_total_price[x].replace(/\,/g,''),
+        quantity: ss_quantity[x]
+    };
+    itemArray.push(items);
+}
+window.criteo_q.push(
+{ event: "setAccount", account: 19481},
+{ event: "setSiteType", type: deviceType},
+{ event: "setHashedEmail", email: [""]},
+{ event: "viewBasket", item: itemArray}
+/* add a line for each item in the user's cart */
+);
+</script>
+      <!-- Google Fonts -->
+      <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900,900italic,700italic,400italic|Open+Sans' rel='stylesheet' type='text/css'>
+      <!-- Bootstrap -->
+      <link href="/AE/bootstrap/css/bootstrap.css" rel="stylesheet">
+      <!--plugins-->
+      <link href="/AE/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+      <link href="/AE/custom-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet">
+      <link href="/AE/css/yamm.css" rel="stylesheet">
+      <link href="/AE/css/hawksearch.css" rel="stylesheet">
+      <link href="/AE/css/navigation.css" rel="stylesheet">
+      <!--sky form pro css-->
+      <link href="/AE/sky-form/css/sky-forms.css" rel="stylesheet">           
+      <!--custom css file-->
+      <link href="/AE/css/fonts.css" rel="stylesheet">
+      <link href="/AE/css/style.css?v=1.2" rel="stylesheet">
+       <script src="https://cdn.optimizely.com/js/3534250896.js"></script>
+       <!-- Hotjar Tracking Code for www.sewingmachinesplus.com -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:21822,hjsv:5};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+<style type="text/css">
+.cart_cp_name {background-color: #f9f9a5; font-weight: bold;}                
+.cart_cp_quantity {background-color: #3c3c3c; color: #f9f9a5;}
+.cart_cp_total {background-color: #f9f9a5; color: green; font-weight: bold; font-size: 20px;}
+.totals_saved_txt {background-color: #f9f9a5;}
+.totals_saved {background-color: #f9f9a5; font-size: 20px; color: green; font-weight: bold;}         
+</style>
+  </head>
+  <body class="cart">
+
+  [-- VAR.Secure "yes" --]
+  [-- INCLUDE sc_cart.css PROCESS --]
+
+  [-- INCLUDE -SMP-checkout-header-empty PROCESS --]
+  [-- INCLUDE -SMP-header-minicart PROCESS --]
+
+  <style type="text/css">
+  .cart_op div {display:none;}/*don't display sale countdown timer*/
+  
+  .cart-top table.google_button {float:right; border-spacing:0px;}
+  .cart-top table.google_button td {padding:0;}
+  /*.cart-top #CBP_wrapper span.button_disp_inline_block {display:none;}*/
+
+  .cart-top #CBP_wrapper span.button_disp_block {margin-top:0;}
+
+  .order #CBP_wrapper span.button_disp_block {width:300px; max-width:100%;}
+  .order #CBP_wrapper span.button_disp_block input {transition: all 0.3s ease 0s;}
+  .order #CBP_wrapper span.button_disp_block input:hover {background-color:rgba(0,0,0,0.9);}
+
+  section.table-responsive table.cart tr td {background-color:#ffffff;}
+  section.table-responsive table.cart tr:nth-child(odd) td {background-color:#ffffff;}
+
+  </style>
+  <script type="text/javascript">
+  $(function() {
+    $("#cart-table-wrpr").find("table.cart").addClass("table table-condensed cart-table").removeClass("cart").find(".cart_op1").append('<label>Product Selections</label>')
+    .end()
+    .find("td.cart_delete").each(function(){
+      $(this).find('input').first().wrap('<span class="icon-trash"></span>').parent().siblings('input').first().wrap('<span class="icon-refresh"></span>');
+    });
+    $('#Redeem').addClass('btn btn-secondary');
+  });
+  </script>
+      <main role="main">
+        <!-- <div id="expertsewingconsultants" style="text-align: center;margin-top:10px;">
+          <span style="color: red;font-size: 30px;">Expert Consultants Here For You!</span><br>
+          <span style="margin-top: 5px;display: block;">We'll help you find the perfect product and provide lifetime support for any purchase.</span>
+        </div> -->
+<style>
+.xp012017-a{
+display:none;
+}
+.xp012017-b{
+display:none;
+}
+</style>
+<div class="xp012017-a">
+[--INCLUDE -xp012017-c-cart--]
+</div>
+<script src="/AE/jquery-popup/jquery.popupoverlay.js"></script>
+<style>
+          .well {
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            display:none;
+            margin:1em;
+            max-height:80%;
+            overflow-y:scroll;
+            max-width:600px !important;
+            padding:19px;
+          }
+          #lowest-price-pop{
+            transform: scale(0.8);
+          }
+          .popup_visible #lowest-price-pop{
+            transform: scale(1);
+          }
+        </style>
+
+<div class="xp012017-b" align="center">
+<a href="#lowest-price-pop" id="lowest-price-link" class="lowest-price-pop_open"><img src="/media/banners/lowest-price-badge.jpg"></a>
+
+
+<div id="lowest-price-pop" class="container well" style="background-color:#ededeb; max-width:33%!important; text-align:center;" align="center">
+  <a class="btn btn-secondary btn-lg lowest-price-pop_close" style="background-color:#e70000 !important;" href="#" role="button">Close</a>
+  <div align="center" style="margin-top:10px;">
+    <img src="/media/financing-popup/vacplus.png" class="img-responsive">
+    <h1 style="font-size:31px;">Lowest Price Guarantee!</h1>
+    <p>If you have found a product at a lower price on a different website call us at: (800) 401-8151 and we will match the price. or if you place your order now and find this product within the next 30 days for a lower price we will refund you the difference in the form of a store credit.</p>
+    <h2 style="font-size:26px;color:#e70000;">It's That Easy!</h2>
+  </div>
+</div>
+</div>
+        <div class="container" style="padding-left:10px; padding-right:10px;">
+          <div class="space-20"></div>
+          [-- SC_Form --]
+            <section class="cart-top">
+              [-- BUTTON ContinueShopping --]
+              <table class="google_button">
+                <tbody>
+                  <tr>
+                    <td>
+                      <div id="CBP_wrapper">
+                        <span class="chk_button button_disp_block">
+                          <input class="btn-block-check" name="function" id="Checkout" value="Checkout" tabindex="2" onclick="return(CheckIt(8,0));" type="submit">
+                        </span>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+            <div class="space-40"></div>     
+
+            <section id="cart-page" class="table-responsive">
+
+            [-- ShopSiteMessages --]
+           
+
+            [-- IF ShoppingCartHeader --]
+              <p>[-- ShoppingCartHeader --]</p>
+            [-- END_IF --]
+
+            <center style="margin-bottom:20px;">[-- SC_Registration --]</center>
+
+            <div id="cart-table-wrpr">
+              <script>
+              $(function(){
+              var amnt=49.01-ss_subtotal;
+              amnt=amnt.toFixed(2);
+              if(ss_subtotal<49.01){
+                document.getElementById("qualify-free-shipping").style.display="block";
+                document.getElementById("quality-free-ship-amount").innerHTML="$"+amnt;
+              }
+              });
+              </script>
+              <span id="qualify-free-shipping" style="margin-bottom:5px;display:none;font-weight: bold;font-size: 18px;">Add <span id="quality-free-ship-amount"></span> more to your cart to <span style="color:green;">qualify for free shipping!</span></span>
+              [-- SC_Cart delete image name quantity sku price total --]</div>
+
+            <div style="display:none;">[-- BUTTON Recalculate --]</div>
+
+            <div style="display:block; margin:25px 10px;">[-- SC_ShowBasket --]</div>
+
+<!--             <style type="text/css">
+            @media (max-width: 500px) {
+              #b2ssaledesktop {
+                display:none;
+              }
+              #b2ssalemobile {
+                display:block !important;
+              }
+            }
+            </style>
+
+            <div id="b2ssaledesktop" style="text-align:center;"><a href="https://www.vacplus.com/cgi-vacplus/sb/order.cgi?storeid=*1a55e44c50ad4a9e18c062cfd94a56&rec=2597&cpid=c1556e3c-d151-11e7-8911-0025907475a0&function=add"><img style="width:100%;" src="//vacplus.com/media/banners/2017-holidays/cart-holidays-v3.jpg"/></a></div>
+            <div id="b2ssalemobile" style="text-align:center;display:none;"><a href="https://www.vacplus.com/cgi-vacplus/sb/order.cgi?storeid=*1a55e44c50ad4a9e18c062cfd94a56&rec=2597&cpid=c1556e3c-d151-11e7-8911-0025907475a0&function=add"><img style="width:100%;" src="//vacplus.com/media/banners/2017-holidays/cart-mobile-holidays-v2.jpg"/></a></div>
+            <span style="display:block;margin-bottom:20px;font-size:12px;text-align:right;">*Excludes Janome, Necchi, Miele, Floriani, Reliable, Sew Steady, Arrow, Kangaroo, Industrial Machines, Financed Orders, Classes, Events, & Warranties.</span> -->
+
+            <aside class="cart-total clearfix cart-total-cmlla">
+              <div>
+                 <div class="col-sm-6">
+                  <div class="ordering-insturctions">
+                    [-- IF SC_OrderingInstructions --]
+                      [-- SC_OrderingInstructions 4 80 --]
+                    [-- END_IF --]
+                  </div>  
+                  <div class="space-30"></div>
+                  [-- IF SC_Coupon --]
+                    <div class="coupon-code">
+                      <label class="coupon-label">Have a Coupon Code? Enter here</label>
+                      <div class="coupon-form">
+                      [-- SC_Coupon --]
+                      [-- BUTTON ApplyCoupon --]
+                      </div>
+                    </div>   
+                  [-- END_IF --]
+                  <div class="space-30"></div> 
+
+                  [-- IF SC_GiftCert --]
+                    <div class="gift-certificate">
+                      <label>Enter Gift Certificate</label>
+                      <div class="gc-form">
+                      [-- SC_GiftCert --]
+                      [-- BUTTON ApplyGiftCert --]
+                      </div>
+                       </form>
+                    </div>
+                  [-- END_IF --]
+                  <div class="space-40"></div>
+                  <p class="shipping-message">
+                    Remember you have 60 days to call us and return<br />
+                    your product if you don't love it! <span style="font-size: 12px;">*Some restrictions apply</span>
+                  </p> 
+                  <!-- <div class="quote-message" style="background-image:url(https://www.vacplus.com/AE/images/cart-quotes.jpg);background-repeat:no-repeat;padding-left:50px;margin-top:20px;">
+                    <a style="float:left;margin:10px;" href="http://www.shopperapproved.com/reviews/SewingMachinesPlus.com/" class="shopperlink"><img src="//www.shopperapproved.com/seals/21959-r.gif" style="border: 0" alt="Customer Reviews" oncontextmenu="var d = new Date(); alert('Copying Prohibited by Law - This image and all included logos are copyrighted by Shopper Approved \251 '+d.getFullYear()+'.'); return false;" /></a><script type="text/javascript">(function() { var js = window.document.createElement("script"); js.src = '//www.shopperapproved.com/seals/certificate.js'; js.type = "text/javascript"; document.getElementsByTagName("head")[0].appendChild(js); })();</script>
+                    <label>Customer Reviews</label>
+                    <p style="font-style:italic;">"Every time I order from Sewing Machines Plus, my order arrives with lightning speed. Outstanding service -- great selection, and great prices. I will definitely be back in the future."</p>
+                    <p style="font-style:italic;">"I did a powerfull lot of shopping, and comparing prices. I always ended up back at Sewing machines plus! The prices were always the best of all the sites I looked at, so I of course purchased from SMP! Order came right on time, and I am beyond tickeled with my machine!"</p>
+                    <p style="font-style:italic;">"I love dealing with Sewing Machines Plus. Over the past few years, I have ordered three times and have been totally satisfied with the products and service. I highly recommend this company to anyone."</p>
+                  </div> -->           
+                 </div>
+                <div class="col-sm-6">
+                  <div class="select-option">
+                    [-- SC_Tax_Shipping --]
+                  </div>
+                  <table class="table table-condensed">
+                    <thead>
+                      <tr>
+                        <th>Total Price</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          [-- SC_Surcharge --]
+                          [-- SC_Totals --]
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          [-- SC_PaymentSelection --] 
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          [-- BUTTON Checkout --]
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="your-order-secure" style="text-align:center;">
+                            <label>Your order is secure</label><br/>
+                            <img src="https://www.vacplus.com/AE/images/checkout-secure-logos.jpg"/>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </aside>
+  <div class="clear">&nbsp;</div>
+  <table class="cart" style="margin:0px auto; width:auto;display:none;">
+
+     [-- IF Cart_Cross_Sell --]
+    <tr>
+    <td colspan="2" style="font-size:14px; font-weight:bold; padding-top:1px; padding-bottom:1px; font-family:Arial, Helvetica, sans-serif;">May we also suggest:</td>
+    </tr>
+    <tr>
+      <td colspan="2"><table>
+        <tr>
+          [-- LOOP Cart_Cross_Sell 3 --]
+          <td>[-- CART_CROSS_SELL --]</td>
+          [-- END_LOOP Cart_Cross_Sell --]
+        </tr>
+      </table></td>
+    </tr>
+    [-- END_IF --]
+    <!-- Global Cross-sell in Cart -->
+    [-- IF Global_Cross_Sell --]
+    <tr>
+      <td colspan="2" class="gcs_table"><table class="gcs_table">
+        <caption>[-- STORE.GlobalCrossSellHeader --]</caption>
+        <tr>
+          <td class="gcs_table_blank">&nbsp;</td>
+          [-- LOOP GLOBAL_Cross_Sell --]
+          <td class="gcs_table_content">[-- GLOBAL_CROSS_SELL --]</td>
+          [-- END_LOOP Global_Cross_Sell --]
+          <td class="gcs_table_blank">&nbsp;</td>
+        </tr>
+      </table></td>
+    </tr>
+    [-- END_IF --]
+    <tr>
+      <td colspan="2">
+<div id="data_4Tell" data-customer="" data-cart=""></div>
+<script type="text/javascript">
+window.onload = function() {
+  document.getElementById("data_4Tell").setAttribute("data-cart", ss_sku.toString()); 
+}
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+    }
+    return "";
+}
+var fourTellCookieContents = getCookie("fourtellemail");
+document.getElementById("data_4Tell").setAttribute("data-customer", fourTellCookieContents);
+</script>
+  <style type="text/css">
+  @media screen and (max-device-width: 414px) {
+    #timer {letter-spacing: 1px !important;}
+    #time-left {padding-left: 130px !important;}
+    }
+
+  @font-face {
+      font-family: 'Agency FB';
+      src: url('/fonts/agency-fb/AGENCYB.eot?') format('eot'),
+    url('/fonts/agency-fb/AGENCYB.woff') format('woff'),
+    url('/fonts/agency-fb/AGENCYB.TTF') format('truetype');
+    }
+
+  </style>
+    <!--<a href="https://www.vacplus.com/promotions-clearance.php"><img src="https://www.vacplus.com/media/promotions/2014-october/page-banner.jpg" border="0"></a>-->
+        <!--<div id="js-banner" style="margin-bottom:15px;">
+          <div id="to-free" style="text-align:center; font-family:Arial, Helvetica, sans-serif; font-size:26px; color:#ffffff; position:relative; top:68%; visibility:hidden;"></div> </div>-->
+
+  <!--banner if over 1k / cz 6/23/2014-->
+    <script type="text/javascript">
+      /* CUSTOM BANNERS*/
+  /*
+      $(function(){
+        var amnt=49-ss_subtotal;
+        amnt=amnt.toFixed(2);
+        if(ss_subtotal<49.00){
+          document.getElementById("js-banner").style.height="104px";
+          document.getElementById("js-banner").style.display="block";
+          document.getElementById("js-banner").style.background="url('https://www.vacplus.com/media/images/cart/free-shipping.jpg') no-repeat";
+          document.getElementById("to-free").style.visibility="visible";
+          document.getElementById("to-free").innerHTML="ADD <span style='color:#000000;'>$"+amnt+"</span> MORE!";
+        }else{
+          if((ss_subtotal>49.00) && (ss_subtotal<1000.00)){
+            document.getElementById("to-free").style.visibility="hidden";
+            document.getElementById("js-banner").style.height="104px";
+            document.getElementById("js-banner").style.background="url('https://www.vacplus.com/media/images/cart/awards.jpg') no-repeat";
+          }else{
+            if(ss_subtotal>1000.00){
+              document.getElementById("to-free").style.visibility="hidden";
+              document.getElementById("js-banner").style.height="104px";
+              document.getElementById("js-banner").style.background="url('https://www.vacplus.com/media/images/cart/financing.jpg') no-repeat";
+            }
+          }
+        }
+      });
+  */
+    </script>
+
+  <!--END banner if over 1k-->
+
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="2">
+
+          <div style="visibility:hidden;"><input type="text" name="reloadPos" id="reloadPos"></div>
+      </td>
+    </tr>
+    <tr>
+      <td style="line-height: 150%; padding-top: 10px; padding-bottom: 10px; border-right:none;" align="center">
+
+      <!--check if shipping or product option has been changed then recalculate / cz 6/20/2014-->
+      <script>
+      $("input[name=shipping]").change(function(){
+        $("#Recalculate").click();
+        document.cookie="reloadPos=yes";
+      });
+
+      //fix for enter on input fields cz 10/15/2014
+      /*$('input').keypress(function(event){
+        if (event.keyCode == 10 || event.keyCode == 13){
+            event.preventDefault();
+          }
+      });
+
+        $('input[name=coupon_code]').keypress(function(event){
+          if (event.keyCode == 10 || event.keyCode == 13) {
+            $(".button152").click();
+          }
+        });
+
+      $('input[name=giftcert_code]').keypress(function(event){
+          if (event.keyCode == 10 || event.keyCode == 13) {
+            $(".button375").click();
+          }
+        });
+
+      $('input[name=giftcert_pin]').keypress(function(event){
+          if (event.keyCode == 10 || event.keyCode == 13) {
+            $(".button375").click();
+          }
+        });*/
+      //end fix
+
+      $("select").change(function(){
+        $("#Recalculate").click();
+      });
+
+      /*$("input").click(function(){
+        $(".taxnship").change();
+      });*/
+
+      </script>
+      <!--END check if shipping or product option has been changed then recalculate / cz 6/20/2014-->
+
+      <!--zip reload cz 7/8/2014-->
+      <script>
+      
+      
+
+      $('#ss_zip2').append('<div id="loadgif" style="visibility:hidden; float:right;"><img src="httpS://www.vacplus.com/media/loading.gif"/></div>');
+    
+    /*Reload document scrolled to the last scroll position
+      $("input[name=zip_code]").ready(function(){  
+        var scrollPos=document.cookie;
+        if(scrollPos.indexOf("reloadPos=yes")===-1){
+          document.cookie="reloadPos=no";
+        }else{
+          var scrollVal=$("input[name=reloadPos]").position();
+          $(window).scrollTop(scrollVal.top);
+          document.cookie="reloadPos=no";
+        }
+        */
+        var zipLength=$("input[name=zip_code]").val();
+        if((zipLength.length>1)&&(zipLength!="Enter Zip")){
+          $("input[name=zip_code]").attr('value', zipLength);
+        }else{
+          if((zipLength.length<1)||(zipLength="Enter Zip")){
+            $("input[name=zip_code]").attr('value', 'Enter Zip');
+            $(".taxnship").css("visibility","hidden");
+          }
+        }
+
+      //});
+      
+      $("input[name=zip_code]").focusin(function(){
+        var zipValue=$("input[name=zip_code]").val();
+        if(zipValue=="Enter Zip"){
+          $("input[name=zip_code]").attr('value', '');
+        }
+      });
+
+      $("input[name=zip_code]").keyup(function(event){
+        if (event.keyCode == 10 || event.keyCode == 13){
+            event.preventDefault();
+        }else{
+          var zipLength=$("input[name=zip_code]").val();
+
+          if((zipLength.length>=5)&&(isNaN(zipLength))){
+            if(zipLength.indexOf(" ")===-1){
+              var canZip=6;  
+            }else{
+              var canZip=7;
+            }
+            if(zipLength.length>=canZip){
+              $(this).blur();
+              //$("#reloadPos").attr('value', 'yes');
+              document.cookie="reloadPos=yes";
+              $('#loadgif').css("visibility", "visible");
+            }
+          }else{
+            if((zipLength.length>=5)&&(!isNaN(zipLength))){
+              $(this).blur();
+              //$("#reloadPos").attr("value", "yes");
+              document.cookie="reloadPos=yes";
+              $('#loadgif').css("visibility", "visible");
+            }
+          }
+        }
+      });
+
+      </script>
+      <!--END zip reload-->
+
+
+
+      <!--Hidden Empty Cart for Staff cz 7/22/2014-->
+      <script>
+        $('.side').click(function(){
+          $('.button9').click();
+        });
+      </script>
+
+
+    </td>
+    <td style="vertical-align: top; line-height: 150%; padding-top: 5px; padding-bottom: 10px;" align="right">
+      <!-- Table for totals, etc. -->
+    </td>
+    </tr>
+
+
+    <tr><td width="100%" colspan="2" style="padding-bottom: 5px;"></td></tr>
+    <!--<tr>
+      <td colspan="2" style="padding-bottom: 10px;" align="center">
+        <script type="text/javascript" data-pp-pubid="de7ad006aa" data-pp-placementtype="468x60"> (function (d, t) {
+        "use strict";
+        var s = d.getElementsByTagName(t)[0], n = d.createElement(t);
+        n.src = "//paypal.adtag.where.com/merchant.js";
+        s.parentNode.insertBefore(n, s);
+        }(document, "script"));
+        </script>
+
+        <small style="font-size:13px; color:#820000;"><i>Freight charges may vary if shipping outside of the Continental United States of America. For actual shipping charges call us at (800) 401-8151.</i></small>
+        <small><i>[-- STORE.SC_AnyChanges --]</i></small>
+      </td>
+    </tr>-->
+
+    <!--<tr>
+      <td colspan="2" style="padding-bottom: 10px;" align="center">
+        [-- BUTTON Checkout --]&nbsp;
+      </td>
+    </tr>-->
+  <tr>
+      <td colspan="2" style="padding-bottom: 10px;" align="center">
+        <div style="visibility:hidden;">[-- BUTTON EmptyCart --]</div>
+      </td>
+    </tr>
+  <tr><td width="100%" colspan="2" style="padding-bottom: 5px;"></td></tr>
+  </table>
+  </div>
+
+  <script src="https://www.vacplus.com/js/cartaband.js" language="javascript" type="text/javascript"></script>
+
+  <script language="JavaScript">
+  <!--
+          psyCartAbandonmentNotify('sewmachshop', '/cartaband/tracker.cgi');
+  -->
+  </script>
+
+  <script type="text/javascript">
+
+  ss_jQuery(function(){ 
+     if(parseFloat(ss_subtotal) <= 49){
+          ss_jQuery("input[value='api_Free Ground Shipping']").removeAttr("checked");
+          ss_jQuery("input[value='api_Free Ground Shipping']").parent().parent().hide();
+     }
+
+     window.show_usps = true;
+      ss_jQuery.each(ss_field15, function(index, value){
+          if(value=='no-usps'){
+              window.show_usps = false;
+          }
+      
+      });
+      
+      if(window.show_usps==false){
+          ss_jQuery("input[value^='usps']").removeAttr("checked");
+          ss_jQuery("input[value^='usps']").parent().parent().hide();
+      }
+
+  });
+
+  </script>
+
+        </div>
+        <div class="space-60"></div>
+      </main>
+    [-- INCLUDE -SMP-footer-cart --]
+    [-- INCLUDE hide-shipping-options --]
+
+<!--4-Tell Recommendations Begin (www.4-tell.com)-->
+<!--4-Tell Recommendations End-->
+
+<script>
+
+      // Initialize the plugin
+      $('#lowest-price-pop').popup({
+        transition: 'all 0.3s',
+        scrolllock: true
+      });
+
+      </script>
+
+<style>
+  .best-value-tag{display:none;}
+</style>
+<script>
+  $(document).ready(function(){
+    $("input[value='api_1-5 Day Delivery']").parent().append(" <span class=\"best-value-tag\" style='color:green;font-weight:bold;font-style:italic;'>Best Value!</span>");
+  })
+</script>
+
+<!-- BEGIN: Bronto Cart Abandon Code -->
+<script type="text/javascript">
+  var _bsw = _bsw || [];
+  _bsw.push(['_bswId', 'a8ab4636c5a9a0b661c43f970b573cb86cec5615a882a5fda052dc5277ff5127']);
+  (function() {
+    var bsw = document.createElement('script'); bsw.type = 'text/javascript'; bsw.async = true;
+    bsw.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'js.bronto.com/s/b.min.js';
+    var t = document.getElementsByTagName('script')[0]; t.parentNode.insertBefore(bsw, t);
+  })();
+</script>
+<!-- END: Bronto Cart Abandon Code -->
+<script src="https://cdn.bronto.com/bba/bba.js" data-bbaid="55ff0542-adde-4334-99f1-3bed861620e0" async></script>
+<!-- <script bronto-popup-id="0ea2bf54-c520-4caa-adc3-28ceeea06625" src="https://cdn.bronto.com/popup/delivery.js"></script> -->
+<!--4-Tell Recommendations Begin (www.4-tell.com)-->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+_4TellBoost={}; _4TellBoost.jq=jQuery.noConflict(true);
+</script>
+<script type="text/javascript" async src="//4tcdn.blob.core.windows.net/4tjs3/4TellLoader.js?alias=sewingma"></script>
+<!--4-Tell Recommendations End-->
+<!-- Start of LiveChat (www.livechatinc.com) code -->
+<script type="text/javascript">
+/*window.__lc = window.__lc || {};
+window.__lc.license = 8753261;
+(function() {
+  var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+  lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+})();*/
+</script>
+<!-- End of LiveChat code -->
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5665943"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script><noscript><img src="//bat.bing.com/action/0?ti=5665943&Ver=2" height="0" width="0" style="display:none; visibility: hidden;" /></noscript>
+  </body>
+
+  [-- INCLUDE -SMP-AE-js-plugins --]
+  </html>
+  [-- END_DEFINE ShoppingCart --]
+
+  [-- DEFINE SHIPPING --]
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <style>.async-hide { opacity: 0 !important} </style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,
+{'GTM-KTCLFC5':true});</script>
+      <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-487443-1', 'auto');
+  ga('require', 'GTM-KTCLFC5');
+  // Optimizely Universal Analytics Integration
+ window.optimizely = window.optimizely || [];
+ window.optimizely.push("activateUniversalAnalytics");
+  ga('send', 'pageview');
+
+</script>
+      <meta charset="ISO-8859-1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>[-- STORE.Ship_CheckOut Remove_Html --]</title>
+  <meta name="verify-v1" content="LgvDD+yKZW1ULvHkUzBRAUu5UnP/88OMGXnfr/0DQao=" />
+
+#  [-- INCLUDE LexiConn_Decline_CC PROCESS --]
+
+  <script type="text/javascript" language="JavaScript">
+  <!-- 
+  [-- SC_JAVASCRIPT extras --]
+  // -->
+  </script>
+
+
+
+  <style type="text/css">
+  table.totals tbody tr td {
+    text-align: right;
+    line-height: 150%;
+  }
+
+  table.cart tbody tr td {
+    padding: 3px;
+  }
+  table.bill_addr{
+    padding-right: 10px;
+  }
+  table.ship_addr{
+    padding-left: 10px;
+  }
+  td.addr_val{
+    text-align: left;!important
+  }
+  td.addr{
+    text-align: left;!important
+  }
+  td.bill_addr_hdr{
+    text-align: left;
+    font-weight:bold;!important
+  }
+  td.ship_addr_hdr{
+    text-align: left;
+    font-weight:bold;!important
+  }
+  table.cart td{
+    background-color: #f8f8f8 !important;
+  }
+  </style>
+  <style type="text/css">
+  .myButton {
+   background-color:#44c767 !important;
+   -moz-border-radius:8px !important;
+   -webkit-border-radius:8px !important;
+   border-radius:8px !important;
+   border:1px solid #18ab29 !important;
+   display:inline-block !important;
+   cursor:pointer !important;
+   color:#ffffff !important;
+   font-family:Arial !important;
+   font-size:17px !important;
+   padding:16px 31px !important;
+   text-decoration:none !important;
+   text-shadow:0px 1px 0px #2f6627 !important;
+  }
+  .myButton:hover {
+   background-color:#5cbf2a !important;
+  }
+  .myButton:active {
+   position:relative !important;
+   top:1px !important;
+  }
+  </style>
+      <!-- Google Fonts -->
+      <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900,900italic,700italic,400italic|Open+Sans' rel='stylesheet' type='text/css'>
+      <!-- Bootstrap -->
+      <link href="/AE/bootstrap/css/bootstrap.css" rel="stylesheet">
+      <!--plugins-->
+      <link href="/AE/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+      <link href="/AE/custom-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet">
+      <link href="/AE/css/yamm.css" rel="stylesheet">
+      <link href="/AE/css/hawksearch.css" rel="stylesheet">
+      <link href="/AE/css/navigation.css" rel="stylesheet">
+      <!--sky form pro css-->
+      <link href="/AE/sky-form/css/sky-forms.css" rel="stylesheet">           
+      <!--custom css file-->
+      <link href="/AE/css/fonts.css" rel="stylesheet">
+      <link href="/AE/css/style.css?v=1.2" rel="stylesheet">
+
+      <script type="text/javascript" src="/jquery/js/jquery-1.4.2.min.js"></script> 
+      <script type="text/javascript" src="/jquery/js/jquery-ui-1.8.2.custom.min.js"></script>
+      <script src="https://cdn.optimizely.com/js/3534250896.js"></script>
+      <!-- Hotjar Tracking Code for www.sewingmachinesplus.com -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:21822,hjsv:5};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+  </head>
+  <body class="cart">
+
+  [-- INCLUDE sc_cart.css PROCESS --]
+
+  [-- INCLUDE -SMP-checkout-header PROCESS --]
+  [-- INCLUDE -SMP-header-minicart PROCESS --]
+
+  <script type="text/javascript">
+  $(function() {
+    $("#cart-table-wrpr").find("table.cart").addClass("table table-condensed cart-table").removeClass("cart").find(".cart_op1").append('<label>Product Selections</label>')
+    .end()
+    .find("td.cart_delete").each(function(){
+      $(this).find('input').first().wrap('<span class="icon-trash"></span>').parent().siblings('input').first().wrap('<span class="icon-refresh"></span>');
+    });
+    $('#Redeem').addClass('btn btn-secondary');
+
+    $('#sky-form .bill_addr_hdr').html('<legend>STEP 1 <b>'+$('#sky-form .bill_addr_hdr').text()+'</b></legend>').closest('#sky-form').find('.ship_addr_hdr').html('<legend>STEP 2 <b>'+$('#sky-form .ship_addr_hdr').text()+'</b></legend>');
+    $('#checkout-submit-order').find('input').removeClass('.button67').addClass('btn btn-skin btn-lg btn-order');
+
+  });
+  </script>
+
+  <main role="main"> 
+  <<!-- div id="expertsewingconsultants" style="text-align: center;margin-top:10px;">
+    <span style="color: red;font-size: 30px;">Expert Sewing Consultants Here For You!</span><br>
+    <span style="margin-top: 5px;display: block;">We'll help you find the perfect product and provide lifetime support for any purchase.</span>
+  </div> -->  
+<script src="/AE/jquery-popup/jquery.popupoverlay.js"></script>
+<style>
+          .xp012017-b{
+            display:none;
+          }
+          .well {
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            display:none;
+            margin:1em;
+            max-height:80%;
+            overflow-y:scroll;
+            max-width:600px !important;
+            padding:19px;
+          }
+          #lowest-price-pop{
+            transform: scale(0.8);
+          }
+          .popup_visible #lowest-price-pop{
+            transform: scale(1);
+          }
+        </style>
+
+<div class="xp012017-b" align="center">
+<a href="#lowest-price-pop" id="lowest-price-link" class="lowest-price-pop_open"><img src="/media/banners/lowest-price-badge.jpg"></a>
+
+
+<div id="lowest-price-pop" class="container well" style="background-color:#ededeb; max-width:33%!important; text-align:center;" align="center">
+  <a class="btn btn-secondary btn-lg lowest-price-pop_close" style="background-color:#e70000 !important;" href="#" role="button">Close</a>
+  <div align="center" style="margin-top:10px;">
+    <img src="/media/financing-popup/vacplus.png" class="img-responsive">
+    <h1 style="font-size:31px;">Lowest Price Guarantee!</h1>
+    <p>If you have found a product at a lower price on a different website call us at: (800) 401-8151 and we will match the price. or if you place your order now and find this product within the next 30 days for a lower price we will refund you the difference in the form of a store credit.</p>
+    <h2 style="font-size:26px;color:#e70000;">It's That Easy!</h2>
+  </div>
+</div>
+</div>           
+    <style>
+      table.payment > tbody:nth-child(1) > tr:nth-child(5){
+        height:115px;
+      }
+      span#E_pay4_1{
+        display:inline-block;
+        margin-bottom:1.5em;
+      }
+    </style>
+    <div class="container sky-checkout-form">
+      <div id="sky-form" class="sky-form">
+        <div class="row">
+          <div class="col-md-9">
+
+            <!--<div class="space-30"></div>-->
+
+            [-- ShopSiteMessages --]
+            [-- ShippingHeader --]
+
+            [-- SC_Form --]
+
+            <fieldset class="opened">
+
+              [-- SC_Address Vertical --]
+
+              [-- IF CustomHTML --]
+                [-- SHIP_CustomHTML 1 --]
+              [-- END_IF --]
+
+              [-- IF CustomHTML --]
+                [-- SHIP_CustomHTML 2 --]
+              [-- END_IF --]
+
+              [-- IF CustomHTML --]
+                [-- SHIP_CustomHTML 3 --]
+              [-- END_IF --]
+
+              [-- IF CustomHTML --]
+                [-- SHIP_CustomHTML 4 --]
+              [-- END_IF --]
+
+              [-- IF CustomHTML --]
+                [-- SHIP_CustomHTML 5 --]
+              [-- END_IF --]
+
+              <h3 style="margin-top:30px;">Payment</h3>
+
+              [-- SC_Payment --]
+
+            </fieldset>
+
+            <fieldset class="opened">
+
+              <legend>Step 3 <b>Review</b></legend>
+
+              <div id="cart-table-wrpr">[-- SC_Cart image name quantity sku price total --]</div>
+
+              <div class="checkout-totals">[-- SC_Totals --]<div class="xp012017-b" align="right"><a href="#lowest-price-pop" id="lowest-price-link" class="lowest-price-pop_open"><img src="/media/banners/lowest-price-badge.jpg"></a>
+</div></div>
+
+              <h3>Additional Information</h3> 
+
+              <!-- cz synchrony financing header link 06/22/2015 -->
+              <script type="text/javascript">
+              window.onload = function() {
+                var financehdr = document.getElementsByClassName('payment_hdr')[0].innerHTML;
+                if(financehdr.indexOf("Financing") > -1) {
+                  document.getElementById("sync-fin-banner").style.display="block";
+                }
+              }
+              </script>
+              <!--end cz synchrony link-->
+              <div id="sync-fin-banner" style="display:none; text-align:center;">
+                <p><span style="font-weight:normal;">VacPlus.com is proud to offer interest free financing through Synchrony Financial on any purchase over $150. To apply for financing simply follow the link below to complete the application page and submit it to Synchrony Financial. Your information is kept secure and private as Synchrony reviews your application.<br/><br/>
+                After completing the application you will be provided with an application key. Enter your application key into the textbox listed above and VacPlus.com will take care of the rest. You will receive 0% APR financing with minimal payments due each month. If your application is declined please call us as soon as possible to speak about other payment methods!<br/><br/>
+                <a target="_blank" href="https://etail.mysynchrony.com/eapply/eapply.action?uniqueId=D2895D9FF3CADB4EF670CD22E0CF1A52D5A064E2C1629DFE&client=Sewing%20Machines%20Plus" class="myButton">Get approved through Synchrony Financial</a></span></p>
+              </div>
+
+              [-- VAR.HR "no" --]
+
+              [-- IF Email_List --]
+                <div class="checkout-email-list">[-- Email_List --]</div>
+              [-- END_IF --]
+
+              [-- IF SC_Comments --]
+                <div class="checkout-comments">[-- SC_Comments --]</div>
+                [-- VAR.HR "yes" --]
+              [-- END_IF --]
+
+              [-- IF SECURITYIMAGE --]
+                [-- SHIPSECURITYIMAGE --]
+              [-- END_IF --]
+
+              <div id="checkout-submit-order" class="checkout-submit-order">[-- BUTTON SubmitOrder --]</div>
+
+            </fieldset>
+
+            <script type="text/javascript">
+            jQuery(function(){
+              if(ss_ordertotal == "0.00") {
+                jQuery(".payment").hide();
+              }
+            });
+            </script>
+            <script src="https://www.vacplus.com/js/cartaband.js" language="javascript" type="text/javascript"></script>
+            <script language="JavaScript">
+            <!--
+              psyCartAbandonmentNotify('sewmachshop', '/cartaband/tracker.cgi');
+            -->
+            </script>
+          </div>
+          <div class="col-md-3 scrollspy">
+            <div class="space-30"></div>
+            <div class="cart-total" data-spy="affix">
+              <fieldset class="opened">
+                <legend>Bag Summary <a href="[-- SHOPPING_CART_URL --]">Edit <i class="fa fa-caret-right"></i></a></legend>
+                <div class="checkout-minicart-wrpr">[-- SC_Cart name quantity --]</div>
+              </fieldset>
+            </div>
+          </div>  
+          <div class="space-30"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+  [-- INCLUDE -SMP-footer-cart --]
+  <!--4-Tell Recommendations Begin (www.4-tell.com)-->
+<!--4-Tell Recommendations End-->
+<script>
+
+      // Initialize the plugin
+      $('#lowest-price-pop').popup({
+        transition: 'all 0.3s',
+        scrolllock: true
+      });
+
+      </script>
+  <!-- BEGIN: Bronto Cart Abandon Code -->
+<script type="text/javascript">
+  var _bsw = _bsw || [];
+  _bsw.push(['_bswId', 'a8ab4636c5a9a0b661c43f970b573cb86cec5615a882a5fda052dc5277ff5127']);
+  (function() {
+    var bsw = document.createElement('script'); bsw.type = 'text/javascript'; bsw.async = true;
+    bsw.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'js.bronto.com/s/b.min.js';
+    var t = document.getElementsByTagName('script')[0]; t.parentNode.insertBefore(bsw, t);
+  })();
+</script>
+<!-- END: Bronto Cart Abandon Code -->
+<script src="https://cdn.bronto.com/bba/bba.js" data-bbaid="55ff0542-adde-4334-99f1-3bed861620e0" async></script>
+<!-- <script bronto-popup-id="0ea2bf54-c520-4caa-adc3-28ceeea06625" src="https://cdn.bronto.com/popup/delivery.js"></script> -->
+ [-- INCLUDE LexiConn_Decline_CC PROCESS --]
+ <!-- Start of LiveChat (www.livechatinc.com) code -->
+<script type="text/javascript">
+/*window.__lc = window.__lc || {};
+window.__lc.license = 8753261;
+(function() {
+  var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+  lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+})();*/
+</script>
+<!-- End of LiveChat code -->
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5665943"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script><noscript><img src="//bat.bing.com/action/0?ti=5665943&Ver=2" height="0" width="0" style="display:none; visibility: hidden;" /></noscript>
+  </body>
+  [-- INCLUDE -SMP-AE-js-plugins --]
+  </html>
+  [-- END_DEFINE SHIPPING --]
+  [-- DEFINE CONFIRMATION --]
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <style>.async-hide { opacity: 0 !important} </style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,
+{'GTM-KTCLFC5':true});</script>
+      <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-487443-1', 'auto');
+  ga('require', 'GTM-KTCLFC5');
+  // Optimizely Universal Analytics Integration
+ window.optimizely = window.optimizely || [];
+ window.optimizely.push("activateUniversalAnalytics");
+  ga('send', 'pageview');
+
+</script>
+      <meta charset="ISO-8859-1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Confirm Your Order</title>
+  <meta name="verify-v1" content="LgvDD+yKZW1ULvHkUzBRAUu5UnP/88OMGXnfr/0DQao=" />
+
+  [-- INCLUDE LexiConn_Decline_CC PROCESS --]
+
+  <script type="text/javascript" language="JavaScript">
+  <!-- 
+  [-- SC_JAVASCRIPT extras --]
+  // -->
+  </script>
+
+
+
+  <style type="text/css">
+  table.totals tbody tr td {
+    text-align: right;
+    line-height: 150%;
+  }
+
+  table.cart tbody tr td {
+    padding: 3px;
+  }
+  </style>
+      <!-- Google Fonts -->
+      <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900,900italic,700italic,400italic|Open+Sans' rel='stylesheet' type='text/css'>
+      <!-- Bootstrap -->
+      <link href="https://www.vacplus.com/AE/bootstrap/css/bootstrap.css" rel="stylesheet">
+      <!--plugins-->
+      <link href="https://www.vacplus.com/AE/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+      <link href="https://www.vacplus.com/AE/custom-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet">
+      <link href="https://www.sewingmachinesplus.com/AE/css/yamm.css" rel="stylesheet">
+      <link href="https://www.vacplus.com/AE/css/hawksearch.css" rel="stylesheet">
+      <link href="https://www.vacplus.com/AE/css/navigation.css" rel="stylesheet">
+      <!--sky form pro css-->
+      <link href="https://www.vacplus.com/AE/sky-form/css/sky-forms.css" rel="stylesheet">           
+      <!--custom css file-->
+      <link href="https://www.vacplus.com/AE/css/fonts.css" rel="stylesheet">
+      <link href="https://www.vacplus.com/AE/css/style.css?v=1.2" rel="stylesheet">
+     <script src="https://cdn.optimizely.com/js/3534250896.js"></script>
+     <!-- Hotjar Tracking Code for www.sewingmachinesplus.com -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:21822,hjsv:5};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+  </head>
+  <body class="cart">
+
+  [-- INCLUDE sc_cart.css PROCESS --]
+
+  [-- INCLUDE -SMP-checkout-header PROCESS --]
+  [-- INCLUDE -SMP-header-minicart PROCESS --]
+
+      <main role="main">              
+        <div class="container">
+          <div class="space-20"></div>
+          <section class="cart-top">
+            [-- BUTTON ContinueShopping --]
+            [-- BUTTON Checkout --]
+          </section>
+          <div class="space-40"></div>   
+
+  <div style="font-size: 8pt; margin: 3px 10px 20px 5px;">
+
+  [-- ShopSiteMessages --]
+
+  #<div class="header">[-- ConfirmationHeader --]</div>
+
+  [-- SC_Form --]
+  <table border="0" width="0" align="center">
+    <tr>
+      <td>
+        [-- SC_Cart delete image name quantity sku price total --]
+      </td>
+    </tr>
+    <tr>
+      <td>
+        [-- SC_Totals --]
+      </td>
+    </tr>
+
+    <tr><td align="center"><hr noshade size="2" /></td></tr>
+
+    <tr>
+      <td align="center">
+        [-- SC_Address --]
+      </td>
+    </tr>
+
+    <tr><td align="center"><hr noshade size="2" /></td></tr>
+
+    <tr>
+      <td align="center">
+        [-- SC_Payment --]
+      </td>
+    </tr>
+
+    <tr><td align="center"><hr noshade size="2" /></td></tr>
+
+  [-- VAR.HR No --]
+
+   [-- IF SC_OrderingInstructions_Text --]
+    <tr>
+      <td align="center">
+        [-- SC_OrderingInstructions --]
+      </td>
+    </tr>
+    [-- VAR.HR Yes --]
+  [-- END_IF --]
+
+  [-- IF SC_Comments_Text --]
+    <tr>
+      <td align="center">
+        [-- SC_Comments --]
+      </td>
+    </tr>
+    [-- VAR.HR Yes --]
+  [-- END_IF --]
+
+  [-- IF CustomHTML_Values --]
+    <tr>
+      <td align="center">
+        <table class="CustomHTML">
+          <tr>
+            <td>
+              [-- CustomHTML_Values --]
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    [-- VAR.HR Yes --]
+  [-- END_IF --]
+
+  [-- IF Email_List --]
+    <tr>
+      <td class="email">
+        [-- Email_List --]
+      </td>
+    </tr>
+    [-- VAR.HR Yes --]
+  [-- END_IF --]
+
+  [-- IF VAR.HR Yes --]
+    <tr><td align="center"><hr noshade size="2" /></td></tr>
+  [-- END_IF --]
+
+    <tr>
+      <td class="buttons">
+        [-- BUTTON Confirmation --]&nbsp;[-- BUTTON MakeChanges --]
+      </td>
+    </tr>
+
+  </table>
+
+  #<div class="footer">[-- ConfirmationFooter --]</div>
+
+  </div>
+
+  <script src="https://www.vacplus.com/js/cartaband.js" language="javascript" type="text/javascript"></script>
+
+  <script language="JavaScript">
+  <!--
+          psyCartAbandonmentNotify('sewmachshop', '/cartaband/tracker.cgi');
+  -->
+  </script>
+
+        </div>
+        <div class="space-60"></div>
+      </main>
+
+  [-- INCLUDE DEV-checkout-rightbar --]
+    [-- INCLUDE -SMP-footer --]
+<!--4-Tell Recommendations Begin (www.4-tell.com)-->
+<!--4-Tell Recommendations End-->
+
+<!-- BEGIN: Bronto Cart Abandon Code -->
+<script type="text/javascript">
+  var _bsw = _bsw || [];
+  _bsw.push(['_bswId', 'a8ab4636c5a9a0b661c43f970b573cb86cec5615a882a5fda052dc5277ff5127']);
+  (function() {
+    var bsw = document.createElement('script'); bsw.type = 'text/javascript'; bsw.async = true;
+    bsw.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'js.bronto.com/s/b.min.js';
+    var t = document.getElementsByTagName('script')[0]; t.parentNode.insertBefore(bsw, t);
+  })();
+</script>
+<!-- END: Bronto Cart Abandon Code -->
+<script src="https://cdn.bronto.com/bba/bba.js" data-bbaid="55ff0542-adde-4334-99f1-3bed861620e0" async></script>
+<!-- <script bronto-popup-id="0ea2bf54-c520-4caa-adc3-28ceeea06625" src="https://cdn.bronto.com/popup/delivery.js"></script> -->
+<!-- Start of LiveChat (www.livechatinc.com) code -->
+<script type="text/javascript">
+/*window.__lc = window.__lc || {};
+window.__lc.license = 8753261;
+(function() {
+  var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+  lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+})();*/
+</script>
+<!-- End of LiveChat code -->
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5665943"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script><noscript><img src="//bat.bing.com/action/0?ti=5665943&Ver=2" height="0" width="0" style="display:none; visibility: hidden;" /></noscript>
+      </body>
+      [-- INCLUDE -SMP-AE-js-plugins --]
+  </html>
+  [-- END_DEFINE CONFIRMATION --]
+
+
+  [-- DEFINE THANKYOU --]
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      
+      <meta charset="ISO-8859-1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>[-- STORE.SC_ThankYou Remove_Html --]</title>
+  <meta name="verify-v1" content="LgvDD+yKZW1ULvHkUzBRAUu5UnP/88OMGXnfr/0DQao=" />
+
+  <script type="text/javascript" language="JavaScript">
+  <!-- 
+  [-- SC_JAVASCRIPT extras --]
+  // -->
+  </script>
+  <script type="text/javascript">
+  var google_tag_params = {
+  ecomm_prodid: [''],
+  ecomm_pagetype: 'purchase',
+  ecomm_totalvalue:''
+  };
+  </script>
+  <!-- PHONE ORDER COOKIE TRACKING -->
+  <script type="text/javascript">
+  var d = new Date();
+  d.setTime(d.getTime()+(29*24*60*60*1000));
+  var expires = "expires="+d.toGMTString();
+  document.cookie = "onlinepurchase=yes;" + expires + ";domain=.sewingmachinesplus.com;path=/";
+  </script>
+  <!-- PHONE ORDER COOKIE TRACKING END -->
+<script type="text/javascript" src="//static.criteo.net/js/ld/ld.js" async="true"></script>
+<script type="text/javascript">
+window.criteo_q = window.criteo_q || [];
+var deviceType = /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Silk/.test(navigator.userAgent) ? "m" : /iPad/.test(navigator.userAgent) ? "t" : "d";
+var itemArray = new Array;
+for(x=0;x<ss_sku.length;x++){
+    var items = {
+        id: ss_field13[x],
+        price: ss_total_price[x].replace(/\,/g,''),
+        quantity: ss_quantity[x]
+    };
+    itemArray.push(items);
+}
+window.criteo_q.push(
+{ event: "setAccount", account: 19481},
+{ event: "setSiteType", type: deviceType},
+{ event: "setHashedEmail", email: [ss_email]},
+{ event: "trackTransaction", id: ss_ordernum, item: itemArray}
+/* add a line for each item in the user's cart */
+);
+</script>
+
+  <style type="text/css">
+  table.totals tbody tr td {
+    text-align: right;
+    line-height: 150%;
+  }
+
+  table.cart tbody tr td {
+    padding: 3px;
+  }
+  </style>
+
+      <!-- Google Fonts -->
+      <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900,900italic,700italic,400italic|Open+Sans' rel='stylesheet' type='text/css'>
+      <!-- Bootstrap -->
+      <link href="https://www.vacplus.com/AE/bootstrap/css/bootstrap.css" rel="stylesheet">
+      <!--plugins-->
+      <link href="https://www.vacplus.com/AE/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+      <link href="https://www.vacplus.com/AE/custom-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet">
+      <link href="https://www.vacplus.com/AE/css/yamm.css" rel="stylesheet">
+      <link href="https://www.vacplus.com/AE/css/hawksearch.css" rel="stylesheet">
+      <link href="https://www.vacplus.com/AE/css/navigation.css" rel="stylesheet">
+      <!--sky form pro css-->
+      <link href="https://www.vacplus.com/AE/sky-form/css/sky-forms.css" rel="stylesheet">           
+      <!--custom css file-->
+      <link href="https://www.vacplus.com/AE/css/fonts.css" rel="stylesheet">
+      <link href="https://www.vacplus.com/AE/css/style.css?v=1.2" rel="stylesheet">
+       <script src="https://cdn.optimizely.com/js/3534250896.js"></script>
+       <!-- Hotjar Tracking Code for www.sewingmachinesplus.com -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:21822,hjsv:5};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+  </head>
+  <body class="cart">
+
+  [-- INCLUDE sc_cart.css PROCESS --]
+
+  [-- INCLUDE -SMP-checkout-header PROCESS --]
+  [-- INCLUDE -SMP-header-minicart PROCESS --]
+
+      <main role="main">              
+        <div class="container">
+          <div class="space-20"></div>
+          <section class="cart-top">
+            <input type="image" border="0" align="bottom" onclick="return(window.location.href='/');" tabindex="1" title="Back to Shopping" alt="Back to Shopping" name="Back to Shopping" id="Back to Shopping" class="button6" src="https://www.vacplus.com/media/back-to-shopping.png">
+          </section>
+          <div class="space-40"></div>   
+
+  <!------------------ 4 TELL CONVERSION TRACKING PAGE ----------------> 
+  <div id="data_4Tell" data-page="ord" data-customer="" data-orderId="" data-orderDetails="" ></div>
+  <script type="text/javascript">
+
+  $(document).ready(function(){
+    $('.addr_name_val').append('&nbsp;');
+    $('table.cart').addClass('table');
+  });
+
+  var ft = "[";
+  for(t=0;t<ss_sku.length;t++) {
+    ft += "["+ss_sku[t]+","+ss_quantity[t]+","+ss_total_price[t]+"]";
+    if(t==ss_sku.length-1) {
+      ft += "]";
+    } else {
+      ft += ",";
+    }
+  }
+  document.getElementById("data_4Tell").setAttribute("data-orderDetails", ft);
+  document.getElementById("data_4Tell").setAttribute("data-orderId", ss_ordernum);
+  document.getElementById("data_4Tell").setAttribute("data-customer", ss_email);
+  function getCookie(cname) {
+      var name = cname + "=";
+      var ca = document.cookie.split(';');
+      for(var i=0; i<ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0)==' ') c = c.substring(1);
+          if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+      }
+      return "";
+  }
+  var fourTellCookieContents = getCookie("fourtellemail");
+  if(fourTellCookieContents != ""){
+    document.getElementById("data_4Tell").setAttribute("data-customer", fourTellCookieContents);  
+  } else {
+    var d = new Date();
+    d.setTime(d.getTime() + (365*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = "fourtellemail=" + ss_email + ";" + expires + ";path=/";
+  }
+  </script>
+  <!------------------ 4 TELL CONVERSION TRACKING PAGE ---------------->
+                  
+  <div style="display:block;">
+
+  <center>
+  [-- ThankYouReturnStore --]
+  </center>
+  <div class="header">[-- ThankYouHeader --]</div>
+
+  <section class="table-responsive table-thankyou">
+  <table border="0" width="0" class="table table-condensed cart-table">
+    <tr>
+      <td>
+        <div style="display:block; text-align:center; paddign:20px;">[-- STORE.SC_YourReceipt --]<br/>You will also receive an e-mail shortly to your inbox with a confirmation of your order.</div>
+      </td>
+    </tr>
+
+    <tr>
+      <td align="center">
+      <b>[--Store.SC_OrderNumber--]&nbsp;<span id="idforbronto">[-- ThankYouOrderNumber --]</span></b>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+      [-- SC_Cart delete image name quantity sku price total --]
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+      [-- SC_Totals --]
+      </td>
+    </tr>
+    <tr>
+      <td align="center"></td>
+    </tr>
+    <tr><td align="center"><hr noshade size="2" /></td></tr>
+
+    <tr>
+      <td align="center">
+        [-- SC_Address --]
+      </td>
+    </tr>
+
+    <tr><td align="center"><hr noshade size="2" /></td></tr>
+
+    <tr>
+      <td align="center">
+        [-- SC_Payment --]
+      </td>
+    </tr>
+
+    <tr><td align="center"><hr noshade size="2" /></td></tr>
+
+  [-- VAR.HR No --]
+
+   [-- IF SC_OrderingInstructions_Text --]
+    <tr>
+      <td align="center">
+        [-- SC_OrderingInstructions --]
+      </td>
+    </tr>
+    [-- VAR.HR Yes --]
+  [-- END_IF --]
+
+  [-- IF SC_Comments_Text --]
+    <tr>
+      <td align="center">
+        [-- SC_Comments --]
+      </td>
+    </tr>
+    [-- VAR.HR Yes --]
+  [-- END_IF --]
+
+  [-- IF CustomHTML_Values --]
+    <tr>
+      <td align="center">
+        <table class="CustomHTML">
+          <tr>
+            <td>
+              [-- CustomHTML_Values --]
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    [-- VAR.HR Yes --]
+  [-- END_IF --]
+
+  [-- IF Email_List --]
+    <tr>
+      <td class="email" id="brontoonboarding">
+        [-- Email_List --]
+      </td>
+    </tr>
+    [-- VAR.HR Yes --]
+  [-- END_IF --]
+  <script type="text/javascript">
+  if(document.getElementById("brontoonboarding").innerHTML.trim() != "")
+  {
+    document.write("<img src='https://app.bronto.com/public/?q=direct_add&fn=Public_DirectAddForm&id=avzsfstznvdkdkabikpbbgcqhpwfbid&email="+ss_email+"&list1=0bbe03ec000000000000000000000002bfff' width='0' height='0' border='0' alt=''/>");
+  }
+  </script>
+  [-- IF VAR.HR Yes --]
+    <tr><td align="center"><hr noshade size="2" /></td></tr>
+  [-- END_IF --]
+
+  </table>
+  </section>
+
+
+  <!--<div class="footer-checkout">[-- ThankYouFooter --]</div>--?
+
+
+  </div>
+
+
+  <!-- Facebook Conversion Code for serger cruise conversions -->
+  <script>(function() {
+  var _fbq = window._fbq || (window._fbq = []);
+  if (!_fbq.loaded) {
+  var fbds = document.createElement('script');
+  fbds.async = true;
+  fbds.src = '//connect.facebook.net/en_US/fbds.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(fbds, s);
+  _fbq.loaded = true;
+  }
+  })();
+  window._fbq = window._fbq || [];
+  window._fbq.push(['track', '6018314597551', {'value':ss_subtotal,'currency':'USD'}]);
+  </script>
+  <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6018314597551&amp;cd[value]="+ss_subtotal+"&amp;cd[currency]=USD&amp;noscript=1" /></noscript>
+
+  <Script language="JavaScript" type="text/javascript">
+  document.write("<IMG SRC='https://tracking.searchmarketing.com/thankyou.asp?SMCID=1260&oVal="+ss_subtotal+"&OrderID="+ss_ordernum+"&ProductID="+ss_sku.join()+"' WIDTH='1' HEIGHT='1' BORDER='0'>");
+  </script>
+
+  <!-- Google Code for Purchase/Sale Conversion Page -->
+  <script type="text/javascript">
+  /* <![CDATA[ */
+  var google_conversion_id = 1070299738;
+  var google_conversion_language = "en";
+  var google_conversion_format = "3";
+  var google_conversion_color = "ffffff";
+  var google_conversion_label = "3XsUCM7wQxDa9K3-Aw";
+  var google_conversion_value = ss_ordertotal;
+  var google_conversion_order_id = ss_ordernum;
+  var google_remarketing_only = false;
+  /* ]]> */
+  </script>
+  <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+  </script>
+  <noscript>
+  <div style="display:inline;">
+  <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/1070299738/?value='ss_ordertotal'&amp;label=3XsUCM7wQxDa9K3-Aw&amp;guid=ON&amp;script=0"/>
+  </div>
+  </noscript>
+
+  <style>.async-hide { opacity: 0 !important} </style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,
+{'GTM-KTCLFC5':true});</script>
+      <!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('require', 'GTM-KTCLFC5');
+  ga('create', 'UA-487443-1', 'auto');
+  // Optimizely Universal Analytics Integration
+ window.optimizely = window.optimizely || [];
+ window.optimizely.push("activateUniversalAnalytics");
+  ga('send', 'pageview');
+  ga('require', 'ecommerce');
+  ga('ecommerce:addTransaction', {
+  'id': ss_ordernum,                     // Transaction ID. Required.
+  'revenue': ss_ordertotal,               // Grand Total.
+  'shipping': ss_shiptotal,                  // Shipping.
+  'tax': ss_taxtotal                     // Tax.
+  });
+  for(x=0;x<ss_sku.length;x++) {
+    ga('ecommerce:addItem', {
+    'id': ss_ordernum,                     // Transaction ID. Required.
+    'name': ss_name[x],    // Product name. Required.
+    'sku': ss_sku[x],                 // SKU/code.
+    'price': ss_price[x],                 // Unit price.
+    'quantity': ss_quantity[x]                   // Quantity.
+    });
+  }
+  ga('ecommerce:send');
+</script>
+
+  
+  <script>
+  var valueincents = ss_ordertotal * 100;
+  </script>
+  <script>
+   window.optimizely = window.optimizely || [];
+   window.optimizely.push(['trackEvent', 'total_revenue', {'revenue': valueincents}]);
+</script>
+  <!-- End Google Analytics Tracking -->
+  <script type="text/javascript">
+  /*var _rrES = {
+      seller_id: 35165,
+      email: ss_email,
+      invoice: ss_ordernum,
+      auto: true
+  };
+  (function(w,o) {
+      o=o||{};w.seller_id=o.seller_id||"";w.__rr_email_pass=o.email||"";w.__rr_inv=o.invoice||"";
+      if(o.auto===false)w.__rr_autoEnroll=false;
+      var s=document.createElement('script');s.type='text/javascript';s.async=true;
+      s.src="https://www.resellerratings.com/popup/include/popup.js";var ss=document.getElementsByTagName('script')[0];
+      ss.parentNode.insertBefore(s,ss);
+  })(window, _rrES);*/
+  </script>
+
+  <!-- <script type="text/javascript"> var sa_values = { 'site':21959, 'orderid':ss_ordernum, 'name':ss_billname, 'email':ss_email, 'forcecomments':1, 'gts':1, 'emailAll':1 };  function saLoadScript(src) { var js = window.document.createElement("script"); js.src = src; js.type = "text/javascript"; document.getElementsByTagName("head")[0].appendChild(js); } var d = new Date(); if (d.getTime() - 172800000 > 1464044293000) saLoadScript("//www.shopperapproved.com/thankyou/rate/21959.js"); else saLoadScript("//direct.shopperapproved.com/thankyou/rate/21959.js?d=" + d.getTime()); </script> -->
+
+ <script type="text/javascript">
+/* Include all products in the object below 'product id':'Product Name' */
+var sa_products = {};
+var newKey;
+var newValue;
+for(x=0;x<ss_sku.length;x++){
+ newKey = ss_sku[x];
+ newValue = ss_name[x];
+ sa_products[newKey] = newValue;
+}
+</script>
+
+
+  <script type="text/javascript">
+  <!--
+      /* NexTag ROI Optimizer Data */
+      var id = '5393398';
+      var rev = ss_ordertotal;
+      var order = ss_ordernum;
+  //-->
+  </script>
+  <script type="text/javascript" src="https://imgsrv.nextag.com/imagefiles/includes/roitrack.js"></script>
+
+  <!-- Become Sales Tracking Script V 1.0.0 - All rights reserved -->
+  <script language="JavaScript">
+    var pg_pangora_merchant_id='106927';
+  var pg_order_id=ss_ordernum;
+  var pg_cart_size='';
+  var pg_cart_value=ss_ordertotal;
+  var pg_currency='USD';
+  var pg_customer_flag='';
+  var pg_product_id='';
+  var pg_product_name='';
+  var pg_product_price='';
+  var pg_product_units='';
+  </script>
+  <script language="JavaScript" src="https://clicks.pangora.com/sales-tracking/salesTracker.js">
+  </script>
+  <noscript>
+  <img src="https://clicks.pangora.com/sales-tracking/106927/salesPixel.do"/>
+  </noscript>
+
+        </div>
+        <div class="space-60"></div>
+      </main>
+  [-- INCLUDE -SMP-footer-cart --]
+<!--4-Tell Recommendations Begin (www.4-tell.com)-->
+<!--4-Tell Recommendations End-->
+
+<!-- BEGIN: Bronto Cart Abandon Code -->
+<script type="text/javascript">
+  var _bsw = _bsw || [];
+  _bsw.push(['_bswId', 'a8ab4636c5a9a0b661c43f970b573cb86cec5615a882a5fda052dc5277ff5127']);
+  (function() {
+    var bsw = document.createElement('script'); bsw.type = 'text/javascript'; bsw.async = true;
+    bsw.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'js.bronto.com/s/b.min.js';
+    var t = document.getElementsByTagName('script')[0]; t.parentNode.insertBefore(bsw, t);
+  })();
+</script>
+<!-- END: Bronto Cart Abandon Code -->
+<script src="https://cdn.bronto.com/bba/bba.js" data-bbaid="55ff0542-adde-4334-99f1-3bed861620e0" async></script>
+<!-- <script bronto-popup-id="0ea2bf54-c520-4caa-adc3-28ceeea06625" src="https://cdn.bronto.com/popup/delivery.js"></script> -->
+<!--4-Tell Recommendations Begin (www.4-tell.com)-->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+_4TellBoost={}; _4TellBoost.jq=jQuery.noConflict(true);
+</script>
+<script type="text/javascript" async src="//4tcdn.blob.core.windows.net/4tjs3/4TellLoader.js?alias=sewingma"></script>
+<!--4-Tell Recommendations End-->
+<!-- Start of LiveChat (www.livechatinc.com) code -->
+<script type="text/javascript">
+/*window.__lc = window.__lc || {};
+window.__lc.license = 8753261;
+(function() {
+  var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+  lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+})();*/
+</script>
+<!-- End of LiveChat code -->
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5665943"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script><noscript><img src="//bat.bing.com/action/0?ti=5665943&Ver=2" height="0" width="0" style="display:none; visibility: hidden;" /></noscript>
+<script>
+window.uetq = window.uetq || [];
+window.uetq.push({ 'gv': ss_ordertotal, 'gc': 'USD'});
+</script>
+      </body>
+      
+      [-- INCLUDE -SMP-AE-js-plugins --]
+  </html>
+  [-- END_DEFINE THANKYOU --]
+  [-- DEFINE THANKYOU_EMAIL --]
+  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html>
+  <head>
+  <title>[-- STORE.SC_ThankYou Remove_Html --]</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+  <style type="text/css">
+  body {color: #000000; background-color: #FFFFFF; width: 100%; margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif;}
+  p {font-family: Arial, Helvetica, sans-serif;}
+  p.disclaim {font-family: Arial, Helvetica, sans-serif; font-size:9px;}
+  img {boder: 0;}
+  div.divider {display: block; margin: 1.5em 0 1.5em 0;}
+  div.divider2 {display: block; margin-top: 1.5em;}
+  table #Table_01 {border: 0; border-collapse: collapse;}
+  a:link, a:hover {color: #A10B0B;}
+  a:visited {color: #BA0C0C;}
+  a:active {color: #CC0001;}
+  div#set-width {width: 100%; max-width: 960px; margin: 0px auto; padding: 0px;}
+  table.cart {width: 100%; padding-top: 1.5em; border-collapse: separate; border-spacing: 1px; font-family: Arial, Helvetica, sans-serif;}
+  .cart_quantity, .cart_cp_quantity, .cart_image, .cart_cp_image {text-align: center;}
+  .cart_name, .cart_cp_name, .cart_sku, .cart_cp_sku, .cart_op {text-align: left;}
+  select.cart {margin:5px 0;}
+  table.totals {line-height: 150%;}
+  td.totals_txt, td.totals_saved_txt, td.totals_blank, td.totals_all_txt {text-align: right; padding-right: 15px;}
+  td.totals, td.totals_saved, td.totals_all {text-align: right; padding-right: 3px;}
+  td.totals_all, td.totals_all_txt {font-weight: bold;}
+  td.comm_hdr, td.instruct_hdr, td.bill_addr_hdr, td.ship_addr_hdr {font-weight: bold; text-align: left;}
+  td.comm_hdr {padding-top: 1.5em;}
+  table.bill_addr, table.ship_addr {margin-left: auto; margin-right: 0px; padding: 0px; font-family: Arial, Helvetica, sans-serif;}
+  table.addr_name {margin-left: -4px; margin-right: auto; font-family: Arial, Helvetica, sans-serif;}
+  td.addr {text-align: right; padding-right: 5px;}
+  td.addr_val, td.ship_check {text-align:left; font-family: Arial, Helvetica, sans-serif;}
+  td.sql_addr {padding-right: 15px;}
+  table.payment, table.pay_holder {font-family: Arial, Helvetica, sans-serif;}
+  td.payment_hdr {font-weight: bold; text-align: left; padding: 0; font-family: Arial, Helvetica, sans-serif;}
+  td.payment, td.payment_value {text-align: left; font-family: Arial, Helvetica, sans-serif;}
+  td.sql_pay {padding-right: 15px;}
+  div.footer {padding-top: 1.5em; padding-bottom: 1.5em; text-align: center;}
+  </style>
+  </head>
+
+  <body>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0" id="background-table" style="background-color: #FFFFFF;">
+    <tbody>
+      <tr>
+        <td align="center" bgcolor="#FFFFFF">
+
+  <p class="buttons">[-- ThankYouReturnStore --]</p>
+  <div class="header">[-- ThankYouHeader --]</div>
+
+  <table id="Table_01" width="650" height="1201" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td align="center" colspan="7">
+        <img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_01.jpg" width="650" height="119" alt="https://www.vacplus.com/"></td>
+    </tr>
+    <tr>
+      <td align="center" colspan="7">
+        <img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_02.jpg" width="650" height="126" alt=""></td>
+    </tr>
+    <tr>
+    <td align="center" colspan="7"><img src="https://www.vacplus.com/specialdiscount.jpg"/></td>
+    </tr>
+    <tr>
+      <td colspan="7">
+          
+          
+  <table style="background-color: #FFFFFF; margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif;" cellpadding="0" cellspacing="0" border="0" width="100%" align="left">
+    <tr>
+      <td style="padding-top: 1.5em; font-family: Arial, Helvetica, sans-serif;">
+        <strong>[--Store.SC_OrderNumber--]&nbsp;[-- ThankYouOrderNumber --]</strong>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+      [-- SC_Cart delete image name quantity sku price total --]
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+      [-- SC_Totals --]
+      </td>
+    </tr>
+
+    <tr><td><div class="divider"><img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_hr.jpg" width="650" height="3"  alt="https://www.vacplus.com/"></div></td></tr>
+
+    <tr>
+      <td>
+        [-- SC_Address --]
+      </td>
+    </tr>
+
+    <tr><td><div class="divider"><img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_hr.jpg" width="650" height="3"  alt="https://www.vacplus.com/"></div></td></tr>
+
+
+    <tr>
+      <td>
+        [-- SC_Payment --]
+      </td>
+    </tr>
+
+    <tr><td><div class="divider"><img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_hr.jpg" width="650" height="3"  alt="https://www.vacplus.com/"></div></td></tr>
+
+  [-- VAR.HR No --]
+
+   [-- IF SC_OrderingInstructions_Text --]
+    <tr>
+      <td>
+        [-- SC_OrderingInstructions --]
+      </td>
+    </tr>
+    [-- VAR.HR Yes --]
+  [-- END_IF --]
+
+
+  [-- IF SC_Comments_Text --]
+    <tr>
+      <td>
+        [-- SC_Comments --]
+      </td>
+    </tr>
+    <tr><td><div class="divider"><img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_hr.jpg" width="650" height="3"  alt="https://www.vacplus.com/"></div></td></tr>
+    [-- VAR.HR Yes --]
+  [-- END_IF --]
+
+  [-- IF CustomHTML_Values --]
+    <tr>
+      <td>
+        <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td>
+              [-- CustomHTML_Values --]
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    [-- VAR.HR Yes --]
+  [-- END_IF --]
+
+  [-- IF Email_List --]
+    <tr>
+      <td>
+        [-- Email_List --]
+      </td>
+    </tr>
+    [-- VAR.HR Yes --]
+  [-- END_IF --]
+
+  [-- IF VAR.HR Yes --]
+  [-- END_IF --]
+
+  </table>
+          </td>
+    </tr>
+    <tr>
+      <td align="center" colspan="7">
+        <div class="divider2"><img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_04.jpg" width="650" height="300" alt="Receive $10 OFF your next purchase of $50 or more!"></div></td>
+    </tr>
+    <tr>
+      <td align="center" colspan="7">
+        <img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_05.jpg" width="650" height="43" alt=""></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.facebook.com/pages/SewingMachinesPluscom/132223788425"><img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_06.jpg" width="108" height="85" alt="Like us on Facebook"></a></td>
+      <td><a href="https://plus.google.com/101008794122420421463/posts"><img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_07.jpg" width="109" height="85" alt="Follow us on Google+"></a></td>
+      <td colspan="2"><a href="https://instagram.com/sewingmachinesplusdotcom"><img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_08.jpg" width="108" height="85" alt="Follow us on Instagram"></a></td>
+      <td><a href="https://www.pinterest.com/sewmachplus/"><img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_09.jpg" width="108" height="85" alt="Follow us on Pinterest"></a></td>
+      <td><a href="https://twitter.com/Sewmachinesplus"><img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_10.jpg" width="109" height="85" alt="Follow us on Twitter"></a></td>
+      <td><a href="https://www.youtube.com/user/SeamsAmazing"><img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_11.jpg" width="108" height="85" alt="Check out our YouTube Channel"></a></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.facebook.com/pages/SewingMachinesPluscom/132223788425"><img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_12.jpg" width="108" height="65" alt="Like us on Facebook"></a></td>
+      <td><a href="https://plus.google.com/101008794122420421463/posts"><img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_13.jpg" width="109" height="65" alt="Follow us on Google+"></a></td>
+      <td colspan="2"><a href="https://instagram.com/sewingmachinesplusdotcom"><img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_14.jpg" width="108" height="65" alt="Follow us on Instagram"></a></td>
+      <td><a href="https://www.pinterest.com/sewmachplus/"><img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_15.jpg" width="108" height="65" alt="Follow us on Pinterest"></a></td>
+      <td><a href="https://twitter.com/Sewmachinesplus"><img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_16.jpg" width="109" height="65" alt="Follow us on Twitter"></a></td>
+      <td><a href="https://www.youtube.com/user/SeamsAmazing"><img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_17.jpg" width="108" height="65" alt="Check out our YouTube Channel"></a></td>
+    </tr>
+      <tr>
+      <td colspan="7">
+      <table width="650" border="0" cellpadding="0" cellspacing="0" align="center">
+    <tr>
+      <td>
+        <img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_18.jpg" width="260" height="140" alt="0% Financing up to 60 Months!"></td>
+      <td>
+        <img src="https://www.vacplus.com/media/email/thankyou_email/images/Receipt_EMAIL_19.jpg" width="390" height="140" alt="https://www.vacplus.com/"></td>
+    </tr>
+      </table>
+      </td>
+      </tr>
+    <tr>
+      <td align="center" colspan="7">
+        <img src="https://www.vacplus.com/media/email/thankyou_email/images/spacer.gif" width="650" height="20" alt=""></td>
+    </tr>
+      <tr>
+      <td align="center" colspan="7">
+          <p style="padding: 1em 0 1em 0;">Click <a href="https://www.vacplus.com/trackorder.php">HERE</a> to check your Order Status.</p></td>
+    </tr>
+    <tr>
+      <td align="center" colspan="7">
+        <img src="https://www.vacplus.com/media/email/thankyou_email/images/spacer.gif" width="650" height="20" alt=""></td>
+    </tr>
+    <tr>
+      <td align="center" colspan="7">
+      <table width="650" border="0" cellpadding="0" cellspacing="0" align="center">
+    <tr>
+      <td align="right" width="65%">
+        <div id="yelp-biz-badge-yelp-rsDumHUQOcoMXjJPA9LR_w"><a href="http://www.yelp.com/biz/sewing-machines-plus-san-marcos-5">Check out Sewing Machines Plus on Yelp</a>&nbsp;&nbsp;</div><script type="text/javascript">(function(d, t) {var g = d.createElement(t);var s = d.getElementsByTagName(t)[0];g.id = "yelp-biz-badge-script-yelp-rsDumHUQOcoMXjJPA9LR_w";g.src = "//dyn.yelpcdn.com/biz_badge_js/en_US/yelp/rsDumHUQOcoMXjJPA9LR_w.js";s.parentNode.insertBefore(g, s);}(document, 'script'));</script>
+           </td>
+      <td align="left" width="35%">
+        <div id="yelp-biz-badge-yelp-rsDumHUQOcoMXjJPA9LR_w">&nbsp;&nbsp;<a href="http://www.yelp.com/biz/sewing-machines-plus-san-marcos-5"><img src="https://www.vacplus.com/media/email/thankyou_email/images/yelp.gif" alt="Check out Sewing Machines Plus on Yelp"/></a></div><script type="text/javascript">(function(d, t) {var g = d.createElement(t);var s = d.getElementsByTagName(t)[0];g.id = "yelp-biz-badge-script-yelp-rsDumHUQOcoMXjJPA9LR_w";g.src = "//dyn.yelpcdn.com/biz_badge_js/en_US/yelp/rsDumHUQOcoMXjJPA9LR_w.js";s.parentNode.insertBefore(g, s);}(document, 'script'));</script>
+           </td>
+      </tr>
+      </table> 
+              </td>
+    </tr>
+    <tr>
+      <td align="center" colspan="7">
+        <img src="https://www.vacplus.com/media/email/thankyou_email/images/spacer.gif" width="650" height="20" alt=""></td>
+    </tr>
+  </table>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  </body>
+
+  </html>
+  [-- END_DEFINE THANKYOU_EMAIL --]
+
+
+  #<!-- Global Cross-sell in Cart -->#
+  [-- DEFINE GLOBAL_CROSS_SELL --]
+  #<!-- HTML Snippet -->#
+  <table class="gcs_product_table">
+    <tbody>
+    [-- IF PRODUCT.Graphic --]
+      [-- IF PRODUCT.DisplayName --]
+      <tr>
+        [-- IF CROSS_SELL_LINK --]
+        <td class="gcs_product_name"><a class="gcs_product_name" href="[-- CROSS_SELL_LINK --]">[-- PRODUCT.Name --]</a></td>
+        [-- ELSE --]
+        <td class="gcs_product_name">[-- PRODUCT.Name --]</td>
+        [-- END_IF --]
+      </tr>
+      [-- END_IF --]
+      <tr>
+      [-- IF CROSS_SELL_LINK --]
+        <td class="gcs_product_image"><a class="gcs_product_graphic" href="[-- CROSS_SELL_LINK --]"><img class="gcs_product_graphic" [-- PRODUCT.Graphic REMOVE_HTML --] alt="[-- PRODUCT.Name REMOVE_HTML --]"></a></td>
+
+      [-- ELSE --]
+        <td class="gcs_product_image"><img class="gcs_product_graphic" [-- PRODUCT.Graphic REMOVE_HTML --] alt="[-- PRODUCT.Name REMOVE_HTML --]"></td>
+      [-- END_IF --]
+      </tr>
+      [-- IF PRODUCT.DisplayPrice --]
+      <tr>
+        [-- IF PRODUCT.SaleOn --]
+        <td class="gcs_product_price">[-- PRODUCT.SaleAmount --]</td>
+        [-- ELSE --]
+        <td class="gcs_product_price">[-- PRODUCT.Price --]</td>
+        [-- END_IF --]
+      </tr>
+      [-- END_IF --]
+      <tr>
+      [-- IF AddImage? --]
+         <td class="gcs_product_add_to_cart"><a class="gcs_addtocart_button" href="[-- PRODUCT.AddToCartURL --]"><img class="pcs_addtocart_button" alt="Add to Cart" [-- AddImage --] border="0"></a></td>
+      [-- ELSE --]
+         <td class="gcs_product_add_to_cart"><a class="gcs_addtocart_button" href="[-- PRODUCT.AddToCartURL --]">[-- AddText --]</a></td>
+      [-- END_IF --]
+      </tr>
+    [-- ELSE --]
+    <!-- No Product Graphic -->
+      [-- IF PRODUCT.DisplayName --]
+      <tr>
+        [-- IF CROSS_SELL_LINK --]
+        <td class="gcs_product_name"><a class="gcs_product_name" href="[-- CROSS_SELL_LINK --]">[-- PRODUCT.Name --]</a></td>
+        [-- ELSE --]
+        <td class="gcs_product_name">[-- PRODUCT.Name --]</td>
+        [-- END_IF --]
+      </tr>
+      [-- END_IF --]
+      [-- IF PRODUCT.DisplayPrice --]
+      <tr>
+        [-- IF PRODUCT.SaleOn --]
+        <td class="gcs_product_price">[-- PRODUCT.SaleAmount --]</td>
+        [-- ELSE --]
+        <td class="gcs_product_price">[-- PRODUCT.Price --]</td>
+        [-- END_IF --]
+      </tr>
+      [-- END_IF --]
+      <tr>
+      [-- IF AddImage? --]
+        <td class="gcs_product_add_to_cart"><a class="gcs_addtocart_button" href="[-- PRODUCT.AddToCartURL --]"><img class="pcs_addtocart_button" alt="Add to Cart" [-- AddImage --] border="0"></a></td>
+      [-- ELSE --]
+        <td class="gcs_product_add_to_cart"><a class="gcs_addtocart_button" href="[-- PRODUCT.AddToCartURL --]">[-- AddText --]</a></td>
+      [-- END_IF --]
+      </tr>
+    [-- END_IF --]
+    </tbody>
+  </table>
+  [-- END_DEFINE GLOBAL_CROSS_SELL --]
+
+
+  #<!-- Per-Product Cross-sell in Cart -->#
+  [-- DEFINE CART_CROSS_SELL --]
+  #<!-- HTML Snippet -->#
+  <table cellpadding="0" cellspacing="0" width="180">
+    <tr valign="middle">
+      <td align="center">
+         
+      [-- IF PRODUCT.Graphic --]
+          <div align="center">
+          <a href="[-- CROSS_SELL_LINK --]">
+          <img border="0" hspace="0" vspace="0" [--PRODUCT.Graphic REMOVE_HTML--]></a>
+          </div>
+          [-- END_IF --]
+      </td>
+    </tr>
+    <tr>
+      <td align="center" valign="top">
+      [-- IF PRODUCT.DisplayName --]
+          <div align="center">
+          <a href="[-- CROSS_SELL_LINK --]" class="cart_name">[-- PRODUCT.Name --]</a>
+          </div>
+          [-- END_IF --]
+
+          
+          </td>
+    </tr>
+  </table>
+  </section>
+  [-- END_DEFINE CART_CROSS_SELL --]

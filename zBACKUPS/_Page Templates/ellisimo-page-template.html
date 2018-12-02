@@ -1,0 +1,202 @@
+[--DEFINE LINK_TO_PAGE--]
+[--IF PAGE.NumItems 0--]
+[--ELSE--]
+  [-- IF VAR.counter "0" --]
+     <tr>
+  [-- END_IF --]
+  [-- VAR.counter INC --]
+<td width="25%">
+[--IF PAGE.LinkGraphic--]
+<a href="[--OUTPUT_DIRECTORY_URL--]/[--Page.FileName--]"><center><img [-- PAGE.LinkGraphic REMOVE_HTML --]></center></a><br>
+<a href="[--OUTPUT_DIRECTORY_URL--]/[--Page.FileName--]"><center><b>[--PAGE.LinkName--]</b></center></a>
+[--ELSE--]
+<a href="[--OUTPUT_DIRECTORY_URL--]/[--Page.FileName--]"><center><b>[--PAGE.LinkName--]</b></center></a>
+[--END_IF--]
+</td>
+ [-- IF VAR.counter "4" --]
+     </tr>
+     [-- VAR.counter "0" --]
+  [-- END_IF --]
+[--END_IF--]
+[--END_DEFINE LINK_TO_PAGE--]
+  
+[--DEFINE PAGE--]
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+[--IF PAGE.Title--]
+<title>[--PAGE.Title REMOVE_HTML --]</title>
+[--ELSE--]
+<title>[--PAGE.Name REMOVE_HTML --]</title>
+[--END_IF--]
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="Keywords" content="[--PAGE.MetaKeywords REMOVE_HTML --]" />
+<meta name="Description" content="[--PAGE.MetaDescription REMOVE_HTML --]" />
+<META NAME="GOOGLEBOT" CONTENT="INDEX, FOLLOW">
+<META NAME="Robots" content="index,follow"> 
+<meta name="rating" content="General" />
+<meta name="language" content="pt, en, es" />
+<link href="/css/sewing-machines.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="/includes/sewing-machines.js" type="text/javascript"></script>
+<meta name="verify-v1" content="LgvDD+yKZW1ULvHkUzBRAUu5UnP/88OMGXnfr/0DQao=" />
+<style type="text/css">
+input.search{
+  height:20px;
+  width:104px;
+}
+
+</style>
+</head>
+<body>
+  <table width="760" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="2" class="pdbtm6">[-- INCLUDE header.txt --]</td>
+  </tr>
+ 
+  <tr>
+    <td style="height: 100%;">
+      <table cellpadding="0" cellspacing="0" style="height: 100%;">
+      <tr><td style="height: 1px; padding-bottom: 8px;">
+      <center>
+      <!-- START SCANALERT CODE -->
+<a target="_blank" href="https://www.mcafeesecure.com/RatingVerify?ref=www.sewingmachinesplus.com"><img width="115" height="32" border="0" src="//images.scanalert.com/meter/www.sewingmachinesplus.com/12.gif" alt="McAfee Secure sites help keep you safe from identity theft, credit card fraud, spyware, spam, viruses and online scams" oncontextmenu="alert('Copying Prohibited by Law - McAfee Secure is a Trademark of McAfee, Inc.'); return false;"></a>
+<!-- END SCANALERT CODE --> 
+      </center>
+      </td></tr>
+        <tr>
+          <td style="height: 1px;"><div id="cart">
+          <div id="cart-inner1">
+            <div id="cart-inner2">
+              <a href="[-- SHOPPING_CART_URL --]" class="yourcart">Your Shopping Cart</a>
+[--INCLUDE MINICART PROCESS--]
+              <a href="[-- SHOPPING_CART_URL --]">Checkout</a></div>            </div>
+          </div>
+        </div><img src="/images/shop-by-category.gif" alt="" width="160" height="39" border="0" /></td>
+        </tr>
+        <tr>
+          <td style="background-color: #990000;"><div class="redbg">[-- INCLUDE navigation.txt --]</div></td>
+        </tr>
+      </table>
+    </td>
+    <td rowspan="1" class="pdl6">
+        <table cellspacing="0" cellpadding="0" width="596" border="0">
+    
+    <tr><td>
+  <a href="https://www.vacplus.com/baby-lock-ellisimo.php" style="margin: 0px;"><img src="https://www.vacplus.com/media/products/babylock/ellisimo/ellisimo-head.gif" alt="The new Baby Lock Ellisimo... COMING SOON!" width="596" height="39" border="0" /></a></td></tr>
+        <tr>
+          <td class="cnt-bg">
+      [-- IF PAGE.Field1 --]
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td width="83%" class="pd10"> [-- IF PAGE.Graphic --]
+                <div align="center">[-- PAGE.Graphic --]</div>
+                [--END_IF--] [-- IF PAGE.DisplayName --]
+                <h1 align="center">[-- PAGE.LinkName --]</h1>
+                [-- END_IF --] [-- IF PAGE.Text1--][--PAGE.Text1--][--END_IF--]
+        [-- IF PAGE.NumLinks 0 --] 
+        [-- ELSE --]
+                <table width="100%" cellpadding="4">
+                  [-- VAR.counter "0" --] 
+          [-- LOOP LINKS --] 
+          [-- LINK --] 
+          [-- END_LOOP LINKS --] 
+          [-- IF VAR.counter "0" --] 
+          [-- ELSE --]
+                </table>
+                [-- END_IF --] 
+        [-- END_IF --] 
+        [-- IF PAGE.NumProducts 0 --]
+         [-- ELSE --]
+                <table width="100%" cellpadding="15">
+                  [--LOOP PRODUCTS 2--]
+                  
+                    <td> [--PRODUCT--]</td>
+                    [--END_LOOP PRODUCTS--]  
+          
+                </table>
+                [--END_IF--]
+                <p>&nbsp;</p>
+                [-- IF PAGE.Text3--]
+                <p>[--PAGE.Text3--]</p>
+                [--END_IF--]</td>
+              <td width="12%" class="logos">
+        <!-- START SCANALERT CODE --> <!--
+<a target="_blank" href="https://www.scanalert.com/RatingVerify?ref=www.sewingmachinesplus.com"><img width="94" height="54" border="0" src="//images.scanalert.com/meter/www.sewingmachinesplus.com/13.gif" alt="HACKER SAFE certified sites prevent over 99.9% of hacker crime." oncontextmenu="alert('Copying Prohibited by Law - HACKER SAFE is a Trademark of ScanAlert'); return false;" /></a> -->
+<!-- END SCANALERT CODE -->
+
+                <p>Click on logos below<br />
+                  [-- PAGE.Field1 --] </p></td>
+            </tr>
+          </table>
+          [-- ELSE --]
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="pd10"><table width="5%" border="0" align="right" cellpadding="0" cellspacing="0">
+                  <tr>
+                  <td><!-- START SCANALERT CODE --> <!--
+                      <a target="_blank" href="https://www.scanalert.com/RatingVerify?ref=www.sewingmachinesplus.com"><img width="94" height="54" border="0" src="//images.scanalert.com/meter/www.sewingmachinesplus.com/13.gif" alt="HACKER SAFE certified sites prevent over 99.9% of hacker crime." oncontextmenu="alert('Copying Prohibited by Law - HACKER SAFE is a Trademark of ScanAlert'); return false;" /></a> -->
+                      <!-- END SCANALERT CODE --></td>
+                </tr>
+                </table>
+        [-- IF PAGE.Field10 --]
+                <div align="center">[-- PAGE.Field10 --]</div>
+                [--END_IF--]
+                [-- IF PAGE.Graphic --]
+                <div align="center">[-- PAGE.Graphic --]</div>
+                [--END_IF--] [-- IF PAGE.DisplayName --]
+                <h1 align="center">[-- PAGE.LinkName --]</h1>
+                [-- END_IF --]
+        [-- IF PAGE.Text1--][--PAGE.Text1--][--END_IF--]
+        
+        
+        [-- IF PAGE.NumLinks 0 --]
+        [-- ELSE --]
+                <table width="100%" cellpadding="4">
+[-- VAR.counter "0" --]
+[-- LOOP LINKS --]
+[-- LINK --]
+[-- END_LOOP LINKS --]
+[-- IF VAR.counter "0" --]
+[-- ELSE --]
+  </table>
+[-- END_IF --]
+        [-- END_IF --]
+        [-- IF PAGE.NumProducts 0 --]
+        [-- ELSE --]
+                <table width="100%" cellpadding="10">
+                  [--LOOP PRODUCTS 3--]
+                    <td>[--PRODUCT--]</td>
+                    [--END_LOOP PRODUCTS--]  
+                </table>
+                [--END_IF--]
+                <p>&nbsp;</p>
+                [-- IF PAGE.Text3--]
+                <p>[--PAGE.Text3--]</p>
+                [--END_IF--] </td>
+            </tr>
+          </table>
+          [--END_IF--]  </td>
+    </tr>
+         <tr>
+          <td><img src="/images/main-btm.gif" width="596" height="9" /></td>
+        </tr>
+      </table></td>
+  </tr>
+      <tr>
+        <td rowspan="2" bgcolor="#990000"><div align="center"><br />
+            <img src="/media/multiple_payment_logo.gif" width="150" height="50" /><br />
+            <img src="/media/site/credit-cards.gif" width="140" height="17" /></div></td>
+        <td><img src="/images/foottp.gif" width="602" height="14" /></td>
+      </tr>
+      <tr>
+        <td class="foot-bg">[-- INCLUDE footer.txt --]</td>
+      </tr>
+      <tr>
+        <td><img src="/images/footccbtm.gif" width="160" height="8" /></td>
+        <td><img src="/images/footbtm.gif" width="602" height="8" /></td>
+      </tr>
+  </table>
+
+</body>
+</html>
+[--END_DEFINE PAGE--]

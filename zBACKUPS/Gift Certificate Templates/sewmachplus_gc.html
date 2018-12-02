@@ -1,0 +1,125 @@
+#<!-- ------------------------------------------------ -->#
+#<!-- Main Template File                               -->#
+#<!-- filename: elite_001_gc_template.sst              -->#
+#<!-- TEMPLATE: Gift Certificate                       -->#
+#<!-- THEME: Elite 001                                 -->#
+#<!-- CORE: Core 001                                   -->#
+#<!-- copyright 2005 ShopSite inc. Design by Stunk     -->#
+#<!-- ------------------------------------------------ -->#
+
+#<!-- ------------------------------------------------ -->#
+#<!-- --------------- Gift Certificate --------------- -->#
+#<!-- ------------------------------------------------ -->#
+[-- DEFINE Gift_Certificate --]
+[-- VAR.define "cert" --]
+[-- INCLUDE elite_001_gc_vars.sst PROCESS --]
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+<META NAME="robots" CONTENT="index,nofollow">
+
+  <title>[-- STORE.SC_GiftCertificate --]</title>
+
+<style type="text/css">
+<!--
+[-- INCLUDE elite_001_gc_styles.css PROCESS --]
+-->
+</style>
+
+<script type="text/javascript" language="JavaScript">
+<!-- 
+[-- SC_JAVASCRIPT extras --]
+// -->
+</script>
+
+</head>
+
+<body>
+[-- SC_FORM --]
+[-- INCLUDE core_001_gc_cert.sst PROCESS --]
+</form>
+</body>
+</html>
+
+[-- END_DEFINE Gift_Certificate --]
+
+
+#<!-- ------------------------------------------------ -->#
+#<!-- ---------------- Gift Cert Email --------------- -->#
+#<!-- ------------------------------------------------ -->#
+[-- DEFINE Gift_Certificate_Email --]
+[-- VAR.define "email" --]
+[-- INCLUDE elite_001_gc_vars.sst PROCESS --]
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<style type="text/css">
+<!--
+[-- INCLUDE elite_001_gc_styles.css PROCESS --]
+-->
+</style>
+</head>
+
+<body>
+
+[-- INCLUDE core_001_gc_email.sst PROCESS --]
+
+</body>
+</html>
+
+[-- END_DEFINE Gift_Certificate_Email --]
+
+
+#<!-- ------------------------------------------------ -->#
+#<!-- ------------- Gift Cert Snail Mail ------------- -->#
+#<!-- ------------------------------------------------ -->#
+[-- DEFINE Gift_Certificate_Mail --]
+[-- VAR.define "mail" --]
+[-- IF FIRST_MAIL_GIFTCERT --]
+[-- INCLUDE elite_001_gc_vars.sst PROCESS --]
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+<META NAME="robots" CONTENT="noindex,nofollow">
+
+  <title>Gift Certificate</title>
+
+<style type="text/css">
+<!--
+[-- INCLUDE elite_001_gc_styles.css PROCESS --]
+-->
+</style>
+
+<style type="text/css" media="print"> <!--
+
+.noprint {
+  display: none;
+}
+
+-->
+</style>
+
+</head>
+
+<body>
+[-- END_IF --]
+[-- INCLUDE core_001_gc_mail.sst PROCESS --]
+[-- IF LAST_MAIL_GIFTCERT --]
+<br>
+<p class="noprint" style="text-align: center; background-color: #FFFFE0;"><a href="javascript:window.print()"><img src="[-- ShopSite_Images --]/buttons/print.gif" border="0"></a>&nbsp;&nbsp;<a href="javascript:self.close()"><img src="[-- ShopSite_Images --]/buttons/done.gif" border="0"></a></p>
+</body>
+</html>
+[-- ELSE --]
+<br>
+<hr class="noprint">
+<br>
+[-- END_IF --]
+[-- END_DEFINE Gift_Certificate_Mail --]

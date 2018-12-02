@@ -1,0 +1,1086 @@
+[-- DEFINE ShoppingCart --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>[-- STORE.SC_YourShoppingCart Remove_Html --]</title>
+<meta name="verify-v1" content="LgvDD+yKZW1ULvHkUzBRAUu5UnP/88OMGXnfr/0DQao=" />
+<script type="text/javascript" language="JavaScript">
+<!-- 
+[-- SC_JAVASCRIPT extras --]
+// -->
+</script>
+
+<script type="text/javascript">
+
+ var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24343941-1']);
+  _gaq.push(['_trackPageview']);
+
+ (function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; 
+
+ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-487443-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; 
+
+ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!-- Google Code for Shopping Cart Remarketing List -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1070299738;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "666666";
+var google_conversion_label = "97l9CPj2iAIQ2vSt_gM";
+var google_conversion_value = 0;
+/* ]]> */
+</script>
+<script type="text/javascript" 
+
+src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://www.googleadservices.com/pagead/conversion/1070299738/?label=97l9CPj2iAIQ2vSt_gM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<!-- END Google Code for Shopping Cart Remarketing List -->
+<!-- Start Google Remarketing Code for Shopping Cart -->
+<script type="text/javascript">
+var google_tag_params = {
+ecomm_prodid: '',
+ecomm_pagetype: 'cart',
+ecomm_totalvalue: ''
+};
+</script>
+
+<!-- End Google Remarketing Code for Shopping Cart -->
+
+<style type="text/css">
+
+table.totals tbody tr td {
+  text-align: right;
+  line-height: 150%;
+}
+
+table.cart tbody tr td {
+  padding: 3px;
+}
+</style>
+
+[-- INCLUDE sc_cart.css PROCESS --]
+
+[-- INCLUDE DEV-checkout-header PROCESS --]
+[-- INCLUDE DEV-checkout-leftbar --]
+
+<div style="font-size: 8pt; margin: 3px 10px 20px 5px;">
+
+[-- ShopSiteMessages --]
+
+[-- IF ShoppingCartHeader --]
+  <p>[-- ShoppingCartHeader --]</p>
+[-- END_IF --]
+
+<center>[-- SC_Registration --]</center>
+
+
+[-- SC_Form --]
+<table width="0" align="center">
+
+   [-- IF Cart_Cross_Sell --]
+  <tr>
+  <td colspan="2" style="font-size:14px; font-weight:bold; padding-top:1px; 
+
+padding-
+
+bottom:1px; font-family:Arial, Helvetica, sans-serif;">May we also 
+
+suggest:</td>
+  </tr>
+  <tr>
+    <td colspan="2"><table>
+      <tr>
+        [-- LOOP Cart_Cross_Sell 3 --]
+        <td>[-- CART_CROSS_SELL --]</td>
+        [-- END_LOOP Cart_Cross_Sell --]
+      </tr>
+    </table></td>
+  </tr>
+  [-- END_IF --]
+  
+  <!-- Global Cross-sell in Cart -->
+  [-- IF Global_Cross_Sell --]
+  <tr>
+    <td colspan="2" class="gcs_table"><table class="gcs_table">
+      <caption>[-- STORE.GlobalCrossSellHeader --]</caption>
+      <tr>
+        <td class="gcs_table_blank">&nbsp;</td>
+        [-- LOOP GLOBAL_Cross_Sell --]
+        <td class="gcs_table_content">[-- GLOBAL_CROSS_SELL --]</td>
+        [-- END_LOOP Global_Cross_Sell --]
+        <td class="gcs_table_blank">&nbsp;</td>
+      </tr>
+    </table></td>
+  </tr>
+  [-- END_IF --]
+  
+  
+  <tr>
+    <td colspan="2">
+    [-- SC_ShowBasket --]
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+      [-- SC_Cart --]
+    </td>
+  </tr>
+  
+  <tr>
+    <td style="line-height: 150%; padding-top: 10px; padding-bottom: 10px;" align="right">
+    [-- SC_Tax_Shipping --]
+    [-- SC_Surcharge --]
+  </td>
+  <td style="vertical-align: top; line-height: 150%; padding-top: 5px; padding-bottom: 10px;" align="right">
+    <!-- Table for totals, etc. -->
+    [-- SC_Totals --]
+  </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-bottom: 10px; padding-top: 10px;" align="center">
+      [-- SC_PaymentSelection --]
+    </td>
+  </tr>
+  
+  <tr>
+    <td colspan="2" style="padding-bottom: 10px;" align="center">
+      [-- BUTTON Checkout --]&nbsp;[-- BUTTON ContinueShopping --]
+    </td>
+  </tr>
+  <tr><td width="100%" colspan="2" style="padding-bottom: 5px;"><hr noshade="noshade" size="2" /></td></tr>
+
+  [-- IF SC_Coupon --]
+  <tr>
+    <td colspan="2" style="padding-bottom: 10px;" align="center">
+        <table><tr>
+          <td style="padding-right: 10px;">[-- STORE.CouponCaption --]</td>
+          <td style="padding-right: 10px;">[-- SC_Coupon --]</td>
+          <td>
+              [-- IF SC_Coupon_Button --]
+                [-- BUTTON ApplyCoupon --]
+              [-- ELSE --]
+                [-- STORE.EnterCoupon --]
+              [-- END_IF --]
+          </td>
+        </tr></table>
+    </td>
+  </tr>
+  [-- END_IF --]
+
+  <tr>
+    <td colspan="2" style="padding-bottom: 10px;" align="center">
+      [-- BUTTON Recalculate --]&nbsp; &nbsp;[-- BUTTON EmptyCart --]
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" style="padding-bottom: 10px;" align="center">
+      <small><i>[-- STORE.SC_AnyChanges --]</i></small>
+    </td>
+  </tr>
+  
+  [-- IF SC_OrderingInstructions --]
+  <tr>
+    <td colspan="2" style="padding-bottom: 10px;">
+      [-- SC_OrderingInstructions 4 60 --]
+    </td>
+  </tr>
+  [-- END_IF --]
+
+  [-- IF SC_GiftCert --]
+  <tr>
+    <td colspan="2" align="center" style="padding-bottom: 10px; border: 1px solid #AAAAAA;">
+      <table cellpadding="3" cellspacing="0">
+          <tr>
+              <td colspan="3" style="padding: 5px;">
+               [-- STORE.EnterGiftCert --]
+               [-- IF SC_GiftCert_Button --]
+                 [-- STORE.GiftCert_Redeem --] 
+               [-- ELSE --]
+                 [-- STORE.GiftCert_Recalculate --] 
+               [-- END_IF --]
+               </td>
+            </tr>
+            <tr>
+         <td style="padding: 5px; font-weight: bold; font-size: 10pt;">[-- STORE.GiftCertCaption --]</td>
+          <td style="padding: 5px;">[-- SC_GiftCert --]</td>
+      <td style="padding: 5px;">
+            [-- IF SC_GiftCert_Button --]
+              [-- BUTTON ApplyGiftCert --]
+            [-- END_IF --]
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  [-- END_IF --]
+
+</table>
+
+<div align="center">
+<!-- Start Norton Secured Powered by Verisign -->
+<table width="135" border="0" cellpadding="2" cellspacing="0" title="Click to Verify - This site chose Symantec SSL for secure e-commerce and confidential communications.">
+<tr>
+<td width="135" align="center" valign="top"><script type="text/javascript" src="https://seal.verisign.com/getseal?host_name=www.sewingmachinesplus.com&amp;size=L&amp;use_flash=NO&amp;use_transparent=NO&amp;lang=en"></script><br />
+<a href="http://www.symantec.com/ssl-certificates" target="_blank"  style="color:#000000; text-decoration:none; font:bold 7px verdana,sans-serif; letter-spacing:.5px; text-align:center; margin:0px; padding:0px;">ABOUT SSL  CERTIFICATES</a></td>
+</tr>
+</table>
+<!-- End Norton Secured Powered by Verisign -->
+</div>
+</div>
+
+<script src="https://www.vacplus.com/js/cartaband.js" language="javascript" type="text/javascript"></script>
+
+<script language="JavaScript">
+<!--
+        psyCartAbandonmentNotify('sewmachshop', '/cartaband/tracker.cgi');
+-->
+</script>
+
+  [-- INCLUDE DEV-checkout-rightbar --]
+  [-- INCLUDE DEV-footer --]
+        [-- INCLUDE hide-shipping-options --]
+
+</html>
+[-- END_DEFINE ShoppingCart --]
+
+
+[-- DEFINE SHIPPING --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>[-- STORE.Ship_CheckOut Remove_Html --]</title>
+<meta name="verify-v1" content="LgvDD+yKZW1ULvHkUzBRAUu5UnP/88OMGXnfr/0DQao=" />
+
+[-- INCLUDE LexiConn_Decline_CC PROCESS --]
+
+<script type="text/javascript" language="JavaScript">
+<!-- 
+[-- SC_JAVASCRIPT extras --]
+// -->
+</script>
+
+<script type="text/javascript">
+ var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24343941-1']);
+  _gaq.push(['_trackPageview']);
+
+ (function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; 
+ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-487443-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<style type="text/css">
+table.totals tbody tr td {
+  text-align: right;
+  line-height: 150%;
+}
+
+table.cart tbody tr td {
+  padding: 3px;
+}
+
+td.bill_addr_hdr{
+  font-weight:bold;!important
+}
+td.ship_addr_hdr{
+  font-weight:bold;!important
+}
+</style>
+
+[-- INCLUDE sc_cart.css PROCESS --]
+
+[-- INCLUDE DEV-checkout-header PROCESS --]
+[-- INCLUDE DEV-checkout-leftbar --]
+
+<div style="font-size: 8pt; margin: 3px 10px 20px 5px;">
+
+[-- ShopSiteMessages --]
+#<div>[-- ShippingHeader --]</div>
+
+[-- SC_Form --]
+<table border="0" width="0" align="center">
+[-- IF CustomHTML --]
+  <tr>
+    <td>
+      <div><font color="#FF0000"><b>[-- SHIP_CustomHTML 1 --]</b></font></div>
+    </td>
+  </tr>
+[-- END_IF --]
+
+  <tr>
+    <td>
+      [-- SC_Cart --]
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      [-- SC_Totals --]
+    </td>
+  </tr>
+
+[-- IF CustomHTML --]
+  <tr>
+    <td>
+      <div>[-- SHIP_CustomHTML 2 --]</div>
+    </td>
+  </tr>
+[-- END_IF --]
+
+[-- IF CustomHTML --]
+  <tr>
+    <td>
+      <div>[-- SHIP_CustomHTML 3 --]</div>
+    </td>
+  </tr>
+[-- END_IF --]
+
+[-- IF VAR.HR "yes" --]
+  <tr><td align="center"><hr noshade size="2" /></td></tr>
+[-- END_IF --]
+  <tr><td align="center"><hr noshade size="2" /></td></tr>
+
+  <tr>
+    <td align="center">
+      [-- SC_Payment --]
+    </td>
+  </tr>
+
+  <tr><td align="center"><hr noshade size="2" /></td></tr>
+  <tr>
+    <td align="center">
+      [-- SC_Address--]
+    </td>
+  </tr>
+
+[-- IF CustomHTML --]
+  <tr>
+    <td>
+      <div>[-- SHIP_CustomHTML 4 --]</div>
+    </td>
+  </tr>
+[-- END_IF --]
+
+
+[-- IF CustomHTML --]
+  <tr>
+    <td>
+      <div>[-- SHIP_CustomHTML 5 --]</div>
+    </td>
+  </tr>
+[-- END_IF --]
+
+  <tr><td align="center"><hr noshade size="2" /></td></tr>
+
+[-- VAR.HR "no" --]
+[-- IF SC_Comments --]
+  <tr>
+    <td align="center">
+      [-- SC_Comments --]
+  [-- VAR.HR "yes" --]
+    </td>
+  </tr>
+[-- END_IF --]
+[-- IF Email_List --]
+  <tr>
+    <td align="center">
+      [-- Email_List --]
+    </td>
+  </tr>
+[-- END_IF --]
+[-- IF SECURITYIMAGE --]
+  <tr>
+    <td align="center" class="secureimage">
+      [-- SHIPSECURITYIMAGE --]
+    </td>
+  </tr>
+[-- END_IF --]
+    
+  
+  <tr>
+    <td class="buttons">
+  <p><b>By clicking the "Submit This Order" button, you are stating that you have read and agree to all of our <a href="/customer-service.php" target="_blank"><font color="#0000ff">store policies</font></a>.</b></p>
+        [-- BUTTON SubmitOrder --]<br>[-- BUTTON ReturnToCart --]
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  jQuery(function(){
+      if(ss_ordertotal == "0.00"){
+         jQuery(".payment").hide();
+      }
+  });
+</script>
+
+</div>
+
+<script src="https://www.vacplus.com/js/cartaband.js" language="javascript" type="text/javascript"></script>
+
+<script language="JavaScript">
+<!--
+        psyCartAbandonmentNotify('sewmachshop', '/cartaband/tracker.cgi');
+-->
+</script>
+
+  [-- INCLUDE DEV-checkout-rightbar --]
+  [-- INCLUDE DEV-footer --]
+
+</html>
+[-- END_DEFINE SHIPPING --]
+
+
+[-- DEFINE CONFIRMATION --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Confirm Your Order</title>
+<meta name="verify-v1" content="LgvDD+yKZW1ULvHkUzBRAUu5UnP/88OMGXnfr/0DQao=" />
+
+[-- INCLUDE LexiConn_Decline_CC PROCESS --]
+
+<script type="text/javascript" language="JavaScript">
+<!-- 
+[-- SC_JAVASCRIPT extras --]
+// -->
+</script>
+
+<script type="text/javascript">
+
+ var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24343941-1']);
+  _gaq.push(['_trackPageview']);
+
+ (function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; 
+ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-487443-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<style type="text/css">
+table.totals tbody tr td {
+  text-align: right;
+  line-height: 150%;
+}
+
+table.cart tbody tr td {
+  padding: 3px;
+}
+</style>
+
+[-- INCLUDE sc_cart.css PROCESS --]
+
+[-- INCLUDE DEV-checkout-header PROCESS --]
+[-- INCLUDE DEV-checkout-leftbar --]
+
+<div style="font-size: 8pt; margin: 3px 10px 20px 5px;">
+
+
+[-- ShopSiteMessages --]
+
+#<div class="header">[-- ConfirmationHeader --]</div>
+
+[-- SC_Form --]
+<table border="0" width="0" align="center">
+  <tr>
+    <td>
+      [-- SC_Cart --]
+    </td>
+  </tr>
+  <tr>
+    <td>
+      [-- SC_Totals --]
+    </td>
+  </tr>
+
+  <tr><td align="center"><hr noshade size="2" /></td></tr>
+
+  <tr>
+    <td align="center">
+      [-- SC_Address --]
+    </td>
+  </tr>
+
+  <tr><td align="center"><hr noshade size="2" /></td></tr>
+
+  <tr>
+    <td align="center">
+      [-- SC_Payment --]
+    </td>
+  </tr>
+
+  <tr><td align="center"><hr noshade size="2" /></td></tr>
+
+[-- VAR.HR No --]
+
+ [-- IF SC_OrderingInstructions_Text --]
+  <tr>
+    <td align="center">
+      [-- SC_OrderingInstructions --]
+    </td>
+  </tr>
+  [-- VAR.HR Yes --]
+[-- END_IF --]
+
+[-- IF SC_Comments_Text --]
+  <tr>
+    <td align="center">
+      [-- SC_Comments --]
+    </td>
+  </tr>
+  [-- VAR.HR Yes --]
+[-- END_IF --]
+
+[-- IF CustomHTML_Values --]
+  <tr>
+    <td align="center">
+      <table class="CustomHTML">
+        <tr>
+          <td>
+            [-- CustomHTML_Values --]
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  [-- VAR.HR Yes --]
+[-- END_IF --]
+
+[-- IF Email_List --]
+  <tr>
+    <td class="email">
+      [-- Email_List --]
+    </td>
+  </tr>
+  [-- VAR.HR Yes --]
+[-- END_IF --]
+
+[-- IF VAR.HR Yes --]
+  <tr><td align="center"><hr noshade size="2" /></td></tr>
+[-- END_IF --]
+
+  <tr>
+    <td class="buttons">
+      [-- BUTTON Confirmation --]&nbsp;[-- BUTTON MakeChanges --]
+    </td>
+  </tr>
+
+</table>
+
+#<div class="footer">[-- ConfirmationFooter --]</div>
+
+
+</div>
+
+<script src="https://www.vacplus.com/js/cartaband.js" language="javascript" type="text/javascript"></script>
+
+<script language="JavaScript">
+<!--
+        psyCartAbandonmentNotify('sewmachshop', '/cartaband/tracker.cgi');
+-->
+</script>
+
+  [-- INCLUDE DEV-checkout-rightbar --]
+  [-- INCLUDE DEV-footer --]
+
+</html>
+[-- END_DEFINE CONFIRMATION --]
+
+
+[-- DEFINE THANKYOU --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>[-- STORE.SC_ThankYou Remove_Html --]</title>
+<meta name="verify-v1" content="LgvDD+yKZW1ULvHkUzBRAUu5UnP/88OMGXnfr/0DQao=" />
+
+
+<script type="text/javascript" language="JavaScript">
+<!-- 
+[-- SC_JAVASCRIPT extras --]
+// -->
+</script>
+
+<script type="text/javascript">
+var google_tag_params = {
+ecomm_prodid: [''],
+ecomm_pagetype: 'purchase',
+ecomm_totalvalue:''
+};
+</script>
+
+<style type="text/css">
+table.totals tbody tr td {
+  text-align: right;
+  line-height: 150%;
+}
+
+table.cart tbody tr td {
+  padding: 3px;
+}
+</style>
+
+[-- INCLUDE sc_cart.css PROCESS --]
+
+[-- INCLUDE DEV-checkout-header PROCESS --]
+[-- INCLUDE DEV-checkout-leftbar --]
+
+<div style="font-size: 8pt; margin: 3px 10px 20px 5px;">
+
+<center>
+[-- ThankYouReturnStore --]
+</center>
+<div class="header">[-- ThankYouHeader --]</div>
+<table border="0" width="0" align="center">
+
+  <tr>
+    <td>
+      [-- STORE.SC_YourReceipt --]<br />&nbsp;
+    </td>
+  </tr>
+
+  <tr>
+    <td align="center">
+    <b>[--Store.SC_OrderNumber--]&nbsp;[-- ThankYouOrderNumber --]</b>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+    [-- SC_Cart --]
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+    [-- SC_Totals --]
+    </td>
+  </tr>
+
+  <tr><td align="center"><hr noshade size="2" /></td></tr>
+
+  <tr>
+    <td align="center">
+      [-- SC_Address --]
+    </td>
+  </tr>
+
+  <tr><td align="center"><hr noshade size="2" /></td></tr>
+
+  <tr>
+    <td align="center">
+      [-- SC_Payment --]
+    </td>
+  </tr>
+
+  <tr><td align="center"><hr noshade size="2" /></td></tr>
+
+[-- VAR.HR No --]
+
+ [-- IF SC_OrderingInstructions_Text --]
+  <tr>
+    <td align="center">
+      [-- SC_OrderingInstructions --]
+    </td>
+  </tr>
+  [-- VAR.HR Yes --]
+[-- END_IF --]
+
+[-- IF SC_Comments_Text --]
+  <tr>
+    <td align="center">
+      [-- SC_Comments --]
+    </td>
+  </tr>
+  [-- VAR.HR Yes --]
+[-- END_IF --]
+
+[-- IF CustomHTML_Values --]
+  <tr>
+    <td align="center">
+      <table class="CustomHTML">
+        <tr>
+          <td>
+            [-- CustomHTML_Values --]
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  [-- VAR.HR Yes --]
+[-- END_IF --]
+
+[-- IF Email_List --]
+  <tr>
+    <td class="email">
+      [-- Email_List --]
+    </td>
+  </tr>
+  [-- VAR.HR Yes --]
+[-- END_IF --]
+
+[-- IF VAR.HR Yes --]
+  <tr><td align="center"><hr noshade size="2" /></td></tr>
+[-- END_IF --]
+
+</table>
+
+<div class="footer">[-- ThankYouFooter --]</div>
+
+
+</div>
+
+  [-- INCLUDE DEV-checkout-rightbar --]
+
+<SCRIPT language="JavaScript" type="text/javascript">
+<!-- Yahoo! Inc.
+window.ysm_customData = new Object();
+window.ysm_customData.conversion = "transId=,currency=,amount=";
+var ysm_accountid  = "1PTE9V37NVPFJ08QFFS8Q8RR2P4";
+document.write("<SCR" + "IPT language='JavaScript' type='text/javascript' " 
++ "SRC=//" + "srv2.wa.marketingsolutions.yahoo.com" + "/script/ScriptServlet" + "?aid=" + ysm_accountid + "></SCR" + "IPT>");
+// -->
+</SCRIPT>
+<Script language="JavaScript" type="text/javascript">
+document.write("<IMG SRC='https://tracking.searchmarketing.com/thankyou.asp?SMCID=1260&oVal="+ss_subtotal+"&OrderID="+ss_ordernum+"&ProductID="+ss_sku.join()+"' WIDTH='1' HEIGHT='1' BORDER='0'>");
+</script>
+
+<!-- Google Code for Purchase/Sale Conversion Page -->
+<script type="text/javascript">
+<!--
+var google_conversion_id = 1070299738;
+var google_conversion_language = "en";
+var google_conversion_format = "1";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "purchase";
+var google_conversion_value = 0;
+//-->
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://www.googleadservices.com/pagead/conversion/1070299738/?label=purchase&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." :"http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+try{
+  var pageTracker = _gat._getTracker("UA-487443-1");
+  pageTracker._trackPageview();
+
+   pageTracker._addTrans(ss_ordernum, ss_associate, ss_ordertotal, ss_taxtotal, 
+
+ss_shiptotal, ss_city, ss_state, ss_country);
+   for (var p = 0 ; p < number_products ; p++) {
+      pageTracker._addItem(ss_ordernum, ss_sku[p], ss_name[p], "Products", ss_price[p], 
+
+ss_quantity[p]);
+   }
+   for (var c = 0 ; c < number_coupons ; c++) {
+      pageTracker._addItem(ss_ordernum, ss_coupon_name[c], ss_coupon_name[c], "Coupons", 
+
+ss_coupon_discount[c], 1);
+   }
+   pageTracker._trackTrans();
+}  catch(err) {}
+</script>
+<!-- End Google Analytics Tracking -->
+
+<script type="text/javascript">
+
+ var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24343941-1']);
+  _gaq.push(['_trackPageview']);
+
+ (function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  [-- INCLUDE DEV-footer --]
+
+</html>
+[-- END_DEFINE THANKYOU --]
+
+
+[-- DEFINE THANKYOU_EMAIL --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<title>[-- STORE.SC_ThankYou Remove_Html --]</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /></head>
+[-- INCLUDE sc_thankyouemail.css PROCESS --]
+
+<body>
+
+<p class="buttons">[-- ThankYouReturnStore --]</p>
+<div class="header">[-- ThankYouHeader --]</div>
+
+<table border="0" width="0" align="center">
+  <tr>
+    <td align="center">
+      <b>[--Store.SC_OrderNumber--]&nbsp;[-- ThankYouOrderNumber --]</b>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+    [-- SC_Cart --]
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+    [-- SC_Totals --]
+    </td>
+  </tr>
+
+  <tr><td align="center"><hr noshade size="2" /></td></tr>
+
+  <tr>
+    <td align="center">
+      [-- SC_Address --]
+    </td>
+  </tr>
+
+  <tr><td align="center"><hr noshade size="2" /></td></tr>
+
+  <tr>
+    <td align="center">
+      [-- SC_Payment --]
+    </td>
+  </tr>
+
+  <tr><td align="center"><hr noshade size="2" /></td></tr>
+
+[-- VAR.HR No --]
+
+ [-- IF SC_OrderingInstructions_Text --]
+  <tr>
+    <td align="center">
+      [-- SC_OrderingInstructions --]
+    </td>
+  </tr>
+  [-- VAR.HR Yes --]
+[-- END_IF --]
+
+[-- IF SC_Comments_Text --]
+  <tr>
+    <td align="center">
+      [-- SC_Comments --]
+    </td>
+  </tr>
+  [-- VAR.HR Yes --]
+[-- END_IF --]
+
+[-- IF CustomHTML_Values --]
+  <tr>
+    <td align="center">
+      <table align="center">
+        <tr>
+          <td>
+            [-- CustomHTML_Values --]
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  [-- VAR.HR Yes --]
+[-- END_IF --]
+
+[-- IF Email_List --]
+  <tr>
+    <td align="center">
+      [-- Email_List --]
+    </td>
+  </tr>
+  [-- VAR.HR Yes --]
+[-- END_IF --]
+
+[-- IF VAR.HR Yes --]
+  <tr><td align="center"><hr noshade size="2" /></td></tr>
+[-- END_IF --]
+
+</table>
+
+<div class="footer">
+[-- ReceiptFooter --]
+</div>
+</body>
+</html>
+[-- END_DEFINE THANKYOU_EMAIL --]
+
+
+#<!-- Global Cross-sell in Cart -->#
+[-- DEFINE GLOBAL_CROSS_SELL --]
+#<!-- HTML Snippet -->#
+<table class="gcs_product_table">
+  <tbody>
+  [-- IF PRODUCT.Graphic --]
+    [-- IF PRODUCT.DisplayName --]
+    <tr>
+      [-- IF CROSS_SELL_LINK --]
+      <td class="gcs_product_name"><a class="gcs_product_name" href="[-- CROSS_SELL_LINK --]">[-- PRODUCT.Name --]</a></td>
+      [-- ELSE --]
+      <td class="gcs_product_name">[-- PRODUCT.Name --]</td>
+      [-- END_IF --]
+    </tr>
+    [-- END_IF --]
+    <tr>
+    [-- IF CROSS_SELL_LINK --]
+      <td class="gcs_product_image"><a class="gcs_product_graphic" href="[-- CROSS_SELL_LINK --]"><img class="gcs_product_graphic" [-- PRODUCT.Graphic REMOVE_HTML --] alt="[-- PRODUCT.Name REMOVE_HTML --]"></a></td>
+
+    [-- ELSE --]
+      <td class="gcs_product_image"><img class="gcs_product_graphic" [-- PRODUCT.Graphic REMOVE_HTML --] alt="[-- PRODUCT.Name REMOVE_HTML --]"></td>
+    [-- END_IF --]
+    </tr>
+    [-- IF PRODUCT.DisplayPrice --]
+    <tr>
+      [-- IF PRODUCT.SaleOn --]
+      <td class="gcs_product_price">[-- PRODUCT.SaleAmount --]</td>
+      [-- ELSE --]
+      <td class="gcs_product_price">[-- PRODUCT.Price --]</td>
+      [-- END_IF --]
+    </tr>
+    [-- END_IF --]
+    <tr>
+    [-- IF AddImage? --]
+       <td class="gcs_product_add_to_cart"><a class="gcs_addtocart_button" href="[-- PRODUCT.AddToCartURL --]"><img class="pcs_addtocart_button" alt="Add to Cart" [-- AddImage --] border="0"></a></td>
+    [-- ELSE --]
+       <td class="gcs_product_add_to_cart"><a class="gcs_addtocart_button" href="[-- PRODUCT.AddToCartURL --]">[-- AddText --]</a></td>
+    [-- END_IF --]
+    </tr>
+  [-- ELSE --]
+  <!-- No Product Graphic -->
+    [-- IF PRODUCT.DisplayName --]
+    <tr>
+      [-- IF CROSS_SELL_LINK --]
+      <td class="gcs_product_name"><a class="gcs_product_name" href="[-- CROSS_SELL_LINK --]">[-- PRODUCT.Name --]</a></td>
+      [-- ELSE --]
+      <td class="gcs_product_name">[-- PRODUCT.Name --]</td>
+      [-- END_IF --]
+    </tr>
+    [-- END_IF --]
+    [-- IF PRODUCT.DisplayPrice --]
+    <tr>
+      [-- IF PRODUCT.SaleOn --]
+      <td class="gcs_product_price">[-- PRODUCT.SaleAmount --]</td>
+      [-- ELSE --]
+      <td class="gcs_product_price">[-- PRODUCT.Price --]</td>
+      [-- END_IF --]
+    </tr>
+    [-- END_IF --]
+    <tr>
+    [-- IF AddImage? --]
+      <td class="gcs_product_add_to_cart"><a class="gcs_addtocart_button" href="[-- PRODUCT.AddToCartURL --]"><img class="pcs_addtocart_button" alt="Add to Cart" [-- AddImage --] border="0"></a></td>
+    [-- ELSE --]
+      <td class="gcs_product_add_to_cart"><a class="gcs_addtocart_button" href="[-- PRODUCT.AddToCartURL --]">[-- AddText --]</a></td>
+    [-- END_IF --]
+    </tr>
+  [-- END_IF --]
+  </tbody>
+</table>
+[-- END_DEFINE GLOBAL_CROSS_SELL --]
+
+
+#<!-- Per-Product Cross-sell in Cart -->#
+[-- DEFINE CART_CROSS_SELL --]
+#<!-- HTML Snippet -->#
+<table cellpadding="0" cellspacing="0" width="180">
+  <tr valign="middle">
+    <td align="center">
+       
+    [-- IF PRODUCT.Graphic --]
+        <div align="center">
+        <a href="[-- CROSS_SELL_LINK --]">
+        <img border="0" hspace="0" vspace="0" [--PRODUCT.Graphic REMOVE_HTML--]></a>
+        </div>
+        [-- END_IF --]
+    </td>
+  </tr>
+  <tr>
+    <td align="center" valign="top">
+    [-- IF PRODUCT.DisplayName --]
+        <div align="center">
+        <a href="[-- CROSS_SELL_LINK --]" class="cart_name">[-- PRODUCT.Name --]</a>
+        </div>
+        [-- END_IF --]
+
+        
+        </td>
+  </tr>
+</table>
+[-- END_DEFINE CART_CROSS_SELL --]

@@ -1,0 +1,97 @@
+<center>
+<div id="out_of_stock_notice" style="display: none; text-align: left; width: 450px; background-color: #D7D7D7; border: 1px ridge #333; padding: 5px;">
+  <div>The product: <span id="out_of_stock_product" style="font-style: oblique;"></span> item is currently out of stock. If you would like us to email you when it is back in stock, send along your email address...</div>
+       <br />
+           <form action="/isnm/out_of_stock_cart.php" name="out_of_stock_notification" id="out_of_stock_notification" method="post">
+                <input type="hidden" name="product_sku" id="product_sku" value="" />
+                <input type="hidden" name="product_name" id="product_name" value="" />
+                <input type="hidden" name="advanced_options" id="advanced_options" value="0" />
+                <input type="hidden" name="option_value" id="option_value" value="" />
+                <input type="hidden" name="ip" id="ip" value="" />
+                <input type="hidden" name="product_url" id="product_url" value="" />
+                <label for="email">Email Address: </label>
+                   <input type="email" name="email" id="email" value="" />
+                <br />
+                <input type="submit" name="submit" value="Submit" />
+           </form>
+</div>
+</center>
+
+<script type="text/javascript" language="JavaScript" src="[-- ShopSite_Images --]/javascript/jquery/jquery.js"> </script>
+[-- CALL notification_type.php --]
+<script type="text/javascript">
+
+function forceRecalc(){
+   var func;
+   func = document.getElementsByName("function");
+   for (i = 0; i < func.length; i++) {
+       if (func[i].type == "hidden") {
+           zip_recalc = 1;
+           func[i].value = "zip_code_changed";
+           window.document.order.submit();
+       }
+   }
+}
+
+
+$(function(){
+        $("#product_url").val(window.location.href); 
+
+  if($(".inv_err").get().length > 0){
+    $.each( ss_quantity, function(i,n){
+      if(ss_quantity[i]==0){
+          $("#out_of_stock_product").html(ss_name[i]);
+          $("#product_name").val(ss_name[i]);
+                            $("#product_sku").val(ss_sku[i]);
+                            $("#option_value").val(ss_finite_options[i]);
+         
+          if(window.notification_type=='inline'){
+        $(".inv_err").hide();
+        $("#out_of_stock_notice").show();
+          } else{
+        $(".inv_err").hide(); 
+        $("#out_of_stock_notice").dialog({ 
+            title: "Out of Stock", 
+            width: 450, 
+            height: 280,
+            close: function(event, ui){
+              forceRecalc();
+            }
+        }); 
+          }
+      }
+    });
+    
+    $("#out_of_stock_notification").submit(function(){
+      var post_data = $("#out_of_stock_notification").serialize();
+           
+       $.ajax({
+                             type: "POST",
+                             url: "/isnm/out_of_stock_cart.php",
+                             data: post_data,
+                             dataType: 'html',
+                             async: false,
+                             success: function(msg){
+                                        alert( msg );
+          var sku = $("#product_sku").val();
+          var c_name = "request_" + sku;
+          $.cookie(c_name, "foo", { expires: 7 });
+                             }
+                         });
+
+                         forceRecalc();
+                   return false;
+                         
+    });
+  } else{
+    if(window.notification_type=='inline'){
+      $("#out_of_stock_notice").hide();
+      $(".inv_err").show();
+    } else{
+      $("#out_of_stock_notice").dialog("hide"); 
+      $(".inv_err").show(); 
+    }
+  }
+});
+
+</script>

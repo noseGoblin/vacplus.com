@@ -1,0 +1,80 @@
+@import "compass";
+@import "breakpoint";
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,800italic,300italic,600,700,800);
+
+.modal-backdrop{
+  background-color: black;
+
+  &.in{
+    @include opacity(0.76);
+  }
+
+}
+
+.modal{
+  text-align: center;
+
+  &.in{
+    .modal-dialog{
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      @include translate(-50%,-50%);
+    }
+  }
+
+  .modal-dialog{
+    width: 100%;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+
+    .modal-content{
+      @include border-radius(0);
+      border: none;
+      background-color: transparent;
+      box-shadow: none;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .modal-header{
+      border: none;
+      margin: 0;
+      background-color: transparent;
+      text-align: right;
+
+      button{
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+
+    .modal-body{
+      padding: 0;
+      margin: 0 auto;
+      background-color: transparent;
+    }
+  }
+
+  &.videoModal{
+    .modal-dialog{
+      max-width: 940px;
+      width: 100%;
+
+      .modal-content{
+        background-color: grey;
+      }
+
+      .modal-body{
+        margin: 0 auto;
+        background-color: transparent;
+        max-width: 832px;
+        width: 100%;
+        padding: 4px 15px 50px 15px;
+      }
+    }
+  }
+}

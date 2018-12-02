@@ -1,0 +1,26 @@
+[-- DEFINE PAGE --]
+[-- IF PAGE.NumProducts 0 --]
+[-- ELSE --]
+
+        <div class="space-20"></div>
+        <!--new arrivals-->
+        <section class="new-arrivals">
+          <div class="container">
+            <!--owl carousel-->
+            <div class="row">
+              <div class="col-md-12 top-products">
+                [--LOOP PRODUCTS--]
+                <div class="item">
+                  <div class="item_holder">
+                    [-- PRODUCT -VP-MM-top-products-TEST --]
+                  </div>
+                </div>
+                [--END_LOOP PRODUCTS--]  
+              </div>
+            </div>
+            <!--owl end-->
+          </div>
+        </section>
+        <!--end new arrivals-->
+[--END_IF--]
+[-- END_DEFINE PAGE --]

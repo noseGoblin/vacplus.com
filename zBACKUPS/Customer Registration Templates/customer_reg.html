@@ -1,0 +1,1493 @@
+################################
+### Registration and Sign In ###
+################################
+
+### New Customer Registration Page ###
+[-- DEFINE New_Registration --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+[-- VAR.Title STORE.NewRegistration --]
+
+<head>
+<link href="/css/sewing-machines.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="/includes/sewing-machines.js" type="text/javascript"></script>
+<script type="text/javascript" language="JavaScript">
+<!--
+[-- CR_JAVASCRIPT --]
+// -->
+</script>
+</head>
+<body>
+  <table width="760" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="2" class="pdbtm6">[-- INCLUDE header.txt PROCESS --] </td>
+  </tr>
+  <tr>
+    <td width="160"><img src="/images/shop-by-category.gif" alt="" width="160" height="39" border="0" /></td>
+    <td width="602" class="pdl6"><a href="https://www.vacplus.com/customer-service.php#processing-shipping">
+  <img src="/images/shipping-header.gif" alt="Sewing Machines Plus Free Shipping" width="596" height="39" border="0" /></a></td>
+  </tr>
+  <tr>
+    <td class="redbg">[-- INCLUDE navigation.txt --]</td>
+    <td class="pdl6"><table cellspacing="0" cellpadding="0" width="596" border="0">
+        <tr>
+          <td class="cnt-bg">
+
+
+<div id="messages">
+[-- CR_ShopSiteMessages --]
+</div>
+[-- CR_FORM --]
+
+<table align="center" cellspacing="10">
+  <tr>
+    <td align="left">
+      [-- CR_Name --]
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+      [-- CR_Email_Password --]
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+      [-- CR_Challenge --]
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+      [-- CR_email_type --]
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+      [-- CR_Save_Payment --]
+    </td>
+  </tr>
+</table>
+
+<p align="center">[-- BUTTON Save --]&nbsp;[-- BUTTON Cancel --]</p>
+
+  </td>
+    </tr>
+         <tr>
+          <td><img src="/images/main-btm.gif" width="596" height="9" /></td>
+        </tr>
+      </table>
+</form>
+<script type="text/javascript" language="JavaScript">
+<!--
+for ( var i=0; i < document.cr.elements.length; i++) {
+   if (document.cr.elements[i].type != "hidden") {
+    document.cr[i].focus();
+    break;
+  }
+}
+// -->
+</script>
+</td>
+  </tr>
+      <tr>
+        <td rowspan="2" bgcolor="#990000"><div align="center"><br />
+            <img src="/media/multiple_payment_logo.gif" width="150" height="50" /><br />
+            <img src="/media/site/credit-cards.gif" width="140" height="17" /></div></td>
+        <td><img src="/images/foottp.gif" width="602" height="14" /></td>
+      </tr>
+      <tr>
+        <td class="foot-bg">[-- INCLUDE footer.txt PROCESS --]</td>
+      </tr>
+      <tr>
+        <td><img src="/images/footccbtm.gif" width="160" height="8" /></td>
+        <td><img src="/images/footbtm.gif" width="602" height="8" /></td>
+      </tr>
+  </table>
+</body>
+</html>
+[-- END_DEFINE New_Registration --]
+
+
+### Registered Customer Sign-In Page ###
+[-- DEFINE Sign_In --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+[-- Var.title STORE.SignIn --]
+
+<head>
+<link href="/css/sewing-machines.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="/includes/sewing-machines.js" type="text/javascript"></script>
+</head>
+<body>
+  <table width="760" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="2" class="pdbtm6">[-- INCLUDE header.txt PROCESS --] </td>
+  </tr>
+  <tr>
+    <td width="160"><img src="/images/shop-by-category.gif" alt="" width="160" height="39" border="0" /></td>
+    <td width="602" class="pdl6"><a href="https://www.vacplus.com/customer-service.php#processing-shipping">
+  <img src="/images/shipping-header.gif" alt="Sewing Machines Plus Free Shipping" width="596" height="39" border="0" /></a></td>
+  </tr>
+  <tr>
+    <td class="redbg">[-- INCLUDE navigation.txt --]</td>
+    <td class="pdl6"><table cellspacing="0" cellpadding="0" width="596" border="0">
+        <tr>
+          <td class="cnt-bg">
+
+<p>[-- STORE.UseSignInEmail --]</p>
+
+[-- CR_Signin_Email_Password --]
+
+<p align="center">[-- BUTTON SignIn --]&nbsp;[-- BUTTON BackToCart --]</p>
+
+  </td>
+    </tr>
+         <tr>
+          <td><img src="/images/main-btm.gif" width="596" height="9" /></td>
+        </tr>
+      </table></td>
+  </tr>
+      <tr>
+        <td rowspan="2" bgcolor="#990000"><div align="center"><br />
+            <img src="/media/multiple_payment_logo.gif" width="150" height="50" /><br />
+            <img src="/media/site/credit-cards.gif" width="140" height="17" /></div></td>
+        <td><img src="/images/foottp.gif" width="602" height="14" /></td>
+      </tr>
+      <tr>
+        <td class="foot-bg">[-- INCLUDE footer.txt PROCESS --]</td>
+      </tr>
+      <tr>
+        <td><img src="/images/footccbtm.gif" width="160" height="8" /></td>
+        <td><img src="/images/footbtm.gif" width="602" height="8" /></td>
+      </tr>
+  </table>
+</body>
+</html>
+[-- END_DEFINE Sign_In --]
+
+
+### Sign Out "Are you sure?" Page ###
+[-- DEFINE Sign_Out_Confirmation --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+[-- Var.title STORE.SignOutConfirmation --]
+
+<head>
+<link href="/css/sewing-machines.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="/includes/sewing-machines.js" type="text/javascript"></script>
+</head>
+<body>
+  <table width="760" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="2" class="pdbtm6">[-- INCLUDE header.txt PROCESS --] </td>
+  </tr>
+  <tr>
+    <td width="160"><img src="/images/shop-by-category.gif" alt="" width="160" height="39" border="0" /></td>
+    <td width="602" class="pdl6"><a href="https://www.vacplus.com/customer-service.php#processing-shipping">
+  <img src="/images/shipping-header.gif" alt="Sewing Machines Plus Free Shipping" width="596" height="39" border="0" /></a></td>
+  </tr>
+  <tr>
+    <td class="redbg">[-- INCLUDE navigation.txt --]</td>
+    <td class="pdl6"><table cellspacing="0" cellpadding="0" width="596" border="0">
+        <tr>
+          <td class="cnt-bg">
+
+<p>[-- STORE.SignOut? --]</p>
+
+<p align="center">[-- BUTTON Yes --]&nbsp;[-- BUTTON No --]</p>
+
+  </td>
+    </tr>
+         <tr>
+          <td><img src="/images/main-btm.gif" width="596" height="9" /></td>
+        </tr>
+      </table></td>
+  </tr>
+      <tr>
+        <td rowspan="2" bgcolor="#990000"><div align="center"><br />
+            <img src="/media/multiple_payment_logo.gif" width="150" height="50" /><br />
+            <img src="/media/site/credit-cards.gif" width="140" height="17" /></div></td>
+        <td><img src="/images/foottp.gif" width="602" height="14" /></td>
+      </tr>
+      <tr>
+        <td class="foot-bg">[-- INCLUDE footer.txt PROCESS --]</td>
+      </tr>
+      <tr>
+        <td><img src="/images/footccbtm.gif" width="160" height="8" /></td>
+        <td><img src="/images/footbtm.gif" width="602" height="8" /></td>
+      </tr>
+  </table>
+</body>
+</html>
+[-- END_DEFINE Sign_Out_Confirmation --]
+
+
+
+########################
+### Customer Account ###
+########################
+
+### Main View/Edit Page with Buttons ###
+[-- DEFINE View_Edit --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+[-- Var.title STORE.AccountInformation --]
+
+<head>
+<link href="/css/sewing-machines.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="/includes/sewing-machines.js" type="text/javascript"></script>
+</head>
+<body>
+  <table width="760" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="2" class="pdbtm6">[-- INCLUDE header.txt PROCESS --] </td>
+  </tr>
+  <tr>
+    <td width="160"><img src="/images/shop-by-category.gif" alt="" width="160" height="39" border="0" /></td>
+    <td width="602" class="pdl6"><a href="https://www.vacplus.com/customer-service.php#processing-shipping">
+  <img src="/images/shipping-header.gif" alt="Sewing Machines Plus Free Shipping" width="596" height="39" border="0" /></a></td>
+  </tr>
+  <tr>
+    <td class="redbg">[-- INCLUDE navigation.txt --]</td>
+    <td class="pdl6"><table cellspacing="0" cellpadding="0" width="596" border="0">
+        <tr>
+          <td class="cnt-bg">
+
+<div class="cust_name">[-- CR_CUSTOMER_NAME --]</div>
+
+<p>[-- STORE.ViewInformation --]</p>
+
+<table class="view_edit">
+  <tr>
+   <td colspan="2" class="view_edit">[-- CR_Reward_Program_Info --]</td>
+  </tr>
+  <tr>
+    <td class="view_edit">[-- BUTTON Orders --]</td>
+    <td class="view_edit">[-- BUTTON Preferences --]</td>
+  </tr>
+  <tr>
+    <td class="view_edit">[-- BUTTON ShipTo --]</td>
+    <td class="view_edit">[-- BUTTON Payment --]</td>
+  </tr>
+  <tr>
+    <td class="view_edit">[-- BUTTON Password --]</td>
+    <td class="view_edit"> </td>
+  </tr>
+</table>
+
+<p align="center">[-- BUTTON BackToCart --]</p>
+
+  </td>
+    </tr>
+         <tr>
+          <td><img src="/images/main-btm.gif" width="596" height="9" /></td>
+        </tr>
+      </table></td>
+  </tr>
+      <tr>
+        <td rowspan="2" bgcolor="#990000"><div align="center"><br />
+            <img src="/media/multiple_payment_logo.gif" width="150" height="50" /><br />
+            <img src="/media/site/credit-cards.gif" width="140" height="17" /></div></td>
+        <td><img src="/images/foottp.gif" width="602" height="14" /></td>
+      </tr>
+      <tr>
+        <td class="foot-bg">[-- INCLUDE footer.txt PROCESS --]</td>
+      </tr>
+      <tr>
+        <td><img src="/images/footccbtm.gif" width="160" height="8" /></td>
+        <td><img src="/images/footbtm.gif" width="602" height="8" /></td>
+      </tr>
+  </table>
+</body>
+</html>
+[-- END_DEFINE View_Edit --]
+
+
+### Preferences Page ###
+[-- DEFINE Preferences --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+[-- Var.title STORE.Preferences --]
+
+<head>
+<link href="/css/sewing-machines.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="/includes/sewing-machines.js" type="text/javascript"></script>
+</head>
+<body>
+  <table width="760" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="2" class="pdbtm6">[-- INCLUDE header.txt PROCESS --] </td>
+  </tr>
+  <tr>
+    <td width="160"><img src="/images/shop-by-category.gif" alt="" width="160" height="39" border="0" /></td>
+    <td width="602" class="pdl6"><a href="https://www.vacplus.com/customer-service.php#processing-shipping">
+  <img src="/images/shipping-header.gif" alt="Sewing Machines Plus Free Shipping" width="596" height="39" border="0" /></a></td>
+  </tr>
+  <tr>
+    <td class="redbg">[-- INCLUDE navigation.txt --]</td>
+    <td class="pdl6"><table cellspacing="0" cellpadding="0" width="596" border="0">
+        <tr>
+          <td class="cnt-bg">
+
+<table align="center" cellspacing="10" width="600">
+  <tr>
+    <td align="left">
+      [-- CR_Email --]
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+      [-- STORE.EmailSecurity --]
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+      [-- CR_Name --]
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+      [-- CR_Email_Type --]
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+      [-- CR_Save_Payment --]
+    </td>
+  </tr>
+</table>
+
+<p align="center">[-- BUTTON Save --]&nbsp;[-- BUTTON Cancel --]</p>
+
+  </td>
+    </tr>
+         <tr>
+          <td><img src="/images/main-btm.gif" width="596" height="9" /></td>
+        </tr>
+      </table></td>
+  </tr>
+      <tr>
+        <td rowspan="2" bgcolor="#990000"><div align="center"><br />
+            <img src="/media/multiple_payment_logo.gif" width="150" height="50" /><br />
+            <img src="/media/site/credit-cards.gif" width="140" height="17" /></div></td>
+        <td><img src="/images/foottp.gif" width="602" height="14" /></td>
+      </tr>
+      <tr>
+        <td class="foot-bg">[-- INCLUDE footer.txt PROCESS --]</td>
+      </tr>
+      <tr>
+        <td><img src="/images/footccbtm.gif" width="160" height="8" /></td>
+        <td><img src="/images/footbtm.gif" width="602" height="8" /></td>
+      </tr>
+  </table>
+</body>
+</html>
+[-- END_DEFINE Preferences --]
+
+
+### Change Password ###
+[-- DEFINE Edit_Password --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+[-- Var.title STORE.EditPassword --]
+
+<head>
+<link href="/css/sewing-machines.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="/includes/sewing-machines.js" type="text/javascript"></script>
+</head>
+<body>
+  <table width="760" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="2" class="pdbtm6">[-- INCLUDE header.txt PROCESS --] </td>
+  </tr>
+  <tr>
+    <td width="160"><img src="/images/shop-by-category.gif" alt="" width="160" height="39" border="0" /></td>
+    <td width="602" class="pdl6"><a href="https://www.vacplus.com/customer-service.php#processing-shipping">
+  <img src="/images/shipping-header.gif" alt="Sewing Machines Plus Free Shipping" width="596" height="39" border="0" /></a></td>
+  </tr>
+  <tr>
+    <td class="redbg">[-- INCLUDE navigation.txt --]</td>
+    <td class="pdl6"><table cellspacing="0" cellpadding="0" width="596" border="0">
+        <tr>
+          <td class="cnt-bg">
+
+[-- CR_Edit_Password --]
+
+<p>[-- BUTTON Change_Password --]&nbsp;[-- BUTTON Cancel --]</p>
+
+<h2>[-- STORE.ChallengeQuestion --]</h2>
+
+<p>[-- STORE.ChangeChallengeText --]</p>
+
+<p align="center">[-- BUTTON Change_Challenge --]</p>
+
+  </td>
+    </tr>
+         <tr>
+          <td><img src="/images/main-btm.gif" width="596" height="9" /></td>
+        </tr>
+      </table></td>
+  </tr>
+      <tr>
+        <td rowspan="2" bgcolor="#990000"><div align="center"><br />
+            <img src="/media/multiple_payment_logo.gif" width="150" height="50" /><br />
+            <img src="/media/site/credit-cards.gif" width="140" height="17" /></div></td>
+        <td><img src="/images/foottp.gif" width="602" height="14" /></td>
+      </tr>
+      <tr>
+        <td class="foot-bg">[-- INCLUDE footer.txt PROCESS --]</td>
+      </tr>
+      <tr>
+        <td><img src="/images/footccbtm.gif" width="160" height="8" /></td>
+        <td><img src="/images/footbtm.gif" width="602" height="8" /></td>
+      </tr>
+  </table>
+</body>
+</html>
+[-- END_DEFINE Edit_Password --]
+
+
+### Change Challenge Phrase ###
+[-- DEFINE Edit_Challenge --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+[-- Var.title STORE.EditChallenge --]
+
+<head>
+<link href="/css/sewing-machines.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="/includes/sewing-machines.js" type="text/javascript"></script>
+</head>
+<body>
+  <table width="760" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="2" class="pdbtm6">[-- INCLUDE header.txt PROCESS --] </td>
+  </tr>
+  <tr>
+    <td width="160"><img src="/images/shop-by-category.gif" alt="" width="160" height="39" border="0" /></td>
+    <td width="602" class="pdl6"><a href="https://www.vacplus.com/customer-service.php#processing-shipping">
+  <img src="/images/shipping-header.gif" alt="Sewing Machines Plus Free Shipping" width="596" height="39" border="0" /></a></td>
+  </tr>
+  <tr>
+    <td class="redbg">[-- INCLUDE navigation.txt --]</td>
+    <td class="pdl6"><table cellspacing="0" cellpadding="0" width="596" border="0">
+        <tr>
+          <td class="cnt-bg">
+
+<p>[-- STORE.EditChallengeText --]</p>
+
+[-- CR_Edit_Challenge --]
+
+<p align="center">[-- BUTTON Change_Challenge --]&nbsp;[-- BUTTON Cancel --]</p>
+
+  </td>
+    </tr>
+         <tr>
+          <td><img src="/images/main-btm.gif" width="596" height="9" /></td>
+        </tr>
+      </table></td>
+  </tr>
+      <tr>
+        <td rowspan="2" bgcolor="#990000"><div align="center"><br />
+            <img src="/media/multiple_payment_logo.gif" width="150" height="50" /><br />
+            <img src="/media/site/credit-cards.gif" width="140" height="17" /></div></td>
+        <td><img src="/images/foottp.gif" width="602" height="14" /></td>
+      </tr>
+      <tr>
+        <td class="foot-bg">[-- INCLUDE footer.txt PROCESS --]</td>
+      </tr>
+      <tr>
+        <td><img src="/images/footccbtm.gif" width="160" height="8" /></td>
+        <td><img src="/images/footbtm.gif" width="602" height="8" /></td>
+      </tr>
+  </table>
+</body>
+</html>
+[-- END_DEFINE Edit_Challenge --]
+
+
+### Set Password ###
+[-- DEFINE Set_Answer_Password --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+[-- Var.title STORE.SetAnswerPassword --]
+
+<head>
+<link href="/css/sewing-machines.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="/includes/sewing-machines.js" type="text/javascript"></script>
+</head>
+<body>
+  <table width="760" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="2" class="pdbtm6">[-- INCLUDE header.txt PROCESS --] </td>
+  </tr>
+  <tr>
+    <td width="160"><img src="/images/shop-by-category.gif" alt="" width="160" height="39" border="0" /></td>
+    <td width="602" class="pdl6"><a href="https://www.vacplus.com/customer-service.php#processing-shipping">
+  <img src="/images/shipping-header.gif" alt="Sewing Machines Plus Free Shipping" width="596" height="39" border="0" /></a></td>
+  </tr>
+  <tr>
+    <td class="redbg">[-- INCLUDE navigation.txt --]</td>
+    <td class="pdl6"><table cellspacing="0" cellpadding="0" width="596" border="0">
+        <tr>
+          <td class="cnt-bg">
+
+<p><b>[-- STORE.EnterNewPassword --]</b></p>
+
+[-- CR_Password --]
+
+<p align="center">[-- BUTTON Submit --]&nbsp;[-- BUTTON Cancel --]</p>
+
+  </td>
+    </tr>
+         <tr>
+          <td><img src="/images/main-btm.gif" width="596" height="9" /></td>
+        </tr>
+      </table></td>
+  </tr>
+      <tr>
+        <td rowspan="2" bgcolor="#990000"><div align="center"><br />
+            <img src="/media/multiple_payment_logo.gif" width="150" height="50" /><br />
+            <img src="/media/site/credit-cards.gif" width="140" height="17" /></div></td>
+        <td><img src="/images/foottp.gif" width="602" height="14" /></td>
+      </tr>
+      <tr>
+        <td class="foot-bg">[-- INCLUDE footer.txt PROCESS --]</td>
+      </tr>
+      <tr>
+        <td><img src="/images/footccbtm.gif" width="160" height="8" /></td>
+        <td><img src="/images/footbtm.gif" width="602" height="8" /></td>
+      </tr>
+  </table>
+</body>
+</html>
+[-- END_DEFINE Set_Answer_Password --]
+
+
+
+########################
+### Payment Accounts ###
+########################
+
+### List of Payment Accounts ###
+[-- DEFINE Payment_Accounts --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+[-- Var.title STORE.PaymentAccounts --]
+
+<head>
+<link href="/css/sewing-machines.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="/includes/sewing-machines.js" type="text/javascript"></script>
+</head>
+<body>
+  <table width="760" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="2" class="pdbtm6">[-- INCLUDE header.txt PROCESS --] </td>
+  </tr>
+  <tr>
+    <td width="160"><img src="/images/shop-by-category.gif" alt="" width="160" height="39" border="0" /></td>
+    <td width="602" class="pdl6"><a href="https://www.vacplus.com/customer-service.php#processing-shipping">
+  <img src="/images/shipping-header.gif" alt="Sewing Machines Plus Free Shipping" width="596" height="39" border="0" /></a></td>
+  </tr>
+  <tr>
+    <td class="redbg">[-- INCLUDE navigation.txt --]</td>
+    <td class="pdl6"><table cellspacing="0" cellpadding="0" width="596" border="0">
+        <tr>
+          <td class="cnt-bg">
+
+<p>[-- STORE.PaymentText --]</p>
+
+<table cellspacing="10">
+  <tr>
+    <td>[-- CR_Payment_List --]</td>
+    <td>[-- BUTTON Edit --]
+    <br>[-- BUTTON Delete --]
+    </td>
+  </tr>
+</table>
+
+<p>[-- STORE.PaymentAdd --]</p>
+
+<p align="center">[-- BUTTON Done --]</p>
+
+  </td>
+    </tr>
+         <tr>
+          <td><img src="/images/main-btm.gif" width="596" height="9" /></td>
+        </tr>
+      </table></td>
+  </tr>
+      <tr>
+        <td rowspan="2" bgcolor="#990000"><div align="center"><br />
+            <img src="/media/multiple_payment_logo.gif" width="150" height="50" /><br />
+            <img src="/media/site/credit-cards.gif" width="140" height="17" /></div></td>
+        <td><img src="/images/foottp.gif" width="602" height="14" /></td>
+      </tr>
+      <tr>
+        <td class="foot-bg">[-- INCLUDE footer.txt PROCESS --]</td>
+      </tr>
+      <tr>
+        <td><img src="/images/footccbtm.gif" width="160" height="8" /></td>
+        <td><img src="/images/footbtm.gif" width="602" height="8" /></td>
+      </tr>
+  </table>
+</body>
+</html>
+[-- END_DEFINE Payment_Accounts --]
+
+
+### Edit One Payment Account ###
+[-- DEFINE Edit_Payment_Account --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+[-- Var.title STORE.EditPaymentAccount --]
+
+<head>
+<link href="/css/sewing-machines.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="/includes/sewing-machines.js" type="text/javascript"></script>
+</head>
+<body>
+  <table width="760" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="2" class="pdbtm6">[-- INCLUDE header.txt PROCESS --] </td>
+  </tr>
+  <tr>
+    <td width="160"><img src="/images/shop-by-category.gif" alt="" width="160" height="39" border="0" /></td>
+    <td width="602" class="pdl6"><a href="https://www.vacplus.com/customer-service.php#processing-shipping">
+  <img src="/images/shipping-header.gif" alt="Sewing Machines Plus Free Shipping" width="596" height="39" border="0" /></a></td>
+  </tr>
+  <tr>
+    <td class="redbg">[-- INCLUDE navigation.txt --]</td>
+    <td class="pdl6"><table cellspacing="0" cellpadding="0" width="596" border="0">
+        <tr>
+          <td class="cnt-bg">
+
+<table width="470">
+  <tr>
+    <td align="center"><b>[-- STORE.DisplayName --]:</b> [-- CR_DisplayName --]</td>
+  </tr>
+  <tr>
+    <td>[-- STORE.EditPaymentText --]</td>
+  </tr>
+</table>
+
+<h2>[-- STORE.EditPaymentInformation --]</h2>
+
+[-- CR_Edit_Payment_Info --]
+
+<h2>[-- STORE.EditPaymentBilling --]</h2>
+
+[-- CR_Edit_Payment_Address --]
+
+<p align="center">[-- BUTTON Save --]&nbsp;[-- BUTTON Cancel --]</p>
+
+  </td>
+    </tr>
+         <tr>
+          <td><img src="/images/main-btm.gif" width="596" height="9" /></td>
+        </tr>
+      </table></td>
+  </tr>
+      <tr>
+        <td rowspan="2" bgcolor="#990000"><div align="center"><br />
+            <img src="/media/multiple_payment_logo.gif" width="150" height="50" /><br />
+            <img src="/media/site/credit-cards.gif" width="140" height="17" /></div></td>
+        <td><img src="/images/foottp.gif" width="602" height="14" /></td>
+      </tr>
+      <tr>
+        <td class="foot-bg">[-- INCLUDE footer.txt PROCESS --]</td>
+      </tr>
+      <tr>
+        <td><img src="/images/footccbtm.gif" width="160" height="8" /></td>
+        <td><img src="/images/footbtm.gif" width="602" height="8" /></td>
+      </tr>
+  </table>
+</body>
+</html>
+[-- END_DEFINE Edit_Payment_Account --]
+
+
+### Delete Payment Account ###
+[-- DEFINE Delete_Payment_Account --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+[-- Var.title STORE.DeletePaymentAccount --]
+
+<head>
+<link href="/css/sewing-machines.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="/includes/sewing-machines.js" type="text/javascript"></script>
+</head>
+<body>
+  <table width="760" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="2" class="pdbtm6">[-- INCLUDE header.txt PROCESS --] </td>
+  </tr>
+  <tr>
+    <td width="160"><img src="/images/shop-by-category.gif" alt="" width="160" height="39" border="0" /></td>
+    <td width="602" class="pdl6"><a href="https://www.vacplus.com/customer-service.php#processing-shipping">
+  <img src="/images/shipping-header.gif" alt="Sewing Machines Plus Free Shipping" width="596" height="39" border="0" /></a></td>
+  </tr>
+  <tr>
+    <td class="redbg">[-- INCLUDE navigation.txt --]</td>
+    <td class="pdl6"><table cellspacing="0" cellpadding="0" width="596" border="0">
+        <tr>
+          <td class="cnt-bg">
+
+<p>[-- STORE.DeletePaymentText --]</p>
+
+<p><b>[-- CR_Delete_Payment --]</b></p>
+
+<p>[-- STORE.DeletePaymentNote --]</p>
+
+<p align="center">[-- BUTTON Yes --]&nbsp;[-- BUTTON No --]</p>
+
+  </td>
+    </tr>
+         <tr>
+          <td><img src="/images/main-btm.gif" width="596" height="9" /></td>
+        </tr>
+      </table></td>
+  </tr>
+      <tr>
+        <td rowspan="2" bgcolor="#990000"><div align="center"><br />
+            <img src="/media/multiple_payment_logo.gif" width="150" height="50" /><br />
+            <img src="/media/site/credit-cards.gif" width="140" height="17" /></div></td>
+        <td><img src="/images/foottp.gif" width="602" height="14" /></td>
+      </tr>
+      <tr>
+        <td class="foot-bg">[-- INCLUDE footer.txt PROCESS --]</td>
+      </tr>
+      <tr>
+        <td><img src="/images/footccbtm.gif" width="160" height="8" /></td>
+        <td><img src="/images/footbtm.gif" width="602" height="8" /></td>
+      </tr>
+  </table>
+</body>
+</html>
+[-- END_DEFINE Delete_Payment_Account --]
+
+
+
+##############
+### Orders ###
+##############
+
+### List of Orders ###
+[-- DEFINE Orders --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+[-- Var.title STORE.Orders --]
+
+<head>
+<link href="/css/sewing-machines.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="/includes/sewing-machines.js" type="text/javascript"></script>
+</head>
+<body>
+  <table width="760" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="2" class="pdbtm6">[-- INCLUDE header.txt PROCESS --] </td>
+  </tr>
+  <tr>
+    <td width="160"><img src="/images/shop-by-category.gif" alt="" width="160" height="39" border="0" /></td>
+    <td width="602" class="pdl6"><a href="https://www.vacplus.com/customer-service.php#processing-shipping">
+  <img src="/images/shipping-header.gif" alt="Sewing Machines Plus Free Shipping" width="596" height="39" border="0" /></a></td>
+  </tr>
+  <tr>
+    <td class="redbg">[-- INCLUDE navigation.txt --]</td>
+    <td class="pdl6"><table cellspacing="0" cellpadding="0" width="596" border="0">
+        <tr>
+          <td class="cnt-bg">
+
+<p>[-- STORE.OrdersText --]</p>
+
+<table cellspacing="10">
+  <tr>
+    <td>[-- CR_Order_List --]</td>
+    <td>[-- BUTTON View --]
+    <br>[-- BUTTON Delete --]</td>
+  </tr>
+</table>
+
+<p>[-- STORE.OrdersNote --]</p>
+
+<p align="center">[-- BUTTON Done --]</p>
+
+  </td>
+    </tr>
+         <tr>
+          <td><img src="/images/main-btm.gif" width="596" height="9" /></td>
+        </tr>
+      </table></td>
+  </tr>
+      <tr>
+        <td rowspan="2" bgcolor="#990000"><div align="center"><br />
+            <img src="/media/multiple_payment_logo.gif" width="150" height="50" /><br />
+            <img src="/media/site/credit-cards.gif" width="140" height="17" /></div></td>
+        <td><img src="/images/foottp.gif" width="602" height="14" /></td>
+      </tr>
+      <tr>
+        <td class="foot-bg">[-- INCLUDE footer.txt PROCESS --]</td>
+      </tr>
+      <tr>
+        <td><img src="/images/footccbtm.gif" width="160" height="8" /></td>
+        <td><img src="/images/footbtm.gif" width="602" height="8" /></td>
+      </tr>
+  </table>
+</body>
+</html>
+[-- END_DEFINE Orders --]
+
+
+### View Order ###
+[-- DEFINE View_Order --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+[-- Var.title STORE.ViewOrder --]
+
+<head>
+<link href="/css/sewing-machines.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="/includes/sewing-machines.js" type="text/javascript"></script>
+</head>
+<body>
+  <table width="760" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="2" class="pdbtm6">[-- INCLUDE header.txt PROCESS --] </td>
+  </tr>
+  <tr>
+    <td width="160"><img src="/images/shop-by-category.gif" alt="" width="160" height="39" border="0" /></td>
+    <td width="602" class="pdl6"><a href="https://www.vacplus.com/customer-service.php#processing-shipping">
+  <img src="/images/shipping-header.gif" alt="Sewing Machines Plus Free Shipping" width="596" height="39" border="0" /></a></td>
+  </tr>
+  <tr>
+    <td class="redbg">[-- INCLUDE navigation.txt --]</td>
+    <td class="pdl6"><table cellspacing="0" cellpadding="0" width="596" border="0">
+        <tr>
+          <td class="cnt-bg">
+
+<table cellspacing="10" style="border: thin black solid">
+  <tr>
+    <td align="left"><b>[-- STORE.SC_OrderNumber --] [-- CR_OrderNum --]</b></td>
+    <td align="right"><b>[-- CR_OrderDate --]</b></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      [-- CR_Cart --]
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      [-- CR_Totals --]
+    </td>
+  </tr>
+  <tr><td colspan="2"><hr width="90%"></td></tr>
+
+  <tr>
+    <td colspan="2">
+      [-- CR_ORDERINGINSTRUCTIONS --]
+      [-- CR_COMMENTS --]
+    </td>
+  </tr>
+
+  <tr>
+    <td align="center" colspan="2">
+      <table>
+        <tr>
+    <td align="left" valign="top">[-- CR_BillTo_Addr --]</td>
+    <td width="40px">&nbsp;</td>
+    <td align="left" valign="top">[-- CR_ShipTo_Addr --]</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr><td colspan="2"><hr width="90%"></td></tr>
+  <tr>
+    <td colspan="2" align="center">
+      [-- CR_Payment_Info --]
+    </td>
+  </tr>
+</table>
+
+<p align="center">[-- BUTTON Done --]</p>
+
+  </td>
+    </tr>
+         <tr>
+          <td><img src="/images/main-btm.gif" width="596" height="9" /></td>
+        </tr>
+      </table></td>
+  </tr>
+      <tr>
+        <td rowspan="2" bgcolor="#990000"><div align="center"><br />
+            <img src="/media/multiple_payment_logo.gif" width="150" height="50" /><br />
+            <img src="/media/site/credit-cards.gif" width="140" height="17" /></div></td>
+        <td><img src="/images/foottp.gif" width="602" height="14" /></td>
+      </tr>
+      <tr>
+        <td class="foot-bg">[-- INCLUDE footer.txt PROCESS --]</td>
+      </tr>
+      <tr>
+        <td><img src="/images/footccbtm.gif" width="160" height="8" /></td>
+        <td><img src="/images/footbtm.gif" width="602" height="8" /></td>
+      </tr>
+  </table>
+</body>
+</html>
+[-- END_DEFINE View_Order --]
+
+
+### Delete Order ###
+[-- DEFINE Delete_Order --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+[-- Var.title STORE.DeleteOrder --]
+
+<head>
+<link href="/css/sewing-machines.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="/includes/sewing-machines.js" type="text/javascript"></script>
+</head>
+<body>
+  <table width="760" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="2" class="pdbtm6">[-- INCLUDE header.txt PROCESS --] </td>
+  </tr>
+  <tr>
+    <td width="160"><img src="/images/shop-by-category.gif" alt="" width="160" height="39" border="0" /></td>
+    <td width="602" class="pdl6"><a href="https://www.vacplus.com/customer-service.php#processing-shipping">
+  <img src="/images/shipping-header.gif" alt="Sewing Machines Plus Free Shipping" width="596" height="39" border="0" /></a></td>
+  </tr>
+  <tr>
+    <td class="redbg">[-- INCLUDE navigation.txt --]</td>
+    <td class="pdl6"><table cellspacing="0" cellpadding="0" width="596" border="0">
+        <tr>
+          <td class="cnt-bg">
+
+<p>[-- STORE.DeleteOrderText --]</p>
+
+[-- CR_Delete_Order_List --]
+
+<p>[-- STORE.OrdersNote --]</p>
+
+<p align="center">[-- BUTTON Yes --]&nbsp;[-- BUTTON No --]</p>
+
+  </td>
+    </tr>
+         <tr>
+          <td><img src="/images/main-btm.gif" width="596" height="9" /></td>
+        </tr>
+      </table></td>
+  </tr>
+      <tr>
+        <td rowspan="2" bgcolor="#990000"><div align="center"><br />
+            <img src="/media/multiple_payment_logo.gif" width="150" height="50" /><br />
+            <img src="/media/site/credit-cards.gif" width="140" height="17" /></div></td>
+        <td><img src="/images/foottp.gif" width="602" height="14" /></td>
+      </tr>
+      <tr>
+        <td class="foot-bg">[-- INCLUDE footer.txt PROCESS --]</td>
+      </tr>
+      <tr>
+        <td><img src="/images/footccbtm.gif" width="160" height="8" /></td>
+        <td><img src="/images/footbtm.gif" width="602" height="8" /></td>
+      </tr>
+  </table>
+</body>
+</html>
+[-- END_DEFINE Delete_Order --]
+
+
+
+##########################
+### Shipping Addresses ###
+##########################
+
+### List of Shipping Addresses ###
+[-- DEFINE Shipping_Options --]
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+[-- Var.title STORE.ShippingOptions --]
+
+<head>
+<link href="/css/sewing-machines.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="/includes/sewing-machines.js" type="text/javascript"></script>
+</head>
+<body>
+  <table width="760" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="2" class="pdbtm6">[-- INCLUDE header.txt PROCESS --] </td>
+  </tr>
+  <tr>
+    <td width="160"><img src="/images/shop-by-category.gif" alt="" width="160" height="39" border="0" /></td>
+    <td width="602" class="pdl6"><a href="https://www.vacplus.com/customer-service.php#processing-shipping">
+  <img src="/images/shipping-header.gif" alt="Sewing Machines Plus Free Shipping" width="596" height="39" border="0" /></a></td>
+  </tr>
+  <tr>
+    <td class="redbg">[-- INCLUDE navigation.txt --]</td>
+    <td class="pdl6"><table cellspacing="0" cellpadding="0" width="596" border="0">
+        <tr>
+          <td class="cnt-bg">
+
+<p>[-- STORE.ShippingOptionsText --]</p>
+
+<table cellspacing="10">
+  <tr>
+    <td>[-- CR_Shipping_List --]</td>
+    <td>[-- BUTTON Edit --]
+    <br>[-- BUTTON Delete --]</td>
+  </tr>
+</table>
+
+<p>[-- STORE.ShippingOptionsNote --]</p>
+
+<p align="center">[-- BUTTON Done --]</p>
+
+  </td>
+    </tr>
+         <tr>
+          <td><img src="/images/main-btm.gif" width="596" height="9" /></td>
+        </tr>
+      </table></td>
+  </tr>
+      <tr>
+        <td rowspan="2" bgcolor="#990000"><div align="center"><br />
+            <img src="/media/multiple_payment_logo.gif" width="150" height="50" /><br />
+            <img src="/media/site/credit-cards.gif" width="140" height="17" /></div></td>
+        <td><img src="/images/foottp.gif" width="602" height="14" /></td>
+      </tr>
+      <tr>
+        <td class="foot-bg">[-- INCLUDE footer.txt PROCESS --]</td>
+      </tr>
+      <tr>
+        <td><img src="/images/footccbtm.gif" width="160" height="8" /></td>
+        <td><img src="/images/footbtm.gif" width="602" height="8" /></td>
+      </tr>
+  </table>
+</body>
+</html>
+[-- END_DEFINE Shipping_Options --]
+
+
+### Edit Shipping Addresses ###
+[-- DEFINE Edit_Shipping --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+[-- Var.title STORE.EditShipping --]
+
+<head>
+<link href="/css/sewing-machines.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="/includes/sewing-machines.js" type="text/javascript"></script>
+</head>
+<body>
+  <table width="760" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="2" class="pdbtm6">[-- INCLUDE header.txt PROCESS --] </td>
+  </tr>
+  <tr>
+    <td width="160"><img src="/images/shop-by-category.gif" alt="" width="160" height="39" border="0" /></td>
+    <td width="602" class="pdl6"><a href="https://www.vacplus.com/customer-service.php#processing-shipping">
+  <img src="/images/shipping-header.gif" alt="Sewing Machines Plus Free Shipping" width="596" height="39" border="0" /></a></td>
+  </tr>
+  <tr>
+    <td class="redbg">[-- INCLUDE navigation.txt --]</td>
+    <td class="pdl6"><table cellspacing="0" cellpadding="0" width="596" border="0">
+        <tr>
+          <td class="cnt-bg">
+
+<table width="470">
+  <tr>
+    <td align="center"><b>[-- STORE.DisplayName --]:</b> [-- CR_Ship_DisplayName --]</td>
+  </tr>
+  <tr>
+    <td align="center">[-- STORE.EditShippingText --]</td>
+  </tr>
+</table>
+
+<h2>[-- STORE.SC_ShippingAddress --]</h2>
+
+[-- CR_Edit_Shipping_Address --]
+
+<p align="center">[-- BUTTON Save --]&nbsp;[-- BUTTON Cancel --]</p>
+
+  </td>
+    </tr>
+         <tr>
+          <td><img src="/images/main-btm.gif" width="596" height="9" /></td>
+        </tr>
+      </table></td>
+  </tr>
+      <tr>
+        <td rowspan="2" bgcolor="#990000"><div align="center"><br />
+            <img src="/media/multiple_payment_logo.gif" width="150" height="50" /><br />
+            <img src="/media/site/credit-cards.gif" width="140" height="17" /></div></td>
+        <td><img src="/images/foottp.gif" width="602" height="14" /></td>
+      </tr>
+      <tr>
+        <td class="foot-bg">[-- INCLUDE footer.txt PROCESS --]</td>
+      </tr>
+      <tr>
+        <td><img src="/images/footccbtm.gif" width="160" height="8" /></td>
+        <td><img src="/images/footbtm.gif" width="602" height="8" /></td>
+      </tr>
+  </table>
+</body>
+</html>
+[-- END_DEFINE Edit_Shipping --]
+
+
+### Delete Shipping Addresses ###
+[-- DEFINE Delete_Shipping --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+[-- Var.title STORE.DeleteShipping --]
+
+<head>
+<link href="/css/sewing-machines.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="/includes/sewing-machines.js" type="text/javascript"></script>
+</head>
+<body>
+  <table width="760" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="2" class="pdbtm6">[-- INCLUDE header.txt PROCESS --] </td>
+  </tr>
+  <tr>
+    <td width="160"><img src="/images/shop-by-category.gif" alt="" width="160" height="39" border="0" /></td>
+    <td width="602" class="pdl6"><a href="https://www.vacplus.com/customer-service.php#processing-shipping">
+  <img src="/images/shipping-header.gif" alt="Sewing Machines Plus Free Shipping" width="596" height="39" border="0" /></a></td>
+  </tr>
+  <tr>
+    <td class="redbg">[-- INCLUDE navigation.txt --]</td>
+    <td class="pdl6"><table cellspacing="0" cellpadding="0" width="596" border="0">
+        <tr>
+          <td class="cnt-bg">
+
+<p>[-- STORE.DeleteShippingText --]</p>
+
+<p><b>[-- CR_Delete_Shipping --]</b></p>
+
+<p>[-- STORE.DeleteShippingNote --]</p>
+
+<p align="center">[-- BUTTON Yes --]&nbsp;[-- BUTTON No --]</p>
+
+  </td>
+    </tr>
+         <tr>
+          <td><img src="/images/main-btm.gif" width="596" height="9" /></td>
+        </tr>
+      </table></td>
+  </tr>
+      <tr>
+        <td rowspan="2" bgcolor="#990000"><div align="center"><br />
+            <img src="/media/multiple_payment_logo.gif" width="150" height="50" /><br />
+            <img src="/media/site/credit-cards.gif" width="140" height="17" /></div></td>
+        <td><img src="/images/foottp.gif" width="602" height="14" /></td>
+      </tr>
+      <tr>
+        <td class="foot-bg">[-- INCLUDE footer.txt PROCESS --]</td>
+      </tr>
+      <tr>
+        <td><img src="/images/footccbtm.gif" width="160" height="8" /></td>
+        <td><img src="/images/footbtm.gif" width="602" height="8" /></td>
+      </tr>
+  </table>
+</body>
+</html>
+[-- END_DEFINE Delete_Shipping --]
+
+
+
+######################
+### Forgot Password ###
+######################
+
+### Forgot Password Page ###
+[-- DEFINE Forgot_Password --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+[-- Var.title Store.ForgotPassword --]
+
+<head>
+<link href="/css/sewing-machines.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="/includes/sewing-machines.js" type="text/javascript"></script>
+</head>
+<body>
+  <table width="760" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="2" class="pdbtm6">[-- INCLUDE header.txt PROCESS --] </td>
+  </tr>
+  <tr>
+    <td width="160"><img src="/images/shop-by-category.gif" alt="" width="160" height="39" border="0" /></td>
+    <td width="602" class="pdl6"><a href="https://www.vacplus.com/customer-service.php#processing-shipping">
+  <img src="/images/shipping-header.gif" alt="Sewing Machines Plus Free Shipping" width="596" height="39" border="0" /></a></td>
+  </tr>
+  <tr>
+    <td class="redbg">[-- INCLUDE navigation.txt --]</td>
+    <td class="pdl6"><table cellspacing="0" cellpadding="0" width="596" border="0">
+        <tr>
+          <td class="cnt-bg">
+
+<p>[-- STORE.RequestPassword --]</p>
+
+[-- CR_Email --]
+
+<p align="center">[-- BUTTON Submit --]&nbsp;[-- BUTTON Cancel --]</p>
+
+  </td>
+    </tr>
+         <tr>
+          <td><img src="/images/main-btm.gif" width="596" height="9" /></td>
+        </tr>
+      </table></td>
+  </tr>
+      <tr>
+        <td rowspan="2" bgcolor="#990000"><div align="center"><br />
+            <img src="/media/multiple_payment_logo.gif" width="150" height="50" /><br />
+            <img src="/media/site/credit-cards.gif" width="140" height="17" /></div></td>
+        <td><img src="/images/foottp.gif" width="602" height="14" /></td>
+      </tr>
+      <tr>
+        <td class="foot-bg">[-- INCLUDE footer.txt PROCESS --]</td>
+      </tr>
+      <tr>
+        <td><img src="/images/footccbtm.gif" width="160" height="8" /></td>
+        <td><img src="/images/footbtm.gif" width="602" height="8" /></td>
+      </tr>
+  </table>
+</body>
+</html>
+[-- END_DEFINE Forgot_Password --]
+
+
+### Forgot Password "E-mail has been sent" Page ###
+[-- DEFINE Forgot_Email_Sent --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+[-- Var.title STORE.ForgotEmailSent --]
+
+<head>
+<link href="/css/sewing-machines.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="/includes/sewing-machines.js" type="text/javascript"></script>
+</head>
+<body>
+  <table width="760" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="2" class="pdbtm6">[-- INCLUDE header.txt PROCESS --] </td>
+  </tr>
+  <tr>
+    <td width="160"><img src="/images/shop-by-category.gif" alt="" width="160" height="39" border="0" /></td>
+    <td width="602" class="pdl6"><a href="https://www.vacplus.com/customer-service.php#processing-shipping">
+  <img src="/images/shipping-header.gif" alt="Sewing Machines Plus Free Shipping" width="596" height="39" border="0" /></a></td>
+  </tr>
+  <tr>
+    <td class="redbg">[-- INCLUDE navigation.txt --]</td>
+    <td class="pdl6"><table cellspacing="0" cellpadding="0" width="596" border="0">
+        <tr>
+          <td class="cnt-bg">
+
+<p>[-- STORE.SentPasswordEmail --]</p>
+
+<p align="center">[--BUTTON BackToCart --]</p>
+
+  </td>
+    </tr>
+         <tr>
+          <td><img src="/images/main-btm.gif" width="596" height="9" /></td>
+        </tr>
+      </table></td>
+  </tr>
+      <tr>
+        <td rowspan="2" bgcolor="#990000"><div align="center"><br />
+            <img src="/media/multiple_payment_logo.gif" width="150" height="50" /><br />
+            <img src="/media/site/credit-cards.gif" width="140" height="17" /></div></td>
+        <td><img src="/images/foottp.gif" width="602" height="14" /></td>
+      </tr>
+      <tr>
+        <td class="foot-bg">[-- INCLUDE footer.txt PROCESS --]</td>
+      </tr>
+      <tr>
+        <td><img src="/images/footccbtm.gif" width="160" height="8" /></td>
+        <td><img src="/images/footbtm.gif" width="602" height="8" /></td>
+      </tr>
+  </table>
+</body>
+</html>
+[-- END_DEFINE Forgot_Email_Sent --]
+
+
+### Reset Password Page (requires answer to Challenge question) ###
+[-- DEFINE Get_Answer --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+[-- Var.title STORE.GetAnswer --]
+
+<head>
+<link href="/css/sewing-machines.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="/includes/sewing-machines.js" type="text/javascript"></script>
+</head>
+<body>
+  <table width="760" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="2" class="pdbtm6">[-- INCLUDE header.txt PROCESS --] </td>
+  </tr>
+  <tr>
+    <td width="160"><img src="/images/shop-by-category.gif" alt="" width="160" height="39" border="0" /></td>
+    <td width="602" class="pdl6"><a href="https://www.vacplus.com/customer-service.php#processing-shipping">
+  <img src="/images/shipping-header.gif" alt="Sewing Machines Plus Free Shipping" width="596" height="39" border="0" /></a></td>
+  </tr>
+  <tr>
+    <td class="redbg">[-- INCLUDE navigation.txt --]</td>
+    <td class="pdl6"><table cellspacing="0" cellpadding="0" width="596" border="0">
+        <tr>
+          <td class="cnt-bg">
+
+<p>[-- CR_Email_Name --]</p>
+
+<p>[-- STORE.ResetPassword --]</p>
+
+[-- CR_ChallengeQuestion --]
+
+<p align="center">[-- BUTTON Submit --]&nbsp;[-- BUTTON Cancel --]</p>
+
+  </td>
+    </tr>
+         <tr>
+          <td><img src="/images/main-btm.gif" width="596" height="9" /></td>
+        </tr>
+      </table></td>
+  </tr>
+      <tr>
+        <td rowspan="2" bgcolor="#990000"><div align="center"><br />
+            <img src="/media/multiple_payment_logo.gif" width="150" height="50" /><br />
+            <img src="/media/site/credit-cards.gif" width="140" height="17" /></div></td>
+        <td><img src="/images/foottp.gif" width="602" height="14" /></td>
+      </tr>
+      <tr>
+        <td class="foot-bg">[-- INCLUDE footer.txt PROCESS --]</td>
+      </tr>
+      <tr>
+        <td><img src="/images/footccbtm.gif" width="160" height="8" /></td>
+        <td><img src="/images/footbtm.gif" width="602" height="8" /></td>
+      </tr>
+  </table>
+</body>
+</html>
+[-- END_DEFINE Get_Answer --]
+
+
+
+######################
+### Error Messages ###
+######################
+
+### Error Message Screen ###
+[-- DEFINE CR_Error --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+[-- Var.title STORE.ErrorMessages --]
+
+<head>
+<link href="/css/sewing-machines.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="/includes/sewing-machines.js" type="text/javascript"></script>
+</head>
+<body>
+  <table width="760" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="2" class="pdbtm6">[-- INCLUDE header.txt PROCESS --] </td>
+  </tr>
+  <tr>
+    <td width="160"><img src="/images/shop-by-category.gif" alt="" width="160" height="39" border="0" /></td>
+    <td width="602" class="pdl6"><a href="https://www.vacplus.com/customer-service.php#processing-shipping">
+  <img src="/images/shipping-header.gif" alt="Sewing Machines Plus Free Shipping" width="596" height="39" border="0" /></a></td>
+  </tr>
+  <tr>
+    <td class="redbg">[-- INCLUDE navigation.txt --]</td>
+    <td class="pdl6"><table cellspacing="0" cellpadding="0" width="596" border="0">
+        <tr>
+          <td class="cnt-bg">]
+
+<p align="center">[--BUTTON BackToCart --]</p>
+
+  </td>
+    </tr>
+         <tr>
+          <td><img src="/images/main-btm.gif" width="596" height="9" /></td>
+        </tr>
+      </table></td>
+  </tr>
+      <tr>
+        <td rowspan="2" bgcolor="#990000"><div align="center"><br />
+            <img src="/media/multiple_payment_logo.gif" width="150" height="50" /><br />
+            <img src="/media/site/credit-cards.gif" width="140" height="17" /></div></td>
+        <td><img src="/images/foottp.gif" width="602" height="14" /></td>
+      </tr>
+      <tr>
+        <td class="foot-bg">[-- INCLUDE footer.txt PROCESS --]</td>
+      </tr>
+      <tr>
+        <td><img src="/images/footccbtm.gif" width="160" height="8" /></td>
+        <td><img src="/images/footbtm.gif" width="602" height="8" /></td>
+      </tr>
+  </table>
+</body>
+</html>
+[-- END_DEFINE CR_Error --]
+
+
+
+#######################
+### E-Mail Messages ###
+#######################
+
+### E-Mail Message for Account Changes ###
+[-- DEFINE Email_Account_Change --]
+[-- IF CR_HTML_Email --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<style type="text/css">
+<!--
+table.ups_error {
+}
+td.ups_error {
+  vertical-align: middle;
+}
+-->
+</style>
+</head>
+<body>
+[-- STORE.EmailAccountChangeText --] [-- STORE.Name --]
+[-- CR_ShopSiteMessages --]
+</body>
+</html>
+
+[-- ELSE --]
+
+[-- STORE.EmailAccountChangeText --] [-- STORE.Name --]
+[-- CR_ShopSiteMessages --]
+
+[-- END_IF --]
+[-- END_DEFINE Email_Account_Change --]
+
+
+### E-mail saying that address has changed ###
+[-- DEFINE Email_Address_Changed --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<body>
+
+<p><b>[-- STORE.Name --]</b></p>
+<p>[-- STORE.EmailAddressChangedText --]</p>
+<p>[-- Store.NewSignInAddress --]: [-- CR_EMAIL_ADDRESS --]</p>
+<p>[-- Store.URL --] <a href="[-- MyStoreURL --]">[-- MyStoreURL --]</a></p>
+
+</body>
+</html>
+[-- END_DEFINE Email_Address_Changed --]
+
+
+### E-mail for Forgotten Password ###
+[-- DEFINE Forgot_Password_Email --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<body>
+<p>[-- STORE.EmailClickLink --]</p>
+<p>[-- CR_FORGOT_PASSWORD_LINK --]</p>
+<p><b>[-- STORE.Name --]</b></p>
+</body>
+</html>
+[-- END_DEFINE Forgot_Password_Email --]
+
+
+### Email If Forgot Password by Address is Not A Registered Customer ###
+[-- DEFINE Forgot_Password_NoEmail --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<body>
+
+<p>[-- STORE.NotRegisteredEmail --]</p>
+
+[-- IF Store.Name --]
+  <p><b><a href="[-- MyStoreURL --]">[-- STORE.Name --]</a></b></p>
+[-- ELSE --]
+  <p><b><a href="[-- MyStoreURL --]">[-- MyStoreURL --]</a></b></p>
+[-- END_IF --]
+
+</body>
+</html>
+[-- END_DEFINE Forgot_Password_NoEmail --]

@@ -1,0 +1,579 @@
+<!-- BEGIN HEADER INCLUDE -->
+  <?php
+  if (substr($_SESSION["NUMBER".$_SESSION["gclid"]], 0, 3)!= '844') {
+    $_SESSION["NUMBER".$_SESSION["gclid"]] = "8004018151";
+    $_SESSION["LOCAL".$_SESSION["gclid"]] = "7607398222";
+  }
+  ?>
+  <header class="header">
+    <!--top bar-->
+    <div class="top-bar">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <ul class="phone-numbers">
+              <li><?php echo "Toll Free: <a href=\"tel:".substr($_SESSION["NUMBER".$_SESSION["gclid"]], 0, 3)."-".substr($_SESSION["NUMBER".$_SESSION["gclid"]], 3, 3)."-".substr($_SESSION["NUMBER".$_SESSION["gclid"]],6)."\">".substr($_SESSION["NUMBER".$_SESSION["gclid"]], 0, 3)."-".substr($_SESSION["NUMBER".$_SESSION["gclid"]], 3, 3)."-".substr($_SESSION["NUMBER".$_SESSION["gclid"]],6)."</a>";?></li>
+              <li><?php echo "Local: <a href=\"tel:".substr($_SESSION["LOCAL".$_SESSION["gclid"]], 0, 3)."-".substr($_SESSION["LOCAL".$_SESSION["gclid"]], 3, 3)."-".substr($_SESSION["LOCAL".$_SESSION["gclid"]],6)."\">".substr($_SESSION["LOCAL".$_SESSION["gclid"]], 0, 3)."-".substr($_SESSION["LOCAL".$_SESSION["gclid"]], 3, 3)."-".substr($_SESSION["LOCAL".$_SESSION["gclid"]],6)."</a>";?></li>
+            </ul>
+          </div>
+          <div class="col-md-8">
+            <ul class="list-inline top-links">
+              <li><a href="/contact-us.php" class="showroom-text">Visit our San Marcos, CA Showroom</a></li>
+              <li><a href="/Events.php" class="events">Events</a></li>                              
+              <li><a href="/martins.php" class="classes">Classes</a></li>
+              <li><a href="/free-projects.php" class="free-projects">Free Projects</a></li>
+              <li class="chat"><a href="#">Let's Chat !</a></li>                                
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--top bar end-->
+    <div class="navbar navbar-default navbar-static-top yamm sticky">
+      <!--Branding header -->
+      <div class="container">
+        <div class="row">
+          <div class="navbar-header">
+            <div class="col-sm-4 col-xs-10">
+              <a href="#" class="toggle-menu-header"><span><span class="visuallyhidden">Menu</span></span></a>
+              <a class="navbar-brand" href="/"><img src="/AE/images/logo.png" class="img-responsive" alt="vacplus.com"></a>
+            </div>
+            <div class="col-sm-1 col-xs-2 col-sm-push-7">
+              <ul class="nav navbar-right" id="header-bag">
+                <li class="dropdown">
+                  <a href="#" class="shopping-bag dropdown-toggle js-activated" role="button" aria-haspopup="true">
+                    <svg class="icon icon-bag_shopping"><use xlink:href="#icon-bag_shopping"></use></svg>
+                    <span class="text">Bag</span>
+                    <span class="badge"></span>                 
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-sm-7 col-sm-pull-1 clearfix">
+              <div class="search-bar">
+                <form role="form" action="searchresults.php">
+                  <input type=hidden name="storeid" value="*2496f57e14d8a0ef8decc151feac6905cd454c8b">
+                  <div><input type="text" name="search_field" class="form-control" placeholder="Search for quilting machines, thread serger, bobbins..."></div>
+                  <div><button type="submit" class="btn btn-search"><span class="icon-search"></span><span class="visuallyhidden">Submit</span></button></div>
+                </form>
+              </div>                  
+            </div>  
+          </div>
+        </div>
+      </div>
+      <!-- Main Nav -->
+      <div class="navbar-nav">
+        <div class="container">
+          <nav class="main-nav nav-bar" role="navigation">
+            <a href="#" class="toggle-menu"><span><span class="visuallyhidden">Menu</span></span></a>
+            <ul class="cm-menu">
+              <li data-type="sliding">
+                <a href="#"><span>Shop By Department</span></a>
+                <ul>
+                  <li>
+                    <a href="#">Household Sewing Supplies</a>
+                    <ul class="sub-menu-list">
+                      <li>
+                        <a href="#">Categories</a>
+                        <ul>
+                          <li><a href="#">Sewing Machines</a></li>
+                          <li><a href="#">Sergers</a></li>
+                          <li><a href="#">Embroidery Machines</a></li>
+                          <li><a href="#">Blind Hemmers</a></li>
+                          <li><a href="#">Felting Machines</a></li>
+                          <li><a href="#">Quilting Machines</a></li>
+                          <li><a href="#">Computerized Machines</a></li>
+                          <li><a href="#">Handheld Sewing Machines</a></li>
+                          <li><a href="#">Child-usable Sewing Machines</a></li>
+                          <li><a href="#">Factory Refurbished</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">Top Brands</a>
+                        <ul>
+                          <li><a href="#">Brother</a></li>
+                          <li><a href="#">Juki</a></li>
+                          <li><a href="#">Janome</a></li>
+                          <li><a href="#">Singer</a></li>
+                          <li><a href="#">Bernina</a></li>
+                        </ul>
+                      </li>
+                      <li class="item-banner">
+                        <a href="#">Best Sellers!</a>
+                        <a href="#" class="banner">
+                          <img src="images/nav-banner-1.png" class="img-responsive" alt="example banner">
+                        </a>
+                        <a href="#" class="banner">
+                          <img src="images/nav-banner-2.png" class="img-responsive" alt="example banner">
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">Industrial Machines</a>
+                    <ul class="sub-menu-list">
+                      <li>
+                        <a href="#">Categories</a>
+                        <ul>
+                          <li><a href="#">Sewing Machines</a></li>
+                          <li><a href="#">Sergers</a></li>
+                          <li><a href="#">Embroidery Machines</a></li>
+                          <li><a href="#">Blind Hemmers</a></li>
+                          <li><a href="#">Felting Machines</a></li>
+                          <li><a href="#">Quilting Machines</a></li>
+                          <li><a href="#">Computerized Machines</a></li>
+                          <li><a href="#">Handheld Sewing Machines</a></li>
+                          <li><a href="#">Child-usable Sewing Machines</a></li>
+                          <li><a href="#">Factory Refurbished</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">Top Brands</a>
+                        <ul>
+                          <li><a href="#">Brother</a></li>
+                          <li><a href="#">Juki</a></li>
+                          <li><a href="#">Janome</a></li>
+                          <li><a href="#">Singer</a></li>
+                          <li><a href="#">Bernina</a></li>
+                        </ul>
+                      </li>
+                      <li class="item-banner">
+                        <a href="#">Best Sellers!</a>
+                        <a href="#" class="banner">
+                          <img src="images/nav-banner-1.png" class="img-responsive" alt="example banner">
+                        </a>
+                        <a href="#" class="banner">
+                          <img src="images/nav-banner-2.png" class="img-responsive" alt="example banner">
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">Sewing Notions &amp; Supplies</a>
+                    <ul class="sub-menu-list">
+                      <li>
+                        <a href="#">Categories</a>
+                        <ul>
+                          <li><a href="#">Sewing Machines</a></li>
+                          <li><a href="#">Sergers</a></li>
+                          <li><a href="#">Embroidery Machines</a></li>
+                          <li><a href="#">Blind Hemmers</a></li>
+                          <li><a href="#">Felting Machines</a></li>
+                          <li><a href="#">Quilting Machines</a></li>
+                          <li><a href="#">Computerized Machines</a></li>
+                          <li><a href="#">Handheld Sewing Machines</a></li>
+                          <li><a href="#">Child-usable Sewing Machines</a></li>
+                          <li><a href="#">Factory Refurbished</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">Top Brands</a>
+                        <ul>
+                          <li><a href="#">Brother</a></li>
+                          <li><a href="#">Juki</a></li>
+                          <li><a href="#">Janome</a></li>
+                          <li><a href="#">Singer</a></li>
+                          <li><a href="#">Bernina</a></li>
+                        </ul>
+                      </li>
+                      <li class="item-banner">
+                        <a href="#">Best Sellers!</a>
+                        <a href="#" class="banner">
+                          <img src="images/nav-banner-1.png" class="img-responsive" alt="example banner">
+                        </a>
+                        <a href="#" class="banner">
+                          <img src="images/nav-banner-2.png" class="img-responsive" alt="example banner">
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">Quilting Supplies</a>
+                    <ul class="sub-menu-list">
+                      <li>
+                        <a href="#">Categories</a>
+                        <ul>
+                          <li><a href="#">Sewing Machines</a></li>
+                          <li><a href="#">Sergers</a></li>
+                          <li><a href="#">Embroidery Machines</a></li>
+                          <li><a href="#">Blind Hemmers</a></li>
+                          <li><a href="#">Felting Machines</a></li>
+                          <li><a href="#">Quilting Machines</a></li>
+                          <li><a href="#">Computerized Machines</a></li>
+                          <li><a href="#">Handheld Sewing Machines</a></li>
+                          <li><a href="#">Child-usable Sewing Machines</a></li>
+                          <li><a href="#">Factory Refurbished</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">Top Brands</a>
+                        <ul>
+                          <li><a href="#">Brother</a></li>
+                          <li><a href="#">Juki</a></li>
+                          <li><a href="#">Janome</a></li>
+                          <li><a href="#">Singer</a></li>
+                          <li><a href="#">Bernina</a></li>
+                        </ul>
+                      </li>
+                      <li class="item-banner">
+                        <a href="#">Best Sellers!</a>
+                        <a href="#" class="banner">
+                          <img src="images/nav-banner-1.png" class="img-responsive" alt="example banner">
+                        </a>
+                        <a href="#" class="banner">
+                          <img src="images/nav-banner-2.png" class="img-responsive" alt="example banner">
+                        </a>
+                      </li>
+                    </ul>
+                  </li>               
+                  <li>
+                    <a href="#">Sewing Furniture</a>
+                    <ul class="sub-menu-list">
+                      <li>
+                        <a href="#">Categories</a>
+                        <ul>
+                          <li><a href="#">Sewing Machines</a></li>
+                          <li><a href="#">Sergers</a></li>
+                          <li><a href="#">Embroidery Machines</a></li>
+                          <li><a href="#">Blind Hemmers</a></li>
+                          <li><a href="#">Felting Machines</a></li>
+                          <li><a href="#">Quilting Machines</a></li>
+                          <li><a href="#">Computerized Machines</a></li>
+                          <li><a href="#">Handheld Sewing Machines</a></li>
+                          <li><a href="#">Child-usable Sewing Machines</a></li>
+                          <li><a href="#">Factory Refurbished</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">Top Brands</a>
+                        <ul>
+                          <li><a href="#">Brother</a></li>
+                          <li><a href="#">Juki</a></li>
+                          <li><a href="#">Janome</a></li>
+                          <li><a href="#">Singer</a></li>
+                          <li><a href="#">Bernina</a></li>
+                        </ul>
+                      </li>
+                      <li class="item-banner">
+                        <a href="#">Best Sellers!</a>
+                        <a href="#" class="banner">
+                          <img src="images/nav-banner-1.png" class="img-responsive" alt="example banner">
+                        </a>
+                        <a href="#" class="banner">
+                          <img src="images/nav-banner-2.png" class="img-responsive" alt="example banner">
+                        </a>
+                      </li>
+                    </ul>
+                  </li>               
+                  <li>
+                    <a href="#">Vacuum Cleaners</a>
+                    <ul class="sub-menu-list">
+                      <li>
+                        <a href="#">Categories</a>
+                        <ul>
+                          <li><a href="#">Sewing Machines</a></li>
+                          <li><a href="#">Sergers</a></li>
+                          <li><a href="#">Embroidery Machines</a></li>
+                          <li><a href="#">Blind Hemmers</a></li>
+                          <li><a href="#">Felting Machines</a></li>
+                          <li><a href="#">Quilting Machines</a></li>
+                          <li><a href="#">Computerized Machines</a></li>
+                          <li><a href="#">Handheld Sewing Machines</a></li>
+                          <li><a href="#">Child-usable Sewing Machines</a></li>
+                          <li><a href="#">Factory Refurbished</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">Top Brands</a>
+                        <ul>
+                          <li><a href="#">Brother</a></li>
+                          <li><a href="#">Juki</a></li>
+                          <li><a href="#">Janome</a></li>
+                          <li><a href="#">Singer</a></li>
+                          <li><a href="#">Bernina</a></li>
+                        </ul>
+                      </li>
+                      <li class="item-banner">
+                        <a href="#">Best Sellers!</a>
+                        <a href="#" class="banner">
+                          <img src="images/nav-banner-1.png" class="img-responsive" alt="example banner">
+                        </a>
+                        <a href="#" class="banner">
+                          <img src="images/nav-banner-2.png" class="img-responsive" alt="example banner">
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">Online Classes</a>
+                    <ul class="sub-menu-list">
+                      <li>
+                        <a href="#">Categories</a>
+                        <ul>
+                          <li><a href="#">Sewing Machines</a></li>
+                          <li><a href="#">Sergers</a></li>
+                          <li><a href="#">Embroidery Machines</a></li>
+                          <li><a href="#">Blind Hemmers</a></li>
+                          <li><a href="#">Felting Machines</a></li>
+                          <li><a href="#">Quilting Machines</a></li>
+                          <li><a href="#">Computerized Machines</a></li>
+                          <li><a href="#">Handheld Sewing Machines</a></li>
+                          <li><a href="#">Child-usable Sewing Machines</a></li>
+                          <li><a href="#">Factory Refurbished</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">Top Brands</a>
+                        <ul>
+                          <li><a href="#">Brother</a></li>
+                          <li><a href="#">Juki</a></li>
+                          <li><a href="#">Janome</a></li>
+                          <li><a href="#">Singer</a></li>
+                          <li><a href="#">Bernina</a></li>
+                        </ul>
+                      </li>
+                      <li class="item-banner">
+                        <a href="#">Best Sellers!</a>
+                        <a href="#" class="banner">
+                          <img src="images/nav-banner-1.png" class="img-responsive" alt="example banner">
+                        </a>
+                        <a href="#" class="banner">
+                          <img src="images/nav-banner-2.png" class="img-responsive" alt="example banner">
+                        </a>
+                      </li>
+                    </ul>
+                  </li>               
+                </ul>
+              </li>
+              <li data-type="sliding">
+                <a href="#"><span>Shop By Brand</span></a>
+                <ul>
+                  <li>
+                    <a href="#">Brand Listing</a>
+                    <ul class="sub-menu-list">
+                      <li>
+                        <a href="#">Categories</a>
+                        <ul>
+                          <li><a href="#">Sewing Machines</a></li>
+                          <li><a href="#">Sergers</a></li>
+                          <li><a href="#">Embroidery Machines</a></li>
+                          <li><a href="#">Blind Hemmers</a></li>
+                          <li><a href="#">Felting Machines</a></li>
+                          <li><a href="#">Quilting Machines</a></li>
+                          <li><a href="#">Computerized Machines</a></li>
+                          <li><a href="#">Handheld Sewing Machines</a></li>
+                          <li><a href="#">Child-usable Sewing Machines</a></li>
+                          <li><a href="#">Factory Refurbished</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">Top Brands</a>
+                        <ul>
+                          <li><a href="#">Brother</a></li>
+                          <li><a href="#">Juki</a></li>
+                          <li><a href="#">Janome</a></li>
+                          <li><a href="#">Singer</a></li>
+                          <li><a href="#">Bernina</a></li>
+                        </ul>
+                      </li>
+                      <li class="item-banner">
+                        <a href="#">Best Sellers!</a>
+                        <a href="#" class="banner">
+                          <img src="images/nav-banner-1.png" class="img-responsive" alt="example banner">
+                        </a>
+                        <a href="#" class="banner">
+                          <img src="images/nav-banner-2.png" class="img-responsive" alt="example banner">
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>               
+              </li>
+              <li>
+                <a href="/vacuum-cleaners.php"><span>Vacuums</span></a>             
+              </li>
+              <li>
+                <a href="#"><span>Pre-Owned</span></a>
+              </li>
+              <li>
+                <a class="clearance" href="/promotions-clearance.php"><span>Clearance</span></a>              
+              </li>
+              <li data-type="dropdown" class="my-account-nav">
+                <a href="#"><span>My Account</span></a>
+                <ul>
+                  <li>
+                    <a href="#">Your Account</a>                  
+                  </li>
+                  <li>
+                    <a href="#">Your Orders</a>                 
+                  </li>
+                  <li>
+                    <a href="#">Log Out</a>                 
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul class="list-inline top-links top-links-nav">
+                  <li><a href="#" class="events">Events</a></li>                              
+                  <li><a href="#" class="classes">Classes</a></li>
+                  <li><a href="#" class="free-projects">Free Projects</a></li>
+                  <li class="chat"><a href="#">Let's Chat !</a></li>                                
+                </ul>             
+              </li>
+            </ul>    
+          </nav>
+        </div>      
+      </div>
+      <!-- END Main Nav -->
+    </div>
+    <a href="/Events.php">Events</a>
+    <a href="/customer-service.php">Policies</a>
+    <a href="/trackorder.php">Order Status</a>
+    <a href="/free-projects.php">FREE Projects</a>
+    <a href="/martins.php">Classes</a>
+    <a href="/contact-us.php">Contact Us</a>
+    <a href="/about-us.php">About Us</a>
+    <a href="/sitemap_sewingmachineplus.php">Site Map</a>
+    <a target="_blank" href="https://www.mcafeesecure.com/RatingVerify?ref=www.sewingmachinesplus.com"><img width="115" height="32" border="0" src="//images.scanalert.com/meter/www.sewingmachinesplus.com/12.gif" alt="McAfee Secure sites help keep you safe from identity theft, credit card fraud, spyware, spam, viruses and online scams" oncontextmenu="alert('Copying Prohibited by Law - McAfee Secure is a Trademark of McAfee, Inc.'); return false;"></a>
+    <ul>
+      <li><a href="/machinebrands.php" title="Popular Brands"><span style="position:relative; right:1pt;">Popular</span><br />Brands</a>
+        <ul class="submenu">
+          <li><a href="/singer-sewing-machines.php" title="Singer">Singer</a></li>
+          <li><a href="/babylock-sewing-machines.php" title="Baby Lock">Baby Lock</a></li>
+          <li><a href="/brother-sewing-machines.php" title="Brother">Brother</a></li>
+          <li><a href="/janome-sewing-machines.php" title="Janome">Janome</a></li>
+          <li><a href="/juki-sewing-machines.php" title="Juki">Juki</a></li>
+          <li><a href="/viking-sewing-machines.php" title="Husqvarna Viking">Husqvarna Viking</a></li>
+          <li><a href="/bernina.php" title="Bernina">Bernina</a></li>
+          <li><a href="/pfaff-sewingmachines.php" title="Pfaff">Pfaff</a></li>
+          <li><a href="/grace-company-quilting-frames.php" title="The Grace Company">The Grace Company</a></li>
+          <li><a href="/tin-lizzie-18-machines.php" title="Tin Lizzie">Long Arm Quilters</a></li>
+          <li><a href="/queen-quilter-machines.php" title="Queen Quilter 18">Queen Quilter 18</a></li>
+          <li><a href="/hinterberg-caddies.php" title="Hinterberg Design">Hinterberg Design</a></li>
+          <li><a href="/quilt-brand-hq.php" title="Handi Quilter">Handi Quilter</a></li>
+          <li><a href="/melco-sewing-machines.php" title="Melco">Melco</a></li>
+        </ul>
+      </li>
+      <li><a href="/sewing-machines.php" title="Sewing Machine"><span style="position:relative; right:1pt;">Household</span><br /><span style="display:inline;">Sewing Machines</span></a>
+        <ul class="submenu">
+          <li><a href="/domestic-sewing-machines.php" title="Cheap Sewing Machines">Sewing Machines</a></li>
+          <li><a href="/serger.php" title="Serger Sewing Machines">Sergers</a></li>
+          <li><a href="/embroidery-machines.php" title="Embroidery Sewing Machines">Embroidery Machines</a></li>
+          <li><a href="/blind-hemmers.php" title="Industrial Sewing Machines">Blind Hemmers</a></li>
+          <li><a href="/felting-machines.php" title="Industrial Cutting Accessories">Felting Machines</a></li>
+          <li><a href="/coverstitch-machines.php" title="Vacuum Cleaners">Coverhem Machines</a></li>
+          <li><a href="/quilting-machines.php" title="Quilting Machines">Quilting Machines</a></li>
+          <li><a href="/computerized-sewing-machines.php" title="Computerized Machines">Computerized Machines</a></li>
+          <li><a href="/handheld-sewing-machines.php" title="Handheld Sewing Machines">Handheld Sewing Machines</a></li>
+          <li><a href="/child-sewing-machines.php" title="Small Sewing Machines">Child-usable Sewing Machines</a></li>
+          <li><a href="/factory-serviced.php" title="Handheld Sewing Machines">Factory Refurbished</a></li>
+        </ul>
+      </li>
+      <li><a href="/industrial-sewing-machines.php" title="Industrial Sewing Machine"><span style="position:relative; right:1pt;">Industrial</span><br />Machines</a>
+        <ul class="submenu">
+          <li><a href="/garment-sewing-machines.php" title="Garment Sewing Machines">Garment Sewing</a></li>
+          <li><a href="/upholstry-sewing-machines.php" title="Industrial Sewing Machine">Upholstry Sewing</a></li>
+          <li><a href="/heavy-duty-sewing-machines.php" title="Industrial Sewing Machine">Heavy-duty Sewing</a></li>
+          <li><a href="/walking-foot-sewing-machines.php" title="Walking Foot Sewing Machine">Walking-foot Machines</a></li>
+          <li><a href="/industrial-blindstitch.php" title="Industrial Sewing Machine">Blindstitch Machines</a></li>
+          <li><a href="/industrial-overlock-machines.php" title="Industrial Overlock Machines">Overlock Machines</a></li>
+          <li><a href="/industrial-zigzag.php" title="Industrial Sewing Machine">Zigzag Machines</a></li>
+          <li><a href="/cylinder-bed-and-post-bed-machines.php" title="Industrial Sewing Machines">Cylinder & Post Bed</a></li>
+          <li><a href="/carpet-binders.php" title="Industrial Carpet Binding Machines">Carpet Binders</a></li>
+          <li><a href="/industrial-cutters.php" title="Industrial Cutting Accessories">Cutting Equipment</a></li>
+          <li><a href="/industrial-accessories.php" title="Industrial Sewing Machine">Industrial Machine Accessories</a></li>
+        </ul>            
+      </li>
+      <li><a href="/sewing-supplies.php" title="Sewing Supplies and Notions"><span style="position:relative; right:1pt;">Sewing Notions</span><br />& Supplies</a>
+        <ul class="submenu">
+          <li><a href="/adhesives.php" title="Adhesives Accessories">Adhesives</a></li>
+          <li><a href="/notions-sewing-caddies.php" title="Sewing Box">Baskets & Storage</a></li>
+          <li><a href="/sewing-bobbins.php" title="Sewing Bobbins">Bobbins</a></li>
+          <li><a href="/bobbin-cases.php" title="Bobbin Cases">Bobbin Cases</a></li>
+          <li><a href="/notions-books.php" title="Books, CDs & DVDs">Books, CDs & DVDs</a></li>
+          <li><a href="/craft-tools.php" title="Craft Tools">Craft Tools</a></li>
+          <li><a href="/dress-forms.php" title="Dress Forms">Dress Forms</a></li>
+          <li><a href="/extension-tables.php" title="Extension Tables">Extension Tables</a></li>
+          <li><a href="/foot-controls.php" title="Sewing Foot Controls">Foot Controls</a></li>
+          <li><a href="/sewing-aids.php" title="Sewing Aids">General Notions</a></li>
+          <li><a href="/notions-lights.php" title="Lamps and Lights Accessories">Lamps & Lights</a></li>
+          <li><a href="/machine-cutting.php" title="Machine Cutting">Machine Cutting</a></li>
+          <li><a href="/magnifiers.php" title="Magnifying Lenses">Magnifying Lenses</a></li>
+          <li><a href="/sewing-machine-manuals.php" title="Sewing Machine Manuals">Manuals</a></li>
+          <li><a href="/notions-marking.php" title="Marking Devices">Marking Devices</a></li>
+          <li><a href="/cover-needle-plates.php" title="Cover Needle Plates">Needle Plates</a></li>
+          <li><a href="/sewing-needles.php" title="Sewing Needles">Needles</a></li>
+          <li><a href="/pins.php" title="Pins and Pincushions">Pins & Pincushions</a></li>
+          <li><a href="/lead-cords.php" title="Lead Cords and Power Cords">Power Cords</a></li>
+          <li><a href="/sewing-feet.php" title="Sewing Machine Feet">Presser Feet</a></li>
+          <li><a href="/sewing-accessories-rulers.php" title="Rulers and Measuring Tools">Rulers & Measuring</a></li>
+          <li><a href="/sewing-scissors.php" title="Sewing Scissors and Rotary Cutters">Scissors</a></li>
+          <li><a href="/serger-feet.php" title="Serger Feet">Serger Feet</a></li>
+          <li><a href="/sewing-kit.php" title="Sewing Kits">Sewing Kits</a></li>
+          <li><a href="/sewing-machine-parts.php" title="Sewing Machine Parts">Sewing Machine Parts</a></li>
+          <li><a href="/thread.php" title="Sewing Thread">Thread</a></li>
+          <li><a href="/sewing-accessories-cases.php" title="Trolleys, Totes & Cases">Trolleys, Totes & Cases</a></li>
+        </ul>
+      </li>
+      <li><a href="/quilting-supplies.php" title="Quilt Sewing Machines">Quilting<br />Supplies</a>
+        <ul class="submenu">
+          <li><a href="/quilting-machines.php" title="Quilting Machines">Quilting Machines</a></li>
+          <li><a href="/quilting-frames.php" title="Long Arm Quilting Machines">Machine Quilting Frames</a></li>
+          <li><a href="/hand-quilting-supplies.php" title="Sewing Machines Quilting">Hand Quilting Frames</a></li>
+          <li><a href="/quilting-hardware-software.php" title="Quilting Hardware and Software">Quilting Hardware & Software</a></li>
+          <li><a href="/quilting-templates.php" title="Quilting Templates">Quilting Templates</a></li>
+          <li><a href="/quilting-thread.php" title="Sewingmachines">Quilting Thread</a></li>
+          <li><a href="/rotary-cutters.php" title="Rotary Cutters">Rotary Cutters</a></li>
+          <li><a href="/machine-cutting.php" title="Machine Cutting">Machine Cutting</a></li>
+          <li><a href="/mats.php" title="Trolleys">Cutting Mats</a></li>
+          <li><a href="/quilting-notions.php" title="Quilting Notions">Quilting Notions</a></li>
+          <li><a href="/quilt-books.php" title="Books">Books, CDs & DVDs</a></li>
+          <li><a href="/quilting-patterns.php" title="Quilting Patterns">Quilt Patterns</a></li>
+          <li><a href="/notions-sewing-caddies.php" title="Sewing Box">Baskets & Storage</a></li>
+          <li><a href="/pins.php" title="Pins and Pincushions">Pins & Pincushions</a></li>
+          <li><a href="/notions-marking.php" title="Marking Devices">Marking Devices</a></li>
+          <li><a href="/sewing-accessories-rulers.php" title="Rulers and Measuring Tools">Rulers & Measuring</a></li>
+          <li><a href="/adhesives.php" title="Adhesives Accessories">Adhesives</a></li>
+        </ul>
+      </li>
+      <li><a href="/embroidery-supplies.php" title="Sewing Embroidery Machine">Embroidery<br />Supplies</a>
+        <ul class="submenu">
+          <li><a href="/embroidery-machines.php" title="Embroidery Sewing Machines">Embroidery Machines</a></li>
+          <li><a href="/embroidery-hoops.php" title="Embroidery Hoops">Embroidery Hoops</a></li>
+          <li><a href="/embroidery-thread.php" title="Embroidery Machine">Embroidery Thread</a></li>
+          <li><a href="/embroidery-designs.php" title="Embroidery Sewing Machine">Embroidery Designs</a></li>
+          <li><a href="/embroidery-software.php" title="Embroidery Software">Embroidery Software</a></li>
+          <li><a href="/embroidery-stabilizers.php" title="Embroidery Stabilizers">Stabilizer</a></li>
+          <li><a href="/embroidery-hooping-aids.php" title="Embroidery Placement ">Placement & Hooping Aids</a></li>
+          <li><a href="/embroidery-notions.php" title="Embroidery Notions">Embroidery Notions</a></li>
+          <li><a href="/embroidery-books.php" title="DVDs">Books, CDs & DVDs</a></li>
+          <li><a href="/machine-cutting.php" title="Machine Cutting">Machine Cutting</a></li>
+        </ul>
+      </li>
+      <li><a href="/sewing-furniture.php" title="Sewing Furniture"><span style="position:relative; right:1pt;">Sewing</span><br />Furniture</a>
+        <ul class="submenu">
+          <li><a href="/sewing-cabinets.php" title="Sewing Cabinets">Sewing Cabinets</a></li>
+          <li><a href="/sewing-tables.php" title="Sewing Machine Table">Sewing Tables</a></li>
+          <li><a href="/sewing-pneumatic-lifts.php" title="Pneumatic Lift Sewing Cabinets">Pneumatic Lifts</a></li>
+          <li><a href="/cutting-tables.php" title="Cutting Tables">Cutting Tables</a></li>
+          <li><a href="/sewing-chairs.php" title="Sewing Chairs">Sewing Chairs</a></li>
+          <li><a href="/sewing-box.php" title="Sewing Caddies">Boxes & Caddies</a></li>
+          <li><a href="/notions-lights.php" title="Lamps">Lamps & Lights</a></li>
+        </ul>
+      </li>
+      <li><a href="/vacuum-cleaners.php" title="Vacuum Cleaners">Vacuum<br />Cleaners</a>
+        <ul class="submenu">
+          <li><a href="/upright-vacuum-cleaners.php" title="Upright Vacuums">Upright Vacuums</a></li>
+          <li><a href="/canister-vacuum-cleaners.php" title="Canister Vacuums">Canister Vacuums</a></li>
+          <li><a href="/handheld-vacuum-cleaners.php" title="Vacuum Cleaners">Handheld Vacuums</a></li>
+          <li><a href="/industrial-vacuum-cleaners.php" title="Vacuum Cleaner">Industrial Vacuums</a></li>
+          <li><a href="/vacuum-bags.php" title="Vacuum Bags">Vacuum Bags</a></li>
+          <li><a href="/steam-cleaners.php" title="Steam Cleaners">Steam Cleaners</a></li>
+          <li><a href="/air-purifiers.php" title="Air Purifiers">Air Purifiers</a></li>
+        </ul>
+      </li>
+      <li><a href="/online-classes.php" title="Online Classes">Online<br />Classes</a>
+      </li>
+    </ul>
+  </header>
+  <!-- END HEADER INCLUDE -->

@@ -1,0 +1,15 @@
+[-- CALL LexiConn_ss_suggest_ui.php --]
+<style type="text/css">
+   table.suggest_table{
+  text-align: left;
+   }
+ 
+   table.suggest_table td img{
+        width: 40px;
+   }
+
+   td.suggest_image_preview{
+  width: 40px;
+   }
+
+</style>

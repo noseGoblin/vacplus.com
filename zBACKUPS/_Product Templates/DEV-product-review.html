@@ -1,0 +1,522 @@
+[-- DEFINE SUBPRODUCT --]
+  <tr valign="middle">
+      <td>
+          <a href="[-- PRODUCT.MoreInfoURL --]" style="color: #000000; text-decoration: none;" target="_blank">
+              <img src="https://www.vacplus.com/media/[-- IMAGE PRODUCT.Graphic --]" width="75" height="75" />
+            </a>
+        </td>
+    <td style="padding: 0px 10px;"><input type="checkbox" name="itemnum" value="[-- PRODUCT.RECORDNUMBER --]"></td>
+    <td style="font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt;">
+          <a href="[-- PRODUCT.MoreInfoURL --]" style="color: #000000; text-decoration: none;" target="_blank">[-- PRODUCT.Name --]</a>
+            <br />[-- IF PRODUCT.SaleOn--]<strike>[--PRODUCT.Price--]</strike> <b style="color: #FF0000;">[--PRODUCT.SaleAmount--]</b>[--ELSE--]<b style="color: #FF0000;">[-- IF PRODUCT.DisplayPrice --][--PRODUCT.Price--][-- END_IF --]</b>[--END_IF--]
+            <br />(Clicking this product will display information in a new window.)
+        </td>
+  </tr>
+[-- END_DEFINE SUBPRODUCT --]
+
+
+[-- DEFINE PRODUCT --]
+  [--IF PRODUCT.DisplayMoreInformationPage--]
+      <a href="[-- PRODUCT.MoreInfoURL --]" style="color: #000000; text-decoration: none;">
+        <div class="productLinkName">[-- PRODUCT.Name --]</div>
+        <img src="/media/[-- IMAGE PRODUCT.Graphic --]" class="productLinkImg" />
+    </a>
+  [--ELSE--]
+      <div class="productLinkName">[-- PRODUCT.Name --]</div><br />
+      <img src="/media/[-- IMAGE PRODUCT.Graphic --]" class="productLinkImg" />
+    [--END_IF--]
+    
+    <br clear="all" />
+    [-- IF PRODUCT.DisplayPrice --]
+      [--IF PRODUCT.SaleOn--]
+          <strike>[-- PRODUCT.Price --]</strike> <span class="productLinkPrice">[-- PRODUCT.SaleAmount --]</span>
+    [--ELSE--]
+          <span class="productLinkPrice">[-- PRODUCT.Price --]</span>
+    [--END_IF--]
+    [--ELSE--]
+      Call for details
+  [--END_IF--]<br />
+    [--IF Product.Field10 "free"--]
+      <span style="color: #2A1FFF;"><strong>Free Delivery</strong></span>
+    [-- END_IF --]
+    [--IF Product.Field10 "free3day"--]
+      <span style="color: #2A1FFF;"><strong>Free 3-Day Delivery</strong></span>
+    [-- END_IF --]
+[-- END_DEFINE PRODUCT --]
+
+
+[-- DEFINE MORE_INFO_PAGE --]
+<?php
+// Start the session
+session_start();
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php
+$_SESSION["NUMBER".$_SESSION["gclid"]] = "8004018151";
+$_SESSION["LOCAL".$_SESSION["gclid"]] = "7607398222";
+
+if(empty($_COOKIE["triviumgclid"])) {
+  if (!isset($_SESSION["gclid"])) {
+    $_SESSION["gclid"] = $_GET["gclid"];
+      $_SESSION["keyword"] =$_GET["keyword"];
+  }
+  if (!empty($_SESSION["gclid"])) {     
+    $file = file_get_contents("http://98.175.242.26:8090/SonicView/callAnalytics/getAdwordsPhoneNumber?number=8004018151&gclid=".$_SESSION["gclid"]."&keyword=".$_SESSION["keyword"]);
+    $_SESSION["NUMBER".$_SESSION["gclid"]]=$file;
+    $_SESSION["LOCAL".$_SESSION["gclid"]] = "7604663195";
+    setcookie("triviumgclid", $_SESSION["gclid"], time()+2592000);
+  }
+} else {
+  if(empty($_GET["gclid"])) {
+    $_SESSION["gclid"] = $_COOKIE["triviumgclid"];
+    $file = file_get_contents("http://98.175.242.26:8090/SonicView/callAnalytics/getAdwordsPhoneNumber?number=8004018151&gclid=".$_SESSION["gclid"]."&keyword=".$_SESSION["keyword"]);
+    $_SESSION["NUMBER".$_SESSION["gclid"]]=$file;
+    $_SESSION["LOCAL".$_SESSION["gclid"]] = "7604663195";
+  } else {
+    $_SESSION["gclid"] = $_GET["gclid"];
+    $file = file_get_contents("http://98.175.242.26:8090/SonicView/callAnalytics/getAdwordsPhoneNumber?number=8004018151&gclid=".$_SESSION["gclid"]."&keyword=".$_SESSION["keyword"]);
+    $_SESSION["NUMBER".$_SESSION["gclid"]]=$file;
+    $_SESSION["LOCAL".$_SESSION["gclid"]] = "7604663195";
+    setcookie("triviumgclid", $_SESSION["gclid"], time()+2592000);
+  }
+}
+?>
+<!-- test -->
+<?php
+$domain='sewingmachinesplus.com';
+$host  = $_SERVER['HTTP_HOST'];
+$uri = $_SERVER['PHP_SELF'];
+function domainCheck($host, $uri, $domain){
+  $dir_name = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+  if($host==$domain){
+    $formattedUrl=$domain.$uri;
+    Header( "HTTP/1.1 301 Moved Permanently" );
+    Header( "Location: http://www.$formattedUrl" );
+    exit; 
+  }
+}
+domainCheck($host, $uri, $domain);
+?>
+<html>
+
+<head>
+  
+    [--IF PRODUCT.MoreInformationTitle --]
+    <title>[--PRODUCT.MoreInformationTitle REMOVE_HTML --]</title>
+  [--ELSE--]
+    <title>[-- PRODUCT.Name REMOVE_HTML --]</title>
+  [--END_IF--]
+
+  [--IF PRODUCT.MoreInformationMetaKeywords --]
+    <meta name="Keywords" content="[-- PRODUCT.MoreInformationMetaKeywords --]" />
+  [--ELSE--]
+    <meta name="Keywords" content="[--Product.Name REMOVE_HTML --]" />
+  [--END_IF--]
+
+  [--IF PRODUCT.MoreInformationMetaDescription --]
+    <meta name="Description" content="[-- PRODUCT.MoreInformationMetaDescription --]" />
+  [--ELSE--]
+    <meta name="Description" content="[--Product.Name REMOVE_HTML --]" />
+  [--END_IF--]
+    
+    <META NAME="GOOGLEBOT" CONTENT="INDEX, FOLLOW">
+  <META NAME="Robots" content="index,follow"> 
+  <meta name="rating" content="General" />
+    
+    <link href="/css/lightbox.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="/js/lightbox.js"></script>    
+    
+    
+  [-- INCLUDE DEV-header --]
+  [-- INCLUDE DEV-leftbar --]
+
+
+<table class="content">
+<tr><td colspan="2" style="width: 660px; padding: 0px; padding-bottom: 20px;">
+  <!-- PRODUCT TITLE GOES HERE -->
+  <h1>
+      [-- IF PRODUCT.MoreInformationTitle --]
+          [-- PRODUCT.MoreInformationTitle --]
+      [-- ELSE --]
+        [-- PRODUCT.Name REMOVE_HTML --]
+        [-- END_IF --]
+    </h1>
+
+</td></tr>
+
+<tr><td style="width: 260px; height: 250px; padding: 0px; border: 1px solid #BBBBBB" class="medimagebox">
+
+  <!-- MEDIUM-SIZED PRODUCT IMAGE GOES HERE -->
+
+    [-- IF PRODUCT.Field5 --]
+    
+      <?php
+      $field5img = explode("|", "[-- PRODUCT.Field5 --]");
+
+      $medImg = "https://www.vacplus.com/media/" . $field5img[0];
+            
+            $pos = strrpos($medImg, '.');
+      $medImg = substr_replace($medImg, '_size2.', $pos, 1);
+            
+            $medImg = substr_replace($medImg, '/resized/', strrpos($medImg, '/'), 1);
+            
+            echo "<img src='".$medImg."' id='mediumImage' />";
+    ?>
+    
+    [-- ELSE --]
+      [-- IF PRODUCT.MoreInformationGraphic --]<img [-- PRODUCT.MoreInformationGraphic REMOVE_HTML--] border="0">
+        [--ELSE--]<img src="[-- VAR.MyImages --]/images/more_comingsoon.gif" hspace="0" vspace="0">
+        [-- END_IF --]
+   [-- END_IF --]
+   <br clear="all" />
+</td>
+
+<td style="font-size: 10pt; padding: 0px 0px 0px 15px; height: 250px; vertical-align: top; width: 100%; margin: 0px;">
+
+<p style="font-weight: bold;">
+
+  <!-- BEGIN PRODUCT INFO -->
+
+
+[-- IF PRODUCT.DisplayPrice --]
+
+  <span style="float: left;">
+  [--IF PRODUCT.SaleOn--]
+          List Price: <strike>[-- PRODUCT.Price --]</strike><br />
+                  <span style="color: #FF0000;">Your Price: [-- PRODUCT.SaleAmount --]</span>
+  [--ELSE--]
+            <span style="color: #FF0000;">Price: [-- PRODUCT.Price --]</span>
+  [--END_IF--]
+    </span>
+    
+        <!-- BEGIN PRICE COMPARISON LINK -->
+
+  <span style="float: right;">
+      <form method="POST" action="price-comparison.php" style="margin: 0px; margin-bottom: 10px;">
+
+    <input type="hidden" name="product" value="[-- PRODUCT.Name --]" />
+    <input type="hidden" name="SKU" value="[-- PRODUCT.SKU --]" />
+    <input type="hidden" name="productURL" value="[-- PRODUCT.MoreInfoURL --]" />
+    <input type="hidden" name="image" value='[-- IMAGE PRODUCT.Graphic --]' />
+    <input type="hidden" name="ourPrice" value="[-- IF PRODUCT.SaleAmount --][-- PRODUCT.SaleAmount --][-- ELSE --][-- PRODUCT.Price --][-- END_IF --]" />
+
+    <input src="/images/layout/price-compare2.gif" name="submit" type="image" value="Yes!" />
+
+    </form>
+  </span>
+    
+      <!-- END PRICE COMPARISON LINK -->
+
+[--ELSE--]
+    
+  <big>Call 1-800-401-8151 for details.</big>
+
+[-- END_IF --]
+
+      <!-- BEGIN ADD TO CART FORM -->
+
+  <form action="[-- SHOPPING_CART_URL BASE --]/order.cgi" method="post">
+
+  <br clear="all" />
+  [-- IF PRODUCT.DisplayOrderingOptions --]
+    [-- PRODUCT.OptionText --]
+        <br />
+    [--Order_Option_Menu Column--]
+  [-- END_IF --]
+</p>
+
+
+
+<!-- PRODUCT CONDITION, AVAILABILITY, ETC -->
+[--IF Product.Field1--] <p><b>[--Product.Field1--]</b></p>[--END_IF--]
+
+[--IF Product.Field2--]
+  <div style="float:left">
+  <p class="info" style="color: #770000; vertical-align: middle;"><u>Condition</u>:<br /> 
+    <span style="color: #0000DD;">
+    [--IF Product.Field2 "new"--]
+      <img src="/images/layout/new.gif" width="20" height="20" style="vertical-align: middle;" />
+      Brand New
+    [-- END_IF --]
+    
+    [--IF Product.Field2 "fs"--]
+      <img src="/images/layout/fs.gif" width="20" height="20" style="vertical-align: middle;" />
+      Factory Serviced
+    [-- END_IF --]
+    
+    [--IF Product.Field2 "dl"--]
+      <img src="/images/layout/dl.gif" width="20" height="20" style="vertical-align: middle;" />
+      File Download (No physical item will be sent)
+    [-- END_IF --]
+    </span>
+  </p>
+  </div>
+  <div style="float:right; margin-right: 30px; height:10px">
+    <!-- Review STARS -->
+    <a href="#" onClick="contentDisplay('reviews')">
+    <?php readfile("https://www.vacplus.com/reviews/summary2.php/[-- PRODUCT.SKU --]"); ?>
+    </a>
+  </div>
+  <br clear="all" />
+[-- END_IF --]
+
+[--IF Product.Field3--]<p class="info" style="color: #990000;"><u>Availability</u>:<br />
+  <span style="color: #0000BB;">
+    [--IF Product.Field3 "sameday"--]
+      <a style="color: #0000BB;" href="/customer-service.php#processing-shipping" target="_blank">Item ships same day if ordered before 1pm PST</a>
+    [-- END_IF --]
+    
+    [--IF Product.Field3 "ds"--]
+      <a style="color: #0000BB;" href="/customer-service.php#processing-shipping" target="_blank">Item ships from another facility. Expedited shipping is not available.</a>
+    [-- END_IF --]
+    
+    [--IF Product.Field3 "store"--]
+      <a style="color: #0000BB;" href="/customer-service.php#processing-shipping" target="_blank">Item ships from our location. Ground shipments usually arrive within 3-7 days.</a>
+    [-- END_IF --]
+    
+    [--IF Product.Field3 "sup"--]
+      <a style="color: #0000BB;" href="/customer-service.php#processing-shipping" target="_blank">Item ships from manufacturer. Expect 5-7 days for delivery.</a>
+    [-- END_IF --]
+    
+    [--IF Product.Field3 "ups"--]
+      <a style="color: #0000BB;" href="/customer-service.php#processing-shipping" target="_blank">Item ships from manufacturer via UPS only.</a>
+    [-- END_IF --]
+    
+    [--IF Product.Field3 "usa"--]
+      <a style="color: #0000BB;" href="/customer-service.php#processing-shipping" target="_blank">Ships from our facility, ONLY to destinations in the USA.</a>
+    [-- END_IF --]
+    
+    [--IF Product.Field3 "out"--]
+      OUT OF STOCK
+    [-- END_IF --]
+    
+    [--IF Product.Field3 "dl"--]
+      A link to download this file will appear on the "thank you" page after ordering. An e-mail will also be sent.
+    [-- END_IF --]
+    
+    [--IF Product.Field3 "local"--]
+      This item can only be purchased locally at our retail location.
+    [-- END_IF --]
+    
+     [--IF Product.Field3 "dec"--]
+      <a style="color: #0000BB;" href="/customer-service.php#processing-shipping" target="_blank">This product will not be available to ship, until after Dec.24th</a>
+    [-- END_IF --]
+    </span>
+</p>[-- END_IF --]
+
+[--IF Product.Field4--]<p class="info" style="color: #BB0000;"><u>Shipping</u>:<br />
+  <span style="color: #000099;">
+    [--IF Product.Field4 "free"--]
+    <a style="color: #000099;" href="/customer-service.php#processing-shipping" target="_blank">Free delivery to the continental USA!</a>
+    [-- END_IF --]
+    
+    [--IF Product.Field4 "3day"--]
+    <a style="color: #000099;" href="/customer-service.php#processing-shipping" target="_blank">Free upgrade to 3 business day shipping when you choose ground to the continental USA!</a>
+    [-- END_IF --]
+    
+    [--IF Product.Field4 "2day"--]
+    <a style="color: #000099;" href="/customer-service.php#processing-shipping" target="_blank">Free upgrade to 2 business day shipping when you choose ground to the continental USA!</a>
+    [-- END_IF --]
+    
+        [--IF Product.Field4 "holiday09"--]
+    <a style="color: #000099;" href="/customer-service.php#processing-shipping" target="_blank">Happy Holidays Free Shipping to the Continental USA! Use code: holiday09</a>
+    [-- END_IF --]
+    
+    [--IF Product.Field4 "freight"--]
+    <a style="color: #000099;" href="/customer-service.php#freight" target="_blank">Freight shipping charges will apply on this item.</a>
+    [-- END_IF --]
+    </span>
+</p>[-- END_IF --]
+
+[-- IF PRODUCT.DisplayPrice --]
+  [--IF Product.Field6 "12"--]<p class="info" style="color: #DD0000;"><u>Financing</u>:<br />
+    <span style="color: #000077;">
+        <a style="color: #000077;" href="/financing.php" target="_blank">
+            <?php
+                $price = 0;
+              ?>
+            [--IF PRODUCT.SaleOn--]
+                  <?php $price = "[-- PRODUCT.SaleAmount --]"; ?>
+        [--ELSE--]
+            <?php $price = "[-- PRODUCT.Price --]"; ?>
+        [--END_IF--]
+              <?php
+                $price = ltrim($price, "$");
+                  $price = str_replace(",", "", $price);
+                  $price = round($price / 12, 2);
+                echo ("Available @ $".$price."/month for 12 months, 0% interest");
+              ?>
+          </a>
+      </span>
+  </p>[-- END_IF --]
+    [--IF Product.Field6 "18"--]<p class="info" style="color: #DD0000;"><u>Financing</u>:<br />
+    <span style="color: #000077;">
+        <a style="color: #000077;" href="/financing.php" target="_blank">
+            <?php
+                $price = 0;
+              ?>
+            [--IF PRODUCT.SaleOn--]
+                  <?php $price = "[-- PRODUCT.SaleAmount --]"; ?>
+        [--ELSE--]
+            <?php $price = "[-- PRODUCT.Price --]"; ?>
+        [--END_IF--]
+              <?php
+                $price = ltrim($price, "$");
+                  $price = str_replace(",", "", $price);
+                  $price = round($price / 18, 2);
+                echo ("Available @ $".$price."/month for 18 months, 0% interest");
+              ?>
+          </a>
+      </span>
+  </p>[-- END_IF --]
+    [--IF Product.Field6 "48"--]<p class="info" style="color: #DD0000;"><u>Financing</u>:<br />
+    <span style="color: #000077;">
+        <a style="color: #000077;" href="/financing.php" target="_blank">
+            <?php
+                $price = 0;
+              ?>
+            [--IF PRODUCT.SaleOn--]
+                  <?php $price = "[-- PRODUCT.SaleAmount --]"; ?>
+        [--ELSE--]
+            <?php $price = "[-- PRODUCT.Price --]"; ?>
+        [--END_IF--]
+              <?php
+                $price = ltrim($price, "$");
+                  $price = str_replace(",", "", $price);
+                  $price = round($price / 48, 2);
+                echo ("Available @ $".$price."/month for 48 months, 0% interest");
+              ?>
+          </a>
+      </span>
+  </p>[-- END_IF --]
+[-- END_IF --]
+
+[--IF Product.Field7--]<p class="info" style="color: #FF0000;"><u>Returns</u>:<br />
+  <span style="color: #000055;">
+    [--IF Product.Field7 "no"--]
+    <a style="color: #000055;" href="/customer-service.php#returns" target="_blank">No returns are accepted on this item.</a>
+    [-- END_IF --]
+    
+    [--IF Product.Field7 "15"--]
+    <a style="color: #000055;" href="/customer-service.php#returns" target="_blank">Returns are subject to a 15% restocking fee.</a>
+    [-- END_IF --]
+    
+    [--IF Product.Field7 "20"--]
+    <a style="color: #000055;" href="/customer-service.php#returns" target="_blank">Returns are subject to a 20% restocking fee.</a>
+    [-- END_IF --]
+    
+     [--IF Product.Field7 "open"--]
+    <a style="color: #000055;" href="/customer-service.php#returns" target="_blank">No returns are allowed if item is opened.</a>
+    [-- END_IF --]
+    </span>
+</p>[-- END_IF --]
+
+<p style="margin-top: 20px;">
+
+  [-- IF PRODUCT.DisplayPrice --]
+  <input type=hidden name="storeid" value="[--Store.id--]">
+  <input type=hidden name="dbname" value="products">
+  <input type="hidden" name="itemnum" value="[-- PRODUCT.RecordNumber --]">
+  <input type=hidden name="function" value="add">
+
+  <input src="images/addtocart.gif" name="Add to Cart" type="image" style="float: left;" />
+    [-- END_IF --]
+    <script type="text/javascript">
+  <!--
+    var var1 = 'test.php';
+  //-->
+    </script>
+  <a href="#" onClick="window.open('https://www.vacplus.com/cgi-vacplus/sb/tellfriend.cgi?storeid=*1a55e44c50fd5a9e18c062cfd94a5c&str=[-- PRODUCT.Name --]&from=[-- PRODUCT.MoreInfoURL --]','tellfriend','width=560,height=560,resizable=yes,scrollbars=yes, status=yes');return false;">
+    <img src="https://www.vacplus.com/images/send-to-friend1.gif" width="142" height="23" style="border: 0px; float: right;" />
+    </a>
+    </p>
+    <br clear="all" />
+    
+    </td></tr>
+<tr><td colspan="2" style="vertical-align: top; padding-top: 15px;">
+  
+    <!-- TABBED BLOCKS GO HERE: MORE INFO, IMAGES, REVIEWS, & ADD-ON ACCESSORIES -->
+    
+    <!-- BEGIN TABS -->
+    
+   <div class="tab" onClick="contentDisplay('moreInfo')" id="infoLink" style="background-color: #FFFFFF; border-bottom-color: #FFFFFF;">
+   
+   Product Info
+   
+   </div>
+   
+   <div class="tab" onClick="contentDisplay('images')" id="imageLink" [-- IF PRODUCT.Field5 --] [--ELSE--] style="display: none;" [--END_IF--]>
+    
+    Images
+    
+    </div>
+    
+    <div class="tab" onClick="contentDisplay('reviews')" id="reviewLink">
+    
+    Reviews
+    
+    </div>
+    
+    <div class="tab" onClick="contentDisplay('acc')" id="accLink" [-- IF PRODUCT.NumSubProducts 0 --] style="display: none;" [-- END_IF --]>
+    
+    Accessories
+    
+    </div>
+    
+    <div style="text-align: right; width: auto; padding: 5px; float: right;"><!-- SPACE RESERVED FOR REVIEW STARS --></div>
+
+    <!-- END TABS -->
+
+<br clear="all" style="height: 0px;" />
+
+<div style="border: 1px solid #000000; vertical-align: top; padding: 15px 0px 15px 5px; margin-top: -1px;"> 
+    
+  <span id="moreInfo" [-- IF PRODUCT.NumSubProducts 0 --] style="display: block;" [--END_IF--]>
+      <!-- MORE INFO BLOCK -->
+    [-- PRODUCT.MoreInformationText --]
+  </span>
+
+  <span id="images" style="display: none;">
+      <!-- IMAGES BLOCK -->
+  <center>    [-- IF PRODUCT.Field5 --]
+                      [--CALL popupv2.php PRODUCT.Field5 imagePopUp.tpl 5--]
+          [-- ELSE --]
+            (More images coming later.)
+         [-- END_IF --]<!-- END ZOOM + POPUP --></center>
+   <br clear="all" />
+  </span>
+
+  <span id="reviews" style="display: none;">
+      <!-- REVIEWS BLOCK -->
+      <?php readfile("https://www.vacplus.com/reviews/summary.php/[-- PRODUCT.SKU --]"); ?>
+    </span>
+
+  <span id="acc" style="display: none;">
+      <!-- ADD-ONS BLOCK -->
+    <center><b>Need more supplies? Just check the boxes and click "Add to Cart" to pick up everything at once!</b></center>
+
+    <table cellpadding="0" cellspacing="0">
+      [--LOOP SUBPRODUCTS --]
+      [--SUBPRODUCTS--]
+      [--END_LOOP SUBPRODUCTS--]
+    </table>    
+  </span>
+
+</div>
+
+<!-- END BLOCK -->
+
+</td>
+</tr>
+</form>
+      <!-- END ADD TO CART FORM -->
+
+</table>
+
+  [-- INCLUDE DEV-minicart PROCESS --]    
+  [-- INCLUDE DEV-rightbar --]
+  [-- INCLUDE DEV-footer --]
+
+</html>
+[-- END_DEFINE MORE_INFO_PAGE --]

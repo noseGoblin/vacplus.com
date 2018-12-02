@@ -1,0 +1,630 @@
+################################
+### Registration and Sign In ###
+################################
+
+### New Customer Registration Page ###
+[-- DEFINE New_Registration --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+[-- VAR.Title STORE.NewRegistration --]
+
+[-- INCLUDE crHeader PROCESS --]
+
+<table align="center" cellspacing="10">
+  <tr>
+    <td align="left">
+      [-- CR_Name --]
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+      [-- CR_Email_Password --]
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+      [-- CR_Challenge --]
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+      [-- CR_email_type --]
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+      [-- CR_Save_Payment --]
+    </td>
+  </tr>
+</table>
+
+<p align="center">[-- BUTTON Save --]&nbsp;[-- BUTTON Cancel --]</p>
+
+[-- INCLUDE crFooter PROCESS --]
+[-- END_DEFINE New_Registration --]
+
+
+### Registered Customer Sign-In Page ###
+[-- DEFINE Sign_In --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+[-- Var.title STORE.SignIn --]
+
+[-- INCLUDE crHeader PROCESS --]
+
+<p>[-- STORE.UseSignInEmail --]</p>
+
+[-- CR_Signin_Email_Password --]
+
+<p align="center">[-- BUTTON SignIn --]&nbsp;[-- BUTTON BackToCart --]</p>
+
+[-- INCLUDE crFooter PROCESS --]
+[-- END_DEFINE Sign_In --]
+
+
+### Sign Out "Are you sure?" Page ###
+[-- DEFINE Sign_Out_Confirmation --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+[-- Var.title STORE.SignOutConfirmation --]
+
+[-- INCLUDE crHeader PROCESS --]
+
+<p>[-- STORE.SignOut? --]</p>
+
+<p align="center">[-- BUTTON Yes --]&nbsp;[-- BUTTON No --]</p>
+
+[-- INCLUDE crFooter PROCESS --]
+[-- END_DEFINE Sign_Out_Confirmation --]
+
+
+
+########################
+### Customer Account ###
+########################
+
+### Main View/Edit Page with Buttons ###
+[-- DEFINE View_Edit --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+[-- Var.title STORE.AccountInformation --]
+
+[-- INCLUDE crHeader PROCESS --]
+
+<div class="cust_name">[-- CR_CUSTOMER_NAME --]</div>
+
+<p>[-- STORE.ViewInformation --]</p>
+
+<table class="view_edit">
+  <tr>
+   <td colspan="2" class="view_edit">[-- CR_Reward_Program_Info --]</td>
+  </tr>
+  <tr>
+    <td class="view_edit">[-- BUTTON Orders --]</td>
+    <td class="view_edit">[-- BUTTON Preferences --]</td>
+  </tr>
+  <tr>
+    <td class="view_edit">[-- BUTTON ShipTo --]</td>
+    <td class="view_edit">[-- BUTTON Payment --]</td>
+  </tr>
+  <tr>
+    <td class="view_edit">[-- BUTTON Password --]</td>
+    <td class="view_edit"> </td>
+  </tr>
+</table>
+
+<p align="center">[-- BUTTON BackToCart --]</p>
+
+[-- INCLUDE crFooter PROCESS --]
+[-- END_DEFINE View_Edit --]
+
+
+### Preferences Page ###
+[-- DEFINE Preferences --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+[-- Var.title STORE.Preferences --]
+
+[-- INCLUDE crHeader PROCESS --]
+
+<table align="center" cellspacing="10" width="600">
+  <tr>
+    <td align="left">
+      [-- CR_Email --]
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+      [-- STORE.EmailSecurity --]
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+      [-- CR_Name --]
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+      [-- CR_Email_Type --]
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+      [-- CR_Save_Payment --]
+    </td>
+  </tr>
+</table>
+
+<p align="center">[-- BUTTON Save --]&nbsp;[-- BUTTON Cancel --]</p>
+
+[-- INCLUDE crFooter PROCESS --]
+[-- END_DEFINE Preferences --]
+
+
+### Change Password ###
+[-- DEFINE Edit_Password --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+[-- Var.title STORE.EditPassword --]
+
+[-- INCLUDE crHeader PROCESS --]
+
+[-- CR_Edit_Password --]
+
+<p>[-- BUTTON Change_Password --]&nbsp;[-- BUTTON Cancel --]</p>
+
+<h2>[-- STORE.ChallengeQuestion --]</h2>
+
+<p>[-- STORE.ChangeChallengeText --]</p>
+
+<p align="center">[-- BUTTON Change_Challenge --]</p>
+
+[-- INCLUDE crFooter PROCESS --]
+[-- END_DEFINE Edit_Password --]
+
+
+### Change Challenge Phrase ###
+[-- DEFINE Edit_Challenge --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+[-- Var.title STORE.EditChallenge --]
+
+[-- INCLUDE crHeader PROCESS --]
+
+<p>[-- STORE.EditChallengeText --]</p>
+
+[-- CR_Edit_Challenge --]
+
+<p align="center">[-- BUTTON Change_Challenge --]&nbsp;[-- BUTTON Cancel --]</p>
+
+[-- INCLUDE crFooter PROCESS --]
+[-- END_DEFINE Edit_Challenge --]
+
+
+### Set Password ###
+[-- DEFINE Set_Answer_Password --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+[-- Var.title STORE.SetAnswerPassword --]
+
+[-- INCLUDE crHeader PROCESS --]
+
+<p><b>[-- STORE.EnterNewPassword --]</b></p>
+
+[-- CR_Password --]
+
+<p align="center">[-- BUTTON Submit --]&nbsp;[-- BUTTON Cancel --]</p>
+
+[-- INCLUDE crFooter PROCESS --]
+[-- END_DEFINE Set_Answer_Password --]
+
+
+
+########################
+### Payment Accounts ###
+########################
+
+### List of Payment Accounts ###
+[-- DEFINE Payment_Accounts --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+[-- Var.title STORE.PaymentAccounts --]
+
+[-- INCLUDE crHeader PROCESS --]
+
+<p>[-- STORE.PaymentText --]</p>
+
+<table cellspacing="10">
+  <tr>
+    <td>[-- CR_Payment_List --]</td>
+    <td>[-- BUTTON Edit --]
+    <br>[-- BUTTON Delete --]
+    </td>
+  </tr>
+</table>
+
+<p>[-- STORE.PaymentAdd --]</p>
+
+<p align="center">[-- BUTTON Done --]</p>
+
+[-- INCLUDE crFooter PROCESS --]
+[-- END_DEFINE Payment_Accounts --]
+
+
+### Edit One Payment Account ###
+[-- DEFINE Edit_Payment_Account --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+[-- Var.title STORE.EditPaymentAccount --]
+
+[-- INCLUDE crHeader PROCESS --]
+
+<table width="470">
+  <tr>
+    <td align="center"><b>[-- STORE.DisplayName --]:</b> [-- CR_DisplayName --]</td>
+  </tr>
+  <tr>
+    <td>[-- STORE.EditPaymentText --]</td>
+  </tr>
+</table>
+
+<h2>[-- STORE.EditPaymentInformation --]</h2>
+
+[-- CR_Edit_Payment_Info --]
+
+<h2>[-- STORE.EditPaymentBilling --]</h2>
+
+[-- CR_Edit_Payment_Address --]
+
+<p align="center">[-- BUTTON Save --]&nbsp;[-- BUTTON Cancel --]</p>
+
+[-- INCLUDE crFooter PROCESS --]
+[-- END_DEFINE Edit_Payment_Account --]
+
+
+### Delete Payment Account ###
+[-- DEFINE Delete_Payment_Account --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+[-- Var.title STORE.DeletePaymentAccount --]
+
+[-- INCLUDE crHeader PROCESS --]
+
+<p>[-- STORE.DeletePaymentText --]</p>
+
+<p><b>[-- CR_Delete_Payment --]</b></p>
+
+<p>[-- STORE.DeletePaymentNote --]</p>
+
+<p align="center">[-- BUTTON Yes --]&nbsp;[-- BUTTON No --]</p>
+
+[-- INCLUDE crFooter PROCESS --]
+[-- END_DEFINE Delete_Payment_Account --]
+
+
+
+##############
+### Orders ###
+##############
+
+### List of Orders ###
+[-- DEFINE Orders --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+[-- Var.title STORE.Orders --]
+
+[-- INCLUDE crHeader PROCESS --]
+
+<p>[-- STORE.OrdersText --]</p>
+
+<table cellspacing="10">
+  <tr>
+    <td>[-- CR_Order_List --]</td>
+    <td>[-- BUTTON View --]
+    <br>[-- BUTTON Delete --]</td>
+  </tr>
+</table>
+
+<p>[-- STORE.OrdersNote --]</p>
+
+<p align="center">[-- BUTTON Done --]</p>
+
+[-- INCLUDE crFooter PROCESS --]
+[-- END_DEFINE Orders --]
+
+
+### View Order ###
+[-- DEFINE View_Order --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+[-- Var.title STORE.ViewOrder --]
+
+[-- INCLUDE crHeader PROCESS --]
+
+<table cellspacing="10" style="border: thin black solid">
+  <tr>
+    <td align="left"><b>[-- STORE.SC_OrderNumber --] [-- CR_OrderNum --]</b></td>
+    <td align="right"><b>[-- CR_OrderDate --]</b></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      [-- CR_Cart --]
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      [-- CR_Totals --]
+    </td>
+  </tr>
+  <tr><td colspan="2"><hr width="90%"></td></tr>
+
+  <tr>
+    <td colspan="2">
+      [-- CR_ORDERINGINSTRUCTIONS --]
+      [-- CR_COMMENTS --]
+    </td>
+  </tr>
+
+  <tr>
+    <td align="center" colspan="2">
+      <table>
+        <tr>
+    <td align="left" valign="top">[-- CR_BillTo_Addr --]</td>
+    <td width="40px">&nbsp;</td>
+    <td align="left" valign="top">[-- CR_ShipTo_Addr --]</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr><td colspan="2"><hr width="90%"></td></tr>
+  <tr>
+    <td colspan="2" align="center">
+      [-- CR_Payment_Info --]
+    </td>
+  </tr>
+</table>
+
+<p align="center">[-- BUTTON Done --]</p>
+
+[-- INCLUDE crFooter PROCESS --]
+[-- END_DEFINE View_Order --]
+
+
+### Delete Order ###
+[-- DEFINE Delete_Order --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+[-- Var.title STORE.DeleteOrder --]
+
+[-- INCLUDE crHeader PROCESS --]
+
+<p>[-- STORE.DeleteOrderText --]</p>
+
+[-- CR_Delete_Order_List --]
+
+<p>[-- STORE.OrdersNote --]</p>
+
+<p align="center">[-- BUTTON Yes --]&nbsp;[-- BUTTON No --]</p>
+
+[-- INCLUDE crFooter PROCESS --]
+[-- END_DEFINE Delete_Order --]
+
+
+
+##########################
+### Shipping Addresses ###
+##########################
+
+### List of Shipping Addresses ###
+[-- DEFINE Shipping_Options --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+[-- Var.title STORE.ShippingOptions --]
+
+[-- INCLUDE crHeader PROCESS --]
+
+<p>[-- STORE.ShippingOptionsText --]</p>
+
+<table cellspacing="10">
+  <tr>
+    <td>[-- CR_Shipping_List --]</td>
+    <td>[-- BUTTON Edit --]
+    <br>[-- BUTTON Delete --]</td>
+  </tr>
+</table>
+
+<p>[-- STORE.ShippingOptionsNote --]</p>
+
+<p align="center">[-- BUTTON Done --]</p>
+
+[-- INCLUDE crFooter PROCESS --]
+[-- END_DEFINE Shipping_Options --]
+
+
+### Edit Shipping Addresses ###
+[-- DEFINE Edit_Shipping --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+[-- Var.title STORE.EditShipping --]
+
+[-- INCLUDE crHeader PROCESS --]
+
+<table width="470">
+  <tr>
+    <td align="center"><b>[-- STORE.DisplayName --]:</b> [-- CR_Ship_DisplayName --]</td>
+  </tr>
+  <tr>
+    <td align="center">[-- STORE.EditShippingText --]</td>
+  </tr>
+</table>
+
+<h2>[-- STORE.SC_ShippingAddress --]</h2>
+
+[-- CR_Edit_Shipping_Address --]
+
+<p align="center">[-- BUTTON Save --]&nbsp;[-- BUTTON Cancel --]</p>
+
+[-- INCLUDE crFooter PROCESS --]
+[-- END_DEFINE Edit_Shipping --]
+
+
+### Delete Shipping Addresses ###
+[-- DEFINE Delete_Shipping --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+[-- Var.title STORE.DeleteShipping --]
+
+[-- INCLUDE crHeader PROCESS --]
+
+<p>[-- STORE.DeleteShippingText --]</p>
+
+<p><b>[-- CR_Delete_Shipping --]</b></p>
+
+<p>[-- STORE.DeleteShippingNote --]</p>
+
+<p align="center">[-- BUTTON Yes --]&nbsp;[-- BUTTON No --]</p>
+
+[-- INCLUDE crFooter PROCESS --]
+[-- END_DEFINE Delete_Shipping --]
+
+
+
+######################
+### Forgot Password ###
+######################
+
+### Forgot Password Page ###
+[-- DEFINE Forgot_Password --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+[-- Var.title Store.ForgotPassword --]
+
+[-- INCLUDE crHeader PROCESS --]
+
+<p>[-- STORE.RequestPassword --]</p>
+
+[-- CR_Email --]
+
+<p align="center">[-- BUTTON Submit --]&nbsp;[-- BUTTON Cancel --]</p>
+
+[-- INCLUDE crFooter PROCESS --]
+[-- END_DEFINE Forgot_Password --]
+
+
+### Forgot Password "E-mail has been sent" Page ###
+[-- DEFINE Forgot_Email_Sent --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+[-- Var.title STORE.ForgotEmailSent --]
+
+[-- INCLUDE crHeader PROCESS --]
+
+<p>[-- STORE.SentPasswordEmail --]</p>
+
+<p align="center">[--BUTTON BackToCart --]</p>
+
+[-- INCLUDE crFooter PROCESS --]
+[-- END_DEFINE Forgot_Email_Sent --]
+
+
+### Reset Password Page (requires answer to Challenge question) ###
+[-- DEFINE Get_Answer --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+[-- Var.title STORE.GetAnswer --]
+
+[-- INCLUDE crHeader PROCESS --]
+
+<p>[-- CR_Email_Name --]</p>
+
+<p>[-- STORE.ResetPassword --]</p>
+
+[-- CR_ChallengeQuestion --]
+
+<p align="center">[-- BUTTON Submit --]&nbsp;[-- BUTTON Cancel --]</p>
+
+[-- INCLUDE crFooter PROCESS --]
+[-- END_DEFINE Get_Answer --]
+
+
+
+######################
+### Error Messages ###
+######################
+
+### Error Message Screen ###
+[-- DEFINE CR_Error --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+[-- Var.title STORE.ErrorMessages --]
+
+[-- INCLUDE crHeader PROCESS --]
+
+<p align="center">[--BUTTON BackToCart --]</p>
+
+[-- INCLUDE crFooter PROCESS --]
+[-- END_DEFINE CR_Error --]
+
+
+
+#######################
+### E-Mail Messages ###
+#######################
+
+### E-Mail Message for Account Changes ###
+[-- DEFINE Email_Account_Change --]
+[-- IF CR_HTML_Email --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<style type="text/css">
+<!--
+table.ups_error {
+}
+td.ups_error {
+  vertical-align: middle;
+}
+-->
+</style>
+</head>
+<body>
+[-- STORE.EmailAccountChangeText --] [-- STORE.Name --]
+[-- CR_ShopSiteMessages --]
+</body>
+</html>
+
+[-- ELSE --]
+
+[-- STORE.EmailAccountChangeText --] [-- STORE.Name --]
+[-- CR_ShopSiteMessages --]
+
+[-- END_IF --]
+[-- END_DEFINE Email_Account_Change --]
+
+
+### E-mail saying that address has changed ###
+[-- DEFINE Email_Address_Changed --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<body>
+
+<p><b>[-- STORE.Name --]</b></p>
+<p>[-- STORE.EmailAddressChangedText --]</p>
+<p>[-- Store.NewSignInAddress --]: [-- CR_EMAIL_ADDRESS --]</p>
+<p>[-- Store.URL --] <a href="[-- MyStoreURL --]">[-- MyStoreURL --]</a></p>
+
+</body>
+</html>
+[-- END_DEFINE Email_Address_Changed --]
+
+
+### E-mail for Forgotten Password ###
+[-- DEFINE Forgot_Password_Email --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<body>
+<p>[-- STORE.EmailClickLink --]</p>
+<p>[-- CR_FORGOT_PASSWORD_LINK --]</p>
+<p><b>[-- STORE.Name --]</b></p>
+</body>
+</html>
+[-- END_DEFINE Forgot_Password_Email --]
+
+
+### Email If Forgot Password by Address is Not A Registered Customer ###
+[-- DEFINE Forgot_Password_NoEmail --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<body>
+
+<p>[-- STORE.NotRegisteredEmail --]</p>
+
+[-- IF Store.Name --]
+  <p><b><a href="[-- MyStoreURL --]">[-- STORE.Name --]</a></b></p>
+[-- ELSE --]
+  <p><b><a href="[-- MyStoreURL --]">[-- MyStoreURL --]</a></b></p>
+[-- END_IF --]
+
+</body>
+</html>
+[-- END_DEFINE Forgot_Password_NoEmail --]
+

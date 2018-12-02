@@ -1,0 +1,392 @@
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="language" content="pt, en, es" />
+<link rel="shortcut icon" href="/images/header/favicon.ico" >
+<link href="/css/smp.css" rel="stylesheet" type="text/css" />
+<meta name="viewport" content="width=1016" />
+
+<script>
+    !window.jQuery && document.write('<script src="js/jquery-1.4.3.min.js"><\/script>');
+  </script>
+<script type="text/javascript" src="https://www.vacplus.com/Adview.js">
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-487443-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+<script type="text/javascript">
+
+ var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24343941-1']);
+  _gaq.push(['_trackPageview']);
+
+ (function() {
+   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<style type="text/css">
+div#fadeMe {
+                opacity: 0.5;
+                background: #000;
+                width: 100%;
+                height: 100%;
+                z-index: 10;
+                top: 0;
+                left: 0;
+                position: fixed;
+}
+</style>
+<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<script type="text/javascript">
+                window.onload=setTimeout(emailCaptureSignup,1000);
+                var userEmail;
+                function emailCaptureSignup() {
+                                var seenAd = false;
+                                var cookieContents = document.cookie.split(';');
+                                for (var x=0; x<cookieContents.length; x++) {
+                                                var available = cookieContents[x].trim();
+                                                if(available.indexOf('promoid') == 0) {
+                                                                seenAd = true;
+                                                                if(available != "promoid=4") {
+                                                                                seenAd = false;
+                                                                }
+                                                }
+                                }
+                                if(seenAd == false) {
+                                                document.getElementById("emailCaptureSignupDiv").style.display="block";
+                                                document.getElementById("fadeMe").style.display="block";
+                                }
+                }
+                function closeEmailCaptureSignup() {
+                                document.getElementById("fadeMe").style.display="none";
+                                document.getElementById("emailCaptureSignupDiv").style.display="none";
+                                document.getElementById("emailCaptureSignupDivCloseButton").style.display="none";
+                                if(userEmail==null) {
+                                                var d = new Date();
+                                                d.setTime(d.getTime()+(2*24*60*60*1000));
+                                                var expires = "expires="+d.toGMTString();
+                                                document.cookie = "promoid=4;" + expires + ";domain=.sewingmachinesplus.com;path=/";
+                                }
+                                if(validateForm(userEmail)==true) {
+                                                //document.writeln('<img src="http://email.sewingmachinesplus.com/public/?q=direct_add&fn=Public_DirectAddForm&id=avzsfstznvdkdkabikpbbgcqhpwfbid&email='+userEmail+'&list1=0bbe03ec0000000000000000000000031014&list2=0bbe03ec000000000000000000000002bfff" width="0" height="0" border="0" alt=""/>');
+                                                var d = new Date();
+                                                d.setTime(d.getTime()+(3650*24*60*60*1000));
+                                                var expires = "expires="+d.toGMTString();
+                                                document.cookie = "promoid=4;" + expires + ";domain=.sewingmachinesplus.com;path=/";
+                                                document.getElementById("emailSend").src='http://email.sewingmachinesplus.com/public/?q=direct_add&fn=Public_DirectAddForm&id=avzsfstznvdkdkabikpbbgcqhpwfbid&email='+userEmail+'&list1=0bbe03ec0000000000000000000000032f2a&list2=0bbe03ec0000000000000000000000031014';
+                                }
+                }
+                function registerUser() {
+                                userEmail = document.getElementById("userEmail").value;
+                                if(validateForm(userEmail)==true) {
+                                                document.getElementById("emailCaptureSignupForm").style.display="none";
+                                                document.getElementById("emailCaptureSignupThankYou").style.display="block";
+                                                return false;
+                                } else {
+                                                return false;
+                                }
+                }
+                function validateForm(x)
+                {
+                                var atpos=x.indexOf("@");
+                                var dotpos=x.lastIndexOf(".");
+                                if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+                                {
+                                                document.getElementById("userEmail").value="Please Enter Valid Email!";
+                                                document.getElementById("userEmail").style.color="red";
+                                                document.getElementById("userEmail").blur();
+                                                return false;
+                                } else {
+                                                return true;
+                                }
+                }
+                function onFocusStyleChange() {
+                                document.getElementById("userEmail").value='';
+                                document.getElementById("userEmail").style.color='#CCC';
+                }
+</script>
+
+<!-- Search Engine Codes.  Added August 17 2011.  GC -->
+<meta name="msvalidate.01" content="12AD6C5141FE93FD2FF7B8446A324041" />  <!-- Bing -->
+<meta name="google-site-verification" content="8rPIzca1hZ5v9_y9LBo9iPIa1WIHcr07q597xD-EkTg" />  <!-- Google -->
+<meta name="y_key" content="7d41bcfbacac9f58" />  <!-- Yahoo -->
+
+<script type="text/javascript">
+window.onload=function(){
+if (screen.width <= 699) {
+  document.getElementById("beta-site").style.display="block";
+}
+}
+
+</script>
+
+</head>
+
+<body>
+<div id="fadeMe" style="display:none;" onClick="closeEmailCaptureSignup();">
+</div>
+<div id="emailCaptureSignupDiv" style="background-image:url(popup-weekly-25.png);width:734px;height:519px;display:none;position:absolute;left:50%;margin-left:-363px;z-index:11;">
+<div id="emailCaptureSignupDivCloseButton" style="position:absolute;top:0px;right:0px;width:25px;height:25px;z-index:12;" onClick="closeEmailCaptureSignup();">
+</div>
+
+<form id="emailCaptureSignupForm" onSubmit="return registerUser();" style="margin: 329px auto 0;display:block;width:608px;">
+<input type="text" id="userEmail" name="email" value="ENTER EMAIL ADDRESS" style="background:url(txt-input-bg.gif);background-color:#FFF;width:608px;height:71px;border:0;font-family: 'Oswald', sans-serif;font-size:42px;color:#CCC;text-align:center;" onFocus="onFocusStyleChange();" onBlur="this.value=!this.value?'ENTER EMAIL ADDRESS':this.value;"><br/>
+<input type="submit" value="" style="background:url(submit-bg.gif);width:608px;height:71px;border:0;margin-top:10px;">
+</form>
+<div id="emailCaptureSignupThankYou" style="margin: 329px auto 0;display:none;width:647px;">
+<p style="text-align:center;font-size:32px;color:white;font-family: 'Oswald', sans-serif;line-height:38px;">Thank You For Entering Your Email Address. Check Your Email or Follow us on Facebook to See if You Won!<br/><span style="color:#FF0;">Winners will be Announced Every Friday</span></p>
+<img id="emailSend" src="" width="0" height="0" border="0" alt=""/>
+
+</div>
+
+</div>
+
+<script type="text/javascript">
+contentDisp('800-401-8151','64.73.241.122','8090');
+</script>
+<!-- BEGIN HEADER INCLUDE -->
+
+
+<div class="head1">
+  <!-- Top red strip - Contains search bar and important links -->
+  <table cellpadding="0" cellspacing="0" style="vertical-align:top; min-width:1012px;">
+    
+    <tr>
+      <td rowspan="2" style="width: 460px; height: 80px; vertical-align: top;">
+        <a href="https://www.vacplus.com"><img src="/images/layout/site-logo3.jpg" class="logo" /></a>
+      </td>
+      <td class="headerInfo" style="font-size: 14px; font-family: Arial, Helvetica, sans-serif;">
+        <div align="left" style="text-align:right; padding-right: 15px;">
+          Toll Free: <span id="contentArea" style="font-weight: bold;">800-401-8151</span>
+        </div>
+        <div align="left" style="text-align:right; padding-right: 15px;">
+          Local: <span style="font-weight: bold;">760-739-8222</span>
+        </div>
+      </td>
+      <td align="bottom" class="headlinks" style="font-size:9pt; vertical-align:center;">
+        <div>
+          <a href="/Events.php">Events</a> | <a href="/customer-service.php">Policies</a> | <a href="https://www.vacplus.com/trackorder.php">Order Status</a> <!--| <a href="https://www.vacplus.com/kbase">FAQ</a>-->
+        </div>
+        <div>
+          <a href="/martins.php">Classes</a> | <a href="/contact-us.php">Contact Us</a> | <a href="/about-us.php">About Us</a> | <span style="overflow: hidden; white-space: nowrap;"><a href="/sitemap_sewingmachineplus.php">Site Map</a></span>
+        </div>
+      </td>
+      <td style="width: 115px; height: 49px; vertical-align:top;" >
+        <!-- START SCANALERT CODE -->
+        <div style="padding-top:3px; text-align:center;">
+          <a target="_blank" href="https://www.mcafeesecure.com/RatingVerify?ref=www.sewingmachinesplus.com">
+          <img width="115" height="32" border="0" src="//images.scanalert.com/meter/www.sewingmachinesplus.com/12.gif" alt="McAfee Secure sites help keep you safe from identity theft, credit card fraud, spyware, spam, viruses and online scams" oncontextmenu="alert('Copying Prohibited by Law - McAfee Secure is a Trademark of McAfee, Inc.'); return false;"></a>
+        </div>
+        <!-- END SCANALERT CODE -->
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3" style="width: 548px; height: 31px; padding-top: 2px; vertical-align: top;">
+        <div style="width:310px; height:25px; overflow:hidden; text-align:right; float:right;">
+          <form action="/cgi-vacplus/sb/productsearch.cgi?storeid=*2496f57e14d8a0ef8decc151feac6905cd454c8b">
+            <input type=hidden name="storeid" value="*2496f57e14d8a0ef8decc151feac6905cd454c8b">
+            <span id="headerText" style="vertical-align: top; color: #FFFFFF;">Search Our Site:</span>
+            <input type="text" name="search_field" size="17" style="height: 25px; margin: 0px; padding: 0px; font-size:12px;" />
+            <input type="image" src="/images/layout/go2.gif" width="34" height="23" border="0" name="search2" style="vertical-align: top;" alt="Search our Site">
+          </form>
+        </div>
+      </td>
+    </tr>   
+  </table>
+</div>
+
+<div class="head2">
+  <!-- Grey strip for ad banners. Images put here cannot be more than 48 pixels high. 
+
+  -->
+  <!--<img src="https://www.vacplus.com/media/products/banners/2012-holiday-banner.jpg" border="0" usemap="#holiday2012">
+  <map name="holiday2012">
+    <area shape="rect" coords="13,1,277,48" href="https://www.vacplus.com/customer-service.php#processing-shipping" target="_parent" alt="Free 
+
+  Shipping on orders over $49">
+    <area shape="rect" coords="288,1,610,48" href="https://www.vacplus.com/gift-certificates.php" target="_parent" alt="Gift Certificates">
+    <area shape="rect" coords="875,4,1001,60" href="https://www.vacplus.com/customer-service.php#ge-capital" target="_parent" alt="No Interest 
+
+  Financing Available">
+  <area shape="rect" coords="631,4,867,49" href="https://www.vacplus.com/customer-service.php#returns" target="_parent" alt="Extended 60 Day 
+
+  Return Policy">
+  </map>-->
+
+<!--HOLIDAY BANNER 2013-->
+<script language="javascript" type="text/javascript">
+function popup60(url) {
+newwindow=window.open(url,'name','height=600,width=550,top=120,left=650,toolbar=no,menubar=no,location=no, scrollbars=yes');
+if (window.focus) {newwindow.focus()}
+return false;
+}
+</script>
+
+<img src="https://www.vacplus.com/media/products/banners/home-banner-2013.jpg" width="1016" height="48" border="0" usemap="#Map" />
+<map name="Map">
+  <area shape="rect" coords="3,1,277,50" href="https://www.vacplus.com/customer-service.php#processing-shipping">
+  <area shape="rect" coords="874,-15,993,48" href="https://www.vacplus.com/customer-service.php#ge-capital">
+  <area shape="rect" coords="636,-16,832,46" href="https://www.vacplus.com/60-day.html" onClick="return popup60('https://www.vacplus.com/60-day.html')">
+</map>
+<!--HOLIDAY BANNER 2013 END-->
+
+<!--ROLLBACK BANNER
+  <img src="https://www.vacplus.com/media/products/banners/home_banner.jpg" width="1016" height="48" border="0" usemap="#Map" align="left" />
+  <map name="Map">
+    <area shape="rect" coords="0,0,467,51" href="https://www.vacplus.com/customer-service.php#processing-shipping">
+    <area shape="rect" coords="478,1,815,50" href="https://www.vacplus.com/customer-service.php#sales-tax">
+    <area shape="rect" coords="821,0,1014,48"href="https://www.vacplus.com/customer-service.php#ge-capital">
+  </map>-->
+</div>
+
+
+
+<div class="head3"><div class="topnav">
+  <ul class="menulist" id="listMenuRoot" style="min-width:1024px;">
+    <li><a href="/machinebrands.php" title="Popular Brands"><span style="position:relative; right:1pt;">Popular</span><br />Brands</a>
+      <ul class="submenu">
+        <li><a href="/singer-sewing-machines.php" title="Singer">Singer</a></li>
+        <li><a href="/babylock-sewing-machines.php" title="Baby Lock">Baby Lock</a></li>
+        <li><a href="/brother-sewing-machines.php" title="Brother">Brother</a></li>
+        <li><a href="/janome-sewing-machines.php" title="Janome">Janome</a></li>
+        <li><a href="/juki-sewing-machines.php" title="Juki">Juki</a></li>
+        <li><a href="/viking-sewing-machines.php" title="Husqvarna Viking">Husqvarna Viking</a></li>
+        <li><a href="/bernina.php" title="Bernina">Bernina</a></li>
+        <li><a href="/pfaff-sewingmachines.php" title="Pfaff">Pfaff</a></li>
+        <li><a href="/grace-company-quilting-frames.php" title="The Grace Company">The Grace Company</a></li>
+        <li><a href="/tin-lizzie-18-machines.php" title="Tin Lizzie">Long Arm Quilters</a></li>
+        <li><a href="/queen-quilter-machines.php" title="Queen Quilter 18">Queen Quilter 18</a></li>
+        <li><a href="/hinterberg-caddies.php" title="Hinterberg Design">Hinterberg Design</a></li>
+        <li><a href="/quilt-brand-hq.php" title="Handi Quilter">Handi Quilter</a></li>
+        <li><a href="/melco-sewing-machines.php" title="Melco">Melco</a></li>
+      </ul>
+    </li>
+    <li><a href="/sewing-machines.php" title="Sewing Machine"><span style="position:relative; right:1pt;">Household</span><br />Sewing Machines</a>
+      <ul class="submenu">
+        <li><a href="/domestic-sewing-machines.php" title="Cheap Sewing Machines">Sewing Machines</a></li>
+        <li><a href="/serger.php" title="Serger Sewing Machines">Sergers</a></li>
+        <li><a href="/embroidery-machines.php" title="Embroidery Sewing Machines">Embroidery Machines</a></li>
+        <li><a href="/blind-hemmers.php" title="Industrial Sewing Machines">Blind Hemmers</a></li>
+        <li><a href="/felting-machines.php" title="Industrial Cutting Accessories">Felting Machines</a></li>
+        <li><a href="/coverstitch-machines.php" title="Vacuum Cleaners">Coverhem Machines</a></li>
+        <li><a href="/quilting-machines.php" title="Quilting Machine">Quilting Machines</a></li>
+        <li><a href="/handheld-sewing-machines.php" title="Handheld Sewing Machines">Handheld Sewing Machines</a></li>
+        <li><a href="/child-sewing-machines.php" title="Small Sewing Machine">Child-usable Sewing Machines</a></li>
+        <li><a href="/factory-serviced.php" title="Handheld Sewing Machinese">Factory Refurbished</a></li>
+      </ul>
+    </li>
+    <li><a href="/industrial-sewing-machines.php" title="Industrial Sewing Machine"><span style="position:relative; right:1pt;">Industrial</span><br />Machines</a>
+      <ul class="submenu">
+        <li><a href="/garment-sewing-machines.php" title="Garment Sewing Machines">Garment Sewing</a></li>
+        <li><a href="/upholstry-sewing-machines.php" title="Industrial Sewing Machine">Upholstry Sewing</a></li>
+        <li><a href="/heavy-duty-sewing-machines.php" title="Industrial Sewing Machine">Heavy-duty Sewing</a></li>
+        <li><a href="/walking-foot-sewing-machines.php" title="Walking Foot Sewing Machine">Walking-foot Machines</a></li>
+        <li><a href="/industrial-blindstitch.php" title="Industrial Sewing Machine">Blindstitch Machines</a></li>
+        <li><a href="/industrial-overlock-machines.php" title="Industrial Overlock Machines">Overlock Machines</a></li>
+        <li><a href="/industrial-zigzag.php" title="Industrial Sewing Machine">Zigzag Machines</a></li>
+        <li><a href="/cylinder-bed-and-post-bed-machines.php" title="Industrial Sewing Machines">Cylinder & Post Bed</a></li>
+        <li><a href="/industrial-cutters.php" title="Industrial Cutting Accessories">Cutting Equipment</a></li>
+        <li><a href="/industrial-accessories.php" title="Industrial Sewing Machine">Industrial Machine Accessories</a></li>
+      </ul>            
+    </li>
+    <li><a href="/sewing-supplies.php" title="Sewing Supplies and Notions">Sewing Notions & Supplies</a>
+      <ul class="submenu">
+        <li><a href="/adhesives.php" title="Adhesives Accessories">Adhesives</a></li>
+        <li><a href="/notions-sewing-caddies.php" title="Sewing Box">Baskets & Storage</a></li>
+        <li><a href="/sewing-bobbins.php" title="Sewing Bobbins">Bobbins</a></li>
+        <li><a href="/bobbin-cases.php" title="Bobbin Cases">Bobbin Cases</a></li>
+        <li><a href="/notions-books.php" title="Books, CDs & DVDs">Books, CDs & DVDs</a></li>
+        <li><a href="/craft-tools.php" title="Craft Tools">Craft Tools</a></li>
+        <li><a href="/dress-forms.php" title="Dress Forms">Dress Forms</a></li>
+        <li><a href="/extension-tables.php" title="Extension Tables">Extension Tables</a></li>
+        <li><a href="/foot-controls.php" title="Sewing Foot Controls">Foot Controls</a></li>
+        <li><a href="/sewing-aids.php" title="Sewing Aids">General Notions</a></li>
+        <li><a href="/notions-lights.php" title="Lamps and Lights Accessories">Lamps & Lights</a></li>
+        <li><a href="/magnifiers.php" title="Magnifying Lenses">Magnifying Lenses</a></li>
+        <li><a href="/sewing-machine-manuals.php" title="Sewing Machine Manuals">Manuals</a></li>
+        <li><a href="/notions-marking.php" title="Marking Devices">Marking Devices</a></li>
+        <li><a href="/cover-needle-plates.php" title="Cover Needle Plates">Needle Plates</a></li>
+        <li><a href="/sewing-needles.php" title="Sewing Needles">Needles</a></li>
+        <li><a href="/pins.php" title="Pins and Pincushions">Pins & Pincushions</a></li>
+        <li><a href="/lead-cords.php" title="Lead Cords and Power Cords">Power Cords</a></li>
+        <li><a href="/sewing-feet.php" title="Sewing Machine Feet">Presser Feet</a></li>
+        <li><a href="/sewing-accessories-rulers.php" title="Rulers and Measuring Tools">Rulers & Measuring</a></li>
+        <li><a href="/sewing-scissors.php" title="Sewing Scissors and Rotary Cutters">Scissors</a></li>
+        <li><a href="/serger-feet.php" title="Serger Feet">Serger Feet</a></li>
+        <li><a href="/sewing-kit.php" title="Sewing Kits">Sewing Kits</a></li>
+        <li><a href="/sewing-machine-parts.php" title="Sewing Machine Parts">Sewing Machine Parts</a></li>
+        <li><a href="/thread.php" title="Sewing Thread">Thread</a></li>
+        <li><a href="/sewing-accessories-cases.php" title="Trolleys, Totes & Cases">Trolleys, Totes & Cases</a></li>
+      </ul>
+    </li>
+    <li><a href="/quilting-supplies.php" title="Quilt Sewing Machines">Quilting<br />Supplies</a>
+      <ul class="submenu">
+        <li><a href="/quilting-machines.php" title="Quilting Machines">Quilting Machines</a></li>
+        <li><a href="/quilting-frames.php" title="Long Arm Quilting Machines">Machine Quilting Frames</a></li>
+        <li><a href="/hand-quilting-supplies.php" title="Sewing Machines Quilting">Hand Quilting Frames</a></li>
+        <li><a href="/quilting-hardware-software.php" title="Quilting Hardware and Software">Quilting Hardware & Software</a></li>
+        <li><a href="/quilting-templates.php" title="Quilting Templates">Quilting Templates</a></li>
+        <li><a href="/quilting-thread.php" title="Sewingmachines">Quilting Thread</a></li>
+        <li><a href="/rotary-cutters.php" title="Rotary Cutters">Rotary Cutters</a></li>
+        <li><a href="/mats.php" title="Trolleys">Cutting Mats</a></li>
+        <li><a href="/quilting-notions.php" title="Quilting Notions">Quilting Notions</a></li>
+        <li><a href="/quilt-books.php" title="Books">Books, CDs & DVDs</a></li>
+        <li><a href="/quilting-patterns.php" title="Quilting Patterns">Quilt Patterns</a></li>
+        <li><a href="/notions-sewing-caddies.php" title="Sewing Box">Baskets & Storage</a></li>
+        <li><a href="/pins.php" title="Pins and Pincushions">Pins & Pincushions</a></li>
+        <li><a href="/notions-marking.php" title="Marking Devices">Marking Devices</a></li>
+        <li><a href="/sewing-accessories-rulers.php" title="Rulers and Measuring Tools">Rulers & Measuring</a></li>
+        <li><a href="/adhesives.php" title="Adhesives Accessories">Adhesives</a></li>
+      </ul>
+    </li>
+    <li><a href="/embroidery-supplies.php" title="Sewing Embroidery Machine">Embroidery<br />Supplies</a>
+      <ul class="submenu">
+        <li><a href="/embroidery-machines.php" title="Embroidery Sewing Machines">Embroidery Machines</a></li>
+        <li><a href="/embroidery-hoops.php" title="Embroidery Hoops">Embroidery Hoops</a></li>
+        <li><a href="/embroidery-thread.php" title="Embroidery Machine">Embroidery Thread</a></li>
+        <li><a href="/embroidery-designs.php" title="Embroidery Sewing Machine">Embroidery Designs</a></li>
+        <li><a href="/embroidery-software.php" title="Embroidery Software">Embroidery Software</a></li>
+        <li><a href="/embroidery-stabilizers.php" title="Embroidery Stabilizers">Stabilizer</a></li>
+        <li><a href="/embroidery-hooping-aids.php" title="Embroidery Placement ">Placement & Hooping Aids</a></li>
+        <li><a href="/embroidery-notions.php" title="Embroidery Notions">Embroidery Notions</a></li>
+        <li><a href="/embroidery-books.php" title="DVDs">Books, CDs & DVDs</a></li>
+      </ul>
+    </li>
+    <li><a href="/sewing-furniture.php" title="Sewing Furniture"><span style="position:relative; right:1pt;">Sewing</span><br />Furniture</a>
+      <ul class="submenu">
+        <li><a href="/sewing-cabinets.php" title="Sewing Cabinets">Sewing Cabinets</a></li>
+        <li><a href="/sewing-tables.php" title="Sewing Machine Table">Sewing Tables</a></li>
+        <li><a href="/sewing-pneumatic-lifts.php" title="Pneumatic Lift Sewing Cabinets">Pneumatic Lifts</a></li>
+        <li><a href="/cutting-tables.php" title="Cutting Tables">Cutting Tables</a></li>
+        <li><a href="/sewing-chairs.php" title="Sewing Chairs">Sewing Chairs</a></li>
+        <li><a href="/sewing-box.php" title="Sewing Caddies">Boxes & Caddies</a></li>
+        <li><a href="/notions-lights.php" title="Lamps">Lamps & Lights</a></li>
+      </ul>
+    </li>
+    <li><a href="/vacuum-cleaners.php" title="Vacuum Cleaners">Vacuum<br />Cleaners</a>
+      <ul class="submenu">
+        <li><a href="/upright-vacuum-cleaners.php" title="Upright Vacuums">Upright Vacuums</a></li>
+        <li><a href="/canister-vacuum-cleaners.php" title="Canister Vacuums">Canister Vacuums</a></li>
+        <li><a href="/handheld-vacuum-cleaners.php" title="Vacuum Cleaners">Handheld Vacuums</a></li>
+        <li><a href="/industrial-vacuum-cleaners.php" title="Vacuum Cleaner">Industrial Vacuums</a></li>
+        <li><a href="/vacuum-bags.php" title="Vacuum Bags">Vacuum Bags</a></li>
+        <li><a href="/steam-cleaners.php" title="Steam Cleaners">Steam Cleaners</a></li>
+        <li><a href="/air-purifiers.php" title="Air Purifiers">Air Purifiers</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+</div>
+<!-- END TOP NAVIGATION BLOCK -->
+<!-- END HEADER INCLUDE -->

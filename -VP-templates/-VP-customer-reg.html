@@ -1,0 +1,4846 @@
+#
+# Sign In
+#
+[--DEFINE SIGN_IN--]
+<!DOCTYPE html>
+<html>
+  <!--sign in-->
+<head>
+  <style>.async-hide { opacity: 0 !important} </style>
+  <script>
+    (function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+    h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+    (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+    })(window,document.documentElement,'async-hide','dataLayer',4000,
+    {'GTM-KTCLFC5':true});
+  </script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-487443-1', 'auto');
+    ga('require', 'GTM-KTCLFC5');
+    ga('send', 'pageview');
+  </script>
+  <title>[--STORE.SignIn--]</title>
+  <script type="text/javascript">
+    [--CR_JAVASCRIPT--]
+  </script>
+  <!--CSS and JS links-->
+  <!-- Google Fonts -->
+  <link href="//fonts.googleapis.com/css?family=Lato:400,100,300,700,900,900italic,700italic,400italic|Open+Sans" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="/AE/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <!--plugins-->
+  <link href="/AE/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/AE/custom-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet">
+  <!--sky form pro css-->
+  <link href="/AE/sky-form/css/sky-forms.css" rel="stylesheet">
+  <!--custom css file-->
+  <link href="/AE/css/vp-fonts.css" rel="stylesheet">
+  <link href="/AE/css/style.css?v=1.1" rel="stylesheet">
+  <!-- MoreInfo product description custom css -->
+  <link href="/AE/css/moreInfo.styles.css" rel="stylesheet">
+  <link href="/AE/css/vp-flex-nav.css" rel="stylesheet">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <!--end CSS and JS links-->
+  <style>
+    table.email_pw{
+      margin:0 auto;
+      max-width:600px;
+    }
+    table.email_pw td{
+      padding: 0.3em;
+    }
+    table.ups_error{
+      margin:0 auto;
+    }
+  </style>
+  <style>
+    .well {
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      display:none;
+      margin:1em;
+      max-height:80%;
+      overflow-y:scroll;
+      max-width:65%;
+    }
+    #packages #craftsy-pop #local-pop #financing-pop, #callouts-pop, #lowest-price-pop{
+      transform: scale(0.8);
+    }
+    .popup_visible #packages #craftsy-pop #local-pop #financing-pop{
+      transform: scale(1);
+    }
+    /*craftsy pop styles*/
+    #longarmsale {
+      display:none;
+    }
+    #genevent h1 {
+      font-size: 26px !important;
+      color: #1f698b !important;
+      font-weight: normal !important;
+      font-family: Georgia, "Times New Roman", Times, serif !important;
+      line-height: 27px !important;
+    }
+    #genevent h3 {
+      font-family: Georgia, "Times New Roman", Times, serif !important;
+      font-size: 18px !important;
+      color: #a91930 !important;
+      font-weight: normal !important;
+    }
+  </style>
+</head>
+<body>
+  <script>
+var shoppingCartURL="[--SHOPPING_CART_URL--]";
+</script>
+
+
+<div class="site-wrap">
+  <!--header start-->
+  <header class="header">
+    
+    [--INCLUDE -VP-header-nav--]
+    [-- INCLUDE -VP-header-minicart PROCESS --]
+  </header>
+  <!--header end-->
+
+  <div class="cmlla" id="cmlla">
+    <style>
+      #shopsite-message td.ups_error img{
+        display:none;
+      }
+      #shopsite-message td.ups_error{
+        padding:10px;
+        background-color:#fff8e9;
+      }
+      #shopsite-message td.ups_error:first-child:before{
+        content:"\ea07";
+        font-weight:bold;
+        font-size:2vw;
+        font-family:'vp-icomoon';
+        color:#ff8d14;
+        margin:2px;
+        vertical-align: middle;
+      }
+    </style>
+    <!--main start-->
+    <main role="main">
+      <div class="container">
+
+          <div id="moreInfo">
+            [--CR_FORM--]
+            <div class="cbox mid">
+              <div class="space-60"></div>
+
+              <div class="mid">
+                [--CR_Header--]
+                <h1>[--STORE.SignIn--]</h1>
+                <div class="cbox">
+                  <div class="pref-fcolc alert alert-danger">
+                    [-- CR_ShopSiteMessages --]
+                  </div>
+                </div>
+              </div>
+
+              <!-- <div class="cbox">
+                [-- IF CR_FACEBOOK_CONNECT --]
+                  [-- CR_FACEBOOK_CONNECT --]
+                [-- END_IF --]
+              </div> -->
+              <div class="cbox">
+                [--STORE.UseSignInEmail--]
+              </div>
+              <div class="cbox signin-email-password">
+                [--CR_Signin_Email_Password--]
+              </div>
+              <div class="cbox">
+                <div class="pref-fcolc">
+                  [-- BUTTON SignIn --]
+                </div>
+              </div>
+              [--CR_Footer--]
+
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+            </div>
+          </div>
+
+      </div>
+    </main>
+    <!--main end-->
+    [-- INCLUDE -VP-mailing-list --]
+    [-- INCLUDE -VP-footer--]
+    [-- INCLUDE SignInModal.sst PROCESS --]
+  </div>
+</div>
+
+<!-- BEGIN: Google Trusted Stores -->
+<!--<script type="text/javascript">
+var gts = gts || [];
+
+gts.push(["id", "231386"]);
+gts.push(["badge_position", "BOTTOM_RIGHT"]);
+gts.push(["locale", "en_US"]);
+gts.push(["google_base_subaccount_id", "1548534"]);
+gts.push(["google_base_country", "US"]);
+gts.push(["google_base_language", "en"]);
+
+(function() {
+  var gts = document.createElement("script");
+  gts.type = "text/javascript";
+  gts.async = true;
+  gts.src = "https://www.googlecommerce.com/trustedstores/api/js";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(gts, s);
+})();
+</script>-->
+<!-- END: Google Trusted Stores -->
+<!-- BEGIN: _GUARANTEE Seal -->
+<!--<span id="_GUARANTEE_SealSpan"></span>
+<script type="text/javascript" src="//nsg.symantec.com/private/rollover/rollover.js"></script>
+<script type="text/javascript">
+if(window._GUARANTEE && _GUARANTEE.Loaded) {
+ _GUARANTEE.Hash = 'x7%2FMzbgvjqCmhA7lp5x6FU7wMwkpQ36bB1EltmszD3devhKhlTwFP5q9X12sk2mPtEhZF3HnE%2BJ3viGbs4HPmw%3D%3D';
+ _GUARANTEE.WriteSeal("_GUARANTEE_SealSpan", "GuaranteedSeal");
+ _GUARANTEE.Bottom = 58;
+}
+</script>-->
+<!-- END: _GUARANTEE Seal -->
+</body>
+[-- INCLUDE -VP-AE-js-plugins --]
+  <!--4-Tell Recommendations Begin (www.4-tell.com)-->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+  _4TellBoost={}; _4TellBoost.jq=jQuery.noConflict(true);
+</script>
+<script type="text/javascript" async src="//4tcdn.blob.core.windows.net/4tjs3/4TellLoader.js?alias=sewingma"></script>
+<!--4-Tell Recommendations End-->
+<script src="/AE/jquery-popup/jquery.popupoverlay.js"></script>
+
+  <script>
+    // Initialize the plugin
+    $('#packages, #craftsy-pop, #local-pop, #financing-pop, #geopopup, #lowest-price-pop, #callouts-pop').popup({
+      transition: 'all 0.3s',
+      scrolllock: true
+    });
+  </script>
+</html>
+[--END_DEFINE SIGN_IN--]
+#
+# NEW REGISTRATION
+#
+[--DEFINE NEW_REGISTRATION--]
+<!DOCTYPE html>
+<html>
+  <!--new registration-->
+<head>
+<style>
+  .async-hide { opacity: 0 !important}
+</style>
+<script>
+  (function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+  h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+  (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+  })(window,document.documentElement,'async-hide','dataLayer',4000,
+  {'GTM-KTCLFC5':true});</script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-487443-1', 'auto');
+  ga('require', 'GTM-KTCLFC5');
+  ga('send', 'pageview');
+
+</script>
+<title>[--STORE.NewRegistration--]</title>
+<script type="text/javascript">
+  [--CR_JAVASCRIPT--]
+</script>
+<!--CSS and JS links-->
+<!-- Google Fonts -->
+<link href="//fonts.googleapis.com/css?family=Lato:400,100,300,700,900,900italic,700italic,400italic|Open+Sans" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+<!-- Bootstrap -->
+<link href="/AE/bootstrap/css/bootstrap.css" rel="stylesheet">
+<!--plugins-->
+<link href="/AE/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="/AE/custom-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet">
+<!--sky form pro css-->
+<link href="/AE/sky-form/css/sky-forms.css" rel="stylesheet">
+<!--custom css file-->
+<link href="/AE/css/vp-fonts.css" rel="stylesheet">
+<link href="/AE/css/style.css?v=1.1" rel="stylesheet">
+<!-- MoreInfo product description custom css -->
+<link href="/AE/css/moreInfo.styles.css" rel="stylesheet">
+<link href="/AE/css/vp-flex-nav.css" rel="stylesheet">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<style>
+  table.addr_name td,
+  table.email_pw td,
+  table.challenge td,
+  table.email_type td,
+  table.save_payment td{
+    padding:.6em;
+  }
+</style>
+<style>
+  .well {
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    display:none;
+    margin:1em;
+    max-height:80%;
+    overflow-y:scroll;
+    max-width:65%;
+  }
+  #packages #craftsy-pop #local-pop #financing-pop,
+  #callouts-pop,
+  #lowest-price-pop{
+    transform: scale(0.8);
+  }
+  .popup_visible #packages #craftsy-pop #local-pop #financing-pop{
+    transform: scale(1);
+  }
+  /*craftsy pop styles*/
+  #longarmsale {
+    display:none;
+  }
+  #genevent h1 {
+    font-size: 26px !important;
+    color: #1f698b !important;
+    font-weight: normal !important;
+    font-family: Georgia, "Times New Roman", Times, serif !important;
+    line-height: 27px !important;
+  }
+  #genevent h3 {
+    font-family: Georgia, "Times New Roman", Times, serif !important;
+    font-size: 18px !important;
+    color: #a91930 !important;
+    font-weight: normal !important;
+  }
+</style>
+</head>
+<body>
+  <script>
+    var shoppingCartURL="[--SHOPPING_CART_URL--]";
+  </script>
+
+
+  <div class="site-wrap">
+    <!--header start-->
+    <header class="header">
+
+      [--INCLUDE -VP-header-nav--]
+      [-- INCLUDE -VP-header-minicart PROCESS --]
+    </header>
+    <!--header end-->
+
+    <div class="cmlla" id="cmlla">
+
+      <!--main start-->
+      <main role="main">
+        <div class="container">
+
+          <div id="moreInfo">
+            [--CR_FORM--]
+            <div class="cbox mid">
+              <div class="space-60"></div>
+
+              <div class="mid">
+                [--CR_Header--]
+                <h1>[--STORE.NewRegistration--]</h1>
+                <div class="cbox">
+                  <div class="pref-fcolc alert alert-danger">
+                    [-- CR_ShopSiteMessages --]
+                  </div>
+                </div>
+              </div>
+
+              <div class="cbox">
+                [-- CR_Name --]
+              </div>
+              <div class="cbox">
+                [-- CR_Email_Password --]
+              </div>
+              <div class="cbox">
+                [-- CR_Challenge --]
+              </div>
+              <div class="cbox">
+                [-- CR_Save_Payment --]
+              </div>
+              <div class="cbox">
+                <div class="pref-fcolc">
+                  [-- BUTTON Save --]
+                </div>
+              </div>
+              [--CR_Footer--]
+
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+            </div>
+          </div>
+
+        </div>
+      </main>
+      <!--main end-->
+      [-- INCLUDE -VP-mailing-list --]
+      [-- INCLUDE -VP-footer--]
+      [-- INCLUDE SignInModal.sst PROCESS --]
+    </div>
+  </div>
+
+  <!-- BEGIN: Google Trusted Stores -->
+  <!--<script type="text/javascript">
+  var gts = gts || [];
+
+  gts.push(["id", "231386"]);
+  gts.push(["badge_position", "BOTTOM_RIGHT"]);
+  gts.push(["locale", "en_US"]);
+  gts.push(["google_base_subaccount_id", "1548534"]);
+  gts.push(["google_base_country", "US"]);
+  gts.push(["google_base_language", "en"]);
+
+  (function() {
+    var gts = document.createElement("script");
+    gts.type = "text/javascript";
+    gts.async = true;
+    gts.src = "https://www.googlecommerce.com/trustedstores/api/js";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(gts, s);
+  })();
+  </script>-->
+  <!-- END: Google Trusted Stores -->
+  <!-- BEGIN: _GUARANTEE Seal -->
+  <!--<span id="_GUARANTEE_SealSpan"></span>
+  <script type="text/javascript" src="//nsg.symantec.com/private/rollover/rollover.js"></script>
+  <script type="text/javascript">
+  if(window._GUARANTEE && _GUARANTEE.Loaded) {
+  _GUARANTEE.Hash = 'x7%2FMzbgvjqCmhA7lp5x6FU7wMwkpQ36bB1EltmszD3devhKhlTwFP5q9X12sk2mPtEhZF3HnE%2BJ3viGbs4HPmw%3D%3D';
+  _GUARANTEE.WriteSeal("_GUARANTEE_SealSpan", "GuaranteedSeal");
+  _GUARANTEE.Bottom = 58;
+  }
+  </script>-->
+  <!-- END: _GUARANTEE Seal -->
+
+</body>
+[-- INCLUDE -VP-AE-js-plugins --]
+<!--4-Tell Recommendations Begin (www.4-tell.com)-->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+  _4TellBoost={}; _4TellBoost.jq=jQuery.noConflict(true);
+</script>
+<script type="text/javascript" async src="//4tcdn.blob.core.windows.net/4tjs3/4TellLoader.js?alias=sewingma"></script>
+<!--4-Tell Recommendations End-->
+<script src="/AE/jquery-popup/jquery.popupoverlay.js"></script>
+
+<script>
+  // Initialize the plugin
+  $('#packages, #craftsy-pop, #local-pop, #financing-pop, #geopopup, #lowest-price-pop, #callouts-pop').popup({
+    transition: 'all 0.3s',
+    scrolllock: true
+  });
+</script>
+</html>
+[--END_DEFINE NEW_REGISTRATION--]
+#
+# Sign out Confirmation
+#
+[--DEFINE SIGN_OUT_CONFIRMATION--]
+<!DOCTYPE html>
+<html>
+  <!--sign out confirmation-->
+<head>
+  <style>.async-hide { opacity: 0 !important} </style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,
+{'GTM-KTCLFC5':true});</script>
+  <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-487443-1', 'auto');
+ga('require', 'GTM-KTCLFC5');
+ga('send', 'pageview');
+
+</script>
+  <title>[--STORE.SignOutConfirmation--]</title>
+  <script type="text/javascript">
+    [--CR_JAVASCRIPT--]
+  </script>
+  <!--CSS and JS links-->
+  <!-- Google Fonts -->
+  <link href="//fonts.googleapis.com/css?family=Lato:400,100,300,700,900,900italic,700italic,400italic|Open+Sans" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="/AE/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <!--plugins-->
+  <link href="/AE/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/AE/custom-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet">
+  <!--sky form pro css-->
+  <link href="/AE/sky-form/css/sky-forms.css" rel="stylesheet">
+  <!--custom css file-->
+  <link href="/AE/css/vp-fonts.css" rel="stylesheet">
+  <link href="/AE/css/style.css?v=1.1" rel="stylesheet">
+  <!-- MoreInfo product description custom css -->
+  <link href="/AE/css/moreInfo.styles.css" rel="stylesheet">
+  <link href="/AE/css/vp-flex-nav.css" rel="stylesheet">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style>
+    .well {
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      display:none;
+      margin:1em;
+      max-height:80%;
+      overflow-y:scroll;
+      max-width:65%;
+    }
+    #packages #craftsy-pop #local-pop #financing-pop, #callouts-pop, #lowest-price-pop{
+      transform: scale(0.8);
+    }
+    .popup_visible #packages #craftsy-pop #local-pop #financing-pop{
+      transform: scale(1);
+    }
+    /*craftsy pop styles*/
+    #longarmsale {
+      display:none;
+    }
+    #genevent h1 {
+      font-size: 26px !important;
+      color: #1f698b !important;
+      font-weight: normal !important;
+      font-family: Georgia, "Times New Roman", Times, serif !important;
+      line-height: 27px !important;
+    }
+    #genevent h3 {
+      font-family: Georgia, "Times New Roman", Times, serif !important;
+      font-size: 18px !important;
+      color: #a91930 !important;
+      font-weight: normal !important;
+    }
+  </style>
+</head>
+<body>
+  <script>
+var shoppingCartURL="[--SHOPPING_CART_URL--]";
+</script>
+
+
+<div class="site-wrap">
+  <!--header start-->
+  <header class="header">
+    [--INCLUDE -VP-header-nav--]
+    [-- INCLUDE -VP-header-minicart PROCESS --]
+  </header>
+  <!--header end-->
+
+  <div class="cmlla" id="cmlla">
+
+    <!--main start-->
+    <main role="main">
+      <div class="container">
+
+          <div id="moreInfo">
+            [--CR_FORM--]
+            <div class="cbox mid">
+              <div class="space-60"></div>
+
+              <div class="mid">
+                [--CR_Header--]
+                <h1>[--STORE.SignOutConfirmation--]</h1>
+                <div class="cbox">
+                  <div class="pref-fcolc alert alert-danger">
+                    [-- CR_ShopSiteMessages --]
+                  </div>
+                </div>
+              </div>
+
+              <div class="cbox">
+                <p>[--STORE.SignOut?--]</p>
+              </div>
+              <div class="cbox">
+                <div class="pref-fcolc">
+                  [-- BUTTON Yes --]
+                </div>
+                <div class="pref-fcolc">
+                  [-- BUTTON No --]
+                </div>
+              </div>
+              [--CR_Footer--]
+
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+            </div>
+          </div>
+
+      </div>
+    </main>
+    <!--main end-->
+    [-- INCLUDE -VP-mailing-list --]
+    [-- INCLUDE -VP-footer--]
+    [-- INCLUDE SignInModal.sst PROCESS --]
+  </div>
+</div>
+
+<!-- BEGIN: Google Trusted Stores -->
+<!--<script type="text/javascript">
+var gts = gts || [];
+
+gts.push(["id", "231386"]);
+gts.push(["badge_position", "BOTTOM_RIGHT"]);
+gts.push(["locale", "en_US"]);
+gts.push(["google_base_subaccount_id", "1548534"]);
+gts.push(["google_base_country", "US"]);
+gts.push(["google_base_language", "en"]);
+
+(function() {
+  var gts = document.createElement("script");
+  gts.type = "text/javascript";
+  gts.async = true;
+  gts.src = "https://www.googlecommerce.com/trustedstores/api/js";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(gts, s);
+})();
+</script>-->
+<!-- END: Google Trusted Stores -->
+<!-- BEGIN: _GUARANTEE Seal -->
+<!--<span id="_GUARANTEE_SealSpan"></span>
+<script type="text/javascript" src="//nsg.symantec.com/private/rollover/rollover.js"></script>
+<script type="text/javascript">
+if(window._GUARANTEE && _GUARANTEE.Loaded) {
+ _GUARANTEE.Hash = 'x7%2FMzbgvjqCmhA7lp5x6FU7wMwkpQ36bB1EltmszD3devhKhlTwFP5q9X12sk2mPtEhZF3HnE%2BJ3viGbs4HPmw%3D%3D';
+ _GUARANTEE.WriteSeal("_GUARANTEE_SealSpan", "GuaranteedSeal");
+ _GUARANTEE.Bottom = 58;
+}
+</script>-->
+<!-- END: _GUARANTEE Seal -->
+</body>
+[-- INCLUDE -VP-AE-js-plugins --]
+<!--4-Tell Recommendations Begin (www.4-tell.com)-->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+  _4TellBoost={}; _4TellBoost.jq=jQuery.noConflict(true);
+</script>
+<script type="text/javascript" async src="//4tcdn.blob.core.windows.net/4tjs3/4TellLoader.js?alias=sewingma"></script>
+<!--4-Tell Recommendations End-->
+<script src="/AE/jquery-popup/jquery.popupoverlay.js"></script>
+
+  <script>
+    // Initialize the plugin
+    $('#packages, #craftsy-pop, #local-pop, #financing-pop, #geopopup, #lowest-price-pop, #callouts-pop').popup({
+      transition: 'all 0.3s',
+      scrolllock: true
+    });
+  </script>
+</html>
+[--END_DEFINE SIGN_OUT_CONFIRMATION--]
+#
+# Forgot Password
+#
+[--DEFINE FORGOT_PASSWORD--]
+<!DOCTYPE html>
+<html>
+  <!--forgot password-->
+<head>
+  <style>.async-hide { opacity: 0 !important} </style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,
+{'GTM-KTCLFC5':true});</script>
+  <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-487443-1', 'auto');
+ga('require', 'GTM-KTCLFC5');
+ga('send', 'pageview');
+</script>
+  <title>[--STORE.ForgotPassword--]</title>
+  <script type="text/javascript">
+    [--CR_JAVASCRIPT--]
+  </script>
+  <!--CSS and JS links-->
+  <!-- Google Fonts -->
+  <link href="//fonts.googleapis.com/css?family=Lato:400,100,300,700,900,900italic,700italic,400italic|Open+Sans" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="/AE/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <!--plugins-->
+  <link href="/AE/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/AE/custom-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet">
+  <!--sky form pro css-->
+  <link href="/AE/sky-form/css/sky-forms.css" rel="stylesheet">
+  <!--custom css file-->
+  <link href="/AE/css/vp-fonts.css" rel="stylesheet">
+  <link href="/AE/css/style.css?v=1.1" rel="stylesheet">
+  <!-- MoreInfo product description custom css -->
+  <link href="/AE/css/moreInfo.styles.css" rel="stylesheet">
+  <link href="/AE/css/vp-flex-nav.css" rel="stylesheet">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style>
+    table.email_pw td{
+      padding:0.6em;
+    }
+  </style>
+  <style>
+    .well {
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      display:none;
+      margin:1em;
+      max-height:80%;
+      overflow-y:scroll;
+      max-width:65%;
+    }
+    #packages #craftsy-pop #local-pop #financing-pop, #callouts-pop, #lowest-price-pop{
+      transform: scale(0.8);
+    }
+    .popup_visible #packages #craftsy-pop #local-pop #financing-pop{
+      transform: scale(1);
+    }
+    /*craftsy pop styles*/
+    #longarmsale {
+      display:none;
+    }
+    #genevent h1 {
+      font-size: 26px !important;
+      color: #1f698b !important;
+      font-weight: normal !important;
+      font-family: Georgia, "Times New Roman", Times, serif !important;
+      line-height: 27px !important;
+    }
+    #genevent h3 {
+      font-family: Georgia, "Times New Roman", Times, serif !important;
+      font-size: 18px !important;
+      color: #a91930 !important;
+      font-weight: normal !important;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    var shoppingCartURL="[--SHOPPING_CART_URL--]";
+  </script>
+
+
+  <div class="site-wrap">
+    <!--header start-->
+    <header class="header">
+      [--INCLUDE -VP-header-nav--]
+      [-- INCLUDE -VP-header-minicart PROCESS --]
+    </header>
+    <!--header end-->
+    <div class="cmlla" id="cmlla">
+      <!--main start-->
+      <main role="main">
+        <div class="container">
+          <div class="col-lg-12 col-md-12 col-sm-12" align="center">
+
+          <div id="moreInfo">
+            [--CR_FORM--]
+            <div class="cbox mid">
+              <div class="space-60"></div>
+
+              <div class="mid">
+                [--CR_Header--]
+                <h1>[--STORE.ForgotPassword--]</h1>
+                <div class="cbox">
+                  <div class="pref-fcolc alert alert-danger">
+                    [-- CR_ShopSiteMessages --]
+                  </div>
+                </div>
+              </div>
+
+              <div class="cbox">
+                [--CR_Email--]
+              </div>
+              <div class="cbox">
+                <div class="pref-fcolc">
+                  [--BUTTON Submit--]
+                </div>
+                <div class="pref-fcolc">
+                  [--BUTTON Cancel--]
+                </div>
+              </div>
+              [--CR_Footer--]
+
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+            </div>
+          </div>
+
+          </div>
+        </div>
+      </main>
+      <!--main end-->
+      [-- INCLUDE -VP-mailing-list --]
+      [-- INCLUDE -VP-footer--]
+      [-- INCLUDE SignInModal.sst PROCESS --]
+    </div>
+  </div>
+  
+<!-- BEGIN: Google Trusted Stores -->
+<!--<script type="text/javascript">
+var gts = gts || [];
+
+gts.push(["id", "231386"]);
+gts.push(["badge_position", "BOTTOM_RIGHT"]);
+gts.push(["locale", "en_US"]);
+gts.push(["google_base_subaccount_id", "1548534"]);
+gts.push(["google_base_country", "US"]);
+gts.push(["google_base_language", "en"]);
+
+(function() {
+  var gts = document.createElement("script");
+  gts.type = "text/javascript";
+  gts.async = true;
+  gts.src = "https://www.googlecommerce.com/trustedstores/api/js";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(gts, s);
+})();
+</script>-->
+<!-- END: Google Trusted Stores -->
+<!-- BEGIN: _GUARANTEE Seal -->
+<!--<span id="_GUARANTEE_SealSpan"></span>
+<script type="text/javascript" src="//nsg.symantec.com/private/rollover/rollover.js"></script>
+<script type="text/javascript">
+if(window._GUARANTEE && _GUARANTEE.Loaded) {
+ _GUARANTEE.Hash = 'x7%2FMzbgvjqCmhA7lp5x6FU7wMwkpQ36bB1EltmszD3devhKhlTwFP5q9X12sk2mPtEhZF3HnE%2BJ3viGbs4HPmw%3D%3D';
+ _GUARANTEE.WriteSeal("_GUARANTEE_SealSpan", "GuaranteedSeal");
+ _GUARANTEE.Bottom = 58;
+}
+</script>-->
+<!-- END: _GUARANTEE Seal -->
+
+</body>
+[-- INCLUDE -VP-AE-js-plugins --]
+<!--4-Tell Recommendations Begin (www.4-tell.com)-->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+  _4TellBoost={}; _4TellBoost.jq=jQuery.noConflict(true);
+</script>
+<script type="text/javascript" async src="//4tcdn.blob.core.windows.net/4tjs3/4TellLoader.js?alias=sewingma"></script>
+<!--4-Tell Recommendations End-->
+<script src="/AE/jquery-popup/jquery.popupoverlay.js"></script>
+
+  <script>
+    // Initialize the plugin
+    $('#packages, #craftsy-pop, #local-pop, #financing-pop, #geopopup, #lowest-price-pop, #callouts-pop').popup({
+      transition: 'all 0.3s',
+      scrolllock: true
+    });
+  </script>
+</html>
+[--END_DEFINE FORGOT_PASSWORD--]
+#
+# Email Define
+#
+[-- DEFINE FORGOT_PASSWORD_EMAIL --]
+  <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!--email define-->
+
+<body>
+  <div class="site-wrap">
+    <!--header start-->
+    <header class="header">
+      [--INCLUDE -VP-header-nav--]
+      [-- INCLUDE -VP-header-minicart PROCESS --]
+    </header>
+    <!--header end-->
+    <div class="cmlla" id="cmlla">
+      <!--main start-->
+      <main role="main">
+        <div class="container">
+
+          <div id="moreInfo">
+            <div class="cbox mid">
+              <div class="space-60"></div>
+
+              <div class="mid">
+                <div class="space-60"></div>
+                <div class="space-60"></div>
+                <p>[-- STORE.EmailClickLink --]</p>
+              </div>
+
+              <div class="cbox">
+                <p>[-- CR_Forgot_Password_Link --]</p>
+              </div>
+              <div class="cbox">
+                <p><b>[-- STORE.Name --]</b></p>
+              </div>
+
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+            </div>
+          </div>
+
+        </div>
+      </main>
+      <!--main end-->
+      [-- INCLUDE -VP-mailing-list --]
+      [-- INCLUDE -VP-footer--]
+      [-- INCLUDE SignInModal.sst PROCESS --]
+    </div>
+  </div>
+</body>
+
+</html>
+[-- END_DEFINE FORGOT_PASSWORD_EMAIL --] 
+
+# 
+# Email for Not A registered customer Define
+# 
+
+[-- DEFINE FORGOT_PASSWORD_NOEMAIL --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!--email for not a registered customer define-->
+
+<body>
+  <div class="site-wrap">
+    <!--header start-->
+    <header class="header">
+      [--INCLUDE -VP-header-nav--]
+      [-- INCLUDE -VP-header-minicart PROCESS --]
+    </header>
+    <!--header end-->
+    <div class="cmlla" id="cmlla">
+      <!--main start-->
+      <main role="main">
+        <div class="container">
+
+          <div id="moreInfo">
+            <div class="cbox mid">
+              <div class="space-60"></div>
+
+              <div class="mid">
+                <div class="space-60"></div>
+                <div class="space-60"></div>
+                <p>[-- STORE.NotRegisteredEmail --]</p>
+              </div>
+
+              <div class="cbox">
+                <p><b><a href="[-- STORE.Output_URL --]/index.html">[-- STORE.Name --]</a></b></p>
+              </div>
+
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+            </div>
+          </div>
+
+        </div>
+      </main>
+      <!--main end-->
+      [-- INCLUDE -VP-mailing-list --]
+      [-- INCLUDE -VP-footer--]
+      [-- INCLUDE SignInModal.sst PROCESS --]
+    </div>
+  </div>
+</body>
+
+</html>
+[-- END_DEFINE FORGOT_PASSWORD_NOEMAIL --]
+#
+# Forgot Password Email Sent
+#
+[-- DEFINE FORGOT_EMAIL_SENT --]
+<!DOCTYPE html>
+<html>
+  <!--forgot password email sent-->
+<head>
+  <style>.async-hide { opacity: 0 !important} </style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,
+{'GTM-KTCLFC5':true});</script>
+  <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-487443-1', 'auto');
+ga('require', 'GTM-KTCLFC5');
+ga('send', 'pageview');
+</script>
+  <title>[--STORE.ForgotEmailSent--]</title>
+  <script type="text/javascript">
+    [--CR_JAVASCRIPT--]
+  </script>
+  <!--CSS and JS links-->
+  <!-- Google Fonts -->
+  <link href="//fonts.googleapis.com/css?family=Lato:400,100,300,700,900,900italic,700italic,400italic|Open+Sans" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="/AE/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <!--plugins-->
+  <link href="/AE/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/AE/custom-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet">
+  <!--sky form pro css-->
+  <link href="/AE/sky-form/css/sky-forms.css" rel="stylesheet">
+  <!--custom css file-->
+  <link href="/AE/css/vp-fonts.css" rel="stylesheet">
+  <link href="/AE/css/style.css?v=1.1" rel="stylesheet">
+  <!-- MoreInfo product description custom css -->
+  <link href="/AE/css/moreInfo.styles.css" rel="stylesheet">
+  <link href="/AE/css/vp-flex-nav.css" rel="stylesheet">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style>
+    .well {
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      display:none;
+      margin:1em;
+      max-height:80%;
+      overflow-y:scroll;
+      max-width:65%;
+    }
+    #packages #craftsy-pop #local-pop #financing-pop, #callouts-pop, #lowest-price-pop{
+      transform: scale(0.8);
+    }
+    .popup_visible #packages #craftsy-pop #local-pop #financing-pop{
+      transform: scale(1);
+    }
+    /*craftsy pop styles*/
+    #longarmsale {
+      display:none;
+    }
+    #genevent h1 {
+      font-size: 26px !important;
+      color: #1f698b !important;
+      font-weight: normal !important;
+      font-family: Georgia, "Times New Roman", Times, serif !important;
+      line-height: 27px !important;
+    }
+    #genevent h3 {
+      font-family: Georgia, "Times New Roman", Times, serif !important;
+      font-size: 18px !important;
+      color: #a91930 !important;
+      font-weight: normal !important;
+    }
+  </style>
+</head>
+<body>
+  <script>
+var shoppingCartURL="[--SHOPPING_CART_URL--]";
+</script>
+
+
+  <div class="site-wrap">
+    <!--header start-->
+    <header class="header">
+      [--INCLUDE -VP-header-nav--]
+      [-- INCLUDE -VP-header-minicart PROCESS --]
+    </header>
+    <!--header end-->
+    <div class="cmlla" id="cmlla">
+      <!--main start-->
+      <main role="main">
+        <div class="container">
+
+          <div id="moreInfo">
+            [--CR_FORM--]
+            <div class="cbox mid">
+              <div class="space-60"></div>
+
+              <div class="mid">
+                [--CR_Header--]
+                <h1>[--STORE.ForgotEmailSent--]</h1>
+                <div class="cbox">
+                  <div class="pref-fcolc alert alert-danger">
+                    [-- CR_ShopSiteMessages --]
+                  </div>
+                </div>
+                <p>[--STORE.SentPasswordEmail--]</p>
+              </div>
+
+              <div class="cbox">
+                <div class="pref-fcolc">
+                  [-- BUTTON BackToCart --]
+                </div>
+              </div>
+              [--CR_Footer--]
+
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+            </div>
+          </div>
+
+        </div>
+      </main>
+      <!--main end-->
+      [-- INCLUDE -VP-mailing-list --]
+      [-- INCLUDE -VP-footer--]
+      [-- INCLUDE SignInModal.sst PROCESS --]
+    </div>
+  </div>
+  
+<!-- BEGIN: Google Trusted Stores -->
+<!--<script type="text/javascript">
+var gts = gts || [];
+
+gts.push(["id", "231386"]);
+gts.push(["badge_position", "BOTTOM_RIGHT"]);
+gts.push(["locale", "en_US"]);
+gts.push(["google_base_subaccount_id", "1548534"]);
+gts.push(["google_base_country", "US"]);
+gts.push(["google_base_language", "en"]);
+
+(function() {
+  var gts = document.createElement("script");
+  gts.type = "text/javascript";
+  gts.async = true;
+  gts.src = "https://www.googlecommerce.com/trustedstores/api/js";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(gts, s);
+})();
+</script>-->
+<!-- END: Google Trusted Stores -->
+<!-- BEGIN: _GUARANTEE Seal -->
+<!--<span id="_GUARANTEE_SealSpan"></span>
+<script type="text/javascript" src="//nsg.symantec.com/private/rollover/rollover.js"></script>
+<script type="text/javascript">
+if(window._GUARANTEE && _GUARANTEE.Loaded) {
+ _GUARANTEE.Hash = 'x7%2FMzbgvjqCmhA7lp5x6FU7wMwkpQ36bB1EltmszD3devhKhlTwFP5q9X12sk2mPtEhZF3HnE%2BJ3viGbs4HPmw%3D%3D';
+ _GUARANTEE.WriteSeal("_GUARANTEE_SealSpan", "GuaranteedSeal");
+ _GUARANTEE.Bottom = 58;
+}
+</script>-->
+<!-- END: _GUARANTEE Seal -->
+
+</body>
+[-- INCLUDE -VP-AE-js-plugins --]
+<!--4-Tell Recommendations Begin (www.4-tell.com)-->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+  _4TellBoost={}; _4TellBoost.jq=jQuery.noConflict(true);
+</script>
+<script type="text/javascript" async src="//4tcdn.blob.core.windows.net/4tjs3/4TellLoader.js?alias=sewingma"></script>
+<!--4-Tell Recommendations End-->
+<script src="/AE/jquery-popup/jquery.popupoverlay.js"></script>
+
+  <script>
+    // Initialize the plugin
+    $('#packages, #craftsy-pop, #local-pop, #financing-pop, #geopopup, #lowest-price-pop, #callouts-pop').popup({
+      transition: 'all 0.3s',
+      scrolllock: true
+    });
+  </script>
+</html>
+[-- END_DEFINE FORGOT_EMAIL_SENT --]
+#
+# Get Answer
+#
+[--DEFINE GET_ANSWER--]
+<!DOCTYPE html>
+<html>
+  <!--get answer-->
+<head>
+  <style>.async-hide { opacity: 0 !important} </style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,
+{'GTM-KTCLFC5':true});</script>
+  <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-487443-1', 'auto');
+ga('require', 'GTM-KTCLFC5');
+ga('send', 'pageview');
+</script>
+  <title>[--STORE.GetAnswer--]</title>
+  <script type="text/javascript">
+    [--CR_JAVASCRIPT--]
+  </script>
+  <!--CSS and JS links-->
+  <!-- Google Fonts -->
+  <link href="//fonts.googleapis.com/css?family=Lato:400,100,300,700,900,900italic,700italic,400italic|Open+Sans" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="/AE/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <!--plugins-->
+  <link href="/AE/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/AE/custom-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet">
+  <!--sky form pro css-->
+  <link href="/AE/sky-form/css/sky-forms.css" rel="stylesheet">
+  <!--custom css file-->
+  <link href="/AE/css/vp-fonts.css" rel="stylesheet">
+  <link href="/AE/css/style.css?v=1.1" rel="stylesheet">
+  <!-- MoreInfo product description custom css -->
+  <link href="/AE/css/moreInfo.styles.css" rel="stylesheet">
+  <link href="/AE/css/vp-flex-nav.css" rel="stylesheet">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style>
+    .well {
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      display:none;
+      margin:1em;
+      max-height:80%;
+      overflow-y:scroll;
+      max-width:65%;
+    }
+    #packages #craftsy-pop #local-pop #financing-pop, #callouts-pop, #lowest-price-pop{
+      transform: scale(0.8);
+    }
+    .popup_visible #packages #craftsy-pop #local-pop #financing-pop{
+      transform: scale(1);
+    }
+    /*craftsy pop styles*/
+    #longarmsale {
+      display:none;
+    }
+    #genevent h1 {
+      font-size: 26px !important;
+      color: #1f698b !important;
+      font-weight: normal !important;
+      font-family: Georgia, "Times New Roman", Times, serif !important;
+      line-height: 27px !important;
+    }
+    #genevent h3 {
+      font-family: Georgia, "Times New Roman", Times, serif !important;
+      font-size: 18px !important;
+      color: #a91930 !important;
+      font-weight: normal !important;
+    }
+  </style>
+</head>
+<body>
+  <script>
+var shoppingCartURL="[--SHOPPING_CART_URL--]";
+</script>
+
+
+  <!--header start-->
+  <header class="header">
+    [--INCLUDE -VP-header-nav--]
+    [-- INCLUDE -VP-header-minicart PROCESS --]
+  </header>
+  <!--header end-->
+  <div class="cmlla" id="cmlla">
+    <!--main start-->
+    <main role="main">
+      <div class="container">
+
+          <div id="moreInfo">
+            [--CR_FORM--]
+            <div class="cbox mid">
+              <div class="space-60"></div>
+
+              <div class="mid">
+                [--CR_Header--]
+                <h1>[--STORE.GetAnswer--]</h1>
+                <div class="cbox">
+                  <div class="pref-fcolc alert alert-danger">
+                    [-- CR_ShopSiteMessages --]
+                  </div>
+                </div>
+                <p>[--CR_Email_Name--]</p>
+              </div>
+
+              <div class="cbox">
+                [--CR_ChallengeQuestion--]
+              </div>
+              <div class="cbox">
+                <div class="pref-fcolc">
+                  [-- BUTTON Submit --]
+                </div>
+                <div class="pref-fcolc">
+                  [-- BUTTON Cancel --]
+                </div>
+              </div>
+              [--CR_Footer--]
+
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+            </div>
+          </div>
+
+      </div>
+    </main>
+    <!--main end-->
+    [-- INCLUDE -VP-mailing-list --]
+    [-- INCLUDE -VP-footer--]
+    [-- INCLUDE SignInModal.sst PROCESS --]
+  </div>
+  
+<!-- BEGIN: Google Trusted Stores -->
+<!--<script type="text/javascript">
+var gts = gts || [];
+
+gts.push(["id", "231386"]);
+gts.push(["badge_position", "BOTTOM_RIGHT"]);
+gts.push(["locale", "en_US"]);
+gts.push(["google_base_subaccount_id", "1548534"]);
+gts.push(["google_base_country", "US"]);
+gts.push(["google_base_language", "en"]);
+
+(function() {
+  var gts = document.createElement("script");
+  gts.type = "text/javascript";
+  gts.async = true;
+  gts.src = "https://www.googlecommerce.com/trustedstores/api/js";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(gts, s);
+})();
+</script>-->
+<!-- END: Google Trusted Stores -->
+<!-- BEGIN: _GUARANTEE Seal -->
+<!--<span id="_GUARANTEE_SealSpan"></span>
+<script type="text/javascript" src="//nsg.symantec.com/private/rollover/rollover.js"></script>
+<script type="text/javascript">
+if(window._GUARANTEE && _GUARANTEE.Loaded) {
+ _GUARANTEE.Hash = 'x7%2FMzbgvjqCmhA7lp5x6FU7wMwkpQ36bB1EltmszD3devhKhlTwFP5q9X12sk2mPtEhZF3HnE%2BJ3viGbs4HPmw%3D%3D';
+ _GUARANTEE.WriteSeal("_GUARANTEE_SealSpan", "GuaranteedSeal");
+ _GUARANTEE.Bottom = 58;
+}
+</script>-->
+<!-- END: _GUARANTEE Seal -->
+
+</body>
+[-- INCLUDE -VP-AE-js-plugins --]
+<!--4-Tell Recommendations Begin (www.4-tell.com)-->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+  _4TellBoost={}; _4TellBoost.jq=jQuery.noConflict(true);
+</script>
+<script type="text/javascript" async src="//4tcdn.blob.core.windows.net/4tjs3/4TellLoader.js?alias=sewingma"></script>
+<!--4-Tell Recommendations End-->
+<script src="/AE/jquery-popup/jquery.popupoverlay.js"></script>
+
+  <script>
+    // Initialize the plugin
+    $('#packages, #craftsy-pop, #local-pop, #financing-pop, #geopopup, #lowest-price-pop, #callouts-pop').popup({
+      transition: 'all 0.3s',
+      scrolllock: true
+    });
+  </script>
+</html>
+[--END_DEFINE GET_ANSWER--]
+#
+# Set Answer Password
+#
+[--DEFINE SET_ANSWER_PASSWORD--]
+<!DOCTYPE html>
+<html>
+  <!--set answer password-->
+<head>
+  <style>.async-hide { opacity: 0 !important} </style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,
+{'GTM-KTCLFC5':true});</script>
+  <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-487443-1', 'auto');
+ga('require', 'GTM-KTCLFC5');
+ga('send', 'pageview');
+</script>
+  <title>[--STORE.SetAnswerPassword--]</title>
+  <script type="text/javascript">
+    [--CR_JAVASCRIPT--]
+  </script>
+  <!--CSS and JS links-->
+  <!-- Google Fonts -->
+  <link href="//fonts.googleapis.com/css?family=Lato:400,100,300,700,900,900italic,700italic,400italic|Open+Sans" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="/AE/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <!--plugins-->
+  <link href="/AE/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/AE/custom-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet">
+  <!--sky form pro css-->
+  <link href="/AE/sky-form/css/sky-forms.css" rel="stylesheet">
+  <!--custom css file-->
+  <link href="/AE/css/vp-fonts.css" rel="stylesheet">
+  <link href="/AE/css/style.css?v=1.1" rel="stylesheet">
+  <!-- MoreInfo product description custom css -->
+  <link href="/AE/css/moreInfo.styles.css" rel="stylesheet">
+  <link href="/AE/css/vp-flex-nav.css" rel="stylesheet">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style>
+    .well {
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      display:none;
+      margin:1em;
+      max-height:80%;
+      overflow-y:scroll;
+      max-width:65%;
+    }
+    #packages #craftsy-pop #local-pop #financing-pop, #callouts-pop, #lowest-price-pop{
+      transform: scale(0.8);
+    }
+    .popup_visible #packages #craftsy-pop #local-pop #financing-pop{
+      transform: scale(1);
+    }
+    /*craftsy pop styles*/
+    #longarmsale {
+      display:none;
+    }
+    #genevent h1 {
+      font-size: 26px !important;
+      color: #1f698b !important;
+      font-weight: normal !important;
+      font-family: Georgia, "Times New Roman", Times, serif !important;
+      line-height: 27px !important;
+    }
+    #genevent h3 {
+      font-family: Georgia, "Times New Roman", Times, serif !important;
+      font-size: 18px !important;
+      color: #a91930 !important;
+      font-weight: normal !important;
+    }
+  </style>
+</head>
+<body>
+  <script>
+var shoppingCartURL="[--SHOPPING_CART_URL--]";
+</script>
+
+
+  <div class="site-wrap">
+    <!--header start-->
+    <header class="header">
+      [--INCLUDE -VP-header-nav--]
+      [-- INCLUDE -VP-header-minicart PROCESS --]
+    </header>
+    <!--header end-->
+    <div class="cmlla" id="cmlla">
+      <!--main start-->
+      <main role="main">
+        <div class="container">
+
+          <div id="moreInfo">
+            [--CR_FORM--]
+            <div class="cbox mid">
+              <div class="space-60"></div>
+
+              <div class="mid">
+                [--CR_Header--]
+                <h1>[--STORE.SetAnswerPassword--]</h1>
+                <div class="cbox">
+                  <div class="pref-fcolc alert alert-danger">
+                    [-- CR_ShopSiteMessages --]
+                  </div>
+                </div>
+              </div>
+
+              <div class="cbox">
+                <p><b>[--STORE.EnterNewPassword--]</b></p>
+              </div>
+              <div class="cbox">
+                <div class="pref-fcolc">
+                  [-- BUTTON Submit --]
+                </div>
+                <div class="pref-fcolc">
+                  [-- BUTTON Cancel --]
+                </div>
+              </div>
+              [--CR_Footer--]
+
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+            </div>
+          </div>
+
+        </div>
+      </main>
+      <!--main end-->
+      [-- INCLUDE -VP-mailing-list --]
+      [-- INCLUDE -VP-footer--]
+      [-- INCLUDE SignInModal.sst PROCESS --]
+    </div>
+  </div>
+  
+<!-- BEGIN: Google Trusted Stores -->
+<!--<script type="text/javascript">
+var gts = gts || [];
+
+gts.push(["id", "231386"]);
+gts.push(["badge_position", "BOTTOM_RIGHT"]);
+gts.push(["locale", "en_US"]);
+gts.push(["google_base_subaccount_id", "1548534"]);
+gts.push(["google_base_country", "US"]);
+gts.push(["google_base_language", "en"]);
+
+(function() {
+  var gts = document.createElement("script");
+  gts.type = "text/javascript";
+  gts.async = true;
+  gts.src = "https://www.googlecommerce.com/trustedstores/api/js";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(gts, s);
+})();
+</script>-->
+<!-- END: Google Trusted Stores -->
+<!-- BEGIN: _GUARANTEE Seal -->
+<!--<span id="_GUARANTEE_SealSpan"></span>
+<script type="text/javascript" src="//nsg.symantec.com/private/rollover/rollover.js"></script>
+<script type="text/javascript">
+if(window._GUARANTEE && _GUARANTEE.Loaded) {
+ _GUARANTEE.Hash = 'x7%2FMzbgvjqCmhA7lp5x6FU7wMwkpQ36bB1EltmszD3devhKhlTwFP5q9X12sk2mPtEhZF3HnE%2BJ3viGbs4HPmw%3D%3D';
+ _GUARANTEE.WriteSeal("_GUARANTEE_SealSpan", "GuaranteedSeal");
+ _GUARANTEE.Bottom = 58;
+}
+</script>-->
+<!-- END: _GUARANTEE Seal -->
+
+</body>
+[-- INCLUDE -VP-AE-js-plugins --]
+<!--4-Tell Recommendations Begin (www.4-tell.com)-->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+  _4TellBoost={}; _4TellBoost.jq=jQuery.noConflict(true);
+</script>
+<script type="text/javascript" async src="//4tcdn.blob.core.windows.net/4tjs3/4TellLoader.js?alias=sewingma"></script>
+<!--4-Tell Recommendations End-->
+<script src="/AE/jquery-popup/jquery.popupoverlay.js"></script>
+
+  <script>
+    // Initialize the plugin
+    $('#packages, #craftsy-pop, #local-pop, #financing-pop, #geopopup, #lowest-price-pop, #callouts-pop').popup({
+      transition: 'all 0.3s',
+      scrolllock: true
+    });
+  </script>
+</html>
+[--END_DEFINE SET_ANSWER_PASSWORD--]
+#
+#  Main account screen - Account Information
+#
+[--DEFINE VIEW_EDIT--]
+<!DOCTYPE html>
+<html>
+  <!--main account screen -account information-->
+<head>
+  <style>.async-hide { opacity: 0 !important} </style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,
+{'GTM-KTCLFC5':true});</script>
+  <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-487443-1', 'auto');
+ga('require', 'GTM-KTCLFC5');
+ga('send', 'pageview');
+</script>
+  <title>[--STORE.AccountInformation--]</title>
+  <script type="text/javascript">
+    [--CR_JAVASCRIPT--]
+  </script>
+  <!--CSS and JS links-->
+  <!-- Google Fonts -->
+  <link href="//fonts.googleapis.com/css?family=Lato:400,100,300,700,900,900italic,700italic,400italic|Open+Sans" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="/AE/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <!--plugins-->
+  <link href="/AE/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/AE/custom-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet">
+  <!--sky form pro css-->
+  <link href="/AE/sky-form/css/sky-forms.css" rel="stylesheet">
+  <!--custom css file-->
+  <link href="/AE/css/vp-fonts.css" rel="stylesheet">
+  <link href="/AE/css/style.css?v=1.1" rel="stylesheet">
+  <!-- MoreInfo product description custom css -->
+  <link href="/AE/css/moreInfo.styles.css" rel="stylesheet">
+  <link href="/AE/css/vp-flex-nav.css" rel="stylesheet">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style>
+    table.view_edit td{
+      padding:0.6em;
+    }
+    .well {
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      display:none;
+      margin:1em;
+      max-height:80%;
+      overflow-y:scroll;
+      max-width:65%;
+    }
+    #packages #craftsy-pop #local-pop #financing-pop, #callouts-pop, #lowest-price-pop{
+      transform: scale(0.8);
+    }
+    .popup_visible #packages #craftsy-pop #local-pop #financing-pop{
+      transform: scale(1);
+    }
+    /*craftsy pop styles*/
+    #longarmsale {
+      display:none;
+    }
+    #genevent h1 {
+      font-size: 26px !important;
+      color: #1f698b !important;
+      font-weight: normal !important;
+      font-family: Georgia, "Times New Roman", Times, serif !important;
+      line-height: 27px !important;
+    }
+    #genevent h3 {
+      font-family: Georgia, "Times New Roman", Times, serif !important;
+      font-size: 18px !important;
+      color: #a91930 !important;
+      font-weight: normal !important;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    var shoppingCartURL="[--SHOPPING_CART_URL--]";
+  </script>
+
+
+  <div class="site-wrap">
+    <!--header start-->
+    <header class="header">
+      [--INCLUDE -VP-header-nav --]
+      [-- INCLUDE -VP-header-minicart PROCESS --]
+    </header>
+    <!--header end-->
+    <div class="cmlla" id="cmlla">
+      <!--main start-->
+      <main role="main">
+        <div class="container">
+
+          <div id="moreInfo">
+            [--CR_FORM--]
+            <div class="cbox mid">
+              <div class="space-60"></div>
+
+              <div class="mid">
+                [--CR_Header--]
+                <h1>[--STORE.AccountInformation--]</h1>
+                [--CR_ShopSiteMessages--]
+                <h2 class="cr-title">Welcome back [--CR_Customer_Name--]!</h2>
+                <p>Not [--CR_Customer_Name--]? <a href=\"https://www.vacplus.com/cgi-vacplus/sb/order.cgi?func=4&storeid=*121deeb48a92086890509d&html_reg=html\">Sign Out</a></p>
+                <p style="margin-bottom:0;">[--STORE.ViewInformation--]</p>
+              </div>
+
+              <div class="cbox">
+                <div class="pref-fcolc">
+                  [-- BUTTON Orders --]
+                </div>
+                <div class="pref-fcolc">
+                  [-- BUTTON Preferences --]
+                </div>
+              </div>
+              <div class="cbox">
+                <div class="pref-fcolc">
+                  [-- BUTTON ShipTo --]
+                </div>
+                <div class="pref-fcolc">
+                  [-- BUTTON Payment --]
+                </div>
+              </div>
+              <div class="cbox">
+                <div class="pref-fcolc">
+                  [-- BUTTON Password --]
+                </div>
+              </div>
+              <div class="cbox">
+                <div class="pref-fcolc back-to-cart">
+                  <div class="space-60"></div>
+                  [-- BUTTON BackToCart --]
+                </div>
+              </div>
+
+              [--CR_Footer--]
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+            </div>
+          </div>
+
+        </div>
+      </main>
+      <!--main end-->
+      [-- INCLUDE -VP-mailing-list --]
+      [-- INCLUDE -VP-footer--]
+      [-- INCLUDE SignInModal.sst PROCESS --]
+    </div>
+  </div>
+  
+<!-- BEGIN: Google Trusted Stores -->
+<!--<script type="text/javascript">
+var gts = gts || [];
+
+gts.push(["id", "231386"]);
+gts.push(["badge_position", "BOTTOM_RIGHT"]);
+gts.push(["locale", "en_US"]);
+gts.push(["google_base_subaccount_id", "1548534"]);
+gts.push(["google_base_country", "US"]);
+gts.push(["google_base_language", "en"]);
+
+(function() {
+  var gts = document.createElement("script");
+  gts.type = "text/javascript";
+  gts.async = true;
+  gts.src = "https://www.googlecommerce.com/trustedstores/api/js";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(gts, s);
+})();
+</script>-->
+<!-- END: Google Trusted Stores -->
+<!-- BEGIN: _GUARANTEE Seal -->
+<!--<span id="_GUARANTEE_SealSpan"></span>
+<script type="text/javascript" src="//nsg.symantec.com/private/rollover/rollover.js"></script>
+<script type="text/javascript">
+if(window._GUARANTEE && _GUARANTEE.Loaded) {
+ _GUARANTEE.Hash = 'x7%2FMzbgvjqCmhA7lp5x6FU7wMwkpQ36bB1EltmszD3devhKhlTwFP5q9X12sk2mPtEhZF3HnE%2BJ3viGbs4HPmw%3D%3D';
+ _GUARANTEE.WriteSeal("_GUARANTEE_SealSpan", "GuaranteedSeal");
+ _GUARANTEE.Bottom = 58;
+}
+</script>-->
+<!-- END: _GUARANTEE Seal -->
+
+</body>
+[-- INCLUDE -VP-AE-js-plugins --]
+<!--4-Tell Recommendations Begin (www.4-tell.com)-->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+  _4TellBoost={}; _4TellBoost.jq=jQuery.noConflict(true);
+</script>
+<script type="text/javascript" async src="//4tcdn.blob.core.windows.net/4tjs3/4TellLoader.js?alias=sewingma"></script>
+<!--4-Tell Recommendations End-->
+<script src="/AE/jquery-popup/jquery.popupoverlay.js"></script>
+
+  <script>
+    // Initialize the plugin
+    $('#packages, #craftsy-pop, #local-pop, #financing-pop, #geopopup, #lowest-price-pop, #callouts-pop').popup({
+      transition: 'all 0.3s',
+      scrolllock: true
+    });
+  </script>
+</html>
+[--END_DEFINE VIEW_EDIT--]
+#
+# Preferences
+#
+[--DEFINE PREFERENCES--]
+<!DOCTYPE html>
+<html>
+  <!--define preferences-->
+<head>
+  <style>.async-hide { opacity: 0 !important} </style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,
+{'GTM-KTCLFC5':true});</script>
+  <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-487443-1', 'auto');
+ga('require', 'GTM-KTCLFC5');
+ga('send', 'pageview');
+</script>
+  <title>[--STORE.Preferences--]</title>
+  <script type="text/javascript">
+    [--CR_JAVASCRIPT--]
+  </script>
+  <!--CSS and JS links-->
+  <!-- Google Fonts -->
+  <link href="//fonts.googleapis.com/css?family=Lato:400,100,300,700,900,900italic,700italic,400italic|Open+Sans" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="/AE/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <!--plugins-->
+  <link href="/AE/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/AE/custom-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet">
+  <!--sky form pro css-->
+  <link href="/AE/sky-form/css/sky-forms.css" rel="stylesheet">
+  <!--custom css file-->
+  <link href="/AE/css/vp-fonts.css" rel="stylesheet">
+  <link href="/AE/css/style.css?v=1.1" rel="stylesheet">
+  <!-- MoreInfo product description custom css -->
+  <link href="/AE/css/moreInfo.styles.css" rel="stylesheet">
+  <link href="/AE/css/vp-flex-nav.css" rel="stylesheet">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style>
+    table.cr-pref td{
+      padding:0.6em;
+    }
+  </style>
+  <style>
+    .well {
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      display:none;
+      margin:1em;
+      max-height:80%;
+      overflow-y:scroll;
+      max-width:65%;
+    }
+    #packages #craftsy-pop #local-pop #financing-pop, #callouts-pop, #lowest-price-pop{
+      transform: scale(0.8);
+    }
+    .popup_visible #packages #craftsy-pop #local-pop #financing-pop{
+      transform: scale(1);
+    }
+    /*craftsy pop styles*/
+    #longarmsale {
+      display:none;
+    }
+    #genevent h1 {
+      font-size: 26px !important;
+      color: #1f698b !important;
+      font-weight: normal !important;
+      font-family: Georgia, "Times New Roman", Times, serif !important;
+      line-height: 27px !important;
+    }
+    #genevent h3 {
+      font-family: Georgia, "Times New Roman", Times, serif !important;
+      font-size: 18px !important;
+      color: #a91930 !important;
+      font-weight: normal !important;
+    }
+  </style>
+</head>
+<body>
+  <script>
+var shoppingCartURL="[--SHOPPING_CART_URL--]";
+</script>
+
+
+<div class="site-wrap">
+  <!--header start-->
+  <header class="header">
+    [--INCLUDE -VP-header-nav--]
+    [-- INCLUDE -VP-header-minicart PROCESS --]
+  </header>
+  <!--header end-->
+  <div class="cmlla" id="cmlla">
+    <!--main start-->
+    <main role="main">
+      <div class="container">
+
+        <div id="moreInfo">
+          <div class="dbox">
+            <div class="space-60"></div>
+            <div class="dbox">
+              [-- CR_Header --]
+              [-- CR_FORM --]              
+            </div>
+
+            <div class="cbox mid">
+              <h1>[--STORE.Preferences--]</h1>
+              <p>Not [--CR_Customer_Name--]? <a href=\"https://www.vacplus.com/cgi-vacplus/sb/order.cgi?func=4&storeid=*121deeb48a92086890509d&html_reg=html\">Sign Out</a></p>
+              <p>[--CR_ShopSiteMessages--]</p>
+            </div>
+
+            <div class="dbox preference">
+              <div class="dbox">
+                [-- CR_Email --]
+              </div>
+              <div class="dbox">
+                <p class="email-security">[-- STORE.EmailSecurity --]</p>
+              </div>
+              <div class="dbox">
+                [-- CR_Name --]
+              </div>
+              <div class="dbox">
+                [-- CR_Email_Type --]
+              </div>
+              <div class="dbox">
+                [-- CR_Save_Payment --]
+              </div>
+              <div class="cbox">
+                <div class="pref-fcolc">
+                  [--BUTTON Save--]
+                </div>
+                <div class="pref-fcolc">
+                  [--BUTTON Cancel--]
+                </div>
+              </div>
+              <div class="cbox">
+                <div class="pref-fcolc back-to-cart">
+                  <div class="space-60"></div>
+                  [-- BUTTON BackToCart --]
+                </div>
+              </div>
+  
+              [--CR_Footer--]
+            </div>
+            <div class="space-60"></div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+    <!--main end-->
+    [-- INCLUDE -VP-mailing-list --]
+    [-- INCLUDE -VP-footer--]
+    [-- INCLUDE SignInModal.sst PROCESS --]
+  </div>
+</div>
+
+<!-- BEGIN: Google Trusted Stores -->
+<!--<script type="text/javascript">
+var gts = gts || [];
+
+gts.push(["id", "231386"]);
+gts.push(["badge_position", "BOTTOM_RIGHT"]);
+gts.push(["locale", "en_US"]);
+gts.push(["google_base_subaccount_id", "1548534"]);
+gts.push(["google_base_country", "US"]);
+gts.push(["google_base_language", "en"]);
+
+(function() {
+  var gts = document.createElement("script");
+  gts.type = "text/javascript";
+  gts.async = true;
+  gts.src = "https://www.googlecommerce.com/trustedstores/api/js";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(gts, s);
+})();
+</script>-->
+<!-- END: Google Trusted Stores -->
+<!-- BEGIN: _GUARANTEE Seal -->
+<!--<span id="_GUARANTEE_SealSpan"></span>
+<script type="text/javascript" src="//nsg.symantec.com/private/rollover/rollover.js"></script>
+<script type="text/javascript">
+if(window._GUARANTEE && _GUARANTEE.Loaded) {
+ _GUARANTEE.Hash = 'x7%2FMzbgvjqCmhA7lp5x6FU7wMwkpQ36bB1EltmszD3devhKhlTwFP5q9X12sk2mPtEhZF3HnE%2BJ3viGbs4HPmw%3D%3D';
+ _GUARANTEE.WriteSeal("_GUARANTEE_SealSpan", "GuaranteedSeal");
+ _GUARANTEE.Bottom = 58;
+}
+</script>-->
+<!-- END: _GUARANTEE Seal -->
+
+</body>
+[-- INCLUDE -VP-AE-js-plugins --]
+<!--4-Tell Recommendations Begin (www.4-tell.com)-->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+  _4TellBoost={}; _4TellBoost.jq=jQuery.noConflict(true);
+</script>
+<script type="text/javascript" async src="//4tcdn.blob.core.windows.net/4tjs3/4TellLoader.js?alias=sewingma"></script>
+<!--4-Tell Recommendations End-->
+<script src="/AE/jquery-popup/jquery.popupoverlay.js"></script>
+
+  <script>
+    // Initialize the plugin
+    $('#packages, #craftsy-pop, #local-pop, #financing-pop, #geopopup, #lowest-price-pop, #callouts-pop').popup({
+      transition: 'all 0.3s',
+      scrolllock: true
+    });
+  </script>
+</html>
+[--END_DEFINE PREFERENCES--]
+#
+# Edit Challenge
+#
+[-- DEFINE EDIT_CHALLENGE --]
+<!DOCTYPE html>
+<html>
+  <!--define edit challenge-->
+<head>
+  <style>.async-hide { opacity: 0 !important} </style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,
+{'GTM-KTCLFC5':true});</script>
+  <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-487443-1', 'auto');
+ga('require', 'GTM-KTCLFC5');
+ga('send', 'pageview');
+</script>
+  <title>[--STORE.EditChallenge--]</title>
+  <script type="text/javascript">
+    [--CR_JAVASCRIPT--]
+  </script>
+  <!--CSS and JS links-->
+  <!-- Google Fonts -->
+  <link href="//fonts.googleapis.com/css?family=Lato:400,100,300,700,900,900italic,700italic,400italic|Open+Sans" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="/AE/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <!--plugins-->
+  <link href="/AE/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/AE/custom-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet">
+  <!--sky form pro css-->
+  <link href="/AE/sky-form/css/sky-forms.css" rel="stylesheet">
+  <!--custom css file-->
+  <link href="/AE/css/vp-fonts.css" rel="stylesheet">
+  <link href="/AE/css/style.css?v=1.1" rel="stylesheet">
+  <!-- MoreInfo product description custom css -->
+  <link href="/AE/css/moreInfo.styles.css" rel="stylesheet">
+  <link href="/AE/css/vp-flex-nav.css" rel="stylesheet">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style>
+    table.challenge td{
+      padding: 0.6em;
+    }
+  </style>
+  <style>
+    .well {
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      display:none;
+      margin:1em;
+      max-height:80%;
+      overflow-y:scroll;
+      max-width:65%;
+    }
+    #packages #craftsy-pop #local-pop #financing-pop, #callouts-pop, #lowest-price-pop{
+      transform: scale(0.8);
+    }
+    .popup_visible #packages #craftsy-pop #local-pop #financing-pop{
+      transform: scale(1);
+    }
+    /*craftsy pop styles*/
+    #longarmsale {
+      display:none;
+    }
+    #genevent h1 {
+      font-size: 26px !important;
+      color: #1f698b !important;
+      font-weight: normal !important;
+      font-family: Georgia, "Times New Roman", Times, serif !important;
+      line-height: 27px !important;
+    }
+    #genevent h3 {
+      font-family: Georgia, "Times New Roman", Times, serif !important;
+      font-size: 18px !important;
+      color: #a91930 !important;
+      font-weight: normal !important;
+    }
+  </style>
+</head>
+<body>
+  <script>
+var shoppingCartURL="[--SHOPPING_CART_URL--]";
+</script>
+
+
+<div class="site-wrap">
+  <!--header start-->
+  <header class="header">
+    [--INCLUDE -VP-header-nav --]
+    [-- INCLUDE -VP-header-minicart PROCESS --]
+  </header>
+  <!--header end-->
+  <div class="cmlla" id="cmlla">
+    <!--main start-->
+    <main role="main">
+      <div class="container">
+
+          <div id="moreInfo">
+            [--CR_FORM--]
+            <div class="cbox mid">
+              <div class="space-60"></div>
+
+              <div class="mid">
+                [--CR_Header--]
+                <h1>[--STORE.EditChallenge--]</h1>
+                <p>Not [--CR_Customer_Name--]? <a href=\"https://www.vacplus.com/cgi-vacplus/sb/order.cgi?func=4&storeid=*121deeb48a92086890509d&html_reg=html\">Sign Out</a></p>
+                <div class="cbox">
+                  <div class="pref-fcolc alert alert-danger">
+                    [-- CR_ShopSiteMessages --]
+                  </div>
+                </div>
+              </div>
+
+              <div class="cbox">
+                <p>[--STORE.EditChallengeText--]</p>
+              </div>
+              <div class="cbox">
+                [--CR_Edit_Challenge--]
+              </div>
+              <div class="cbox">
+                <div class="pref-fcolc">
+                  [-- BUTTON Change_Challenge --]
+                </div>
+                <div class="pref-fcolc">
+                  [-- BUTTON Cancel --]
+                </div>
+              </div>
+              <div class="cbox">
+                <div class="pref-fcolc back-to-cart">
+                  <div class="space-60"></div>
+                  [-- BUTTON BackToCart --]
+                </div>
+              </div>
+              [--CR_Footer--]
+
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+            </div>
+          </div>
+
+      </div>
+    </main>
+    <!--main end-->
+    [-- INCLUDE -VP-mailing-list --]
+    [-- INCLUDE -VP-footer--]
+    [-- INCLUDE SignInModal.sst PROCESS --]
+  </div>
+</div>
+
+<!-- BEGIN: Google Trusted Stores -->
+<!--<script type="text/javascript">
+var gts = gts || [];
+
+gts.push(["id", "231386"]);
+gts.push(["badge_position", "BOTTOM_RIGHT"]);
+gts.push(["locale", "en_US"]);
+gts.push(["google_base_subaccount_id", "1548534"]);
+gts.push(["google_base_country", "US"]);
+gts.push(["google_base_language", "en"]);
+
+(function() {
+  var gts = document.createElement("script");
+  gts.type = "text/javascript";
+  gts.async = true;
+  gts.src = "https://www.googlecommerce.com/trustedstores/api/js";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(gts, s);
+})();
+</script>-->
+<!-- END: Google Trusted Stores -->
+<!-- BEGIN: _GUARANTEE Seal -->
+<!--<span id="_GUARANTEE_SealSpan"></span>
+<script type="text/javascript" src="//nsg.symantec.com/private/rollover/rollover.js"></script>
+<script type="text/javascript">
+if(window._GUARANTEE && _GUARANTEE.Loaded) {
+ _GUARANTEE.Hash = 'x7%2FMzbgvjqCmhA7lp5x6FU7wMwkpQ36bB1EltmszD3devhKhlTwFP5q9X12sk2mPtEhZF3HnE%2BJ3viGbs4HPmw%3D%3D';
+ _GUARANTEE.WriteSeal("_GUARANTEE_SealSpan", "GuaranteedSeal");
+ _GUARANTEE.Bottom = 58;
+}
+</script>-->
+<!-- END: _GUARANTEE Seal -->
+
+</body>
+[-- INCLUDE -VP-AE-js-plugins --]
+<!--4-Tell Recommendations Begin (www.4-tell.com)-->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+  _4TellBoost={}; _4TellBoost.jq=jQuery.noConflict(true);
+</script>
+<script type="text/javascript" async src="//4tcdn.blob.core.windows.net/4tjs3/4TellLoader.js?alias=sewingma"></script>
+<!--4-Tell Recommendations End-->
+<script src="/AE/jquery-popup/jquery.popupoverlay.js"></script>
+
+  <script>
+    // Initialize the plugin
+    $('#packages, #craftsy-pop, #local-pop, #financing-pop, #geopopup, #lowest-price-pop, #callouts-pop').popup({
+      transition: 'all 0.3s',
+      scrolllock: true
+    });
+  </script>
+</html>
+[-- END_DEFINE EDIT_CHALLENGE --]
+#
+# Edit Password
+#
+[-- DEFINE EDIT_PASSWORD --]
+<!DOCTYPE html>
+<html>
+  <!--define edit password-->
+<head>
+  <style>.async-hide { opacity: 0 !important} </style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,
+{'GTM-KTCLFC5':true});</script>
+  <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-487443-1', 'auto');
+ga('require', 'GTM-KTCLFC5');
+ga('send', 'pageview');
+</script>
+  <title>[-- STORE.EditPassword --]</title>
+  <script type="text/javascript">
+    [--CR_JAVASCRIPT--]
+  </script>
+  <!--CSS and JS links-->
+  <!-- Google Fonts -->
+  <link href="//fonts.googleapis.com/css?family=Lato:400,100,300,700,900,900italic,700italic,400italic|Open+Sans" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="/AE/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <!--plugins-->
+  <link href="/AE/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/AE/custom-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet">
+  <!--sky form pro css-->
+  <link href="/AE/sky-form/css/sky-forms.css" rel="stylesheet">
+  <!--custom css file-->
+  <link href="/AE/css/vp-fonts.css" rel="stylesheet">
+  <link href="/AE/css/style.css?v=1.1" rel="stylesheet">
+  <!-- MoreInfo product description custom css -->
+  <link href="/AE/css/moreInfo.styles.css" rel="stylesheet">
+  <link href="/AE/css/vp-flex-nav.css" rel="stylesheet">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style>
+    table.pw td{
+      padding:0.6em;
+    }
+  </style>
+  <style>
+    .well {
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      display:none;
+      margin:1em;
+      max-height:80%;
+      overflow-y:scroll;
+      max-width:65%;
+    }
+    #packages #craftsy-pop #local-pop #financing-pop, #callouts-pop, #lowest-price-pop{
+      transform: scale(0.8);
+    }
+    .popup_visible #packages #craftsy-pop #local-pop #financing-pop{
+      transform: scale(1);
+    }
+    /*craftsy pop styles*/
+    #longarmsale {
+      display:none;
+    }
+    #genevent h1 {
+      font-size: 26px !important;
+      color: #1f698b !important;
+      font-weight: normal !important;
+      font-family: Georgia, "Times New Roman", Times, serif !important;
+      line-height: 27px !important;
+    }
+    #genevent h3 {
+      font-family: Georgia, "Times New Roman", Times, serif !important;
+      font-size: 18px !important;
+      color: #a91930 !important;
+      font-weight: normal !important;
+    }
+  </style>
+</head>
+<body>
+  <script>
+var shoppingCartURL="[--SHOPPING_CART_URL--]";
+</script>
+
+
+<div class="site-wrap">
+  <!--header start-->
+  <header class="header">
+    [--INCLUDE -VP-header-nav --]
+    [-- INCLUDE -VP-header-minicart PROCESS --]
+  </header>
+  <!--header end-->
+  <div class="cmlla" id="cmlla">
+    <!--main start-->
+    <main role="main">
+      <div class="container">
+
+          <div id="moreInfo">
+            [--CR_FORM--]
+            <div class="cbox mid">
+              <div class="space-60"></div>
+
+              <div class="mid">
+                [--CR_Header--]
+                <h1>[--STORE.EditPassword--]</h1>
+                <p>Not [--CR_Customer_Name--]? <a href=\"https://www.vacplus.com/cgi-vacplus/sb/order.cgi?func=4&storeid=*121deeb48a92086890509d&html_reg=html\">Sign Out</a></p>
+                <div class="cbox">
+                  <div class="pref-fcolc alert alert-danger">
+                    [-- CR_ShopSiteMessages --]
+                  </div>
+                </div>
+              </div>
+
+              <div class="cbox">
+                [-- CR_Edit_Password --]
+              </div>
+              <div class="cbox">
+                [--CR_Edit_Challenge--]
+              </div>
+              <div class="cbox">
+                <div class="pref-fcolc">
+                  [-- BUTTON Change_Password --]
+                </div>
+                <div class="pref-fcolc">
+                  [-- BUTTON Cancel --]
+                </div>
+              </div>
+              <div class="cbox">
+                <h2>[-- STORE.ChallengeQuestion --]</h2>
+              </div>
+              <div class="cbox">
+                <p>[-- STORE.ChangeChallengeText --]</p>
+              </div>
+              <div class="cbox">
+                <div class="pref-fcolc">
+                  [-- BUTTON Change_Challenge --]
+                </div>
+              </div>
+              <div class="cbox">
+                <div class="pref-fcolc back-to-cart">
+                  <div class="space-60"></div>
+                  [-- BUTTON BackToCart --]
+                </div>
+              </div>
+              [--CR_Footer--]
+
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+            </div>
+          </div>
+
+      </div>
+    </main>
+    <!--main end-->
+    [-- INCLUDE -VP-mailing-list --]
+    [-- INCLUDE -VP-footer--]
+    [-- INCLUDE SignInModal.sst PROCESS --]
+  </div>
+</div>
+
+<!-- BEGIN: Google Trusted Stores -->
+<!--<script type="text/javascript">
+var gts = gts || [];
+
+gts.push(["id", "231386"]);
+gts.push(["badge_position", "BOTTOM_RIGHT"]);
+gts.push(["locale", "en_US"]);
+gts.push(["google_base_subaccount_id", "1548534"]);
+gts.push(["google_base_country", "US"]);
+gts.push(["google_base_language", "en"]);
+
+(function() {
+  var gts = document.createElement("script");
+  gts.type = "text/javascript";
+  gts.async = true;
+  gts.src = "https://www.googlecommerce.com/trustedstores/api/js";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(gts, s);
+})();
+</script>-->
+<!-- END: Google Trusted Stores -->
+<!-- BEGIN: _GUARANTEE Seal -->
+<!--<span id="_GUARANTEE_SealSpan"></span>
+<script type="text/javascript" src="//nsg.symantec.com/private/rollover/rollover.js"></script>
+<script type="text/javascript">
+if(window._GUARANTEE && _GUARANTEE.Loaded) {
+ _GUARANTEE.Hash = 'x7%2FMzbgvjqCmhA7lp5x6FU7wMwkpQ36bB1EltmszD3devhKhlTwFP5q9X12sk2mPtEhZF3HnE%2BJ3viGbs4HPmw%3D%3D';
+ _GUARANTEE.WriteSeal("_GUARANTEE_SealSpan", "GuaranteedSeal");
+ _GUARANTEE.Bottom = 58;
+}
+</script>-->
+<!-- END: _GUARANTEE Seal -->
+
+</body>
+[-- INCLUDE -VP-AE-js-plugins --]
+<!--4-Tell Recommendations Begin (www.4-tell.com)-->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+  _4TellBoost={}; _4TellBoost.jq=jQuery.noConflict(true);
+</script>
+<script type="text/javascript" async src="//4tcdn.blob.core.windows.net/4tjs3/4TellLoader.js?alias=sewingma"></script>
+<!--4-Tell Recommendations End-->
+<script src="/AE/jquery-popup/jquery.popupoverlay.js"></script>
+
+  <script>
+    // Initialize the plugin
+    $('#packages, #craftsy-pop, #local-pop, #financing-pop, #geopopup, #lowest-price-pop, #callouts-pop').popup({
+      transition: 'all 0.3s',
+      scrolllock: true
+    });
+  </script>
+</html>
+[-- END_DEFINE EDIT_PASSWORD --]
+#
+# Payment Account
+#
+[-- DEFINE PAYMENT_ACCOUNTS --]
+<!DOCTYPE html>
+<html>
+  <!--payment account-->
+<head>
+  <style>.async-hide { opacity: 0 !important} </style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,
+{'GTM-KTCLFC5':true});</script>
+  <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-487443-1', 'auto');
+ga('require', 'GTM-KTCLFC5');
+ga('send', 'pageview');
+</script>
+  <title>[-- STORE.PaymentAccounts --]</title>
+  <script type="text/javascript">
+    [--CR_JAVASCRIPT--]
+  </script>
+  <!--CSS and JS links-->
+  <!-- Google Fonts -->
+  <link href="//fonts.googleapis.com/css?family=Lato:400,100,300,700,900,900italic,700italic,400italic|Open+Sans" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="/AE/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <!--plugins-->
+  <link href="/AE/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/AE/custom-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet">
+  <!--sky form pro css-->
+  <link href="/AE/sky-form/css/sky-forms.css" rel="stylesheet">
+  <!--custom css file-->
+  <link href="/AE/css/vp-fonts.css" rel="stylesheet">
+  <link href="/AE/css/style.css?v=1.1" rel="stylesheet">
+  <!-- MoreInfo product description custom css -->
+  <link href="/AE/css/moreInfo.styles.css" rel="stylesheet">
+  <link href="/AE/css/vp-flex-nav.css" rel="stylesheet">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style>
+    table.cr-payment td{
+      padding: 0.6em;
+    }
+  </style>
+  <style>
+    .well {
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      display:none;
+      margin:1em;
+      max-height:80%;
+      overflow-y:scroll;
+      max-width:65%;
+    }
+    #packages #craftsy-pop #local-pop #financing-pop, #callouts-pop, #lowest-price-pop{
+      transform: scale(0.8);
+    }
+    .popup_visible #packages #craftsy-pop #local-pop #financing-pop{
+      transform: scale(1);
+    }
+    /*craftsy pop styles*/
+    #longarmsale {
+      display:none;
+    }
+    #genevent h1 {
+      font-size: 26px !important;
+      color: #1f698b !important;
+      font-weight: normal !important;
+      font-family: Georgia, "Times New Roman", Times, serif !important;
+      line-height: 27px !important;
+    }
+    #genevent h3 {
+      font-family: Georgia, "Times New Roman", Times, serif !important;
+      font-size: 18px !important;
+      color: #a91930 !important;
+      font-weight: normal !important;
+    }
+  </style>
+</head>
+<body>
+  <script>
+var shoppingCartURL="[--SHOPPING_CART_URL--]";
+</script>
+
+
+<div class="site-wrap">
+  <!--header start-->
+  <header class="header">
+    [--INCLUDE -VP-header-nav --]
+    [-- INCLUDE -VP-header-minicart PROCESS --]
+  </header>
+  <!--header end-->
+  <div class="cmlla" id="cmlla">
+    <!--main start-->
+
+          <div id="moreInfo">
+            [--CR_FORM--]
+            <div class="cbox mid">
+              <div class="space-60"></div>
+
+              <div class="mid">
+                [--CR_Header--]
+                <h1>[-- STORE.PaymentAccounts --]</h1>
+                <p>Not [--CR_Customer_Name--]? <a href=\"https://www.vacplus.com/cgi-vacplus/sb/order.cgi?func=4&storeid=*121deeb48a92086890509d&html_reg=html\">Sign Out</a></p>
+                <div class="cbox">
+                  <div class="pref-fcolc alert alert-danger">
+                    [--CR_ShopSiteMessages--]
+                  </div>
+                </div>
+                <p>[-- STORE.PaymentText --]</p>
+              </div>
+
+              <div class="cbox">
+                [-- CR_Payment_List --]
+              </div>
+              <div class="cbox">
+                <div class="pref-fcolc">
+                  [-- BUTTON Edit --]
+                </div>
+                <div class="pref-fcolc">
+                  [-- BUTTON Delete --]
+                </div>
+              </div>
+              <div class="cbox">
+                <div class="pref-fcolc">
+                  <p>[-- STORE.PaymentAdd --]</p>
+                </div>
+              </div>
+              <div class="cbox">
+                <div class="pref-fcolc">
+                  <div class="space-60"></div>
+                  [-- BUTTON Done --]
+                </div>
+              </div>
+              <div class="cbox">
+                <div class="pref-fcolc back-to-cart">
+                  <div class="space-60"></div>
+                  [-- BUTTON BackToCart --]
+                </div>
+              </div>
+              [--CR_Footer--]
+
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+            </div>
+          </div>
+
+    </main>
+    <!--main end-->
+    [-- INCLUDE -VP-mailing-list --]
+    [-- INCLUDE -VP-footer--]
+    [-- INCLUDE SignInModal.sst PROCESS --]
+  </div>
+</div>
+
+<!-- BEGIN: Google Trusted Stores -->
+<!--<script type="text/javascript">
+var gts = gts || [];
+
+gts.push(["id", "231386"]);
+gts.push(["badge_position", "BOTTOM_RIGHT"]);
+gts.push(["locale", "en_US"]);
+gts.push(["google_base_subaccount_id", "1548534"]);
+gts.push(["google_base_country", "US"]);
+gts.push(["google_base_language", "en"]);
+
+(function() {
+  var gts = document.createElement("script");
+  gts.type = "text/javascript";
+  gts.async = true;
+  gts.src = "https://www.googlecommerce.com/trustedstores/api/js";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(gts, s);
+})();
+</script>-->
+<!-- END: Google Trusted Stores -->
+<!-- BEGIN: _GUARANTEE Seal -->
+<!--<span id="_GUARANTEE_SealSpan"></span>
+<script type="text/javascript" src="//nsg.symantec.com/private/rollover/rollover.js"></script>
+<script type="text/javascript">
+if(window._GUARANTEE && _GUARANTEE.Loaded) {
+ _GUARANTEE.Hash = 'x7%2FMzbgvjqCmhA7lp5x6FU7wMwkpQ36bB1EltmszD3devhKhlTwFP5q9X12sk2mPtEhZF3HnE%2BJ3viGbs4HPmw%3D%3D';
+ _GUARANTEE.WriteSeal("_GUARANTEE_SealSpan", "GuaranteedSeal");
+ _GUARANTEE.Bottom = 58;
+}
+</script>-->
+<!-- END: _GUARANTEE Seal -->
+
+</body>
+[-- INCLUDE -VP-AE-js-plugins --]
+<!--4-Tell Recommendations Begin (www.4-tell.com)-->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+  _4TellBoost={}; _4TellBoost.jq=jQuery.noConflict(true);
+</script>
+<script type="text/javascript" async src="//4tcdn.blob.core.windows.net/4tjs3/4TellLoader.js?alias=sewingma"></script>
+<!--4-Tell Recommendations End-->
+<script src="/AE/jquery-popup/jquery.popupoverlay.js"></script>
+
+  <script>
+    // Initialize the plugin
+    $('#packages, #craftsy-pop, #local-pop, #financing-pop, #geopopup, #lowest-price-pop, #callouts-pop').popup({
+      transition: 'all 0.3s',
+      scrolllock: true
+    });
+  </script>
+</html>
+[-- END_DEFINE PAYMENT_ACCOUNTS --]
+#
+# Edit Payment Option
+#
+[-- DEFINE EDIT_PAYMENT_ACCOUNT --]
+<!DOCTYPE html>
+<html>
+  <!--edit payment account-->
+<head>
+  <style>.async-hide { opacity: 0 !important} </style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,
+{'GTM-KTCLFC5':true});</script>
+  <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-487443-1', 'auto');
+ga('require', 'GTM-KTCLFC5');
+ga('send', 'pageview');
+</script>
+  <title>[-- STORE.EditPaymentAccount --]</title>
+  <script type="text/javascript">
+    [--CR_JAVASCRIPT--]
+  </script>
+  <!--CSS and JS links-->
+  <!-- Google Fonts -->
+  <link href="//fonts.googleapis.com/css?family=Lato:400,100,300,700,900,900italic,700italic,400italic|Open+Sans" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="/AE/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <!--plugins-->
+  <link href="/AE/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/AE/custom-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet">
+  <!--sky form pro css-->
+  <link href="/AE/sky-form/css/sky-forms.css" rel="stylesheet">
+  <!--custom css file-->
+  <link href="/AE/css/vp-fonts.css" rel="stylesheet">
+  <link href="/AE/css/style.css?v=1.1" rel="stylesheet">
+  <!-- MoreInfo product description custom css -->
+  <link href="/AE/css/moreInfo.styles.css" rel="stylesheet">
+  <link href="/AE/css/vp-flex-nav.css" rel="stylesheet">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style>
+    table.cr-edit-pay td{
+      padding: 0.6em;
+    }
+  </style>
+</head>
+<style>
+    .well {
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      display:none;
+      margin:1em;
+      max-height:80%;
+      overflow-y:scroll;
+      max-width:65%;
+    }
+    #packages #craftsy-pop #local-pop #financing-pop, #callouts-pop, #lowest-price-pop{
+      transform: scale(0.8);
+    }
+    .popup_visible #packages #craftsy-pop #local-pop #financing-pop{
+      transform: scale(1);
+    }
+    /*craftsy pop styles*/
+    #longarmsale {
+      display:none;
+    }
+    #genevent h1 {
+      font-size: 26px !important;
+      color: #1f698b !important;
+      font-weight: normal !important;
+      font-family: Georgia, "Times New Roman", Times, serif !important;
+      line-height: 27px !important;
+    }
+    #genevent h3 {
+      font-family: Georgia, "Times New Roman", Times, serif !important;
+      font-size: 18px !important;
+      color: #a91930 !important;
+      font-weight: normal !important;
+    }
+  </style>
+<body>
+  <script>
+var shoppingCartURL="[--SHOPPING_CART_URL--]";
+</script>
+
+
+<div class="site-wrap">
+  <!--header start-->
+  <header class="header">
+    [--INCLUDE -VP-header-nav --]
+    [-- INCLUDE -VP-header-minicart PROCESS --]
+  </header>
+  <!--header end-->
+  <div class="cmlla" id="cmlla">
+    <!--main start-->
+    <main role="main">
+      <div class="container">
+
+          <div id="moreInfo">
+            [--CR_FORM--]
+            <div class="cbox mid">
+              <div class="space-60"></div>
+
+              <div class="mid">
+                [--CR_Header--]
+                <h1>[-- STORE.EditPaymentAccount --]</h1>
+                <p>Not [--CR_Customer_Name--]? <a href=\"https://www.vacplus.com/cgi-vacplus/sb/order.cgi?func=4&storeid=*121deeb48a92086890509d&html_reg=html\">Sign Out</a></p>
+                <div class="cbox">
+                  <div class="pref-fcolc alert alert-danger">
+                    [-- CR_ShopSiteMessages --]
+                  </div>
+                </div>
+              </div>
+
+              <div class="cbox">
+                <p><b>[-- STORE.DisplayName --]:</b> [-- CR_DisplayName --]</p>
+              </div>
+              <div class="cbox">
+                [-- STORE.EditPaymentText --]
+              </div>
+              <div class="cbox">
+                <h2>[-- STORE.EditPaymentInformation --]</h2>
+                [-- CR_Edit_Payment_Info --]
+              </div>
+              <div class="cbox">
+                <h2>[-- STORE.EditPaymentBilling --]</h2>
+                [-- CR_Edit_Payment_Address --]
+              </div>
+              <div class="cbox">
+                <div class="pref-fcolc">
+                  [-- BUTTON Save --]
+                </div>
+                <div class="pref-fcolc">
+                  [-- BUTTON Cancel --]
+                </div>
+              </div>
+              <div class="cbox">
+                <div class="pref-fcolc back-to-cart">
+                  <div class="space-60"></div>
+                  [-- BUTTON BackToCart --]
+                </div>
+              </div>
+              [--CR_Footer--]
+
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+            </div>
+          </div>
+
+      </div>
+    </main>
+    <!--main end-->
+    [-- INCLUDE -VP-mailing-list --]
+    [-- INCLUDE -VP-footer--]
+    [-- INCLUDE SignInModal.sst PROCESS --]
+  </div>
+</div>
+
+<!-- BEGIN: Google Trusted Stores -->
+<!--<script type="text/javascript">
+var gts = gts || [];
+
+gts.push(["id", "231386"]);
+gts.push(["badge_position", "BOTTOM_RIGHT"]);
+gts.push(["locale", "en_US"]);
+gts.push(["google_base_subaccount_id", "1548534"]);
+gts.push(["google_base_country", "US"]);
+gts.push(["google_base_language", "en"]);
+
+(function() {
+  var gts = document.createElement("script");
+  gts.type = "text/javascript";
+  gts.async = true;
+  gts.src = "https://www.googlecommerce.com/trustedstores/api/js";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(gts, s);
+})();
+</script>-->
+<!-- END: Google Trusted Stores -->
+<!-- BEGIN: _GUARANTEE Seal -->
+<!--<span id="_GUARANTEE_SealSpan"></span>
+<script type="text/javascript" src="//nsg.symantec.com/private/rollover/rollover.js"></script>
+<script type="text/javascript">
+if(window._GUARANTEE && _GUARANTEE.Loaded) {
+ _GUARANTEE.Hash = 'x7%2FMzbgvjqCmhA7lp5x6FU7wMwkpQ36bB1EltmszD3devhKhlTwFP5q9X12sk2mPtEhZF3HnE%2BJ3viGbs4HPmw%3D%3D';
+ _GUARANTEE.WriteSeal("_GUARANTEE_SealSpan", "GuaranteedSeal");
+ _GUARANTEE.Bottom = 58;
+}
+</script>-->
+<!-- END: _GUARANTEE Seal -->
+
+</body>
+[-- INCLUDE -VP-AE-js-plugins --]
+<!--4-Tell Recommendations Begin (www.4-tell.com)-->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+  _4TellBoost={}; _4TellBoost.jq=jQuery.noConflict(true);
+</script>
+<script type="text/javascript" async src="//4tcdn.blob.core.windows.net/4tjs3/4TellLoader.js?alias=sewingma"></script>
+<!--4-Tell Recommendations End-->
+<script src="/AE/jquery-popup/jquery.popupoverlay.js"></script>
+
+  <script>
+    // Initialize the plugin
+    $('#packages, #craftsy-pop, #local-pop, #financing-pop, #geopopup, #lowest-price-pop, #callouts-pop').popup({
+      transition: 'all 0.3s',
+      scrolllock: true
+    });
+  </script>
+</html>
+[-- END_DEFINE EDIT_PAYMENT_ACCOUNT --]
+#
+# Delete Payment Option
+#
+[-- DEFINE DELETE_PAYMENT_ACCOUNT --]
+<!DOCTYPE html>
+<html>
+  <!--delete payment option-->
+<head>
+  <style>.async-hide { opacity: 0 !important} </style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,
+{'GTM-KTCLFC5':true});</script>
+  <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-487443-1', 'auto');
+ga('require', 'GTM-KTCLFC5');
+ga('send', 'pageview');
+</script>
+  <title>[-- STORE.DeletePaymentAccount --]</title>
+  <script type="text/javascript">
+    [--CR_JAVASCRIPT--]
+  </script>
+  <!--CSS and JS links-->
+  <!-- Google Fonts -->
+  <link href="//fonts.googleapis.com/css?family=Lato:400,100,300,700,900,900italic,700italic,400italic|Open+Sans" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="/AE/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <!--plugins-->
+  <link href="/AE/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/AE/custom-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet">
+  <!--sky form pro css-->
+  <link href="/AE/sky-form/css/sky-forms.css" rel="stylesheet">
+  <!--custom css file-->
+  <link href="/AE/css/vp-fonts.css" rel="stylesheet">
+  <link href="/AE/css/style.css?v=1.1" rel="stylesheet">
+  <!-- MoreInfo product description custom css -->
+  <link href="/AE/css/moreInfo.styles.css" rel="stylesheet">
+  <link href="/AE/css/vp-flex-nav.css" rel="stylesheet">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style>
+    table.cr-edit-pay td{
+      padding: 0.6em;
+    }
+  </style>
+  <style>
+    .well {
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      display:none;
+      margin:1em;
+      max-height:80%;
+      overflow-y:scroll;
+      max-width:65%;
+    }
+    #packages #craftsy-pop #local-pop #financing-pop, #callouts-pop, #lowest-price-pop{
+      transform: scale(0.8);
+    }
+    .popup_visible #packages #craftsy-pop #local-pop #financing-pop{
+      transform: scale(1);
+    }
+    /*craftsy pop styles*/
+    #longarmsale {
+      display:none;
+    }
+    #genevent h1 {
+      font-size: 26px !important;
+      color: #1f698b !important;
+      font-weight: normal !important;
+      font-family: Georgia, "Times New Roman", Times, serif !important;
+      line-height: 27px !important;
+    }
+    #genevent h3 {
+      font-family: Georgia, "Times New Roman", Times, serif !important;
+      font-size: 18px !important;
+      color: #a91930 !important;
+      font-weight: normal !important;
+    }
+  </style>
+</head>
+<body>
+  <script>
+var shoppingCartURL="[--SHOPPING_CART_URL--]";
+</script>
+
+
+<div class="site-wrap">
+  <!--header start-->
+  <header class="header">
+    [--INCLUDE -VP-header-nav --]
+    [-- INCLUDE -VP-header-minicart PROCESS --]
+  </header>
+  <!--header end-->
+  <div class="cmlla" id="cmlla">
+    <!--main start-->
+    <main role="main">
+      <div class="container">
+
+          <div id="moreInfo">
+            [--CR_FORM--]
+            <div class="cbox mid">
+              <div class="space-60"></div>
+
+              <div class="mid">
+                [--CR_Header--]
+                <h1>[-- STORE.DeletePaymentAccount --]</h1>
+                <p>Not [--CR_Customer_Name--]? <a href=\"https://www.vacplus.com/cgi-vacplus/sb/order.cgi?func=4&storeid=*121deeb48a92086890509d&html_reg=html\">Sign Out</a></p>
+                <div class="cbox">
+                  <div class="pref-fcolc alert alert-danger">
+                    [-- CR_ShopSiteMessages --]
+                  </div>
+                </div>
+              </div>
+
+              <div class="cbox">
+                <p>[-- STORE.DeletePaymentText --]</p>
+              </div>
+                <div class="cbox">
+                  <div class="pref-fcolc alert alert-danger">
+                    <p><b>[-- CR_Delete_Payment --]</b></p>
+                  </div>
+                </div>
+              <div class="cbox">
+                <p>[-- STORE.DeletePaymentNote --]</p>
+              </div>
+              <div class="cbox">
+                <div class="pref-fcolc">
+                  [-- BUTTON Yes --]
+                </div>
+                <div class="pref-fcolc">
+                  [-- BUTTON No --]
+                </div>
+              </div>
+              <div class="cbox">
+                <div class="pref-fcolc back-to-cart">
+                  <div class="space-60"></div>
+                  [-- BUTTON BackToCart --]
+                </div>
+              </div>
+              [--CR_Footer--]
+
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+            </div>
+          </div>
+
+      </div>
+    </main>
+    <!--main end-->
+    [-- INCLUDE -VP-mailing-list --]
+    [-- INCLUDE -VP-footer--]
+    [-- INCLUDE SignInModal.sst PROCESS --]
+  </div>
+</div>
+
+<!-- BEGIN: Google Trusted Stores -->
+<!--<script type="text/javascript">
+var gts = gts || [];
+
+gts.push(["id", "231386"]);
+gts.push(["badge_position", "BOTTOM_RIGHT"]);
+gts.push(["locale", "en_US"]);
+gts.push(["google_base_subaccount_id", "1548534"]);
+gts.push(["google_base_country", "US"]);
+gts.push(["google_base_language", "en"]);
+
+(function() {
+  var gts = document.createElement("script");
+  gts.type = "text/javascript";
+  gts.async = true;
+  gts.src = "https://www.googlecommerce.com/trustedstores/api/js";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(gts, s);
+})();
+</script>-->
+<!-- END: Google Trusted Stores -->
+<!-- BEGIN: _GUARANTEE Seal -->
+<!--<span id="_GUARANTEE_SealSpan"></span>
+<script type="text/javascript" src="//nsg.symantec.com/private/rollover/rollover.js"></script>
+<script type="text/javascript">
+if(window._GUARANTEE && _GUARANTEE.Loaded) {
+ _GUARANTEE.Hash = 'x7%2FMzbgvjqCmhA7lp5x6FU7wMwkpQ36bB1EltmszD3devhKhlTwFP5q9X12sk2mPtEhZF3HnE%2BJ3viGbs4HPmw%3D%3D';
+ _GUARANTEE.WriteSeal("_GUARANTEE_SealSpan", "GuaranteedSeal");
+ _GUARANTEE.Bottom = 58;
+}
+</script>-->
+<!-- END: _GUARANTEE Seal -->
+
+</body>
+[-- INCLUDE -VP-AE-js-plugins --]
+<!--4-Tell Recommendations Begin (www.4-tell.com)-->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+  _4TellBoost={}; _4TellBoost.jq=jQuery.noConflict(true);
+</script>
+<script type="text/javascript" async src="//4tcdn.blob.core.windows.net/4tjs3/4TellLoader.js?alias=sewingma"></script>
+<!--4-Tell Recommendations End-->
+<script src="/AE/jquery-popup/jquery.popupoverlay.js"></script>
+
+  <script>
+    // Initialize the plugin
+    $('#packages, #craftsy-pop, #local-pop, #financing-pop, #geopopup, #lowest-price-pop, #callouts-pop').popup({
+      transition: 'all 0.3s',
+      scrolllock: true
+    });
+  </script>
+</html>
+[-- END_DEFINE DELETE_PAYMENT_ACCOUNT --]
+#
+# List Orders
+#
+[-- DEFINE ORDERS --]
+<!DOCTYPE html>
+<html>
+  <!--list orders-->
+<head>
+  <style>.async-hide { opacity: 0 !important} </style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,
+{'GTM-KTCLFC5':true});</script>
+  <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-487443-1', 'auto');
+ga('require', 'GTM-KTCLFC5');
+ga('send', 'pageview');
+</script>
+  <title>[-- STORE.Orders --]</title>
+  <script type="text/javascript">
+    [--CR_JAVASCRIPT--]
+  </script>
+  <!--CSS and JS links-->
+  <!-- Google Fonts -->
+  <link href="//fonts.googleapis.com/css?family=Lato:400,100,300,700,900,900italic,700italic,400italic|Open+Sans" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="/AE/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <!--plugins-->
+  <link href="/AE/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/AE/custom-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet">
+  <!--sky form pro css-->
+  <link href="/AE/sky-form/css/sky-forms.css" rel="stylesheet">
+  <!--custom css file-->
+  <link href="/AE/css/vp-fonts.css" rel="stylesheet">
+  <link href="/AE/css/style.css?v=1.1" rel="stylesheet">
+  <!-- MoreInfo product description custom css -->
+  <link href="/AE/css/moreInfo.styles.css" rel="stylesheet">
+  <link href="/AE/css/vp-flex-nav.css" rel="stylesheet">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style>
+    table.cr-orders td{
+      text-align:center;
+    }
+  </style>
+  <style>
+    .well {
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      display:none;
+      margin:1em;
+      max-height:80%;
+      overflow-y:scroll;
+      max-width:65%;
+    }
+    #packages #craftsy-pop #local-pop #financing-pop, #callouts-pop, #lowest-price-pop{
+      transform: scale(0.8);
+    }
+    .popup_visible #packages #craftsy-pop #local-pop #financing-pop{
+      transform: scale(1);
+    }
+    /*craftsy pop styles*/
+    #longarmsale {
+      display:none;
+    }
+    #genevent h1 {
+      font-size: 26px !important;
+      color: #1f698b !important;
+      font-weight: normal !important;
+      font-family: Georgia, "Times New Roman", Times, serif !important;
+      line-height: 27px !important;
+    }
+    #genevent h3 {
+      font-family: Georgia, "Times New Roman", Times, serif !important;
+      font-size: 18px !important;
+      color: #a91930 !important;
+      font-weight: normal !important;
+    }
+  </style>
+</head>
+<body>
+  <script>
+var shoppingCartURL="[--SHOPPING_CART_URL--]";
+</script>
+
+
+<div class="site-wrap">
+  <!--header start-->
+  <header class="header">
+    [--INCLUDE -VP-header-nav --]
+    [-- INCLUDE -VP-header-minicart PROCESS --]
+  </header>
+  <!--header end-->
+  <div class="cmlla" id="cmlla">
+    <!--main start-->
+    <main role="main">
+      <div class="container">
+
+          <div id="moreInfo">
+            [--CR_FORM--]
+            <div class="cbox mid">
+              <div class="space-60"></div>
+
+              <div class="mid">
+                [--CR_Header--]
+                <h1>[-- STORE.Orders --]</h1>
+                <p>Not [--CR_Customer_Name--]? <a href=\"https://www.vacplus.com/cgi-vacplus/sb/order.cgi?func=4&storeid=*121deeb48a92086890509d&html_reg=html\">Sign Out</a></p>
+                <div class="cbox">
+                  <div class="pref-fcolc alert alert-danger">
+                    [-- CR_ShopSiteMessages --]
+                  </div>
+                </div>
+                <p>[-- STORE.OrdersText --]</p>
+              </div>
+
+              <div class="cbox">
+                [-- CR_Order_List --]
+              </div>
+              <div class="cbox">
+                <div class="pref-fcolc">
+                  [-- BUTTON View --]
+                </div>
+                <div class="pref-fcolc">
+                  [-- BUTTON Delete --]
+                </div>
+              </div>
+              <div class="cbox">
+                <div class="pref-fcolc"></div>
+                <div class="pref-fcolc">
+                  <span class="asterisk">[-- STORE.OrdersNote --]</span>
+                </div>
+              </div>
+              <div class="cbox">
+                <div class="pref-fcolc">
+                  <div class="space-60"></div>
+                  [-- BUTTON Done --]
+                </div>
+              </div>
+              <div class="cbox">
+                <div class="pref-fcolc back-to-cart">
+                  <div class="space-60"></div>
+                  [-- BUTTON BackToCart --]
+                </div>
+              </div>
+              [--CR_Footer--]
+
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+            </div>
+          </div>
+
+      </div>
+    </main>
+    <!--main end-->
+    [-- INCLUDE -VP-mailing-list --]
+    [-- INCLUDE -VP-footer--]
+    [-- INCLUDE SignInModal.sst PROCESS --]
+  </div>
+</div>
+
+<!-- BEGIN: Google Trusted Stores -->
+<!--<script type="text/javascript">
+var gts = gts || [];
+
+gts.push(["id", "231386"]);
+gts.push(["badge_position", "BOTTOM_RIGHT"]);
+gts.push(["locale", "en_US"]);
+gts.push(["google_base_subaccount_id", "1548534"]);
+gts.push(["google_base_country", "US"]);
+gts.push(["google_base_language", "en"]);
+
+(function() {
+  var gts = document.createElement("script");
+  gts.type = "text/javascript";
+  gts.async = true;
+  gts.src = "https://www.googlecommerce.com/trustedstores/api/js";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(gts, s);
+})();
+</script>-->
+<!-- END: Google Trusted Stores -->
+<!-- BEGIN: _GUARANTEE Seal -->
+<!--<span id="_GUARANTEE_SealSpan"></span>
+<script type="text/javascript" src="//nsg.symantec.com/private/rollover/rollover.js"></script>
+<script type="text/javascript">
+if(window._GUARANTEE && _GUARANTEE.Loaded) {
+ _GUARANTEE.Hash = 'x7%2FMzbgvjqCmhA7lp5x6FU7wMwkpQ36bB1EltmszD3devhKhlTwFP5q9X12sk2mPtEhZF3HnE%2BJ3viGbs4HPmw%3D%3D';
+ _GUARANTEE.WriteSeal("_GUARANTEE_SealSpan", "GuaranteedSeal");
+ _GUARANTEE.Bottom = 58;
+}
+</script>-->
+<!-- END: _GUARANTEE Seal -->
+
+</body>
+  [-- INCLUDE -VP-AE-js-plugins --]
+  <!--4-Tell Recommendations Begin (www.4-tell.com)-->
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    _4TellBoost={}; _4TellBoost.jq=jQuery.noConflict(true);
+  </script>
+  <script type="text/javascript" async src="//4tcdn.blob.core.windows.net/4tjs3/4TellLoader.js?alias=sewingma"></script>
+  <!--4-Tell Recommendations End-->
+  <script src="/AE/jquery-popup/jquery.popupoverlay.js"></script>
+
+  <script>
+    // Initialize the plugin
+    $('#packages, #craftsy-pop, #local-pop, #financing-pop, #geopopup, #lowest-price-pop, #callouts-pop').popup({
+      transition: 'all 0.3s',
+      scrolllock: true
+    });
+  </script>
+</html>
+[-- END_DEFINE ORDERS --]
+#
+# View an order
+#
+[-- DEFINE VIEW_ORDER --]
+<!DOCTYPE html>
+<html>
+  <!--view an order-->
+<head>
+  <style>.async-hide { opacity: 0 !important} </style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,
+{'GTM-KTCLFC5':true});</script>
+  <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-487443-1', 'auto');
+ga('require', 'GTM-KTCLFC5');
+ga('send', 'pageview');
+</script>
+  <title>[-- STORE.ViewOrder --]</title>
+  <script type="text/javascript">
+    [--CR_JAVASCRIPT--]
+  </script>
+  <!--CSS and JS links--> 
+  <!-- Google Fonts -->
+  <link href="//fonts.googleapis.com/css?family=Lato:400,100,300,700,900,900italic,700italic,400italic|Open+Sans" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="/AE/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <!--plugins-->
+  <link href="/AE/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/AE/custom-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet">
+  <!--sky form pro css-->
+  <link href="/AE/sky-form/css/sky-forms.css" rel="stylesheet">
+  <!--custom css file-->
+  <link href="/AE/css/vp-fonts.css" rel="stylesheet">
+  <link href="/AE/css/style.css?v=1.1" rel="stylesheet">
+  <!-- MoreInfo product description custom css -->
+  <link href="/AE/css/moreInfo.styles.css" rel="stylesheet">
+  <link href="/AE/css/vp-flex-nav.css" rel="stylesheet">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style>
+    table.cr-view-order td{
+      padding: 0.6em;
+    }
+  </style>
+  <style>
+    .well {
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      display:none;
+      margin:1em;
+      max-height:80%;
+      overflow-y:scroll;
+      max-width:65%;
+    }
+    #packages #craftsy-pop #local-pop #financing-pop, #callouts-pop, #lowest-price-pop{
+      transform: scale(0.8);
+    }
+    .popup_visible #packages #craftsy-pop #local-pop #financing-pop{
+      transform: scale(1);
+    }
+    /*craftsy pop styles*/
+    #longarmsale {
+      display:none;
+    }
+    #genevent h1 {
+      font-size: 26px !important;
+      color: #1f698b !important;
+      font-weight: normal !important;
+      font-family: Georgia, "Times New Roman", Times, serif !important;
+      line-height: 27px !important;
+    }
+    #genevent h3 {
+      font-family: Georgia, "Times New Roman", Times, serif !important;
+      font-size: 18px !important;
+      color: #a91930 !important;
+      font-weight: normal !important;
+    }
+  </style>
+</head>
+<body>
+  <script>
+var shoppingCartURL="[--SHOPPING_CART_URL--]";
+</script>
+
+
+<div class="site-wrap">
+  <!--header start-->
+  <header class="header">
+    [--INCLUDE -VP-header-nav--]
+    [-- INCLUDE -VP-header-minicart PROCESS --]
+  </header>
+  <!--header end-->
+  <div class="cmlla" id="cmlla">
+    <!--main start-->
+    <main role="main">
+      <div class="container">
+
+          <div id="moreInfo">
+            [--CR_FORM--]
+            <p>Not [--CR_Customer_Name--]? <a href=\"https://www.vacplus.com/cgi-vacplus/sb/order.cgi?func=4&storeid=*121deeb48a92086890509d&html_reg=html\">Sign Out</a></p>
+            <div class="cbox mid">
+              <div class="space-60"></div>
+
+              <div class="mid">
+                [--CR_Header--]
+                <h1>[-- STORE.ViewOrder --]</h1>
+                <div class="cbox">
+                  <div class="pref-fcolc alert alert-danger">
+                    [-- CR_ShopSiteMessages --]
+                  </div>
+                </div>
+              </div>
+
+              <div class="cbox">
+                <div class="pref-fcolc">
+                  <p><b>[-- STORE.SC_OrderNumber --]</b> [-- CR_OrderNum --]</p>
+                </div>
+                <div class="pref-fcolc">
+                  <p>Order Date: <b>[-- CR_OrderDate --]</b></p>
+                </div>
+              </div>
+              <div class="cbox">
+                <div class="pref-fcolc" style="text-align:right;">
+                  [-- CR_Cart --]
+                </div>
+                <div class="pref-fcolc" style="text-align:left; margin:0;">
+                  [-- CR_Totals --]
+                </div>
+              </div>
+
+              <div class="cbox">
+                [-- CR_OrderingInstructions --]
+                [-- CR_Comments --]
+              </div>
+              <div class="dbox">
+                <div class="dcol2" style="text-align:left; margin:0;">
+                  [-- CR_ShipTo_Addr --]
+                </div>
+                <div class="dcol2" style="text-align:left; margin:0;">
+                  [-- CR_BillTo_Addr --]
+                </div>
+              </div>
+              <div class="cbox">
+                <dic class="pref-fcolc">
+                  [-- CR_Payment_Info --]
+                </dic>
+              </div>
+              <div class="cbox">
+                <div class="pref-fcolc">
+                  <div class="space-60"></div>
+                  [-- BUTTON Done --]
+                </div>
+              </div>
+              <div class="cbox">
+                <div class="pref-fcolc back-to-cart">
+                  <div class="space-60"></div>
+                  [-- BUTTON BackToCart --]
+                </div>
+              </div>
+              [--CR_Footer--]
+
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+            </div>
+          </div>
+
+      </div>
+    </main>
+    <!--main end-->
+    [-- INCLUDE -VP-mailing-list --]
+    [-- INCLUDE -VP-footer--]
+    [-- INCLUDE SignInModal.sst PROCESS --]
+  </div>
+</div>
+
+<!-- BEGIN: Google Trusted Stores -->
+<!--<script type="text/javascript">
+var gts = gts || [];
+
+gts.push(["id", "231386"]);
+gts.push(["badge_position", "BOTTOM_RIGHT"]);
+gts.push(["locale", "en_US"]);
+gts.push(["google_base_subaccount_id", "1548534"]);
+gts.push(["google_base_country", "US"]);
+gts.push(["google_base_language", "en"]);
+
+(function() {
+  var gts = document.createElement("script");
+  gts.type = "text/javascript";
+  gts.async = true;
+  gts.src = "https://www.googlecommerce.com/trustedstores/api/js";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(gts, s);
+})();
+</script>-->
+<!-- END: Google Trusted Stores -->
+<!-- BEGIN: _GUARANTEE Seal -->
+<!--<span id="_GUARANTEE_SealSpan"></span>
+<script type="text/javascript" src="//nsg.symantec.com/private/rollover/rollover.js"></script>
+<script type="text/javascript">
+if(window._GUARANTEE && _GUARANTEE.Loaded) {
+ _GUARANTEE.Hash = 'x7%2FMzbgvjqCmhA7lp5x6FU7wMwkpQ36bB1EltmszD3devhKhlTwFP5q9X12sk2mPtEhZF3HnE%2BJ3viGbs4HPmw%3D%3D';
+ _GUARANTEE.WriteSeal("_GUARANTEE_SealSpan", "GuaranteedSeal");
+ _GUARANTEE.Bottom = 58;
+}
+</script>-->
+<!-- END: _GUARANTEE Seal -->
+
+
+</body>
+[-- INCLUDE -VP-AE-js-plugins --]
+<!--4-Tell Recommendations Begin (www.4-tell.com)-->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+  _4TellBoost={}; _4TellBoost.jq=jQuery.noConflict(true);
+</script>
+<script type="text/javascript" async src="//4tcdn.blob.core.windows.net/4tjs3/4TellLoader.js?alias=sewingma"></script>
+<!--4-Tell Recommendations End-->
+<script src="/AE/jquery-popup/jquery.popupoverlay.js"></script>
+
+  <script>
+    // Initialize the plugin
+    $('#packages, #craftsy-pop, #local-pop, #financing-pop, #geopopup, #lowest-price-pop, #callouts-pop').popup({
+      transition: 'all 0.3s',
+      scrolllock: true
+    });
+  </script>
+</html>
+[-- END_DEFINE VIEW_ORDER --]
+#
+# Delete orders
+#
+[-- DEFINE DELETE_ORDER --]
+<!DOCTYPE html>
+<html>
+  <!--delete orders-->
+<head>
+  <style>.async-hide { opacity: 0 !important} </style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,
+{'GTM-KTCLFC5':true});</script>
+  <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-487443-1', 'auto');
+ga('require', 'GTM-KTCLFC5');
+ga('send', 'pageview');
+</script>
+  <title>[-- STORE.DeleteOrder --]</title>
+  <script type="text/javascript">
+    [--CR_JAVASCRIPT--]
+  </script>
+  <!--CSS and JS links--> 
+  <!-- Google Fonts -->
+  <link href="//fonts.googleapis.com/css?family=Lato:400,100,300,700,900,900italic,700italic,400italic|Open+Sans" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="/AE/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <!--plugins-->
+  <link href="/AE/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/AE/custom-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet">
+  <!--sky form pro css-->
+  <link href="/AE/sky-form/css/sky-forms.css" rel="stylesheet">
+  <!--custom css file-->
+  <link href="/AE/css/vp-fonts.css" rel="stylesheet">
+  <link href="/AE/css/style.css?v=1.1" rel="stylesheet">
+  <!-- MoreInfo product description custom css -->
+  <link href="/AE/css/moreInfo.styles.css" rel="stylesheet">
+  <link href="/AE/css/vp-flex-nav.css" rel="stylesheet">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style>
+    .well {
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      display:none;
+      margin:1em;
+      max-height:80%;
+      overflow-y:scroll;
+      max-width:65%;
+    }
+    #packages #craftsy-pop #local-pop #financing-pop, #callouts-pop, #lowest-price-pop{
+      transform: scale(0.8);
+    }
+    .popup_visible #packages #craftsy-pop #local-pop #financing-pop{
+      transform: scale(1);
+    }
+    /*craftsy pop styles*/
+    #longarmsale {
+      display:none;
+    }
+    #genevent h1 {
+      font-size: 26px !important;
+      color: #1f698b !important;
+      font-weight: normal !important;
+      font-family: Georgia, "Times New Roman", Times, serif !important;
+      line-height: 27px !important;
+    }
+    #genevent h3 {
+      font-family: Georgia, "Times New Roman", Times, serif !important;
+      font-size: 18px !important;
+      color: #a91930 !important;
+      font-weight: normal !important;
+    }
+  </style>
+</head>
+<body>
+  <script>
+var shoppingCartURL="[--SHOPPING_CART_URL--]";
+</script>
+
+
+<div class="site-wrap">
+  <!--header start-->
+  <header class="header">
+    [--INCLUDE -VP-header-nav --]
+    [-- INCLUDE -VP-header-minicart PROCESS --]
+  </header>
+  <!--header end-->
+  <div class="cmlla" id="cmlla">
+    <!--main start-->
+    <main role="main">
+      <div class="container">
+
+          <div id="moreInfo">
+            [--CR_FORM--]
+            <div class="cbox mid">
+              <div class="space-60"></div>
+
+              <div class="mid">
+                [--CR_Header--]
+                <h1>[-- STORE.DeleteOrder --]</h1>
+                <p>Not [--CR_Customer_Name--]? <a href=\"https://www.vacplus.com/cgi-vacplus/sb/order.cgi?func=4&storeid=*121deeb48a92086890509d&html_reg=html\">Sign Out</a></p>
+                <div class="cbox">
+                  <div class="pref-fcolc alert alert-danger">
+                    [-- CR_ShopSiteMessages --]
+                  </div>
+                </div>
+                <p>[-- STORE.DeleteOrderText --]</p>
+              </div>
+
+              <div class="cbox">
+                [-- CR_Delete_Order_List --]
+              </div>
+              <div class="cbox">
+                <p>[-- STORE.OrdersNote --]</p>
+              </div>
+              <div class="cbox">
+                <div class="pref-fcolc">
+                  [-- BUTTON Yes --]
+                </div>
+                <div class="pref-fcolc">
+                  [-- BUTTON No --]
+                </div>
+              </div>
+              <div class="cbox">
+                <div class="pref-fcolc back-to-cart">
+                  <div class="space-60"></div>
+                  [-- BUTTON BackToCart --]
+                </div>
+              </div>
+              [--CR_Footer--]
+
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+            </div>
+          </div>
+
+      </div>
+    </main>
+    <!--main end-->
+    [-- INCLUDE -VP-mailing-list --]
+    [-- INCLUDE -VP-footer--]
+    [-- INCLUDE SignInModal.sst PROCESS --]
+  </div>
+</div>
+
+<!-- BEGIN: Google Trusted Stores -->
+<!--<script type="text/javascript">
+var gts = gts || [];
+
+gts.push(["id", "231386"]);
+gts.push(["badge_position", "BOTTOM_RIGHT"]);
+gts.push(["locale", "en_US"]);
+gts.push(["google_base_subaccount_id", "1548534"]);
+gts.push(["google_base_country", "US"]);
+gts.push(["google_base_language", "en"]);
+
+(function() {
+  var gts = document.createElement("script");
+  gts.type = "text/javascript";
+  gts.async = true;
+  gts.src = "https://www.googlecommerce.com/trustedstores/api/js";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(gts, s);
+})();
+</script>-->
+<!-- END: Google Trusted Stores -->
+<!-- BEGIN: _GUARANTEE Seal -->
+<!--<span id="_GUARANTEE_SealSpan"></span>
+<script type="text/javascript" src="//nsg.symantec.com/private/rollover/rollover.js"></script>
+<script type="text/javascript">
+if(window._GUARANTEE && _GUARANTEE.Loaded) {
+ _GUARANTEE.Hash = 'x7%2FMzbgvjqCmhA7lp5x6FU7wMwkpQ36bB1EltmszD3devhKhlTwFP5q9X12sk2mPtEhZF3HnE%2BJ3viGbs4HPmw%3D%3D';
+ _GUARANTEE.WriteSeal("_GUARANTEE_SealSpan", "GuaranteedSeal");
+ _GUARANTEE.Bottom = 58;
+}
+</script>-->
+<!-- END: _GUARANTEE Seal -->
+
+</body>
+[-- INCLUDE -VP-AE-js-plugins --]
+<!--4-Tell Recommendations Begin (www.4-tell.com)-->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+  _4TellBoost={}; _4TellBoost.jq=jQuery.noConflict(true);
+</script>
+<script type="text/javascript" async src="//4tcdn.blob.core.windows.net/4tjs3/4TellLoader.js?alias=sewingma"></script>
+<!--4-Tell Recommendations End-->
+<script src="/AE/jquery-popup/jquery.popupoverlay.js"></script>
+
+  <script>
+    // Initialize the plugin
+    $('#packages, #craftsy-pop, #local-pop, #financing-pop, #geopopup, #lowest-price-pop, #callouts-pop').popup({
+      transition: 'all 0.3s',
+      scrolllock: true
+    });
+  </script>
+</html>
+[-- END_DEFINE DELETE_ORDER --]
+#
+# List Shipping Options
+#
+[-- DEFINE SHIPPING_OPTIONS --]
+<!DOCTYPE html>
+<html>
+  <!--list shipping options-->
+<head>
+  <style>.async-hide { opacity: 0 !important} </style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,
+{'GTM-KTCLFC5':true});</script>
+  <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-487443-1', 'auto');
+ga('require', 'GTM-KTCLFC5');
+ga('send', 'pageview');
+</script>
+  <title>[-- STORE.ShippingOptions --]</title>
+  <script type="text/javascript">
+    [--CR_JAVASCRIPT--]
+  </script>
+  <!--CSS and JS links--> 
+  <!-- Google Fonts -->
+  <link href="//fonts.googleapis.com/css?family=Lato:400,100,300,700,900,900italic,700italic,400italic|Open+Sans" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="/AE/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <!--plugins-->
+  <link href="/AE/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/AE/custom-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet">
+  <!--sky form pro css-->
+  <link href="/AE/sky-form/css/sky-forms.css" rel="stylesheet">
+  <!--custom css file-->
+  <link href="/AE/css/vp-fonts.css" rel="stylesheet">
+  <link href="/AE/css/style.css?v=1.1" rel="stylesheet">
+  <!-- MoreInfo product description custom css -->
+  <link href="/AE/css/moreInfo.styles.css" rel="stylesheet">
+  <link href="/AE/css/vp-flex-nav.css" rel="stylesheet">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style>
+    .well {
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      display:none;
+      margin:1em;
+      max-height:80%;
+      overflow-y:scroll;
+      max-width:65%;
+    }
+    #packages #craftsy-pop #local-pop #financing-pop, #callouts-pop, #lowest-price-pop{
+      transform: scale(0.8);
+    }
+    .popup_visible #packages #craftsy-pop #local-pop #financing-pop{
+      transform: scale(1);
+    }
+    /*craftsy pop styles*/
+    #longarmsale {
+      display:none;
+    }
+    #genevent h1 {
+      font-size: 26px !important;
+      color: #1f698b !important;
+      font-weight: normal !important;
+      font-family: Georgia, "Times New Roman", Times, serif !important;
+      line-height: 27px !important;
+    }
+    #genevent h3 {
+      font-family: Georgia, "Times New Roman", Times, serif !important;
+      font-size: 18px !important;
+      color: #a91930 !important;
+      font-weight: normal !important;
+    }
+  </style>
+</head>
+<style>
+  table.cr-ship-op td{
+    padding: 0.6em;
+  }
+</style>
+<body>
+  <script>
+var shoppingCartURL="[--SHOPPING_CART_URL--]";
+</script>
+
+
+<div class="site-wrap">
+  <!--header start-->
+  <header class="header">
+    [--INCLUDE -VP-header-nav --]
+    [-- INCLUDE -VP-header-minicart PROCESS --]
+  </header>
+  <!--header end-->
+  <div class="cmlla" id="cmlla">
+    <!--main start-->
+    <main role="main">
+      <div class="container">
+
+          <div id="moreInfo">
+            [--CR_FORM--]
+            <div class="cbox mid">
+              <div class="space-60"></div>
+
+              <div class="mid">
+                [--CR_Header--]
+                <h1>[-- STORE.ShippingOptions --]</h1>
+                <p>Not [--CR_Customer_Name--]? <a href=\"https://www.vacplus.com/cgi-vacplus/sb/order.cgi?func=4&storeid=*121deeb48a92086890509d&html_reg=html\">Sign Out</a></p>
+                <div class="cbox">
+                  <div class="pref-fcolc alert alert-danger">
+                    [-- CR_ShopSiteMessages --]
+                  </div>
+                </div>
+                <p>[-- STORE.ShippingOptionsText --]</p>
+              </div>
+
+              <div class="cbox">
+                [-- CR_Shipping_List --]
+              </div>
+              <div class="cbox">
+                <div class="pref-fcolc">
+                  [-- BUTTON Edit --]
+                </div>
+                <div class="pref-fcolc">
+                  [-- BUTTON Delete --]
+                </div>
+              </div>
+              <div class="cbox">
+                <p>[-- STORE.ShippingOptionsNote --]</p>
+              </div>
+              <div class="cbox">
+                <div class="pref-fcolc">
+                  <div class="space-60"></div>
+                  [-- BUTTON Done --]
+                </div>
+              </div>
+              <div class="cbox">
+                <div class="pref-fcolc back-to-cart">
+                  <div class="space-60"></div>
+                  [-- BUTTON BackToCart --]
+                </div>
+              </div>
+              [--CR_Footer--]
+
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+            </div>
+          </div>
+
+      </div>
+    </main>
+    <!--main end-->
+    [-- INCLUDE -VP-mailing-list --]
+    [-- INCLUDE -VP-footer--]
+    [-- INCLUDE SignInModal.sst PROCESS --]
+  </div>
+</div>
+
+<!-- BEGIN: Google Trusted Stores -->
+<!--<script type="text/javascript">
+var gts = gts || [];
+
+gts.push(["id", "231386"]);
+gts.push(["badge_position", "BOTTOM_RIGHT"]);
+gts.push(["locale", "en_US"]);
+gts.push(["google_base_subaccount_id", "1548534"]);
+gts.push(["google_base_country", "US"]);
+gts.push(["google_base_language", "en"]);
+
+(function() {
+  var gts = document.createElement("script");
+  gts.type = "text/javascript";
+  gts.async = true;
+  gts.src = "https://www.googlecommerce.com/trustedstores/api/js";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(gts, s);
+})();
+</script>-->
+<!-- END: Google Trusted Stores -->
+<!-- BEGIN: _GUARANTEE Seal -->
+<!--<span id="_GUARANTEE_SealSpan"></span>
+<script type="text/javascript" src="//nsg.symantec.com/private/rollover/rollover.js"></script>
+<script type="text/javascript">
+if(window._GUARANTEE && _GUARANTEE.Loaded) {
+ _GUARANTEE.Hash = 'x7%2FMzbgvjqCmhA7lp5x6FU7wMwkpQ36bB1EltmszD3devhKhlTwFP5q9X12sk2mPtEhZF3HnE%2BJ3viGbs4HPmw%3D%3D';
+ _GUARANTEE.WriteSeal("_GUARANTEE_SealSpan", "GuaranteedSeal");
+ _GUARANTEE.Bottom = 58;
+}
+</script>-->
+<!-- END: _GUARANTEE Seal -->
+
+</body>
+[-- INCLUDE -VP-AE-js-plugins --]
+<!--4-Tell Recommendations Begin (www.4-tell.com)-->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+  _4TellBoost={}; _4TellBoost.jq=jQuery.noConflict(true);
+</script>
+<script type="text/javascript" async src="//4tcdn.blob.core.windows.net/4tjs3/4TellLoader.js?alias=sewingma"></script>
+<!--4-Tell Recommendations End-->
+<script src="/AE/jquery-popup/jquery.popupoverlay.js"></script>
+
+  <script>
+    // Initialize the plugin
+    $('#packages, #craftsy-pop, #local-pop, #financing-pop, #geopopup, #lowest-price-pop, #callouts-pop').popup({
+      transition: 'all 0.3s',
+      scrolllock: true
+    });
+  </script>
+</html>
+[-- END_DEFINE SHIPPING_OPTIONS --]
+#
+# Edit Shipping Option
+#
+[-- DEFINE EDIT_SHIPPING --]
+<!DOCTYPE html>
+<html>
+  <!--edit shipping option-->
+<head>
+  <style>.async-hide { opacity: 0 !important} </style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,
+{'GTM-KTCLFC5':true});</script>
+  <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-487443-1', 'auto');
+ga('require', 'GTM-KTCLFC5');
+ga('send', 'pageview');
+</script>
+  <title>[-- STORE.EditShipping --]</title>
+  <script type="text/javascript">
+    [--CR_JAVASCRIPT--]
+  </script>
+  <!--CSS and JS links--> 
+  <!-- Google Fonts -->
+  <link href="//fonts.googleapis.com/css?family=Lato:400,100,300,700,900,900italic,700italic,400italic|Open+Sans" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="/AE/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <!--plugins-->
+  <link href="/AE/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/AE/custom-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet">
+  <!--sky form pro css-->
+  <link href="/AE/sky-form/css/sky-forms.css" rel="stylesheet">
+  <!--custom css file-->
+  <link href="/AE/css/vp-fonts.css" rel="stylesheet">
+  <link href="/AE/css/style.css?v=1.1" rel="stylesheet">
+  <!-- MoreInfo product description custom css -->
+  <link href="/AE/css/moreInfo.styles.css" rel="stylesheet">
+  <link href="/AE/css/vp-flex-nav.css" rel="stylesheet">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style>
+    .well {
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      display:none;
+      margin:1em;
+      max-height:80%;
+      overflow-y:scroll;
+      max-width:65%;
+    }
+    #packages #craftsy-pop #local-pop #financing-pop, #callouts-pop, #lowest-price-pop{
+      transform: scale(0.8);
+    }
+    .popup_visible #packages #craftsy-pop #local-pop #financing-pop{
+      transform: scale(1);
+    }
+    /*craftsy pop styles*/
+    #longarmsale {
+      display:none;
+    }
+    #genevent h1 {
+      font-size: 26px !important;
+      color: #1f698b !important;
+      font-weight: normal !important;
+      font-family: Georgia, "Times New Roman", Times, serif !important;
+      line-height: 27px !important;
+    }
+    #genevent h3 {
+      font-family: Georgia, "Times New Roman", Times, serif !important;
+      font-size: 18px !important;
+      color: #a91930 !important;
+      font-weight: normal !important;
+    }
+  </style>
+</head>
+<style>
+  table.cr-edit-ship td, table.addr td{
+    padding: 0.6em;
+  }
+</style>
+<body>
+  <script>
+var shoppingCartURL="[--SHOPPING_CART_URL--]";
+</script>
+
+
+<div class="site-wrap">
+  <!--header start-->
+  <header class="header">
+    [--INCLUDE -VP-header-nav --]
+    [-- INCLUDE -VP-header-minicart PROCESS --]
+  </header>
+  <!--header end-->
+  <div class="cmlla" id="cmlla">
+    <!--main start-->
+    <main role="main">
+      <div class="container">
+
+          <div id="moreInfo">
+            [--CR_FORM--]
+            <div class="cbox mid">
+              <div class="space-60"></div>
+
+              <div class="mid">
+                [--CR_Header--]
+                <h1>[-- STORE.EditShipping --]</h1>
+                <p>Not [--CR_Customer_Name--]? <a href=\"https://www.vacplus.com/cgi-vacplus/sb/order.cgi?func=4&storeid=*121deeb48a92086890509d&html_reg=html\">Sign Out</a></p>
+                <div class="cbox">
+                  <div class="pref-fcolc alert alert-danger">
+                    [-- CR_ShopSiteMessages --]
+                  </div>
+                </div>
+              </div>
+
+              <div class="cbox">
+                <div class="pref-fcolc">
+                  <p><b>[-- STORE.DisplayName --]:</b> [-- CR_Ship_DisplayName --]</p>
+                </div>
+                <div class="pref-fcolc">
+                  <p>[-- STORE.EditShippingText --]</p>
+                </div>
+              </div>
+              <div class="cbox">
+                <h2>[-- STORE.SC_ShippingAddress --]</h2>
+                [-- CR_Edit_Shipping_Address --]
+              </div>
+              <div class="cbox">
+                <div class="pref-fcolc">
+                  [-- BUTTON Save --]
+                </div>
+                <div class="pref-fcolc">
+                  [-- BUTTON Cancel --]
+                </div>
+              </div>
+              <div class="cbox">
+                <div class="pref-fcolc back-to-cart">
+                  <div class="space-60"></div>
+                  [-- BUTTON BackToCart --]
+                </div>
+              </div>
+              [--CR_Footer--]
+
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+            </div>
+          </div>
+
+      </div>
+    </main>
+    <!--main end-->
+    [-- INCLUDE -VP-mailing-list --]
+    [-- INCLUDE -VP-footer--]
+    [-- INCLUDE SignInModal.sst PROCESS --]
+  </div>
+</div>
+
+<!-- BEGIN: Google Trusted Stores -->
+<!--<script type="text/javascript">
+var gts = gts || [];
+
+gts.push(["id", "231386"]);
+gts.push(["badge_position", "BOTTOM_RIGHT"]);
+gts.push(["locale", "en_US"]);
+gts.push(["google_base_subaccount_id", "1548534"]);
+gts.push(["google_base_country", "US"]);
+gts.push(["google_base_language", "en"]);
+
+(function() {
+  var gts = document.createElement("script");
+  gts.type = "text/javascript";
+  gts.async = true;
+  gts.src = "https://www.googlecommerce.com/trustedstores/api/js";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(gts, s);
+})();
+</script>-->
+<!-- END: Google Trusted Stores -->
+<!-- BEGIN: _GUARANTEE Seal -->
+<!--<span id="_GUARANTEE_SealSpan"></span>
+<script type="text/javascript" src="//nsg.symantec.com/private/rollover/rollover.js"></script>
+<script type="text/javascript">
+if(window._GUARANTEE && _GUARANTEE.Loaded) {
+ _GUARANTEE.Hash = 'x7%2FMzbgvjqCmhA7lp5x6FU7wMwkpQ36bB1EltmszD3devhKhlTwFP5q9X12sk2mPtEhZF3HnE%2BJ3viGbs4HPmw%3D%3D';
+ _GUARANTEE.WriteSeal("_GUARANTEE_SealSpan", "GuaranteedSeal");
+ _GUARANTEE.Bottom = 58;
+}
+</script>-->
+<!-- END: _GUARANTEE Seal -->
+
+</body>
+[-- INCLUDE -VP-AE-js-plugins --]
+<!--4-Tell Recommendations Begin (www.4-tell.com)-->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+  _4TellBoost={}; _4TellBoost.jq=jQuery.noConflict(true);
+</script>
+<script type="text/javascript" async src="//4tcdn.blob.core.windows.net/4tjs3/4TellLoader.js?alias=sewingma"></script>
+<!--4-Tell Recommendations End-->
+<script src="/AE/jquery-popup/jquery.popupoverlay.js"></script>
+
+  <script>
+    // Initialize the plugin
+    $('#packages, #craftsy-pop, #local-pop, #financing-pop, #geopopup, #lowest-price-pop, #callouts-pop').popup({
+      transition: 'all 0.3s',
+      scrolllock: true
+    });
+  </script>
+</html>
+[-- END_DEFINE EDIT_SHIPPING --]
+#
+# Delete Shipping Option
+#
+[-- DEFINE DELETE_SHIPPING --]
+<!DOCTYPE html>
+<html>
+  <!--delete shipping option-->
+<head>
+  <style>.async-hide { opacity: 0 !important} </style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,
+{'GTM-KTCLFC5':true});</script>
+  <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-487443-1', 'auto');
+ga('require', 'GTM-KTCLFC5');
+ga('send', 'pageview');
+</script>
+  <title>[-- STORE.DeleteShipping --]</title>
+  <script type="text/javascript">
+    [--CR_JAVASCRIPT--]
+  </script>
+  <!--CSS and JS links--> 
+  <!-- Google Fonts -->
+  <link href="//fonts.googleapis.com/css?family=Lato:400,100,300,700,900,900italic,700italic,400italic|Open+Sans" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="/AE/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <!--plugins-->
+  <link href="/AE/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/AE/custom-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet">
+  <!--sky form pro css-->
+  <link href="/AE/sky-form/css/sky-forms.css" rel="stylesheet">
+  <!--custom css file-->
+  <link href="/AE/css/vp-fonts.css" rel="stylesheet">
+  <link href="/AE/css/style.css?v=1.1" rel="stylesheet">
+  <!-- MoreInfo product description custom css -->
+  <link href="/AE/css/moreInfo.styles.css" rel="stylesheet">
+  <link href="/AE/css/vp-flex-nav.css" rel="stylesheet">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style>
+    .well {
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      display:none;
+      margin:1em;
+      max-height:80%;
+      overflow-y:scroll;
+      max-width:65%;
+    }
+    #packages #craftsy-pop #local-pop #financing-pop, #callouts-pop, #lowest-price-pop{
+      transform: scale(0.8);
+    }
+    .popup_visible #packages #craftsy-pop #local-pop #financing-pop{
+      transform: scale(1);
+    }
+    /*craftsy pop styles*/
+    #longarmsale {
+      display:none;
+    }
+    #genevent h1 {
+      font-size: 26px !important;
+      color: #1f698b !important;
+      font-weight: normal !important;
+      font-family: Georgia, "Times New Roman", Times, serif !important;
+      line-height: 27px !important;
+    }
+    #genevent h3 {
+      font-family: Georgia, "Times New Roman", Times, serif !important;
+      font-size: 18px !important;
+      color: #a91930 !important;
+      font-weight: normal !important;
+    }
+  </style>
+</head>
+<style>
+  table.cr-edit-ship td{
+    padding: 0.6em;
+  }
+  table td{
+    padding:0.6em;
+  }
+</style>
+<body>
+  <script>
+    var shoppingCartURL="[--SHOPPING_CART_URL--]";
+  </script>
+
+
+<div class="site-wrap">
+  <!--header start-->
+  <header class="header">
+    [--INCLUDE -VP-header-nav--]
+    [-- INCLUDE -VP-header-minicart PROCESS --]
+  </header>
+  <!--header end-->
+  <div class="cmlla" id="cmlla">
+    <!--main start-->
+    <main role="main">
+      <div class="container">
+
+          <div id="moreInfo">
+            [--CR_FORM--]
+            <div class="cbox mid">
+              <div class="space-60"></div>
+
+              <div class="mid">
+                [--CR_Header--]
+                <h1>[-- STORE.DeleteShipping --]</h1>
+                <p>Not [--CR_Customer_Name--]? <a href=\"https://www.vacplus.com/cgi-vacplus/sb/order.cgi?func=4&storeid=*121deeb48a92086890509d&html_reg=html\">Sign Out</a></p>
+                <div class="cbox">
+                  <div class="pref-fcolc alert alert-danger">
+                    [-- CR_ShopSiteMessages --]
+                  </div>
+                </div>
+                <p>[-- STORE.DeleteShippingText --]</p>
+              </div>
+
+              <div class="cbox">
+                <p><b>[-- CR_Delete_Shipping --]</b></p>
+              </div>
+              <div class="cbox">
+                <p>[-- STORE.DeleteShippingNote --]</p>
+              </div>
+              <div class="cbox">
+                <div class="pref-fcolc">
+                  [-- BUTTON Yes --]
+                </div>
+                <div class="pref-fcolc">
+                  [-- BUTTON No --]
+                </div>
+              </div>
+              <div class="cbox">
+                <div class="pref-fcolc back-to-cart">
+                  <div class="space-60"></div>
+                  [-- BUTTON BackToCart --]
+                </div>
+              </div>
+              [--CR_Footer--]
+
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+            </div>
+          </div>
+
+      </div>
+    </main>
+    <!--main end-->
+    [-- INCLUDE -VP-mailing-list --]
+    [-- INCLUDE -VP-footer--]
+    [-- INCLUDE SignInModal.sst PROCESS --]
+  </div>
+</div>
+
+<!-- BEGIN: Google Trusted Stores -->
+<!--<script type="text/javascript">
+var gts = gts || [];
+
+gts.push(["id", "231386"]);
+gts.push(["badge_position", "BOTTOM_RIGHT"]);
+gts.push(["locale", "en_US"]);
+gts.push(["google_base_subaccount_id", "1548534"]);
+gts.push(["google_base_country", "US"]);
+gts.push(["google_base_language", "en"]);
+
+(function() {
+  var gts = document.createElement("script");
+  gts.type = "text/javascript";
+  gts.async = true;
+  gts.src = "https://www.googlecommerce.com/trustedstores/api/js";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(gts, s);
+})();
+</script>-->
+<!-- END: Google Trusted Stores -->
+<!-- BEGIN: _GUARANTEE Seal -->
+<!--<span id="_GUARANTEE_SealSpan"></span>
+<script type="text/javascript" src="//nsg.symantec.com/private/rollover/rollover.js"></script>
+<script type="text/javascript">
+if(window._GUARANTEE && _GUARANTEE.Loaded) {
+ _GUARANTEE.Hash = 'x7%2FMzbgvjqCmhA7lp5x6FU7wMwkpQ36bB1EltmszD3devhKhlTwFP5q9X12sk2mPtEhZF3HnE%2BJ3viGbs4HPmw%3D%3D';
+ _GUARANTEE.WriteSeal("_GUARANTEE_SealSpan", "GuaranteedSeal");
+ _GUARANTEE.Bottom = 58;
+}
+</script>-->
+<!-- END: _GUARANTEE Seal -->
+
+</body>
+[-- INCLUDE -VP-AE-js-plugins --]
+<!--4-Tell Recommendations Begin (www.4-tell.com)-->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+  _4TellBoost={}; _4TellBoost.jq=jQuery.noConflict(true);
+</script>
+<script type="text/javascript" async src="//4tcdn.blob.core.windows.net/4tjs3/4TellLoader.js?alias=sewingma"></script>
+<!--4-Tell Recommendations End-->
+<script src="/AE/jquery-popup/jquery.popupoverlay.js"></script>
+
+  <script>
+    // Initialize the plugin
+    $('#packages, #craftsy-pop, #local-pop, #financing-pop, #geopopup, #lowest-price-pop, #callouts-pop').popup({
+      transition: 'all 0.3s',
+      scrolllock: true
+    });
+  </script>
+</html>
+[-- END_DEFINE DELETE_SHIPPING --]
+#
+# Customer Registration Error Screen
+#
+[-- DEFINE CR_ERROR --]
+<!DOCTYPE html>
+<html>
+  <!--customer registration error screen-->
+<head>
+  <style>.async-hide { opacity: 0 !important} </style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,
+{'GTM-KTCLFC5':true});</script>
+  <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-487443-1', 'auto');
+ga('require', 'GTM-KTCLFC5');
+ga('send', 'pageview');
+
+</script>
+  <title>[-- STORE.ErrorMessages --]</title>
+  <script type="text/javascript">
+    [--CR_JAVASCRIPT--]
+  </script>
+  <!--CSS and JS links--> 
+  <!-- Google Fonts -->
+  <link href="//fonts.googleapis.com/css?family=Lato:400,100,300,700,900,900italic,700italic,400italic|Open+Sans" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="/AE/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <!--plugins-->
+  <link href="/AE/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/AE/custom-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet">
+  <!--sky form pro css-->
+  <link href="/AE/sky-form/css/sky-forms.css" rel="stylesheet">
+  <!--custom css file-->
+  <link href="/AE/css/vp-fonts.css" rel="stylesheet">
+  <link href="/AE/css/style.css?v=1.1" rel="stylesheet">
+  <!-- MoreInfo product description custom css -->
+  <link href="/AE/css/moreInfo.styles.css" rel="stylesheet">
+  <link href="/AE/css/vp-flex-nav.css" rel="stylesheet">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style>
+    .well {
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      display:none;
+      margin:1em;
+      max-height:80%;
+      overflow-y:scroll;
+      max-width:65%;
+    }
+    #packages #craftsy-pop #local-pop #financing-pop, #callouts-pop, #lowest-price-pop{
+      transform: scale(0.8);
+    }
+    .popup_visible #packages #craftsy-pop #local-pop #financing-pop{
+      transform: scale(1);
+    }
+    /*craftsy pop styles*/
+    #longarmsale {
+      display:none;
+    }
+    #genevent h1 {
+      font-size: 26px !important;
+      color: #1f698b !important;
+      font-weight: normal !important;
+      font-family: Georgia, "Times New Roman", Times, serif !important;
+      line-height: 27px !important;
+    }
+    #genevent h3 {
+      font-family: Georgia, "Times New Roman", Times, serif !important;
+      font-size: 18px !important;
+      color: #a91930 !important;
+      font-weight: normal !important;
+    }
+  </style>
+</head>
+<style>
+  table.cr-edit-ship td{
+    padding: 0.6em;
+  }
+</style>
+<body>
+  <script>
+var shoppingCartURL="[--SHOPPING_CART_URL--]";
+</script>
+
+
+<div class="site-wrap">
+  <!--header start-->
+  <header class="header">
+    [--INCLUDE -VP-header-nav--]
+    [-- INCLUDE -VP-header-minicart PROCESS --]
+  </header>
+  <!--header end-->
+  <div class="cmlla" id="cmlla">
+    <!--main start-->
+    <main role="main">
+      <div class="container">
+
+          <div id="moreInfo">
+            [--CR_FORM--]
+            <div class="cbox mid">
+              <div class="space-60"></div>
+
+              <div class="mid">
+                [--CR_Header--]
+                <h1>[-- STORE.ErrorMessages --]</h1>
+                <div class="cbox">
+                  <div class="pref-fcolc alert alert-danger">
+                    [-- CR_ShopSiteMessages --]
+                  </div>
+                </div>
+              </div>
+
+              <div class="cbox">
+                <div class="pref-fcolc">
+                  [--BUTTON BackToCart --]
+                </div>
+              </div>
+              [--CR_Footer--]
+
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+              <div class="space-60"></div>
+            </div>
+          </div>
+
+      </div>
+    </main>
+    <!--main end-->
+    [-- INCLUDE -VP-mailing-list --]
+    [-- INCLUDE -VP-footer--]
+    [-- INCLUDE SignInModal.sst PROCESS --]
+  </div>
+</div>
+
+<!-- BEGIN: Google Trusted Stores -->
+<!--<script type="text/javascript">
+var gts = gts || [];
+
+gts.push(["id", "231386"]);
+gts.push(["badge_position", "BOTTOM_RIGHT"]);
+gts.push(["locale", "en_US"]);
+gts.push(["google_base_subaccount_id", "1548534"]);
+gts.push(["google_base_country", "US"]);
+gts.push(["google_base_language", "en"]);
+
+(function() {
+  var gts = document.createElement("script");
+  gts.type = "text/javascript";
+  gts.async = true;
+  gts.src = "https://www.googlecommerce.com/trustedstores/api/js";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(gts, s);
+})();
+</script>-->
+<!-- END: Google Trusted Stores -->
+<!-- BEGIN: _GUARANTEE Seal -->
+<!--<span id="_GUARANTEE_SealSpan"></span>
+<script type="text/javascript" src="//nsg.symantec.com/private/rollover/rollover.js"></script>
+<script type="text/javascript">
+if(window._GUARANTEE && _GUARANTEE.Loaded) {
+ _GUARANTEE.Hash = 'x7%2FMzbgvjqCmhA7lp5x6FU7wMwkpQ36bB1EltmszD3devhKhlTwFP5q9X12sk2mPtEhZF3HnE%2BJ3viGbs4HPmw%3D%3D';
+ _GUARANTEE.WriteSeal("_GUARANTEE_SealSpan", "GuaranteedSeal");
+ _GUARANTEE.Bottom = 58;
+}
+</script>-->
+<!-- END: _GUARANTEE Seal -->
+
+</body>
+[-- INCLUDE -VP-AE-js-plugins --]
+<!--4-Tell Recommendations Begin (www.4-tell.com)-->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+  _4TellBoost={}; _4TellBoost.jq=jQuery.noConflict(true);
+</script>
+<script type="text/javascript" async src="//4tcdn.blob.core.windows.net/4tjs3/4TellLoader.js?alias=sewingma"></script>
+<!--4-Tell Recommendations End-->
+<script src="/AE/jquery-popup/jquery.popupoverlay.js"></script>
+
+  <script>
+    // Initialize the plugin
+    $('#packages, #craftsy-pop, #local-pop, #financing-pop, #geopopup, #lowest-price-pop, #callouts-pop').popup({
+      transition: 'all 0.3s',
+      scrolllock: true
+    });
+  </script>
+</html>
+[-- END_DEFINE CR_ERROR --]
+#
+# Email address has changed
+#
+[-- DEFINE EMAIL_ADDRESS_NEW --]
+  <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+  <html>
+    <!--email address has changed-->
+  <body>
+
+    <div class="site-wrap">
+      <!--header start-->
+      <header class="header">
+        [--INCLUDE -VP-header-nav--]
+        [-- INCLUDE -VP-header-minicart PROCESS --]
+      </header>
+      <!--header end-->
+      <div class="cmlla" id="cmlla">
+        <!--main start-->
+        <main role="main">
+          <div class="container">
+
+            <div id="moreInfo">
+              <div class="cbox mid">
+                <div class="space-60"></div>
+                <h1>[-- STORE.Name --]</h1>
+                
+                <div class="mid">
+                  <div class="space-60"></div>
+                  <div class="space-60"></div>
+                  <p>[-- STORE.EmailAddressChangedText --]</p>
+                </div>
+
+                <div class="cbox">
+                  <p>[-- Store.NewSignInAddress --]: [-- CR_Email_Address --]</p>
+                </div>
+                <div class="cbox">
+                  <p>[-- Store.URL --] <a href="[-- MyStoreURL --]">[-- MyStoreURL --]</a></p>
+                </div>
+
+                <div class="space-60"></div>
+                <div class="space-60"></div>
+                <div class="space-60"></div>
+              </div>
+            </div>
+
+          </div>
+        </main>
+        <!--main end-->
+        [-- INCLUDE -VP-mailing-list --]
+        [-- INCLUDE -VP-footer--]
+        [-- INCLUDE SignInModal.sst PROCESS --]
+      </div>
+    </div>
+
+  </body>
+  </html>
+[-- END_DEFINE EMAIL_ADDRESS_NEW --]
+#
+# Email address has changed - OLD
+#
+[-- DEFINE EMAIL_ADDRESS_CHANGED --]
+  <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+  <html>
+    <!--email address has changed - old-->
+  <body>
+
+    <div class="site-wrap">
+      <!--header start-->
+      <header class="header">
+        [--INCLUDE -VP-header-nav--]
+        [-- INCLUDE -VP-header-minicart PROCESS --]
+      </header>
+      <!--header end-->
+      <div class="cmlla" id="cmlla">
+        <!--main start-->
+        <main role="main">
+          <div class="container">
+
+            <div id="moreInfo">
+              <div class="cbox mid">
+                <div class="space-60"></div>
+                <h1>[-- STORE.Name --]</h1>
+
+                <div class="mid">
+                  <div class="space-60"></div>
+                  <div class="space-60"></div>
+                  <p>[-- STORE.EmailAddressChangedText --]</p>
+                </div>
+
+                <div class="cbox">
+                  <p>[-- Store.NewSignInAddress --]: [-- CR_Email_Address --]</p>
+                </div>
+                <div class="cbox">
+                  <p>[-- Store.URL --] <a href="[-- MyStoreURL --]">[-- MyStoreURL --]</a></p>
+                </div>
+
+                <div class="space-60"></div>
+                <div class="space-60"></div>
+                <div class="space-60"></div>
+              </div>
+            </div>
+
+          </div>
+        </main>
+        <!--main end-->
+        [-- INCLUDE -VP-mailing-list --]
+        [-- INCLUDE -VP-footer--]
+        [-- INCLUDE SignInModal.sst PROCESS --]
+      </div>
+    </div>
+
+  </body>
+  </html>
+[-- END_DEFINE EMAIL_ADDRESS_CHANGED --]
+#
+# Email for when account information changes
+#
+[-- DEFINE EMAIL_ACCOUNT_CHANGE --]
+  [-- IF CR_HTML_Email --]
+  <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+  <html>
+    <!--email for when account information changes-->
+  <head>
+  </head>
+  <body>
+
+    <div class="site-wrap">
+      <!--header start-->
+      <header class="header">
+        [--INCLUDE -VP-header-nav--]
+        [-- INCLUDE -VP-header-minicart PROCESS --]
+      </header>
+      <!--header end-->
+      <div class="cmlla" id="cmlla">
+        <!--main start-->
+        <main role="main">
+          <div class="container">
+
+            <div id="moreInfo">
+              <div class="cbox mid">
+                <div class="space-60"></div>
+                <h1>[-- STORE.Name --]</h1>
+                
+                <div class="cbox">
+                  <div class="pref-fcolc alert alert-danger">
+                    [-- CR_ShopSiteMessages --]
+                  </div>
+                </div>
+
+                <div class="mid">
+                  <div class="space-60"></div>
+                  <div class="space-60"></div>
+                  <p>[-- STORE.EmailAccountChangeText --]</p>
+                </div>
+
+                <div class="space-60"></div>
+                <div class="space-60"></div>
+                <div class="space-60"></div>
+              </div>
+            </div>
+
+          </div>
+        </main>
+        <!--main end-->
+        [-- INCLUDE -VP-mailing-list --]
+        [-- INCLUDE -VP-footer--]
+        [-- INCLUDE SignInModal.sst PROCESS --]
+      </div>
+    </div>
+  
+  </body>
+  </html>
+
+  [-- ELSE --]
+
+  [-- STORE.EmailAccountChangeText --] [-- STORE.Name --]
+  [-- CR_ShopSiteMessages --]
+
+  [-- END_IF --]
+[-- END_DEFINE EMAIL_ACCOUNT_CHANGE --]

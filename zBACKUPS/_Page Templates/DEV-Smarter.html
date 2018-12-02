@@ -1,0 +1,166 @@
+<?php
+$domain='sewingmachinesplus.com';
+$host  = $_SERVER['HTTP_HOST'];
+$uri = $_SERVER['PHP_SELF'];
+function domainCheck($host, $uri, $domain){
+  $dir_name = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+  if($host==$domain){
+    $formattedUrl=$domain.$uri;
+    Header( "HTTP/1.1 301 Moved Permanently" );
+    Header( "Location: http://www.$formattedUrl" );
+    exit; 
+  }
+}
+domainCheck($host, $uri, $domain);
+?>
+
+[--DEFINE LINK_TO_PAGE--]
+  [--IF PAGE.NumItems 0--]
+        [-- IF PAGE.Field1 "no" --]
+              <!-- IGNORE PAGE LINK IF IT HAS NO ITEMS AND IS NOT A SUBDIRECTORY -->
+            [-- END_IF --]
+            
+            [-- IF PAGE.Field1 "yes" --]
+            [-- IF VAR.counter "0" --]
+          <tr>
+        [-- END_IF --]
+        [-- VAR.counter INC --]
+        <td class="pageLink">
+        [--IF PAGE.LinkGraphic--]
+          <a href="[--OUTPUT_DIRECTORY_URL--]/[--Page.FileName--]">
+                      <center>
+                          <img [-- PAGE.LinkGraphic REMOVE_HTML --] /><br>
+              [--PAGE.LinkName--]
+                        </center>
+                    </a>
+        [--ELSE--]
+          <a href="[--OUTPUT_DIRECTORY_URL--]/[--Page.FileName--]"><center><b>[--PAGE.LinkName--]</b></center></a>
+        [--END_IF--]
+        </td>
+        [-- IF VAR.counter "5" --]
+            </tr>
+            [-- VAR.counter "0" --]
+        [-- END_IF --]
+            [-- END_IF --]
+  [--ELSE--]
+    [-- IF VAR.counter "0" --]
+         <tr>
+    [-- END_IF --]
+    [-- VAR.counter INC --]
+    <td class="pageLink">
+    [--IF PAGE.LinkGraphic--]
+      <a href="[--OUTPUT_DIRECTORY_URL--]/[--Page.FileName--]">
+              <center>
+                <img [-- PAGE.LinkGraphic REMOVE_HTML --]><br>
+          <b>[--PAGE.LinkName--]</b>
+                </center>
+            </a>
+    [--ELSE--]
+      <a href="[--OUTPUT_DIRECTORY_URL--]/[--Page.FileName--]"><center><b>[--PAGE.LinkName--]</b></center></a>
+    [--END_IF--]
+    </td>
+    [-- IF VAR.counter "5" --]
+        </tr>
+        [-- VAR.counter "0" --]
+    [-- END_IF --]
+  [--END_IF--]
+[--END_DEFINE LINK_TO_PAGE--]
+
+[-- VAR.Secure "no" --]
+
+[-- DEFINE PAGE --]
+<!-- test page -->
+
+<html>
+
+<head>
+  
+    [--IF PAGE.Title --]
+    <title>[--PAGE.Title REMOVE_HTML --]</title>
+  [--ELSE--]
+    <title>[-- PAGE.Name REMOVE_HTML --]</title>
+  [--END_IF--]
+
+  [-- IF PAGE.MetaKeywords --]
+    <meta name="Keywords" content="[-- PAGE.MetaKeywords --]" />
+  [--ELSE--]
+    <meta name="Keywords" content="[-- PAGE.Name REMOVE_HTML --]" />
+  [--END_IF--]
+
+  [--IF PAGE.MetaDescription --]
+    <meta name="Description" content="[-- PAGE.MetaDescription --]" />
+  [--ELSE--]
+    <meta name="Description" content="[--PAGE.Name REMOVE_HTML --]" />
+  [--END_IF--]
+    
+    [-- IF PAGE.Field5 --]
+      [-- PAGE.Field5 --]
+    [--END_IF--]
+    
+    <META NAME="GOOGLEBOT" CONTENT="INDEX, FOLLOW">
+  <META NAME="Robots" content="index,follow"> 
+  <meta name="rating" content="General" />
+
+[-- IF PAGE.Field2 --]
+  <div align="center">[-- PAGE.Field2 --]</div>
+[--END_IF--]
+
+[-- IF PAGE.Text1 --]
+  <p>[-- PAGE.Text1 --]</p>
+[-- END_IF --]
+
+[-- IF PAGE.Field4 --]
+  [-- PAGE.Field4 --]
+[--END_IF--]
+
+  [-- IF PAGE.NumLinks 0 --]
+  [-- ELSE --]
+      <center><table cellpadding="4">
+    [-- VAR.counter "0" --]
+    [-- LOOP LINKS --]
+      [-- LINK --]
+    [-- END_LOOP LINKS --]
+        </table></center>
+    [-- IF VAR.counter "0" --]
+    [-- ELSE --]
+    [-- END_IF --]
+        
+        [-- IF PAGE.NumProducts 0 --]
+        [-- ELSE --]
+          <br /><hr width="50%" /><br />
+    [-- END_IF --]    
+  [-- END_IF --]
+                
+                
+  [-- IF PAGE.NumProducts 0 --]
+  [-- ELSE --]
+      <table style="margin: 0px;" cellspacing="1">
+        [--LOOP PRODUCTS 4--]
+          <td class="productListing">
+            <div style="height: 215px;"><center>[--PRODUCT--]</center></div>
+            </td>
+        [--END_LOOP PRODUCTS--]  
+        </table>
+    [--END_IF--]
+    
+   </div> 
+<script type="text/javascript" src="//static.criteo.net/js/ld/ld.js" async="true"></script>
+<script type="text/javascript">
+window.criteo_q = window.criteo_q || [];
+var deviceType = /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Silk/.test(navigator.userAgent) ? "m" : /iPad/.test(navigator.userAgent) ? "t" : "d";
+var viewList = new Array();
+ss_jQuery("input[class='viewlist']").each(function(i){
+if(i < 3){
+viewList[i] = ss_jQuery(this).val();
+}
+});
+
+window.criteo_q.push(
+{ event: "setAccount", account: 19481},
+{ event: "setSiteType", type: deviceType},
+{ event: "setHashedEmail", email: [""]},
+{ event: "viewList", item: [viewList[0], viewList[1], viewList[2]] });
+</script>
+
+</html>
+[-- END_DEFINE PAGE --]

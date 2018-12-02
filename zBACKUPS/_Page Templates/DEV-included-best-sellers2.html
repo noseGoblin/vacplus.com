@@ -1,0 +1,97 @@
+[--DEFINE LINK_TO_PAGE--]
+  [--IF PAGE.NumItems 0--]
+        [-- IF PAGE.Field1 "no" --]
+              <!-- IGNORE PAGE LINK IF IT HAS NO ITEMS AND IS NOT A SUBDIRECTORY -->
+            [-- END_IF --]
+            
+            [-- IF PAGE.Field1 "yes" --]
+            [-- IF VAR.counter "0" --]
+          <tr>
+        [-- END_IF --]
+        [-- VAR.counter INC --]
+        <td class="pageLink">
+        [--IF PAGE.LinkGraphic--]
+          <a href="[--OUTPUT_DIRECTORY_URL--]/[--Page.FileName--]">
+                      <center>
+                          <img [-- PAGE.LinkGraphic REMOVE_HTML --] /><br>
+              [--PAGE.LinkName--]
+                        </center>
+                    </a>
+        [--ELSE--]
+          <a href="[--OUTPUT_DIRECTORY_URL--]/[--Page.FileName--]"><center><b>[--PAGE.LinkName--]</b></center></a>
+        [--END_IF--]
+        </td>
+        [-- IF VAR.counter "5" --]
+            </tr>
+            [-- VAR.counter "0" --]
+        [-- END_IF --]
+            [-- END_IF --]
+  [--ELSE--]
+    [-- IF VAR.counter "0" --]
+         <tr>
+    [-- END_IF --]
+    [-- VAR.counter INC --]
+    <td class="pageLink">
+    [--IF PAGE.LinkGraphic--]
+      <a href="[--OUTPUT_DIRECTORY_URL--]/[--Page.FileName--]">
+              <center>
+                <img [-- PAGE.LinkGraphic REMOVE_HTML --]><br>
+          <b>[--PAGE.LinkName--]</b>
+                </center>
+            </a>
+    [--ELSE--]
+      <a href="[--OUTPUT_DIRECTORY_URL--]/[--Page.FileName--]"><center><b>[--PAGE.LinkName--]</b></center></a>
+    [--END_IF--]
+    </td>
+    [-- IF VAR.counter "5" --]
+        </tr>
+        [-- VAR.counter "0" --]
+    [-- END_IF --]
+  [--END_IF--]
+[--END_DEFINE LINK_TO_PAGE--]
+
+
+
+[-- DEFINE PAGE --]
+
+  [-- IF PAGE.Field3 --]
+    [-- IF PAGE.Field3 "b" --]
+          <div class="subpage">Shop by Brand</div>
+        [-- END_IF --]
+        
+        [-- IF PAGE.Field3 "c" --]
+          <div class="subpage">Shop by Category</div>
+        [-- END_IF --]
+  [--END_IF--]
+<div align="center" style="clear:both;"><img src="images/test/images/best-seller-tab2.jpg" border="0"></div>
+  [-- IF PAGE.NumLinks 0 --]
+  [-- ELSE --]
+      <center><table cellpadding="4" width="650px">
+    [-- VAR.counter "0" --]
+    [-- LOOP LINKS --]
+      [-- LINK --]
+    [-- END_LOOP LINKS --]
+        </table></center>
+    [-- IF VAR.counter "0" --]
+    [-- ELSE --]
+    [-- END_IF --]
+        
+        [-- IF PAGE.NumProducts 0 --]
+        [-- ELSE --]
+          <br /><hr width="50%" /><br />
+    [-- END_IF --]    
+  [-- END_IF --]
+                
+                
+  [-- IF PAGE.NumProducts 0 --]
+  [-- ELSE --]
+      <table width="650px" style="margin: 0px;">
+        [--LOOP PRODUCTS 4--]
+          <td class="productListing">
+            <div style="height: 215x;"><center>[--PRODUCT--]</center></div>
+            </td>
+        [--END_LOOP PRODUCTS--]  
+        </table>
+    [--END_IF--]
+
+[-- END_DEFINE PAGE --]

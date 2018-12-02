@@ -1,0 +1,367 @@
+<?php
+// Start the session
+session_start();
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php
+$_SESSION["NUMBER".$_SESSION["gclid"]] = "8004018151";
+$_SESSION["LOCAL".$_SESSION["gclid"]] = "7607398222";
+
+if(empty($_COOKIE["triviumgclid"])) {
+  if (!isset($_SESSION["gclid"])) {
+    $_SESSION["gclid"] = $_GET["gclid"];
+      $_SESSION["keyword"] =$_GET["keyword"];
+  }
+  if (!empty($_SESSION["gclid"])) {     
+    $file = file_get_contents("http://98.175.242.26:8090/SonicView/callAnalytics/getAdwordsPhoneNumber?number=8004018151&gclid=".$_SESSION["gclid"]."&keyword=".$_SESSION["keyword"]);
+    $_SESSION["NUMBER".$_SESSION["gclid"]]=$file;
+    $_SESSION["LOCAL".$_SESSION["gclid"]] = "7604663195";
+    setcookie("triviumgclid", $_SESSION["gclid"], time()+2592000);
+  }
+} else {
+  if(empty($_GET["gclid"])) {
+    $_SESSION["gclid"] = $_COOKIE["triviumgclid"];
+    $file = file_get_contents("http://98.175.242.26:8090/SonicView/callAnalytics/getAdwordsPhoneNumber?number=8004018151&gclid=".$_SESSION["gclid"]."&keyword=".$_SESSION["keyword"]);
+    $_SESSION["NUMBER".$_SESSION["gclid"]]=$file;
+    $_SESSION["LOCAL".$_SESSION["gclid"]] = "7604663195";
+  } else {
+    $_SESSION["gclid"] = $_GET["gclid"];
+    $file = file_get_contents("http://98.175.242.26:8090/SonicView/callAnalytics/getAdwordsPhoneNumber?number=8004018151&gclid=".$_SESSION["gclid"]."&keyword=".$_SESSION["keyword"]);
+    $_SESSION["NUMBER".$_SESSION["gclid"]]=$file;
+    $_SESSION["LOCAL".$_SESSION["gclid"]] = "7604663195";
+    setcookie("triviumgclid", $_SESSION["gclid"], time()+2592000);
+  }
+}
+?>
+<?php
+$domain='sewingmachinesplus.com';
+$host  = $_SERVER['HTTP_HOST'];
+$uri = $_SERVER['PHP_SELF'];
+function domainCheck($host, $uri, $domain){
+  $dir_name = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+  if($host==$domain){
+    $formattedUrl=$domain.$uri;
+    Header( "HTTP/1.1 301 Moved Permanently" );
+    Header( "Location: http://www.$formattedUrl" );
+    exit; 
+  }
+}
+domainCheck($host, $uri, $domain);
+?>
+
+[--DEFINE LINK_TO_PAGE--]
+  [--IF PAGE.NumItems 0--]
+        [-- IF PAGE.Field1 "no" --]
+              <!-- IGNORE PAGE LINK IF IT HAS NO ITEMS AND IS NOT A SUBDIRECTORY -->
+            [-- END_IF --]
+            
+            [-- IF PAGE.Field1 "yes" --]
+            [-- IF VAR.counter "0" --]
+          <tr>
+        [-- END_IF --]
+        [-- VAR.counter INC --]
+        <td class="pageLink">
+        [--IF PAGE.LinkGraphic--]
+          <a href="[--OUTPUT_DIRECTORY_URL--]/[--Page.FileName--]">
+                      <center>
+                          <img [-- PAGE.LinkGraphic REMOVE_HTML --] /><br>
+              [--PAGE.LinkName--]
+                        </center>
+                    </a>
+        [--ELSE--]
+          <a href="[--OUTPUT_DIRECTORY_URL--]/[--Page.FileName--]"><center><b>[--PAGE.LinkName--]</b></center></a>
+        [--END_IF--]
+        </td>
+        [-- IF VAR.counter "5" --]
+            </tr>
+            [-- VAR.counter "0" --]
+        [-- END_IF --]
+            [-- END_IF --]
+  [--ELSE--]
+    [-- IF VAR.counter "0" --]
+         <tr>
+    [-- END_IF --]
+    [-- VAR.counter INC --]
+    <td class="pageLink">
+    [--IF PAGE.LinkGraphic--]
+      <a href="[--OUTPUT_DIRECTORY_URL--]/[--Page.FileName--]">
+              <center>
+                <img [-- PAGE.LinkGraphic REMOVE_HTML --]><br>
+          <b>[--PAGE.LinkName--]</b>
+                </center>
+            </a>
+    [--ELSE--]
+      <a href="[--OUTPUT_DIRECTORY_URL--]/[--Page.FileName--]"><center><b>[--PAGE.LinkName--]</b></center></a>
+    [--END_IF--]
+    </td>
+    [-- IF VAR.counter "5" --]
+        </tr>
+        [-- VAR.counter "0" --]
+    [-- END_IF --]
+  [--END_IF--]
+[--END_DEFINE LINK_TO_PAGE--]
+
+[-- VAR.Secure "no" --]
+
+[-- DEFINE PAGE --]
+<!-- test page -->
+
+<html>
+
+<head>
+<script src="https://cdn.optimizely.com/js/3534250896.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Cabin:400italic" rel="stylesheet" type="text/css">
+
+
+
+    [--IF PAGE.Title --]
+    <title>[--PAGE.Title REMOVE_HTML --]</title>
+  [--ELSE--]
+    <title>[-- PAGE.Name REMOVE_HTML --]</title>
+  [--END_IF--]
+
+  [-- IF PAGE.MetaKeywords --]
+    <meta name="Keywords" content="[-- PAGE.MetaKeywords --]" />
+  [--ELSE--]
+    <meta name="Keywords" content="[-- PAGE.Name REMOVE_HTML --]" />
+  [--END_IF--]
+
+  [--IF PAGE.MetaDescription --]
+    <meta name="Description" content="[-- PAGE.MetaDescription --]" />
+  [--ELSE--]
+    <meta name="Description" content="[--PAGE.Name REMOVE_HTML --]" />
+  [--END_IF--]
+    
+    [-- IF PAGE.Field5 --]
+      [-- PAGE.Field5 --]
+    [--END_IF--]
+    
+    <META NAME="GOOGLEBOT" CONTENT="INDEX, FOLLOW">
+  <META NAME="Robots" content="index,follow"> 
+  <meta name="rating" content="General" />
+
+<meta property="og:site_name" content="SewingMachinesPlus.com"/>
+<meta property="og:image" content="https://www.vacplus.com/media/facebook/thread2.gif"/>
+
+<meta property="og:title" content="[--PAGE.Title--]" />
+<meta property="og:description" content="[-- PAGE.MetaDescription --]" />
+<meta property="og:type" content="website" />
+
+<meta itemprop="name" content="[--PAGE.Title--]">
+<meta itemprop="description" content="[-- PAGE.MetaDescription --]">
+<meta itemprop="image" content="https://www.vacplus.com/media/facebook/thread2.gif">
+
+<meta name="twitter:card" content="photo">
+<meta name="twitter:title" content="[--PAGE.Title--]">
+<meta name="twitter:description" content="[-- PAGE.MetaDescription --]">
+<meta name="twitter:image" content="https://www.vacplus.com/media/facebook/thread2.gif">
+
+
+[-- INCLUDE LexiConnAACSimpleHeadDialog PROCESS --]<!--AJAX CART-->
+
+        [-- INCLUDE DEV-header --]
+
+      [-- INCLUDE DEV-leftbar --]
+
+
+<div style="font-size: 8pt; margin: 3px 10px 20px 5px; vertical-align:top;">
+<script>
+    var title="[--PAGE.Title--]";
+    title=title.toLowerCase();
+    $(function(){
+      if(title.indexOf("Black Friday")>-1){
+        document.getElementById('blackfriday').style.display="none";
+      }
+    });
+
+  </script>
+
+
+
+
+<!---------------- 4 TELL CATEGORY PAGE ------------------>
+<?php
+// require_once("/home/vacplus/www/shopsite_api/includes/api_include.php");
+// $dom = new DOMDocument();
+// $html = file_get_contents("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]");
+// libxml_use_internal_errors(true);
+// $dom->loadHTML($html);
+// $xpath = new DOMXPath($dom);
+// $results = $xpath->query("//*[@class='viewlist']");
+// if ($results->length > 0) {
+//     $pid4tell = $results->item(0)->getAttribute('value');
+//  $ptype4tell = $Product->id($pid4tell, "ss_froogleproducttype", false);
+//     $ptype4tell = str_replace(">", ",",$ptype4tell);
+// }
+?>
+<!---------------- END 4 TELL CATEGORY PAGE ------------------>
+
+
+<!---------------------------------------BANNER-------------------------------------------------->
+<div id="nsm_banner" align="center" style="padding-top: 15px; padding-bottom: 15px;"><a href="https://www.vacplus.com/2016-national-sewing-month-sale.php"><img src="https://www.vacplus.com/media/email/2016-web-september-national-sewing-month/EVERY-PAGE-BANNER.jpg" alt="SewingMachinesplus.com National Sewing Month Sale" /></a></div>
+<!---------------------------------------BANNER-------------------------------------------------->
+
+
+
+    <!--XMAS SHIPPING BANNER-->
+    <!--<div id="xmas-shipping" align="center">
+      <img src="https://www.vacplus.com/media/promotions/2014-holiday/2014-shipping-call-in-special-banner.jpg">
+    </div>-->
+    <!--END XMAS SHIPPING BANNER-->
+    <div id="promo-banner" style="display:none; color:#fff;">
+      <a href="https://www.vacplus.com/promotions-clearance.php"><img src="https://www.vacplus.com/media/promotions/2014-october/page-banner.jpg" border="0"></a>
+      <!--<table width="650" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td width="650" height="37" colspan="3"><img style="display: block;" border="0" src="https://www.vacplus.com/media/email/2014-national-sewing-month/2014-national-sewing-month-longbanner_01.jpg" width="650" height="37" alt="" /></td>
+        </tr>
+        <tr valign="bottom">
+          <td width="416" height="32"><img style="display: block;" border="0" src="https://www.vacplus.com/media/email/2014-national-sewing-month/2014-national-sewing-month-longbanner_02.jpg" width="416" height="32" alt="" /></td>
+          <td width="226" height="32" bgcolor="#146db6"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 26px; color: #8dc73f;">SEWMONTH2014</span></td>
+          <td width="9" height="32"><img style="display: block;" border="0" src="https://www.vacplus.com/media/email/2014-national-sewing-month/2014-national-sewing-month-longbanner_04.jpg" width="9" height="32" alt="" /></td>
+        </tr>
+        <tr>
+          <td width="650" height="19" colspan="3"><img style="display: block;" border="0" src="https://www.vacplus.com/media/email/2014-national-sewing-month/2014-national-sewing-month-longbanner_05.jpg" width="650" height="19" alt=""  /></td>
+        </tr>
+        <tr>
+          <td width="650" colspan="3" style="background-color:#3ea2d4; color:#fff;"><p>*Some exclusions may apply. Not applicable to Miele products and some select products. Not to be combined with certain finance specials or other discounts.</p></td>
+        </tr>
+      </table>-->
+    </div>
+
+[-- IF PAGE.Field2 --]
+  <div align="center">[-- PAGE.Field2 --]</div>
+[--END_IF--]
+
+[-- IF PAGE.Text1 --]
+  <p>[-- PAGE.Text1 --]</p>
+[-- END_IF --]
+
+[-- IF PAGE.Field4 --]
+  [-- PAGE.Field4 --]
+[--END_IF--]
+
+  [-- IF PAGE.NumLinks 0 --]
+  [-- ELSE --]
+      <center><table cellpadding="4">
+    [-- VAR.counter "0" --]
+    [-- LOOP LINKS --]
+      [-- LINK --]
+    [-- END_LOOP LINKS --]
+        </table></center>
+    [-- IF VAR.counter "0" --]
+    [-- ELSE --]
+    [-- END_IF --]
+        
+        [-- IF PAGE.NumProducts 0 --]
+        [-- ELSE --]
+          <br /><hr width="50%" /><br />
+    [-- END_IF --]    
+  [-- END_IF --]
+                
+                
+  [-- IF PAGE.NumProducts 0 --]
+  [-- ELSE --]
+      <table style="margin: 0px;" cellspacing="1">
+        [--LOOP PRODUCTS 4--]
+          <td class="productListing">
+            <div style="height: 215px;"><center>[--PRODUCT--]</center></div>
+            </td>
+        [--END_LOOP PRODUCTS--]  
+        </table>
+    [--END_IF--]
+    
+    [-- IF PAGE.Text3 --]
+    <p>[-- PAGE.Text3 --]</p>
+    [-- END_IF --]
+
+   </div>
+   [-- INCLUDE LexiConnAACSimpleBody_Dialog PROCESS --]<!--AJAX CART-->
+  [-- INCLUDE LexiConnSimpleMinicart PROCESS --]    <!--AJAX CART-->  
+<script type="text/javascript" src="//static.criteo.net/js/ld/ld.js" async="true"></script>
+<script type="text/javascript">
+window.criteo_q = window.criteo_q || [];
+var deviceType = /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Silk/.test(navigator.userAgent) ? "m" : /iPad/.test(navigator.userAgent) ? "t" : "d";
+var viewList = new Array();
+ss_jQuery("input[class='viewlist']").each(function(i){
+if(i < 3){
+viewList[i] = ss_jQuery(this).val();
+}
+});
+
+window.criteo_q.push(
+{ event: "setAccount", account: 19481},
+{ event: "setSiteType", type: deviceType},
+{ event: "setHashedEmail", email: [""]},
+{ event: "viewList", item: [viewList[0], viewList[1], viewList[2]] });
+</script>
+
+<div id="tout1_cat_4Tell" ></div>
+<div id="data_4Tell" data-category="" data-customer="" data-cart=""></div>
+<script type="text/javascript">
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+    }
+    return "";
+}
+var fourTellCookieContents = getCookie("fourtellemail");
+document.getElementById("data_4Tell").setAttribute("data-customer", fourTellCookieContents);
+if(fourTellCookieContents) {
+  document.getElementById("emailSend").src='http://email.sewingmachinesplus.com/public/?q=direct_add&fn=Public_DirectAddForm&id=avzsfstznvdkdkabikpbbgcqhpwfbid&email='+fourTellCookieContents+'&list1=0bbe03ec0000000000000000000000042efe';
+}
+var googleProdCat = new Array();
+ss_jQuery("input[class='googleProdCat']").each(function(i){
+if(i < 1){
+googleProdCat[i] = ss_jQuery(this).val();
+googleProdCat[i] = googleProdCat[i].replace(">", ",");
+document.getElementById("data_4Tell").setAttribute("data-category", googleProdCat[i]);
+}
+});
+</script>
+
+
+  [-- INCLUDE DEV-rightbar --]
+  <!-- BEGIN: Google Trusted Stores -->
+<script type="text/javascript">
+  var gts = gts || [];
+
+  gts.push(["id", "231386"]);
+  gts.push(["badge_position", "BOTTOM_RIGHT"]);
+  gts.push(["locale", "en_US"]);
+  gts.push(["google_base_subaccount_id", "1548534"]);
+  gts.push(["google_base_country", "US"]);
+  gts.push(["google_base_language", "en"]);
+
+  (function() {
+    var gts = document.createElement("script");
+    gts.type = "text/javascript";
+    gts.async = true;
+    gts.src = "https://www.googlecommerce.com/trustedstores/api/js";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(gts, s);
+  })();
+</script>
+<!-- END: Google Trusted Stores -->
+  [-- INCLUDE DEV-footer --]
+<div id="callnowtap">
+  <a href="tel:18004018151"><img src="https://www.vacplus.com/media/callnowtap/callnow.png"/></a>
+</div>
+<script language="JavaScript">
+function calcTime(city, offset) {
+    d = new Date(); 
+    utc = d.getTime() + (d.getTimezoneOffset() * 60000); 
+    nd = new Date(utc + (3600000*offset));
+    if(nd.getHours() < 6 || nd.getHours() >= 18) {
+      document.getElementById("callnowtap").setAttribute('id', 'callnowtap2');
+    }
+}
+calcTime('Our Store', '-8');
+</script>
+</html>
+[-- END_DEFINE PAGE --]

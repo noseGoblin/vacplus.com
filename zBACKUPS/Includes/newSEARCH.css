@@ -1,0 +1,52 @@
+<style type="text/css">
+.search_info {
+  border: 1px solid #EFEFEF; 
+  background: #FFFFFF; 
+  padding:6px;
+  padding:3px;
+  width: 100%;}
+  
+.search_table{
+  width: 100%;}
+
+.search_field{
+  width: 200px;
+  padding-right:3px;}
+
+.search-count{
+  padding-bottom:3px; 
+  font-size:11px}
+
+.results-page{
+  font-size:11px; 
+  padding-bottom:3px; 
+  font-weight:bold;}
+  
+input.search_button {
+    border: 0px;
+  background-color:#FFFFFF;
+  color:#0000FF;
+  padding: 0 0 0 0;
+    font-weight: bold;
+  text-decoration:underline;
+  cursor:pointer;}
+  
+input.search_button_selected {
+    border: 0px;
+  background-color:#FFFFFF;
+  color:#000000;
+  padding: 0 0 0 0;
+    font-weight: bold;}
+  
+input.search_field{
+  text-align:left;}
+  
+.search_rpp_dropdown{
+  font-size:11px;
+  margin-left:3px;
+  margin-right:3px;}
+  
+.search_sort_dropdown{
+    font-size:12px;
+  margin-left:3px;}
+</style>

@@ -1,0 +1,33 @@
+[-- DEFINE PAGE --]
+[-- IF PAGE.NumProducts 0 --]
+[-- ELSE --]
+        <!--new arrivals-->
+        <section class="new-arrivals">
+          <div class="container">
+            <h2 class="section-heading" style="margin-bottom:0px;">
+              <span>
+                <span style="color:black;">[-- PAGE.Field7 --]</span>
+              </span>
+              <!-- <div>
+                <a href="#">VIEW ALL</a>
+              </div> -->
+            </h2>
+            <!--owl carousel-->
+            <div class="row">
+              <div class="col-md-12 top-products">
+                [--LOOP PRODUCTS--]
+                <div class="item">
+                  <div class="item_holder" style="padding:5px;margin-bottom:20px;">
+                    [-- PRODUCT -SMP-category-products--]
+                  </div>
+                </div>
+                [--END_LOOP PRODUCTS--]  
+              </div>
+            </div>
+            <!--owl end-->
+          </div>
+        </section>
+        <!--end new arrivals-->
+
+[--END_IF--]
+[-- END_DEFINE PAGE --]

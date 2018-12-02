@@ -1,0 +1,451 @@
+<!-- BEGIN MODULE HEAD -->
+[-- VAR.MiniCartType 3 --]
+
+[-- VAR.McColor1 Store.Color1 --]
+[-- VAR.McColor2 Store.Color2 --]
+[-- VAR.McColor3 Store.Color3 --]
+[-- VAR.McColor4 Store.Color4 --]
+[-- VAR.McColor5 Store.Color5 --]
+
+[-- VAR.NoItemsInCartMessage "No items in cart" --]
+[-- VAR.AddCartMessage "Adding Item to Cart" --]
+[-- VAR.EmptyCartMessage "Clearing Cart" --]
+[-- VAR.ViewCartAsPopup "false" --]
+#static|fixed
+[-- VAR.CartFivePosition "static" --]
+
+# If you are using the Dialog version of the script, you may select a different JQuery UI theme for the Dialog box by setting the VAR.JQueryUITheme below.
+#
+# JQuery UI Themes for Dialog box include the following (case sensitive) -- default = "base":
+#
+# base
+# black-tie
+# blitzer
+# cupertino
+# dark-hive
+# dot-luv
+# eggplant
+# excite-bike
+# flick
+# hot-sneaks
+# humanity
+# le-frog
+# mint-choc
+# overcast
+# pepper-grinder
+# redmond
+# smoothness
+# south-street
+# start
+# sunny
+# swanky-purse
+# trontastic
+# ui-darkness
+# ui-lightness
+# vader
+#
+# Examples of each can be found at:
+#
+# http://jqueryui.com/themeroller/
+#
+# under the "Gallery" tab
+
+[-- VAR.JQueryUITheme "blitzer" --]
+
+<link type="text/css" rel="stylesheet" href="/media/en-US/css/jquery.loadmask.css">
+<link type="text/css" rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/[-- VAR.JQueryUITheme --]/jquery-ui.css">
+
+<style type="text/css">
+.loadmask {background-color:#CCCCCC;}
+.loadmask-msg div {background-color:#FBFBFB;color:#222222;}
+</style>
+[-- IF VAR.MiniCartType 5 --]
+<style type="text/css">
+
+        #right_side div {
+              overflow: visible !important;
+        }
+
+        #minicart, #minicart_product_table_wrap, #minicart_cart_table{
+              min-width: 250px !important;
+        }
+
+        #minicart{
+                text-align: left;
+                width: 90%;
+    position: [-- VAR.CartFivePosition --];
+        }
+
+        #minicart a:link{
+                text-decoration: none;
+                clear: right;
+        }
+
+        #minicart_product_table th {
+                background-color: #[-- VAR.McColor4 --];
+                color: #ffffff;
+                font-weight: normal;
+        }
+
+  #minicart_product_table_body{
+    color: #000 !important;
+  }
+
+  td.minicart_qnty, td.minicart_name, td.minicart_price{
+     color: #000 !important;
+  }
+        #minicart_icon {
+                background: url([-- ShopSite_Images --]/cart-black.gif) center bottom no-repeat;
+                width: 40px;
+                padding: 0;
+                margin: 0;
+                float: left;
+        }
+
+        .loadmask-msg {
+               z-index: 20001;
+               position: absolute;
+               top: 0;
+               left: 0;
+               border:1px solid #[-- VAR.McColor4 --];
+               background: #[-- VAR.McColor2 --];
+               padding:2px;
+        }
+
+        .loadmask-msg {
+                position: fixed !important;
+                left: 37% !important;
+                top: 40% !important;
+                padding: 2px !important;
+                z-index: 20001 !important;
+                height: auto !important;
+        }
+
+        .loadmask {
+                z-index: 100;
+                position: absolute;
+                top:0;
+                left:0;
+                -moz-opacity: 0.5;
+                opacity: .50;
+                filter: alpha(opacity=50);
+                background-color: #CCC;
+                width: 100%;
+                height: 100%;
+                zoom: 1;
+         }
+
+         #right td a{
+                text-align: left !important;
+                padding: 0 !important;
+                margin: 0 !important;
+         }
+
+
+        #minicart_cartlinks{
+             border-top: 1px solid #[-- VAR.McColor4 --];
+        }
+
+        .minicart_button{
+                 -moz-border-bottom-colors: none;
+                -moz-border-left-colors: none;
+                -moz-border-right-colors: none;
+                -moz-border-top-colors: none;
+                background: -moz-linear-gradient(center bottom , #[-- VAR.McColor5 --] 2%, #[-- VAR.McColor5 --] 51%, #[-- VAR.McColor4 --] 87%) repeat scroll 0 0 transparent;
+                border-color: #[-- VAR.McColor5 --] #[-- VAR.McColor4 --] #[-- VAR.McColor4 --];
+                border-image: none;
+                border-style: solid;
+                border-radius: 5px;
+                border-width: 1px;
+                text-align: center;
+                color: #[-- VAR.McColor2 --];
+                padding: 4px 2px 4px 2px;
+                text-align: center;
+                font-family: inherit;
+                font-size: inherit;
+                font-weight: bold;
+        }
+
+        #minicart_cartlinks td{
+                text-align: center;
+        }
+
+        #minicart_empty_message{
+                padding-bottom: 20px;
+        }
+
+        div#minicart{
+                border-color: #[-- VAR.McColor4 --];
+                border-image: none;
+                border-style: solid;
+                border-radius: 5px;
+                border-width: 2px 2px 3px;
+        }
+
+    table.minicart_product_table{
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: bold;
+      font-style: normal;
+      border-collapse:separate;
+    }
+    .minicart_product_table thead th{
+      padding:6px;
+      color:#fff;
+      text-align: center;
+      border:1px solid #[-- VAR.McColor1 --];
+      border-bottom:3px solid #[-- VAR.McColor1 --];
+      background-color:#[-- VAR.McColor4 --];
+
+      -webkit-border-top-left-radius:5px;
+      -webkit-border-top-right-radius:5px;
+      -moz-border-radius:5px 5px 0px 0px;
+      border-top-left-radius:5px;
+      border-top-right-radius:5px;
+    }
+
+    .minicart_product_table tfoot td{
+        padding-right: 10px !important;
+    }
+
+    
+    .minicart_product_table thead th:empty{
+      background:transparent;
+      border:none;
+    }
+    .minicart_product_table tbody th{
+      color:#[-- VAR.McColor2 --];
+      background-color: #[-- VAR.McColor5 --];
+      border:1px solid #[-- VAR.McColor4 --];
+      border-right:3px solid #[-- VAR.McColor1 --];
+      padding:0px 10px;
+
+      -moz-border-radius:5px 0px 0px 5px;
+      -webkit-border-top-left-radius:5px;
+      -webkit-border-bottom-left-radius:5px;
+      border-top-left-radius:5px;
+      border-bottom-left-radius:5px;
+    }
+
+    .minicart_product_table tfoot{
+        padding-bottom: 15px;
+    }
+
+    .minicart_button diabled{
+        color: #ccc;
+
+    }
+
+    .minicart_product_table tfoot td{
+      color: #[-- VAR.McColor5 --];
+       font-size: inherit;
+      text-align:right;
+      padding: 1px 10px 1px 1px;
+    }
+    .minicart_product_table tfoot th{
+      color:#[-- VAR.McColor3 --];
+    }
+    .minicart_product_table tbody td{
+      padding:10px;
+      text-align:center;
+      background-color:#[-- VAR.McColor1 --];
+      border: 2px solid #[-- VAR.McColor3 --];
+      -moz-border-radius:2px;
+      -webkit-border-radius:2px;
+      border-radius:2px;
+      color:[-- VAR.McColor5 --];
+    }
+
+    .minicart_button{
+        width: 80% !important;
+    }
+
+    .minicart_product_table tbody span.check::before{
+      content : url(../images/check0.png)
+    }
+    /* Table 2 Style */
+    table.table2{
+      font-family: Georgia, serif;
+       font-size: inherit;
+      font-style: normal;
+      font-weight: normal;
+      letter-spacing: -1px;
+      line-height: 1.2em;
+      border-collapse:collapse;
+      text-align:center;
+    }
+    .table2 thead th, .table2 tfoot td{
+      padding:20px 10px 40px 10px;
+      color:#fff;
+       font-size: inherit;
+      background-color:#222;
+      font-weight:normal;
+      border-right:1px dotted #666;
+      border-top:3px solid #666;
+      -moz-box-shadow:0px -1px 4px #000;
+      -webkit-box-shadow:0px -1px 4px #000;
+      box-shadow:0px -1px 4px #000;
+    }
+    .table2 tfoot th{
+      padding:10px;
+       font-size: inherit;
+      text-transform:uppercase;
+      color:#888;
+    }
+    .table2 tfoot td{
+       font-size: inherit;
+      color:#EF870E;
+      border-top:none;
+      border-bottom:3px solid #666;
+      -moz-box-shadow:0px 1px 4px #000;
+      -webkit-box-shadow:0px 1px 4px #000;
+      box-shadow:0px 1px 4px #000;
+    }
+    .table2 thead th:empty{
+      background:transparent;
+      -moz-box-shadow:none;
+      -webkit-box-shadow:none;
+      box-shadow:none;
+    }
+    .table2 thead :nth-last-child(1){
+      border-right:none;
+    }
+    .table2 thead :first-child,
+    .table2 tbody :nth-last-child(1){
+      border:none;
+    }
+    .table2 tbody th{
+      text-align:right;
+      padding:10px;
+      color:#333;
+      background-color:#[-- VAR.McColor2 --];
+    }
+    .table2 tbody td{
+      padding:10px;
+      background-color:#[-- VAR.McColor2 --];
+      border-right:1px dotted #999;
+      text-transform:uppercase;
+      color:#333;
+    }
+    .table2 tbody span.check::before{
+      content : url(/aac_module/images/check1.png)
+    }
+
+    /* Table 3 Style */
+    table.table3{
+      font-family: inherit;
+       font-size: inherit;
+      font-style: normal;
+      font-weight: normal;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+      line-height: 1.7em;
+      text-align:center;
+      border-collapse:collapse;
+    }
+    .table3 thead th{
+      padding:6px 10px;
+      text-transform:uppercase;
+      color:#444;
+      font-weight:bold;
+      border-bottom:5px solid #[-- VAR.McColor1 --];
+    }
+    .table3 thead th:empty{
+      background:transparent;
+      border:none;
+    }
+    .table3 thead :nth-child(2),
+    .table3 tfoot :nth-child(2){
+      background-color: #[-- VAR.McColor1 --];
+    }
+    .table3 tfoot :nth-child(2){
+      -moz-border-radius:0px 0px 0px 5px;
+      -webkit-border-bottom-left-radius:5px;
+      border-bottom-left-radius:5px;
+    }
+    .table3 thead :nth-child(2){
+      -moz-border-radius:5px 0px 0px 0px;
+      -webkit-border-top-left-radius:5px;
+      border-top-left-radius:5px;
+    }
+    .table3 thead :nth-child(3),
+    .table3 tfoot :nth-child(3){
+      background-color: #[-- VAR.McColor1 --];
+    }
+    .table3 thead :nth-child(4),
+    .table3 tfoot :nth-child(4){
+      background-color: #[-- VAR.McColor1 --];
+    }
+    .table3 thead :nth-child(5),
+    .table3 tfoot :nth-child(5){
+      background-color: #096A9F;
+    }
+    .table3 thead :nth-child(5){
+      -moz-border-radius:0px 5px 0px 0px;
+      -webkit-border-top-right-radius:5px;
+      border-top-right-radius:5px;
+    }
+    .table3 tfoot :nth-child(5){
+      -moz-border-radius:0px 0px 5px 0px;
+      -webkit-border-bottom-right-radius:5px;
+      border-bottom-right-radius:5px;
+    }
+    .table3 tfoot td{
+       font-size: inherit;
+      font-weight:bold;
+      padding:15px 0px;
+    }
+    .table3 tbody td{
+      padding:10px;
+    }
+    .table3 tbody tr:nth-child(4) td{
+       font-size: inherit;
+      font-weight:bold;
+    }
+    .table3 tbody td:nth-child(even){
+      background-color:#[-- VAR.McColor4 --];
+      color:#444;
+      border-bottom:1px solid #[-- VAR.McColor4 --];
+
+    }
+    .table3 tbody td:nth-child(odd){
+      background-color:#[-- VAR.McColor5 --];
+      color:#f0f0f0;
+      border-bottom:1px solid #[-- VAR.McColor4 --];
+    }
+    .table3 tbody td:nth-last-child(1){
+      border-right:1px solid #[-- VAR.McColor1 --];
+    }
+    .table3 tbody th{
+      color:#[-- VAR.McColor4 --];
+      text-align:right;
+      padding:0px 10px;
+      border-right:1px solid #[-- VAR.McColor5 --];
+    }
+    .table3 tbody span.check::before{
+      content : url(/aac_module/images/check2.png)
+    }
+    
+    .ui-dialog{
+      z-index: 9999 !important;
+    }
+
+</style>
+[-- ELSE --]
+<style type="text/css">
+        #minicart{
+                text-align: left;
+                position: [-- VAR.CartFivePosition --];
+                border:1px solid;
+                border-color: #751113;
+
+        }
+        
+        .ui-dialog{
+      z-index: 9999 !important;
+    }
+    
+</style>
+[-- END_IF --]
+<!-- END MODULE HEAD -->
+

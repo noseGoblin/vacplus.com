@@ -1,0 +1,101 @@
+[--DEFINE LINK_TO_PAGE--]
+# This define is used to control how the link to this page will
+#     look on other pages
+[--END_DEFINE LINK_TO_PAGE--]
+
+[-- DEFINE PAGE --]
+
+<div id="finitto2">
+        <div style="font-family: 'Cabin', sans-serif; font-size: 21px;" align="center">TAKE ADVANTAGE OF THESE DEALS WHILE THERE'S STILL TIME!</div>
+        <!--<div class="subpage">Flash Sale</div>-->
+        <div><img src="https://www.vacplus.com/media/flash-sale/flash-sale-ribbon.jpg" border="0"></div>
+  <div id="flash-sale-scroller" style="position:relative; max-width:655px; min-width:655px; height:250px; max-height:250px; overflow-x:scroll; overflow-y:hidden; clear:both;">
+    <div id="flash-sale-items" style="position:relative; right:0;" align="center">
+      <?php include('flash-sale-singles.php'); ?>
+    </div><!--#flash-sale-items-->
+  </div><!--#flash-sale-scroller-->
+
+  <!--<div id="scroller-btns" style="position:relative; z-index:50; height:30px; max-height:17px;">
+    <img src="https://www.vacplus.com/media/flash-sale/next.jpg" border="0" id="next-btn" style="float:right;">
+    <img src="https://www.vacplus.com/media/flash-sale/prev.jpg" border="0" id="prev-btn" style="float:left;">
+  </div>--><!--#scroller-btns--><br>
+  <div style="background-color:#dcb626; height:5px; width:650px;">&nbsp;</div>
+</div><!--div finitto2-->
+
+<!--scroller script-->
+<script>
+  $('#next-btn').mouseover(function(){
+    $('#next-btn').attr('src', 'https://www.vacplus.com/media/flash-sale/over-next.jpg')
+  });
+
+  $('#next-btn').mouseout(function(){
+    $('#next-btn').attr('src', 'https://www.vacplus.com/media/flash-sale/next.jpg')
+  });
+
+  $('#prev-btn').mouseover(function(){
+    $('#prev-btn').attr('src', 'https://www.vacplus.com/media/flash-sale/over-prev.jpg')
+  });
+
+  $('#prev-btn').mouseout(function(){
+    $('#prev-btn').attr('src', 'https://www.vacplus.com/media/flash-sale/prev.jpg')
+  });
+
+  //scroll up/down
+  /*$('#next-btn').click(function(){
+    var boxPos=$('#flash-sale-items').css('bottom');
+    boxPos=parseFloat(boxPos);
+    var newPos=boxPos+235;
+    if(newPos<fullHght){
+      $('#flash-sale-items').css('bottom', newPos);
+    }
+  });
+
+  $('#prev-btn').click(function(){
+    var boxPos=$('#flash-sale-items').css('bottom');
+    boxPos=parseFloat(boxPos);
+    var newPos=boxPos-235;
+    if(newPos>-235){
+      $('#flash-sale-items').css('bottom',newPos);
+    }
+  });*/
+
+  var initPos=$('#flash-sale-items').css('right');
+  initPos=parseFloat(initPos);
+  if(initPos==0){
+    $('#prev-btn').css('display', 'none');
+  }
+
+  $('#next-btn').click(function(){
+    var boxPos=$('#flash-sale-items').css('right');
+    boxPos=parseFloat(boxPos);
+    var newPos=boxPos+327;
+    $('#prev-btn').css('display', 'block');
+    if(newPos<fullWdth){
+      $( "#flash-sale-items" ).animate({
+          right: newPos
+      }, 500, function() {
+          // Animation complete.
+      });
+    }else{
+      $('#next-btn').css('display', 'none');
+    }
+  });
+
+  $('#prev-btn').click(function(){
+    var boxPos=$('#flash-sale-items').css('right');
+    boxPos=parseFloat(boxPos);
+    var newPos=boxPos-327;
+    $('#next-btn').css('display', 'block');
+    if(newPos>-163.5){
+      $( "#flash-sale-items" ).animate({
+          right: newPos
+      }, 500, function() {
+          // Animation complete.
+      });
+    }else{
+      $('#prev-btn').css('display', 'none');
+    }
+  });
+</script>
+
+[-- END_DEFINE PAGE --]

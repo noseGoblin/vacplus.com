@@ -1,0 +1,192 @@
+[-- DEFINE SUBPRODUCT --]
+<input type="hidden" name="itemnum" value="[-- PRODUCT.RecordNumber --]">&nbsp;[-- PRODUCT.Name --] [-- IF PRODUCT.DisplayPrice --][-- IF PRODUCT.SaleAmount --][-- IF PRODUCT.SaleOn --][-- PRODUCT.PriceStyle Begin --][-- PRODUCT.SaleAmount --] [-- STORE.OnSaleText --][-- PRODUCT.PriceStyle End --][-- ELSE --][-- PRODUCT.PriceStyle Begin --][-- PRODUCT.Price --][-- PRODUCT.PriceStyle End --][-- END_IF --][-- ELSE --][-- PRODUCT.PriceStyle Begin --][-- PRODUCT.Price --][-- PRODUCT.PriceStyle End --][-- END_IF --][-- END_IF --]
+[-- END_DEFINE SUBPRODUCT --]
+################################################################################
+[-- DEFINE PRODUCT --]
+<style type="text/css">
+ #ss_em_pr {margin: 0px; padding: 0px; display:-webkit-box;}
+ #ss_em_pr, #ss_em_pr td {font-family: [-- IF STORE.Font --][-- STORE.Font --][-- ELSE --]arial, helvetica, sans-serif[-- END_IF --]; font-size: [-- IF STORE.FontSize --][-- STORE.FontSize --][-- ELSE --]10pt[-- END_IF --]; color: #[-- STORE.TextColor --];}
+ #ss_em_pr .pr_name, #ss_em_pr .pr_sku, #ss_em_pr .pr_price, #ss_em_pr input.add {display: block;}
+ #ss_em_pr input.add_text {border: 0px; background: #[-- STORE.LinkColor --]; color: #FFFFFF; font-weight: normal; font-size: 100%; margin: 5px 0px; padding: 8px 12px; clear: both; border-radius: 3px;}
+ #ss_em_pr .pr_price {padding: 10px 0px;} #ss_em_pr .pr_price strike {display: block; font-size: 80%;} #ss_em_pr .pr_variable {line-height: 180%;}
+ #ss_em_pr .Bold, #ss_em_pr .bold {font-weight: bold;} #ss_em_pr .Big, #ss_em_pr .big {font-size: 120%;}
+ #ss_em_pr .Small, #ss_em_pr .small {font-size: 80%;} #ss_em_pr .Italic, #ss_em_pr .italic {font-style: italic;}
+</style>
+<div id="ss_em_pr">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <tr>
+##### Product Graphic #####
+[-- IF PRODUCT.ImageAlignment "Center" --]
+  [-- IF PRODUCT.Graphic --]
+    [-- IF PRODUCT.DisplayGraphic --]
+    <td align="center"><a href="[-- PRODUCT.MoreInfoURL --]">[-- PRODUCT.Graphic --]</a></td>
+    </tr>
+    <tr>
+      <td valign="top" align="left">
+    [-- ELSE --]
+      <td valign="top" align="left">
+    [-- END_IF --]
+  [-- ELSE --]
+      <td valign="top" align="left">
+  [-- END_IF --]
+[-- ELSE_IF PRODUCT.TextWrap On --]
+    <td valign="top" align="left">
+  [-- IF PRODUCT.DisplayGraphic --]
+    [-- IF PRODUCT.Graphic --]
+    <a href="[-- PRODUCT.MoreInfoURL --]"><img [-- PRODUCT.Graphic REMOVE_HTML --] align="[-- PRODUCT.ImageAlignment --]"[-- IF PRODUCT.ImageAlignment "Right" --] style="margin: 0px 0px 10px 10px;"[-- ELSE_IF PRODUCT.ImageAlignment "Left" --] style="margin: 0px 10px 10px 0px;"[-- END_IF --]></a>
+    [-- END_IF --]
+  [-- END_IF --]
+[-- ELSE_IF PRODUCT.TextWrap "Off" --]
+  [-- IF PRODUCT.DisplayGraphic --]
+    [-- IF PRODUCT.Graphic --]
+      [-- IF PRODUCT.ImageAlignment "Right" --]
+    <td valign="top" align="left" width="100%">
+      [-- ELSE --]
+    <td valign="top" align="center">
+    <a href="[-- PRODUCT.MoreInfoURL --]"><img [-- PRODUCT.Graphic REMOVE_HTML --] align="[-- PRODUCT.ImageAlignment --]" style="margin: 0px 10px 10px 0px;"></a>
+    </td>
+    <td valign="top" align="left" width="100%">
+      [-- END_IF --]
+    [-- ELSE --]
+      <td valign="top" align="left">
+    [-- END_IF --]
+  [-- ELSE --]
+      <td valign="top" align="left">
+  [-- END_IF --]
+[-- ELSE --]
+  [-- IF PRODUCT.DisplayGraphic --]
+    [-- IF PRODUCT.Graphic --]
+      [-- IF PRODUCT.ImageAlignment "Right" --]
+    <td valign="top" align="left" width="100%">
+      [-- ELSE --]
+    <td valign="top" align="center">
+    <a href="[-- PRODUCT.MoreInfoURL --]"><img [-- PRODUCT.Graphic REMOVE_HTML --] align="[-- PRODUCT.ImageAlignment --]" style="margin: 0px 10px 10px 0px;"></a>
+    </td></tr><tr>
+    <td valign="top" align="center" width="100%">
+      [-- END_IF --]
+    [-- ELSE --]
+      <td valign="top" align="left">
+    [-- END_IF --]
+  [-- ELSE --]
+      <td valign="top" align="left">
+  [-- END_IF --]
+[-- END_IF --]
+##### Product Name #####
+[-- IF PRODUCT.VariablePrice? --]
+  [-- IF PRODUCT.VariableName? --]
+  [-- ELSE_IF PRODUCT.DisplayName --]
+    <a href="[-- PRODUCT.MoreInfoURL --]"><span class="pr_name [-- PRODUCT.NameSize --] [-- PRODUCT.NameStyle --]">[-- PRODUCT.Name --]</span></a>
+  [-- END_IF --]
+[-- ELSE_IF PRODUCT.DisplayName --]
+    <a href="[-- PRODUCT.MoreInfoURL --]"><span class="pr_name [-- PRODUCT.NameSize --] [-- PRODUCT.NameStyle --]">[-- PRODUCT.Name --]</span></a>
+[-- END_IF --]
+##### Product Sku #####
+[-- IF PRODUCT.VariablePrice? --]
+  [-- IF PRODUCT.VariableSKU? --]
+  [-- ELSE_IF PRODUCT.DisplaySKU --]
+    [-- IF PRODUCT.Sku --]
+    <a href="[-- PRODUCT.MoreInfoURL --]"><span class="pr_sku [-- PRODUCT.SKUSize --] [-- PRODUCT.SKUStyle --]">[-- PRODUCT.Sku --]</span></a>
+    [-- END_IF --]
+  [-- END_IF --]
+[-- ELSE_IF PRODUCT.DisplaySku --]
+  [-- IF PRODUCT.Sku --]
+    <a href="[-- PRODUCT.MoreInfoURL --]"><span class="pr_sku [-- PRODUCT.SKUSize --] [-- PRODUCT.SKUStyle --]">[-- PRODUCT.Sku --]</span></a>
+  [-- END_IF --]
+[-- END_IF --]
+##### Product Description #####
+[-- IF PRODUCT.ProductDescription --]
+  [-- PRODUCT.DescriptionStyle Begin --][-- PRODUCT.DescriptionSize Begin --][-- PRODUCT.ProductDescription --][-- PRODUCT.DescriptionSize End --][-- PRODUCT.DescriptionStyle End --]
+[-- END_IF --]
+##### Product Price #####
+[-- IF PRODUCT.SubProduct --]
+[-- ELSE_IF PRODUCT.VariablePrice? --]
+[-- ELSE_IF PRODUCT.QuantityPricing --]
+  [-- PRODUCT.QuantityPricing --]
+[-- ELSE_IF PRODUCT.DisplayPrice --]
+  <a href="[-- PRODUCT.MoreInfoURL --]"><span class="pr_price [-- PRODUCT.PriceSize --] [-- PRODUCT.PriceStyle --]">
+  [-- IF PRODUCT.SaleAmount --]
+    [-- IF PRODUCT.SaleOn --]
+      [-- STORE.Price --]: [-- PRODUCT.SaleAmount --] [-- STORE.OnSaleText --]
+        [-- IF PRODUCT.AltPrice --]<br>[-- PRODUCT.AltSaleAmount --][-- END_IF --]
+      <strike>[-- STORE.Price --]: [-- PRODUCT.Price --][-- IF PRODUCT.AltPrice --]<br>[-- PRODUCT.AltPrice --][-- END_IF --]</strike>
+    [-- ELSE --]
+      [-- STORE.Price --]: [-- PRODUCT.Price --]
+        [-- IF PRODUCT.AltPrice --]<br>[-- PRODUCT.AltPrice --][-- END_IF --]
+    [-- END_IF --]
+  [-- ELSE --]
+      [-- STORE.Price --]: [-- PRODUCT.Price --]
+        [-- IF PRODUCT.AltPrice --]<br>[-- PRODUCT.AltPrice --][-- END_IF --]
+  [-- END_IF --]
+  </span></a>
+[-- END_IF --]
+##### Product Subproducts #####
+[-- IF PRODUCT.Subproduct --]
+<form action="[-- SHOPPING_CART_URL BASE --]/order.cgi" method="post">
+<input type="hidden" name="storeid" value="[-- STORE.ID --]">
+<input type="hidden" name="dbname" value="products">
+<input type="hidden" name="function" value="add">
+<!--<br>  [-- LOOP SUBPRODUCTS --]
+    [-- SUBPRODUCTS em_BasicLayout.sst --]<br>
+  [-- END_LOOP SUBPRODUCTS --]<br>-->
+[-- IF ADDIMAGE? --]
+  <input class="add" type="image" [--ADDIMAGE--]>
+[-- ELSE --]
+  <input class="add_text" type="submit" value="[-- ADDTEXT --]">
+[-- END_IF --]
+</form>
+##### Product Add To Cart If No Subproducts #####
+[-- ELSE_IF PRODUCT.UseMultiMenus checked --]
+[-- ELSE --]
+<form action="[-- SHOPPING_CART_URL BASE --]/order.cgi" method="post">
+<input type="hidden" name="storeid" value="[-- STORE.ID --]">
+<input type="hidden" name="dbname" value="products">
+<input type="hidden" name="function" value="add">
+<input type="hidden" name="itemnum" value="[-- PRODUCT.RecordNumber --]">
+  [-- IF PRODUCT.VariablePrice? --]
+    <span class="pr_variable">
+    [-- IF PRODUCT.VariableName? --]
+      <b>[-- STORE.ProductName --]:</b> <input type="text" name="[-- PRODUCT.RecordNumber --]:name" size="20" maxlength="100" value=""><br>
+    [-- END_IF --]
+
+    [-- IF PRODUCT.VariableSKU? --]
+      <b>[-- STORE.Sku --]:</b> <input name="[--PRODUCT.RecordNumber--]:sku" size="10" value="" type="text"><br>
+    [-- END_IF --]
+
+      <b>[--STORE.Price --]:</b> [-- STORE.CurrencySymbol --]<input type="text" name="[-- PRODUCT.RecordNumber --]:price" size="4" maxlength="10" value="">
+    </span><br>
+  [-- END_IF --]
+  [-- IF PRODUCT.DisplayOrderingOptions --]
+    [-- IF PRODUCT.OptionText --][-- PRODUCT.OptionText --][-- END_IF --]
+    [-- ORDER_OPTION_MENU Column --]
+    [-- IF PRODUCT.OptionsBox --]
+      [-- IF PRODUCT.OptionsBoxHeader --][-- PRODUCT.OptionsBoxHeader --]<br>[-- END_IF --]
+      <textarea name="[-- PRODUCT.Recordnumber --]:freeopt" cols="[-- PRODUCT.OptionsBoxColumns --]" rows="[-- PRODUCT.OptionsBoxRows --]"></textarea><br>
+    [-- END_IF --] 
+  [-- END_IF --]
+  [-- IF PRODUCT.DisplayOrderQuantity --]
+    [-- STORE.OrderQuantity --] <input type="text" size="2" name="[-- PRODUCT.RecordNumber --]:qnty" value="1"><br>
+  [-- END_IF --]
+  [-- IF ADDIMAGE? --]
+    <input class="add" type="image" [--ADDIMAGE--]>
+  [-- ELSE --]
+    <input class="add_text" type="submit" value="[-- ADDTEXT --]">
+  [-- END_IF --]
+</form>
+[-- END_IF --]
+##### Product Graphic Align Right #####
+[-- IF PRODUCT.TextWrap "Off" --]
+  [-- IF PRODUCT.DisplayGraphic --]
+    [-- IF PRODUCT.Graphic --]
+      [-- IF PRODUCT.ImageAlignment "Right" --]
+    </td>
+    <td valign="top" align="center">
+      <a href="[-- PRODUCT.MoreInfoURL --]"><img [-- PRODUCT.Graphic REMOVE_HTML --] align="[-- PRODUCT.ImageAlignment --]" style="margin: 0px 0px 10px 10px;"></a>
+    </td>
+      [-- END_IF --]
+    [-- END_IF --]
+  [-- END_IF --]
+[-- END_IF --]
+  </tr>
+</table>
+</div>
+[-- END_DEFINE PRODUCT --]

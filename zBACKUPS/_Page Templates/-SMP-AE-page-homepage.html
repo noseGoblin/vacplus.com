@@ -1,0 +1,295 @@
+<?php
+    // Start the session
+    session_start();
+  ?>
+  <?php
+    $_SESSION["NUMBER".$_SESSION["gclid"]] = "8004018151";
+    $_SESSION["LOCAL".$_SESSION["gclid"]] = "7607398222";
+
+      
+    if (!isset($_SESSION["gclid"])) {
+      $_SESSION["gclid"] = $_GET["gclid"];
+        $_SESSION["keyword"] =$_GET["keyword"];
+    }
+
+    if (!empty($_SESSION["gclid"])) {     
+      $file = file_get_contents("http://64.73.241.122:8090/SonicView/callAnalytics/getAdwordsPhoneNumber?number=8004018151&gclid=".$_SESSION["gclid"]."&keyword=".$_SESSION["keyword"]);
+      $_SESSION["NUMBER".$_SESSION["gclid"]]=$file;
+      $_SESSION["LOCAL".$_SESSION["gclid"]] = "7604663195";
+
+    }
+  ?>
+  <?php
+    $domain='sewingmachinesplus.com';
+    $host  = $_SERVER['HTTP_HOST'];
+    $uri = $_SERVER['PHP_SELF'];
+    function domainCheck($host, $uri, $domain){
+      $dir_name = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+      if($host==$domain){
+        $formattedUrl=$domain.$uri;
+        Header( "HTTP/1.1 301 Moved Permanently" );
+        Header( "Location: http://www.$formattedUrl" );
+        exit; 
+      }
+    }
+    domainCheck($host, $uri, $domain);
+  ?>
+  [--DEFINE LINK_TO_PAGE--]
+    [--IF PAGE.NumItems 0--]
+      [-- IF PAGE.Field1 "no" --]
+        <!-- IGNORE PAGE LINK IF IT HAS NO ITEMS AND IS NOT A SUBDIRECTORY -->
+      [-- END_IF --]
+      [-- IF PAGE.Field1 "yes" --]
+        [-- IF VAR.counter "0" --]
+          <tr>
+        [-- END_IF --]
+        [-- VAR.counter INC --]
+        <td class="pageLink">
+        [--IF PAGE.LinkGraphic--]
+          <a href="[--OUTPUT_DIRECTORY_URL--]/[--Page.FileName--]">
+            <center>
+              <img [-- PAGE.LinkGraphic REMOVE_HTML --] /><br>
+              [--PAGE.LinkName--]
+            </center>
+          </a>
+        [--ELSE--]
+          <a href="[--OUTPUT_DIRECTORY_URL--]/[--Page.FileName--]"><center><b>[--PAGE.LinkName--]</b></center></a>
+        [--END_IF--]
+        </td>
+        [-- IF VAR.counter "5" --]
+          </tr>
+          [-- VAR.counter "0" --]
+        [-- END_IF --]
+      [-- END_IF --]
+    [--ELSE--]
+      [-- IF VAR.counter "0" --]
+        <tr>
+      [-- END_IF --]
+      [-- VAR.counter INC --]
+      <td class="pageLink">
+      [--IF PAGE.LinkGraphic--]
+        <a href="[--OUTPUT_DIRECTORY_URL--]/[--Page.FileName--]">
+          <center>
+            <img [-- PAGE.LinkGraphic REMOVE_HTML --]><br><b>[--PAGE.LinkName--]</b>
+          </center>
+        </a>
+      [--ELSE--]
+        <a href="[--OUTPUT_DIRECTORY_URL--]/[--Page.FileName--]"><center><b>[--PAGE.LinkName--]</b></center></a>
+      [--END_IF--]
+      </td>
+      [-- IF VAR.counter "5" --]
+        </tr>
+        [-- VAR.counter "0" --]
+      [-- END_IF --]
+    [--END_IF--]
+  [--END_DEFINE LINK_TO_PAGE--]
+  [-- VAR.Secure "no" --]
+  [-- DEFINE PAGE --]
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="ISO-8859-1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="//cdn.optimizely.com/js/3534250896.js"></script>
+      [--IF PAGE.Title --]
+        <title>[--PAGE.Title REMOVE_HTML --]</title>
+      [--ELSE--]
+        <title>[-- PAGE.Name REMOVE_HTML --]</title>
+      [--END_IF--]
+      [-- IF PAGE.MetaKeywords --]
+        <meta name="Keywords" content="[-- PAGE.MetaKeywords --]" />
+      [--ELSE--]
+        <meta name="Keywords" content="[-- PAGE.Name REMOVE_HTML --]" />
+      [--END_IF--]
+      [--IF PAGE.MetaDescription --]
+        <meta name="Description" content="[-- PAGE.MetaDescription --]" />
+      [--ELSE--]
+        <meta name="Description" content="[--PAGE.Name REMOVE_HTML --]" />
+      [--END_IF--]
+      [-- IF PAGE.Field5 --]
+        [-- PAGE.Field5 --]
+      [--END_IF--]
+      <!-- Google Fonts -->
+      <link href="//fonts.googleapis.com/css?family=Lato:400,100,300,700,900,900italic,700italic,400italic|Open+Sans" rel="stylesheet" type="text/css">
+      <!-- Bootstrap -->
+      <link href="/AE/bootstrap/css/bootstrap.css" rel="stylesheet">
+      <!--plugins-->
+      <link href="/AE/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+      <link href="/AE/custom-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet">
+      <link href="/AE/css/yamm.css" rel="stylesheet">
+      <link href="/AE/css/hawksearch.css" rel="stylesheet">
+      <link href="/AE/css/navigation.css" rel="stylesheet">
+      <!--sky form pro css-->
+      <link href="/AE/sky-form/css/sky-forms.css" rel="stylesheet">           
+      <!--custom css file-->
+      <link href="/AE/css/fonts.css" rel="stylesheet">
+      <link href="/AE/css/style.css" rel="stylesheet">
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+      <meta name="googlebot" content="index,follow">
+      <meta name="robots" content="index,follow"> 
+      <meta name="rating" content="General" />
+      <meta property="og:site_name" content="SewingMachinesPlus.com"/>
+      <meta property="og:image" content="https://www.vacplus.com/media/facebook/thread2.gif"/>
+      <meta property="og:title" content="[--PAGE.Title--]" />
+      <meta property="og:description" content="[-- PAGE.MetaDescription --]" />
+      <meta property="og:type" content="website" />
+      <meta itemprop="name" content="[--PAGE.Title--]">
+      <meta itemprop="description" content="[-- PAGE.MetaDescription --]">
+      <meta itemprop="image" content="https://www.vacplus.com/media/facebook/thread2.gif">
+      <meta name="twitter:card" content="photo">
+      <meta name="twitter:title" content="[--PAGE.Title--]">
+      <meta name="twitter:description" content="[-- PAGE.MetaDescription --]">
+      <meta name="twitter:image" content="https://www.vacplus.com/media/facebook/thread2.gif">
+      <!-- Start Google Remarketing Code for Category -->
+      <script type="text/javascript">
+        var google_tag_params = {
+        ecomm_prodid : '',
+        ecomm_pagetype : 'category',
+        ecomm_totalvalue : ''
+        };
+      </script>
+      <!-- End Google Remarketing Code for Category -->
+      <!--AJAX CART Begin-->
+      [-- INCLUDE LexiConnAACSimpleHeadDialog PROCESS --]
+      <!--AJAX CART End-->
+      <script>
+        (function(f,b){
+          var c;
+          f.hj=f.hj||function(){(f.hj.q=f.hj.q||[]).push(arguments)};
+          f._hjSettings={hjid:21822, hjsv:3};
+          c=b.createElement("script");c.async=1;
+          c.src="//static.hotjar.com/c/hotjar-21822.js?sv=3";
+          b.getElementsByTagName("head")[0].appendChild(c); 
+        })(window,document);
+      </script>
+      <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-487443-1']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      </script>
+      <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-24343941-1']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      </script>
+      <!-- Search Engine Codes.  Added August 17 2011.  GC -->
+      <meta name="msvalidate.01" content="12AD6C5141FE93FD2FF7B8446A324041" /><!-- Bing -->
+      <meta name="google-site-verification" content="8rPIzca1hZ5v9_y9LBo9iPIa1WIHcr07q597xD-EkTg" /><!-- Google -->
+      <meta name="y_key" content="7d41bcfbacac9f58" /><!-- Yahoo -->
+      <script type="text/javascript" src="//cdn.nextopia.net/v1.5.1/d237f9d9ae7166c0aa227ca5904ff0ee.js" async></script>
+    </head>
+    <body>
+      <div class="site-wrap">
+        [-- INCLUDE -SMP-svg --]
+        <!--header start-->
+        <header class="header">
+          [-- INCLUDE -SMP-topbar --]
+          [-- INCLUDE -SMP-toolbar PROCESS --]
+          [-- INCLUDE -SMP-header-minicart PROCESS --]
+        </header>
+        <!--header end-->
+        <div class="cmlla" id="cmlla">
+          [-- INCLUDE -SMP-callouts --]
+          <!--main start-->
+          <main role="main">
+            [-- IF PAGE.Text1 --]
+              [-- PAGE.Text1 --]
+            [-- END_IF --]
+            [-- IF PAGE.Text2 --]
+              [-- PAGE.Text2 --]
+            [-- END_IF --]
+            [-- IF PAGE.Text2 --]
+              [-- PAGE.Text3 --]
+            [-- END_IF --]
+            [-- IF PAGE.Field1 --]
+              <div align="center">[-- PAGE.Field1 --]</div>
+            [--END_IF--]
+            [-- IF PAGE.NumLinks 0 --]
+            [-- ELSE --]
+              <table cellpadding="4">
+                [-- VAR.counter "0" --]
+                [-- LOOP LINKS --]
+                  [-- LINK --]
+                [-- END_LOOP LINKS --]
+              </table>
+              [-- IF VAR.counter "0" --]
+              [-- ELSE --]
+              [-- END_IF --]
+              [-- IF PAGE.NumProducts 0 --]
+              [-- ELSE --]
+                <br /><hr width="50%" /><br />
+              [-- END_IF --]
+            [-- END_IF --]
+            [-- IF PAGE.NumProducts 0 --]
+            [-- ELSE --]
+              <div class="space-20"></div>
+              <!--new arrivals-->
+              <section class="new-arrivals">
+                <div class="container">
+                  <h2 class="section-heading">
+                    <span>
+                      <span>Shop by</span><br />Top Products
+                    </span>
+                    <div>
+                      <a href="#">VIEW ALL</a>
+                    </div>
+                  </h2>
+                  <!--owl carousel-->
+                  <div class="row">
+                    <div class="col-md-12 top-products">
+                      [--LOOP PRODUCTS--]
+                      <div class="item">
+                        <div class="item_holder">
+                          [-- PRODUCT AE-DEV-homepage-top-products--]
+                        </div>
+                      </div>
+                      [--END_LOOP PRODUCTS--]  
+                    </div>
+                  </div>
+                  <!--owl end-->
+                </div>
+              </section>
+              <!--end new arrivals-->
+            [--END_IF--]
+            <script type="text/javascript">
+              window.criteo_q = window.criteo_q || [];
+              var deviceType = /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Silk/.test(navigator.userAgent) ? "m" : /iPad/.test(navigator.userAgent) ? "t" : "d";
+              var viewList = new Array();
+              ss_jQuery("input[class='viewlist']").each(function(i){
+                if(i < 3){
+                viewList[i] = ss_jQuery(this).val();
+                }
+              });
+              window.criteo_q.push(
+                { event: "setAccount", account: 19481},
+                { event: "setSiteType", type: deviceType},
+                { event: "setHashedEmail", email: [""]},
+                { event: "viewList", item: [viewList[0], viewList[1], viewList[2]] }
+              );
+            </script>
+          </main>
+          <!--main end-->
+          [-- INCLUDE -SMP-mailing-list --]
+          [-- INCLUDE -SMP-footer --]
+        </div>
+      </div>
+    </body>
+    [-- INCLUDE -SMP-AE-js-plugins --]
+    </html>
+  [-- END_DEFINE PAGE --]

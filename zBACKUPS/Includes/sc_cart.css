@@ -1,0 +1,77 @@
+<style type="text/css">
+ body {color: #[-- STORE.SC_TextColor --]; background-color: #[-- STORE.SC_BackgroundColor --];}
+ body, td, li, a, p, div, th {[-- IF STORE.Font --]   font-family: [-- STORE.Font --];[-- END_IF --]}
+ a:link, a:hover { color: #[-- STORE.SC_LinkColor --];}
+ a:visited { color: #[-- STORE.SC_VisitedLinkColor --];}
+ a:active { color: #[-- STORE.SC_ActiveLinkColor --];}
+ div#set-width {width: 100%; max-width: [-- STORE.PageWidth --]; margin: 0px auto; padding: 0px;}
+ div.footer {padding-top: 1em; padding-bottom: 1em; text-align: center;}
+ .reviews_stars_wrapper {margin: 0px auto;}
+ .reviews-brief {font-size: 90%; white-space: nowrap; display: block;}
+ .reviews-brief div.reviews_stars {height: 20px; max-height: 20px; overflow: hidden; padding: 2px 0px;}
+ .reviews-brief span.reviews_stars_text, .reviews-brief span.review_product_name, .reviews-brief span.review_microdata_count, span.review_microdata_wrapper span.review_product_name, span.review_microdata_wrapper span.review_microdata_count, div.review span.review_product_name {display: none;}
+ .reviews-brief a, div#reviews-more a {text-decoration: underline;}
+ div#messages {vertical-align: middle;}
+ table.pay_holder, table.instruct, table.checkout_err, .inv_err, table.ups_error, table.checkout, table.google_button, table.gcs_table, table.pcs_table, table.thankyou_err, .cert_err {margin-left: auto; margin-right: auto;}
+ table.cart {width: 100%; padding-top: 1em; border-collapse: separate; border-spacing: 1px;}
+ table.cart td {padding: 3px; background-color: #[-- STORE.SC_ShadeColor --];}
+ .cart_delete, .cart_cp_delete {width: 50px; text-align: center;}
+ .cart_quantity, .cart_cp_quantity {width: 70px; text-align: center;}
+ .cart_name, .cart_cp_name, .cart_sku, .cart_cp_sku, .cart_op, select.cart {text-align: left;}
+ .cart_image, .cart_cp_image, .cart_empty {text-align: center;}
+ .cart_price, .cart_cp_price {font-style: italic; text-align: right;}
+ .cart_total, .cart_cp_total {text-align: right; white-space: nowrap;}
+ table.totals {width: 100%; line-height: 150%;}
+ td.totals_txt, td.totals_saved_txt, td.totals_blank, td.totals_all_txt {text-align: right; padding-right: 15px;}
+ td.totals, td.totals_saved, td.totals_all {text-align: right; padding-right: 3px;}
+ td.totals_all, td.totals_all_txt {font-weight: bold;}
+ td.pay_holder_hdr {font-weight: bold;}
+ td.payment_hdr {font-weight: bold; text-align: center;}
+ td.paymentselection {text-align: center; padding-top: 1em;}
+ td.payment, td.payment_value {text-align: left;}
+ table.sql_pay {margin-left: -4px; margin-right: auto;}
+ td.sql_pay {padding-right: 15px; font-weight: bold;}
+ td.new_payment_type {text-align: left;}
+ table.reg {vertical-align: middle; border-spacing: 0; padding-bottom: 1em;}
+ td.reg_wel {font-weight: bold;}
+ td.reg, td.reg_link {text-align: left;}
+ td.coupon {padding-top: 1em;}
+ td.buttons {text-align: center; padding-top: 1em;}
+ table.zipncountry, td.zipncountry, td.zipncountry_text {text-align: left;}
+ td.sql_addr_hdr {font-weight: bold;}
+ td.sql_addr {padding-right: 15px;}
+ table.taxnship, table.surcharge {text-align: right; padding-top: 1em;}
+ td.taxnship_hdr {font-weight: bold; text-align: left;}
+ td.taxnship {text-align: left;}
+ table.surcharge { text-align: right;}
+ td.orderinginstructions {text-align: center; padding-top: 1em;}
+ table.instruct {text-align: center;}
+ td.instruct_hdr, td.comm_hdr {font-weight: bold;}
+ input.button152, input.button154 {color: #[--STORE.SC_TextColor--]; cursor: pointer;}
+ div.warning {width: 400px; margin: 0px auto; padding: 5px; border: 1px solid #[-- STORE.SC_TextColor --]; background-color: #[-- STORE.SC_ShadeColor --];}
+ td.checkout_err, .inv_err, table.thankyou_err, .cert_err {background-color: #[-- STORE.SC_shadecolor --];}
+ td.ups_error {background-color: #[-- STORE.SC_shadecolor --]; vertical-align: middle;}
+ td.checkout {padding: 5px; text-align: center;}
+ table.checkout, table.google_button {vertical-align: middle; text-align: center;}
+ table.google_button td {vertical-align: middle; text-align: center; padding: 4px;}
+ td.gcs_table, td.pcs_table {text-align: center; padding-top: 10px; padding-bottom: 10px;}
+ table.gcs_table, table.pcs_table {width: 100%; text-align: center; border-collapse: collapse;}
+ table.gcs_table caption, table.pcs_table caption {width: 100%; text-align: center; font-weight: bold;}
+ td.gcs_table_content, td.pcs_table_content {width: 25%; vertical-align: top;}
+ table.gcs_product_table, table.pcs_product_table {border-collapse: collapse; text-align: center; width: 100%;}
+ td.gcs_product_name, td.pcs_product_name {text-align: center; font-weight: bold;}
+ td.gcs_product_image, td.pcs_product_image {text-align: center;}
+ td.gcs_product_image img, td.pcs_product_image img {border: 0px none; text-align: center; margin-left: auto; margin-right: auto;}
+ td.gcs_product_price, td.pcs_product_price, td.gcs_product_add_to_cart, td.pcs_product_add_to_cart, td.sc_secure_image {text-align: center;}
+ td.gcs_product_add_to_cart a, td.pcs_product_add_to_cart a {font-weight: bold;}
+ td.gcs_product_add_to_cart img, td.pcs_product_add_to_cart img {border: 0px none; text-align: center; margin-left: auto; margin-right: auto;}
+ .ship_logos {margin: 10px auto;}
+ .ship_logos td {width: 220px; text-align: center; padding: 3px; vertical-align: top;}
+ .ship_logos td.ship_img {vertical-align: middle;}
+ .ship_logos td.ship_text {font-size: 8pt;}
+ span.field_warn {color: red; font-weight: bold;} input.field_warn, select.field_warn {border: 1px solid red; padding: 3px; background: #FFEFEF;}
+ table.checkout_err, table.ups_error, table.inv_err {margin: 0px auto; padding: 0px; border-collapse: collapse; border-spacing: 0px; border: 1px solid #CCC; background: #[-- STORE.FieldWarnShadeColor --];}
+ table.checkout_err td, table.ups_error td, table.inv_err td {vertical-align: middle; text-align: left; padding: 10px; background: #CCCC99; color: #000;}
+ table.checkout_err td:first-child, table.ups_error td:first-child, table.inv_err td:first-child {border-right: 1px solid #CCC;}
+ .notice {display: block; width: 80%; text-align: center; padding: 20px 0px; margin: 0px auto; border: 1px solid #CCC; background: #[-- STORE.FieldWarnShadeColor --]; color: #[-- STORE.FieldWarnHighlightColor --];}
+</style>

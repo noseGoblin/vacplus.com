@@ -1,0 +1,335 @@
+<ul class="menulist" id="listMenuRoot">
+  <li><a href="https://www.vacplus.com/sewing-machines.php" title="sewing machines">Sewing Machines</a>
+    <ul>
+      <li><a href="/sewing-machines.php" title="sewing machines">All Sewing Machines</a></li>
+      <li><a href="/industrial-sewing-machines.php" title="industrial sewing machines">Industrial Sewing Machines</a></li>
+      <li><a href="/domestic-sewing-machines.php" title="domestic sewing machines">Domestic Sewing Machines</a></li>
+    <li><a href="/embroidery-machines.php" title="embroidery sewing machines">Embroidery Sewing Machines</a></li>
+      <li><a href="/child-sewing-machines.php" title="child sewing machines">Child Sewing Machines</a></li>
+      <li><a href="/handheld-sewing-machines.php" title="handheld sewing machines">Handheld Sewing Machines</a></li>
+      <li><a href="/felting-machines.php" title="felting machines">Felting Machines</a></li>
+      <li><a href="/coverstitch-machines.php" title="coverstitch machines">Coverstitch Machines</a></li>
+      <li><a href="/blind-hemmers.php" title="blind hemmers">Blind Hemmers</a></li>
+    <li><a href="/quilting-machines.php" title="quilting machines">Quilting Machines</a></li>
+      <li><a href="/sewing-gift-ideas.php" title="sewing gift ideas">Sewing Gift Ideas</a></li>
+      <li><a href="/discount-sewing-machines.php" title="discount sewing machines">Discount Sewing Machines</a></li>
+      <li><a href="/factory-serviced.php" title="factory serviced sewing machines">Factory Serviced Sewing Machines</a></li>
+    <li><a href="/sewing-bobbins.php" title="sewing machine bobbins">Sewing Machine Bobbins</a></li>
+    <li><a href="/sewing-accessories-cases.php" title="sewing machine bags & cases">Sewing Machine Bags, Cases & Trolleys</a></li>
+    <li><a href="/sewing-machine-manuals.php" title="sewing machine manuals">Sewing Machine Manuals</a></li>
+    </ul>
+  </li>
+  <li><a href="/serger.php" title="sergers">Sergers</a></li>
+  <li><a href="/sewing-supplies.php" title="sewing supplies">Sewing Supplies</a>
+    <ul>
+      <li><a href="/sewing-feet.php" title="sewing machine feet">Sewing Machine Feet</a></li>
+    <li><a href="/serger-feet.php" title="serger feet">Serger Feet</a></li>
+    <li><a href="/adhesives.php" title="adhesives">Adhesives</a></li>
+      <li><a href="/sewing-bobbins.php" title="sewing bobbins">Bobbins</a></li>
+    <li><a href="/bobbin-cases.php" title="bobbin cases">Bobbin Cases</a></li>
+    <li><a href="/notions-books.php" title="books, cds and dvds">Books, CDs & DVDs</a></li>
+    <li><a href="/mats.php" title="cutting mats">Cutting Mats</a></li>
+    <li><a href="/dress-forms.php" title="dress forms">Dress Forms</a></li>
+    <li><a href="/foot-controls.php" title="foot control pedal">Foot Control Pedals</a></li>
+    <li><a href="/sewing-kit.php" title="sewing kit">Sewing Kit</a></li>
+      <li><a href="/sewing-machine-parts.php" title="sewing machine parts">Sewing Machine Parts</a></li>
+      <li><a href="/sewing-notions.php" title="sewing notions">Sewing Notions</a></li>
+      <li><a href="/sewing-machine-manuals.php" title="sewing machine manuals">Sewing Machine Manuals</a></li>
+      <li><a href="/sewing-needles.php" title="sewing needles">Sewing Needles</a></li>
+    <li><a href="/cover-needle-plates.php" title="cover plates & needle plates">Cover Plates & Needle Plates</a></li>
+    <li><a href="/industrial-cutters.php" title="industrial cutters">Industrial Cutting Supplies</a></li>
+    <li><a href="/notions-marking.php" title="marking supplies">Marking Devices</a></li>
+    <li><a href="/pins.php" title="pins and pincushions">Pins & Pincushions</a></li>
+    <li><a href="/sewing-accessories-rulers.php" title="rulers and measuring tools">Rulers & Measuring Tools</a></li>
+    <li><a href="/notions-lights.php" title="lamps and lights">Lamps & Lights</a></li>
+    <li><a href="/magnifiers.php" title="magnifying lenses">Magnifying Lenses</a></li>
+    <li><a href="/notions-sewing-caddies.php" title="caddies, bags and storage">Sewing Boxes, Caddies & Storage</a></li>
+    <li><a href="/sewing-scissors.php" title="scissors">Scissors</a></li>
+    <li><a href="/sewing-accessories-cases.php" title="sewing machine cases and serger cases">Sewing Machine & Serger Cases</a></li>
+    <li><a href="/lead-cords.php" title="lead cords, power cords">Lead Power Cords</a></li>
+    <li><a href="/craft-tools.php" title="craft tools">Craft Supplies</a></li>
+    <li><a href="/featherweight-parts.php" title="featherweight 221 parts & accessories">Featherweight 221 Parts</a></li>
+    <li><a href="/extension-tables.php" title="extension tables">Extension Tables</a></li>
+    </ul>
+  </li>
+  <li><a href="/sewing-furniture.php" title="sewing furniture">Sewing Furniture</a>
+    <ul>
+      <li><a href="/sewing-furniture.php" title="sewing furniture">Sewing Furniture</a></li>
+      <li><a href="/sewing-tables.php" title="sewign tables">Sewing Table</a></li>
+      <li><a href="/sewing-cabinets.php" title="sewing cabinets">Sewing Cabinets</a></li>
+      <li><a href="/cutting-tables.php" title="cutting tables">Cutting Tables</a></li>
+      <li><a href="/sewing-chairs.php" title="sewing chairs">Sewing Chairs</a></li>
+      <li><a href="/sewing-pneumatic-lifts.php" title="sewing pneumatic lifts">Pneumatic Lifts</a></li>
+      <li><a href="/notions-lights.php" title="lamps and lights">Lamps & Lights</a></li>
+    </ul>
+  </li>
+  <li><a href="/quilting-machines.php" title="quilting machines">Quilting Machines</a>
+    <ul>
+    <li><a href="/quilting-machines.php" title="quilting machines">All Quilting Machines</a>
+      <li><a href="/quilting-machines-tinlizzy18.php" title="Tin Lizzie 18 quilting machine">Tin Lizzie 18 Quilting Machine</a></li>
+    <li><a href="/handi-quilter.php" title="handi quilter machine">Handi Quilter Machine</a></li>
+    <li><a href="/voyager-quilting-machine.php" title="voyager 17 quilting machine">Voyager 17 Quilting Machine</a></li>
+    <li><a href="/janome-quilting-machines.php" title="Janome quilting machines">Janome Quilting Machines</a></li>
+    <li><a href="/juki-quilting-machines.php" title="Juki quilting machines">Juki Quilting Machines</a></li>
+    <li><a href="/singer-quilting-machines.php" title="Singer quilting machines">Singer Quilting Machines</a></li>
+    <li><a href="/simplicity-quilting-machines.php" title="Simplicity quilting machines">Simplicity Quilting Machines</a></li>
+    </ul>
+  </li>
+  <li><a href="/quilting-frames.php" title="quilting frames">Quilting Frames</a></li>
+  <li><a href="/quilting-supplies.php" title="quilting supplies">Quilting Supplies</a>
+    <ul>
+      <li><a href="/quilting-supplies.php" title="quilting supplies">Quilting Supplies</a></li>
+      <li><a href="/quilting-frames.php" title="quilting frames">Quilting Frames</a></li>
+      <li><a href="/quilting-hardware-software.php" title="quilting software" >Quilting Hardware & Software</a></li>
+      <li><a href="/quilting-notions.php" title="quilting notions">Quilting Notions</a></li>
+    <li><a href="/sewing-accessories-rulers.php" title="rulers and measuring tools">Rulers & Measuring Tools</a></li>
+    <li><a href="/rotary-cutters.php" title="rotary cutters">Rotary Cutters</a></li>
+    <li><a href="/mats.php" title="cutting mats">Cutting Mats</a></li>
+    <li><a href="/quilt-books.php" title="quilting books, cds and dvds">Books, CDs & DVDs</a></li>
+    <li><a href="/notions-sewing-caddies.php" title="caddies, bags and storage">Sewing Boxes, Caddies & Storage</a></li>
+    <li><a href="/pins.php" title="pins and pincushions">Pins & Pincushions</a></li>
+    <li><a href="/notions-marking.php" title="marking supplies">Marking Devices</a></li>
+    <li><a href="/adhesives.php" title="adhesives">Adhesives</a></li>
+    <li><a href="/quilting-templates.php" title="quilting templates">Quilting Templates</a></li>
+    <li><a href="/quilting-patterns.php" title="quilting patterns">Quilting Patterns</a></li>
+    </ul>
+  </li>
+  <li><a href="/embroidery-machines.php" title="embroidery machines">Embroidery Machines</a></li>
+  <li><a href="/embroidery-supplies.php" title="embroidery supplies">Embroidery Supplies</a>
+    <ul>
+      <li><a href="/embroidery-supplies.php" title="embroidery supplies">Embroidery Supplies</a></li>
+      <li><a href="/embroidery-thread.php" title="embroidery thread">Embroidery Thread</a></li>
+      <li><a href="/embroidery-designs.php" title="embroidery designs">Embroidery Designs</a></li>
+      <li><a href="/embroidery-hoops.php" title="embroidery hoops">Embroidery Hoops</a></li>
+      <li><a href="/embroidery-notions.php" title="embroidery notions">Embroidery Notions</a></li>
+    <li><a href="/embroidery-software.php" title="embroidery software">Embroidery Software</a></li>
+      <li><a href="/embroidery-stabilizers.php" title="embroidery stabilizer">Embroidery Stabilizer</a></li>
+      <li><a href="/embroidery-books.php" title="embroidery books & DVDs">Books & DVDs</a></li>
+      <li><a href="/embroidery-hooping-aids.php" title="hooping and design placement aids">Hooping & Placement Aids</a></li>
+    </ul>
+  </li>
+  <li><a href="/thread.php" title="sewing threads">Thread</a></li>
+  <li><a href="/sewing-needles.php" title="sewing needles">Needles</a></li>
+  <li><a href="/steam-cleaners.php" title="steam cleaners">Steam Cleaners</a></li>
+  <li><a href="/garment-care.php" title="garment care">Garment Care</a>
+    <ul>
+      <li><a href="/clothing-care-lint-shavers.php" title="lint shavers">Lint Shavers</a></li>
+      <li><a href="/irons-garment-steamers.php" title="garment steamers">Garment Steamers</a></li>
+      <li><a href="/clothing-presses.php" title="clothing presses">Clothing Presses</a></li>
+      <li><a href="/irons.php" title="irons">Steam Irons</a></li>
+      <li><a href="/irons-steam-generator.php" title="steam generator irons">Steam Generator Irons</a></li>
+      <li><a href="/ironing-boards.php" title="ironing boards">Ironing Boards</a></li>
+    </ul>
+  </li>
+  <li><a href="/air-purifiers.php" title="air purifiers">Air Purifiers</a></li>
+  <li><a href="/vacuum-cleaners.php" title="vacuum cleaners">Vacuum Cleaners</a>
+    <ul>
+      <li><a href="/upright-vacuum-cleaners.php" title="upright vacuum cleaners">Upright Vacuum Cleaners</a></li>
+      <li><a href="/canister-vacuum-cleaners.php" title="canister vacuum cleaners">Canister Vacuum Cleaners</a></li>
+      <li><a href="/handheld-vacuum-cleaners.php" title="handheld vacuum cleaners">Handheld Vacuum Cleaners</a></li>
+      <li><a href="/robotic-floor-vacuums.php" title="robotic floor cleaners">Robotic Floor Cleaners</a></li>
+      <li><a href="/industrial-vacuum-cleaners.php" title="industrial vacuum cleaners">Industrial Vacuum Cleaners</a></li>
+    <li><a href="/vacuum-accessories.php" title="vacuum accessories">Vacuum Accessories</a></li>
+    </ul>
+  </li>
+  <li><a href="/gift-certificates.php" title="gift certificate">Gift Certificates</a></li>
+  <li><a href="/sale-specials.php" title="sale specials">Sale Specials!</a></li>
+  <li><a href="/financing.php" title="financing" target="_blank">Financing</a></li>
+</ul>
+<center>
+  <img src="/images/shop-by-brand.gif" alt="Sewing Machine Brands" border="0" style="margin:4px 0;">
+</center>
+<ul class="menulist" id="brandMenuRoot">
+  <li><a href="#">Select A Brand</a>
+    <ul>
+      <li><a href="/singer-sewing-machines.php" title="singer sewing machines">Singer Sewing Machines</a>
+    <ul>
+    <li><a href="/singer-futura-ce350-embroidery-machine.php" title="Singer Futura CE-350 sewing & embroidery machine">Futura CE-350</a></li>
+    <li><a href="/sing-CE250.php" title="Singer Futura CE-250 sewing & embroidery machine">Futura CE-250</a></li>
+    <li><a href="/sing-CE150.php" title="Singer Futura CE-150 sewing & embroidery machine">Futura CE-150</a></li>
+    <li><a href="/singer-curvy-8770.php" title="Singer Curvy 8770 sewing machine">Curvy 8770</a></li>
+    <li><a href="/singer-curvy-8763.php" title="Singer Curvy 8763 sewing machine">Curvy 8763</a></li>
+    <li><a href="/sing-7470.php" title="Singer Confidence 7470 sewing machine">Confidence 7470</a></li>
+    <li><a href="/singer-7469-sewing-machine.php" title="Singer Confidence 7469 sewing machine">Confidence 7469</a></li>
+    <li><a href="/singer-7467-sewing-machine.php" title="Singer Confidence 7467 sewing machine">Confidence 7467</a></li>
+    <li><a href="/singer-7463-sewing-machine.php" title="Singer Confidence 7463 sewing machine">Confidence 7463</a></li>
+    <li><a href="/sewing-machines-singer-7468.php" title="Singer Touch & Sew 7468 sewing machine">Touch & Sew 7468</a></li>
+    <li><a href="/singer-7466.php" title="Singer Touch & Sew 7466 sewing machine">Touch & Sew 7466</a></li>
+    <li><a href="/singer-7462.php" title="Singer Touch & Sew 7462 sewing machine">Touch & Sew 7462</a></li>
+    <li><a href="/sing-4212.php" title="Singer Inspiration 4212 sewing machine">Inspiration 4212</a></li>
+    <li><a href="/sing-inspiration-4210.php" title="Singer Inspiration 4210 sewing machine">Inspiration 4210</a></li>
+    <li><a href="/sing-inspiration-4206.php" title="Singer Inspiration 4206 sewing machine">Inspiration 4206</a></li>
+    <li><a href="/sing-4205.php" title="Singer Inspiration 4205 sewing machine">Inspiration 4205</a></li>
+    <li><a href="/sing-esp2.php" title="Singer ESP2 steam press">ESP2 Steam Press</a></li>
+    </ul>
+    </li>
+      <li><a href="/brother-sewing-machines.php" title="brother sewing machines">Brother Sewing Machines</a>
+    <ul>
+      <li><a href="/brother-nv2500d.php" title="Brother Innov-is 2500D sewing & embroidery machine">Innov-is 2500D</a></li>
+      <li><a href="/brother-nv1200.php" title="Brother Innov-is 1200 sewing & embroidery machine">Innov-is 1200</a></li>
+      <li><a href="/brother-nv1000.php" title="Brother Innov-is 1000 sewing & embroidery machine">Innov-is 1000</a></li>
+    <li><a href="/brother-lb6770-project-runway.php" title="Brother LB6770 Project Runway Sewing & embroidery machine">LB6770 Project Runway</a></li>
+    <li><a href="/brother-se350-sewing-embroidery-machine.php" title="Brother SE-350 Sewing & embroidery machine">SE-350</a></li>
+      <li><a href="/brother-pe700II-embroidery-machine.php" title="Brother PE-700II embroidery machine">PE-700II</a></li>
+    <li><a href="/brother-nx650q-sewing-machine.php" title="Brother NX650Q sewing machine">NX650Q</a></li>
+    <li><a href="/brother-nx450q-sewing-machine.php" title="Brother NX450Q sewing machine">NX450Q</a></li>
+    <li><a href="/brother-nx250-sewing-machine.php" title="Brother NX250 sewing machine">NX250</a></li>
+    <li><a href="/brother-pc420-project-runway.php" title="Brother PC420 sewing machine">PC-420 Project Runway</a></li>
+    <li><a href="/brother-project-runway-pc210.php" title="Brother PC210 sewing machine">PC-210 Project Runway</a></li>
+    </ul>
+    </li>
+      <li><a href="/janome-sewing-machines.php" title="janome sewing machines">Janome Sewing Machines</a>
+    <ul>
+      <li><a href="/janome-9500.php" title="Janome Memory Craft 9500 sewing & embroidery machine">Memory Craft 9500</a></li>
+    <li><a href="/janome-mc6500p.php" title="Janome Memory Craft 6500 sewing & embroidery machine">Memory Craft 6500</a></li>
+    <li><a href="/j-HT2008.php" title="Janome Heart Truth 2008 sewing machine">Heart Truth 2008</a></li>
+    <li><a href="/janome-sew-precise.php" title="Janome SewPrecise sewing machine">SewPrecise</a></li>
+    <li><a href="/jan-1600P-DBX.php" title="Janome 1600P-DBX sewing machine">1600P-DBX</a></li>
+    <li><a href="/sewing-machine-janome-1600p-db.php" title="Janome 1600P-DB sewing machine">1600P-DB</a></li>
+    <li><a href="/j-7330.php" title="Janome Magnolia 7330 sewing machine">Magnolia 7330</a></li>
+    <li><a href="/j-7318.php" title="Janome Magnolia 7318 sewing machine">Magnolia 7318</a></li>
+    <li><a href="/j-7312.php" title="Janome Magnolia 7312 sewing machine">Magnolia 7312</a></li>
+    <li><a href="/j-7306.php" title="Janome Magnolia 7306 sewing machine">Magnolia 7306</a></li>
+    <li><a href="/sewing-machine-janome-712t.php" title="Janome 712T treadle sewing machine">712T Treadle</a></li>
+    <li><a href="/sewing-machine-serger-janome-634d.php" title="Janome MyLock 634D serger">MyLock 634D serger</a></li>
+    <li><a href="/j-7034D.php" title="Janome Magnolia 7034D serger">Magnolia 7034D serger</a></li>
+    </ul>
+    </li>
+      <li><a href="/juki-sewing-machines.php" title="juki sewing machines">Juki Sewing Machines</a>
+    <ul>
+    <li><a href="/sewing-machines-industrial-juki-ddl8700.php" title="Juki DDL-8700 industrial sewing machine">DDL-8700 Industrial</a></li>
+      <li><a href="/juki-tl98q.php" title="Juki TL98Q sewing machine">TL98Q</a></li>
+    <li><a href="/juki-TL98QE.php" title="Juki TL98QE sewing machine">TL98QE</a></li>
+    <li><a href="/juki-HZL-E80.php" title="Juki HZL-E80 sewing machine">HZL-E80</a></li>
+    <li><a href="/juki-HZL-E70.php" title="Juki HZL-E70 sewing machine">HZL-E70</a></li>
+    <li><a href="/juki-HZL-E61.php" title="Juki HZL-E61 sewing machine">HZL-E61</a></li>
+    <li><a href="/juki-MO-735.php" title="Juki MO-735 serger">MO-735 serger</a></li>
+    <li><a href="/juki-MO-734DE.php" title="Juki MO-734DE serger">MO-734DE serger</a></li>
+    <li><a href="/juki-MO-655.php" title="Juki Pearl Line MO-655 serger">Pearl Line MO-655 serger</a></li>
+    <li><a href="/juki-MO-654DE.php" title="Juki Pearl Line MO-654DE serger">Pearl Line MO-654DE serger</a></li>
+    <li><a href="/juki-MO-644D.php" title="Juki Garnet Line MO-644D serger">Garnet Line MO-644D serger</a></li>
+    <li><a href="/juki-MO-623.php" title="Juki Garnet Line MO-623 serger">Garnet Line MO-623 serger</a></li>
+    </ul>
+    </li>
+      <li><a href="/babylock-sewing-machines.php" title="babylock sewing machines">Babylock Sewing Machines</a>
+    <ul>
+      <li><a href="/babylock-sewing-machine-blg.php" title="Baby Lock Ellegante sewing & embroidery machine">Ellegante (BLG)</a></li>
+    <li><a href="/babylock-bll.php" title="Baby Lock New Ellageo sewing & embroidery machine">New Ellageo (BLL)</a></li>
+    <li><a href="/BL-BLSR.php" title="Baby Lock New Espire sewing machine">New Espire (BLSR)</a></li>
+    <li><a href="/sewing-machine-babylock-quilters-choice-pro-blqp.php" title="Baby Lock Quilter's Choice Professional sewing machine">Quilter's Choice Professional (BLQP)</a></li>
+    <li><a href="/bl-blqc2.php" title="Baby Lock New Quilter's Choice sewing machine">New Quilter's Choice (BLQC2)</a></li>
+    <li><a href="/babylock-sewing-machine-blcc.php" title="Baby Lock Crafter's Choice sewing machine">Crafter's Choice (BLCC)</a></li>
+    <li><a href="/BL-BLDC2.php" title="Baby Lock New Decorator's Choice sewing machine">New Decorator's Choice (BLDC2)</a></li>
+    <li><a href="/babylock-sewing-machine-bl22.php" title="Baby Lock Design Pro sewing machine">Design Pro BL22</a></li>
+    <li><a href="/babylock-sewing-machine-bl16.php" title="Baby Lock Denim Pro sewing machine">Denim Pro BL16</a></li>
+    <li><a href="/babylock-sewing-machine-embroidery-bmp6.php" title="Baby Lock BMP6 Embroidery Professional">Embroidery Professional BMP6</a></li>
+    <li><a href="/babylock-sewing-machine-ble8w.php" title="Baby Lock Evolve serger">Evolve serger (BLE8W)</a></li>
+    <li><a href="/babylock-sewing-machine-imagine-wave-ble3atw.php" title="Baby Lock Imagine Wave serger">Imagine serger (BLE3ATW)</a></li>
+    <li><a href="/babylock-sewing-machine-imagine-ble1at.php" title="Baby Lock Imagine serger">Imagine serger (BLE1AT)</a></li>
+    <li><a href="/babylock-sewing-machine-ble1dx.php" title="Baby Lock Eclipse DX serger">Eclipse DX serger (BLE1DX)</a></li>
+    <li><a href="/babylock-sewing-machine-ble1sx.php" title="Baby Lock Eclipse SX serger">Eclipse SX serger (BLE1SX)</a></li>
+    <li><a href="/babylock-sewing-machine-bl450.php" title="Baby Lock BL450 serger">BL450 serger</a></li>
+    <li><a href="/babylock-sewing-machine-blind-hemmer-bl101.php" title="Baby Lock Blind Hemmer BL101">BL101 Blind Hemmer</a></li>
+    <li><a href="/babylock-sewing-machine-blcs.php" title="Baby Lock Coverstitch machine">Coverstitch BLCS</a></li>
+    <li><a href="/babylock-sewing-machine-emb7.php" title="Baby Lock Embellisher">Embellisher (EMB7)</a></li>
+    </ul>
+    </li>
+      <li><a href="/tin-lizzie-18-machines.php" title="Tin Lizzie 18 quilting machine">Tin Lizzie 18 Quilting Machines</a>
+    <ul>
+      <li><a href="/tin-lizzie-18ls.php" title="Tin Lizzie 18LS quilting machine">Tin Lizzie 18LS system</a></li>
+      <li><a href="/quilting-machines-tinlizzy18.php" title="Tin Lizzie 18 quilting machine">Tin Lizzie 18 system</a></li>
+    </ul>
+    </li>
+      <li><a href="/simplicity-sewing-machines.php" title="simplicity sewing machines">Simplicity Sewing Machines</a>
+    <ul>
+      <li><a href="/simplicity-blind-hemmer-bh600.php" title="Simplicity BH600 blindhem machine">BH600 Blindhemmer</a></li>
+    <li><a href="/simplicity-digital-press-ssp200.php" title="Simplicity SSP200 digital steam press">SSP200 Digital Steam Press</a></li>
+    <li><a href="/simplicity-quick-press-sp100.php" title="Simplicity SP100 steam press">SP100 Steam Press</a></li>
+    <li><a href="/simplicity-garment-steamer-SHCST1.php" title="Simplicity SHCST1 garment steamer">SHCST1 Garment Steamer</a></li>
+    </ul>
+    </li>
+      <li><a href="/rex-sewing-machines.php" title="rex sewing machines">REX Sewing Machines</a></li>
+      <li><a href="/reliable-sewing-machines.php" title="reliable sewing machines">Reliable Sewing Machines</a></li>
+      <li><a href="/sewing-machines-econosew.php" title="econosew sewing machines">Econosew Sewing Machines</a></li>
+      <li><a href="/happy-voyager-embroidery-machine.php" title="happy embroidery machines">Happy 12-Needle Embroidery Machine</a></li>
+      <li><a href="/quilt-brand-hq.php" title="handi quilter machiens">Handi Quilter Machines</a></li>
+      <li><a href="/embroidery-floriani.php" title="floriani stabilizers">Floriani Stabilizers</a></li>
+      <li><a href="/grace-company-quilting-frames.php" title="Grace Quilting Frames">Grace Quilting Frames</a></li>
+    </ul>
+  </li>
+</ul>
+<table border="0" cellpadding="0" cellspacing="2" align="center">
+  <tr>
+    <td align="center"><a href="/singer-sewing-machines.php" title="singer sewing machines"> <img src="/media/products/brand_icons/Navigation/Optimized/brand-icon-singer-opt.gif" alt="Singer Sewing Machines" hspace="2" border="0"></a><a href="/simplicity-sewing-machines.php"> <img src="/media/products/brand_icons/Navigation/Optimized/brand-icon-simplicity-opt.gif" alt="Simplicity Sewing Machines" hspace="2" border="0"></a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="/babylock-sewing-machines.php" title="babylock sewing machines"> <img src="/media/products/brand_icons/Navigation/Optimized/brand-icon-babylock-opt.gif" alt="Babylock Sewing Machines" hspace="2" border="0"></a><a href="/rex-sewing-machines.php"> <img src="/media/products/brand_icons/Navigation/Optimized/brand-icon-rex-opt.gif" hspace="2" alt="Rex Sewing Machines" border="0"></a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="/janome-sewing-machines.php" title="janome sewing machines"> <img src="/media/products/brand_icons/Navigation/Optimized/brand-icon-janome-opt.gif" alt="Janome Sewing Machines" hspace="2" border="0"></a><a href="/quilt-brand-hq.php"> <img src="/media/products/brand_icons/Navigation/Optimized/brand-icon-handiquilter-opt.gif" alt="Handi Quilter Machines" hspace="2" border="0"></a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="/reliable-sewing-machines.php"> <img src="/media/products/brand_icons/Navigation/Optimized/brand-icon-reliable-opt.gif" alt="RELIABLE Industrial Sewing Machines" hspace="2" border="0"></a><a href="/sewing-machines-econosew.php"> <img src="/media/products/brand_icons/Navigation/Optimized/econosew-nav-logo-opt.gif" alt="Econosew Industrial Sewing Machines" hspace="2" border="0"></a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="/brother-sewing-machines.php" title="brother sewing machines"> <img src="/media/products/brand_icons/Navigation/Optimized/brother-nav-logo-bkrnd-opt.gif" alt="Brother Sewing Machines" hspace="2" border="0"></a><a href="/juki-sewing-machines.php"> <img src="/media/products/brand_icons/Navigation/Optimized/brand-icon-juki-opt.gif" alt="Juki Industrial Machines" hspace="2" border="0"></a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="happy-voyager-embroidery-machine.php" title="happy embroidery machines"> <img src="/media/products/brand_icons/Navigation/Optimized/happy.gif" alt="Happy Embroidery" hspace="2" border="0"></a><a href="/embroidery-floriani.php"> <img src="/media/products/brand_icons/Navigation/Optimized/brand-icon-floriani-opt.gif" alt="Floriani embroidery stabilizers" hspace="2" border="0"></a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="/tin-lizzie-18-machines.php" title="tin lizzie 18 quilting machine"> <img src="/media/products/brand_icons/Navigation/Optimized/tin-lizzie-18.gif" alt="Tin Lizzie 18 quilting machine" hspace="2" border="0"></a><a href="/grace-company-quilting-frames.php"> <img src="/media/products/brand_icons/Navigation/Optimized/brand-icon-grace.gif" alt="Grace Company Quilting Frames" hspace="2" border="0"></a></td>
+  </tr>
+</table>
+<script type="text/javascript" src="/includes/menustart.js"></script>
+  <center>
+  
+  <a href="https://www.vacplus.com/regs/anitagoodesign.php" target="_blank"><img src="/images/events/anita-goodesign-sm.jpg" width="150" height="150" alt="Anita Goodesign embroidery seminar" /></a>
+  <br clear="all" /><br />
+  
+  <a href="https://www.vacplus.com/regs/christopher-nejman.php" target="_blank"><img src="/images/events/cn-square.jpg" width="150" height="150" alt="Christopher Nejman textile art seminar" /></a>
+  <br clear="all" /><br />
+  
+  
+  <a class="giftcertlink" href="https://www.vacplus.com/cgi-vacplus/sb/order.cgi?storeid=*1edadc54e50c40be8c0174e6dc9f95a4b8&cert=gift"><img src="/images/gift-cert.gif" alt="" name="giftcert" width="154" height="50" border="0" id="giftcert" /></a> <br>
+  <br>
+<table border="0" cellspacing="0" cellpadding="0">
+    <form action="http://visitor.constantcontact.com/d.jsp" method="post" name="ccoptin" id="survey" onSubmit="window.open('','signup','resizable=1,scrollbars=yes,width=762,height=600');" target="signup">
+      <input type="hidden" name="m" value="1102000924937">
+    <input type="hidden" name="p" value="oi">
+      <tr>
+        <td><img src="/images/email-specials.gif" alt="" width="154" height="27" border="0" /></td>
+      </tr>
+      <tr>
+        <td class="email-bg"><div class="pd4"> <span class="txwt">Sign up now to be alerted of our best deals.</span><br><br>
+            <span class="txwt"><b>E-mail address:</b></span>
+            <input type="text" name="ea" size="20" value="" style="font-size:10pt; border:1px solid #999999; width: 143px;">
+            <br>
+            <div align="center">
+              <input type="image" src="/images/btn-join.gif" width="104" height="16" border="0" class="go" name="go" alt="Subscribe" value='submit' onClick='doSubmit();'>
+        <!-- <input type="submit" name="go" value="Go" class="submit" style="font-family:Verdana,Geneva,Arial,Helvetica,sans-serif; font-size:10pt;"> -->
+              <br>
+              <a href="/privacy-policy.php" class="small wt">Privacy Policy</a></div>
+          </div></td>
+      </tr>
+      <tr>
+        <td><img src="/images/lbt.gif" alt="" width="154" height="8" border="0" /></td>
+      </tr>
+    </form>
+  </table>
+  
+  <br />
+  
+  <a href="https://www.vacplus.com/martins.php"><img src="/images/events/classes.gif" width="129" height="83" alt="SewingMachinesPlus classes & newsletter" /></a>
+  
+  </center>
+
+<!-- MINI CART SHOULD EVENTUALLY BE INSERTED HERE -->
+
+  <p align="center"> <a href="http://checkout.google.com/buyer/tour.html" target="_blank"> <img src="https://www.vacplus.com/media/products/website%20images/google-checkout.jpg" width="150" height="59" alt="We accept Google Checkout" border="0" /> </a> </p>
+  <center>
+    <script src="https://siteseal.thawte.com/cgi/server/thawte_seal_generator.exe">
+    </script>
+  </center>
+  <br />
+</div>

@@ -1,0 +1,51 @@
+[-- DEFINE PRODUCT --]
+  [-- IF PRODUCT.DisplayGraphic--]
+    [-- IF PRODUCT.Graphic --]
+      [-- IF PRODUCT.DisplayMoreInformationPage --]
+        <a href="[-- PRODUCT.MoreInfoURL --]"><img src="//cdn.sewingmachinesplus.com/media/[-- IMAGE PRODUCT.Graphic --]" class="img-responsive"></a>
+      [-- ELSE --]
+        <img src="//cdn.sewingmachinesplus.com/media/[-- IMAGE PRODUCT.Graphic --]" class="img-responsive"> 
+      [-- END_IF --]
+    [-- END_IF --]
+  [-- END_IF --]
+  <div class="title">
+    [-- IF PRODUCT.DisplayMoreInformationPage --]
+      <h4 class="slick-prodBrand"><a href="[-- PRODUCT.MoreInfoURL --]">[-- PRODUCT.Brand --]</a></h4>
+    [-- END_IF --]
+    [-- IF PRODUCT.Name --]
+      <h5 class="slick-prodName" style="max-height:2.6;min-height:2.6;overflow:hidden;"><a href="[-- PRODUCT.MoreInfoURL --]">[-- PRODUCT.Name --]</a></h5>
+    [-- END_IF --]
+    <!--<div style="background-color: #ed1885;padding: 3px;color: white;font-weight: bold;">Spring Sales Event</div>-->
+    [--IF PRODUCT.DisplayPrice--]
+      [-- IF PRODUCT.SaleAmount --]
+        <div class="price price-slider"><a href="[-- PRODUCT.MoreInfoURL --]">[-- PRODUCT.SaleAmount --]</a></div>
+        [--IF PRODUCT.Field6--]
+          <?php
+            $price="[--PRODUCT.SaleAmount--]";
+            $months="[--PRODUCT.Field6--]";
+            $price=ltrim($price, "$");
+            $price=str_replace(",", "", $price);
+            $price=number_format($price/$months, 2);
+            echo ("<span class='price-slider-monthly'><a href='[-- PRODUCT.MoreInfoURL --]'>$".$price."/mo for ".$months."mos</a></span>");
+          ?>
+        [--END_IF--]
+      [-- ELSE --]
+        <div class="price price-slider"><a href="[-- PRODUCT.MoreInfoURL --]">[-- PRODUCT.Price --]</a></div>
+        [--IF PRODUCT.Field6--]
+          <?php
+            $price="[-- PRODUCT.Price --]";
+            $months="[--PRODUCT.Field6--]";
+            $price=ltrim($price, "$");
+            $price=str_replace(",", "", $price);
+            $price=number_format($price/$months, 2);
+            echo ("<span class='price-slider-monthly'><a href='[-- PRODUCT.MoreInfoURL --]'>$".$price."/mo for ".$months."mos</a></span>");
+          ?>
+        [--END_IF--]
+      [-- END_IF --]
+    [--ELSE--]
+    <div class="callfordeets slider-deets">Call for details</div>
+    <span class='price-slider-monthly' style="visibility:hidden;">&nbsp;&nbsp;</span>
+    [--END_IF--]
+    <div class="star_container [-- PRODUCT.SKU --]"></div>
+  </div>
+[-- END_DEFINE PRODUCT --]

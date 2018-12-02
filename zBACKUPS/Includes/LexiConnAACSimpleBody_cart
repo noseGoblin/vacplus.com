@@ -1,0 +1,655 @@
+
+<!-- BEGIN MODULE BODY -->
+<script type="text/javascript">
+    if (typeof ss_jQuery == 'undefined'){
+  document.write(unescape('%3Cscript%20type="text/javascript" src="[-- OUTPUT_DIRECTORY_URL --]/media/en-US/javascript/jquery/jquery.js"%3E%3C%2Fscript%3E'));
+    
+  document.write(unescape('%3Cscript%20type%3D%22text%2Fjavascript%22%3E  var ss_jQuery = jQuery.noConflict(true); %3C%2Fscript%3E'));
+    }
+</script>
+<script type="text/javascript" src="[-- OUTPUT_DIRECTORY_URL --]/media/en-US/javascript/jquery/jquery.loadmask.min.js"></script>
+<script type="text/javascript">
+  window.add_cart_loadmaskphrase='[-- VAR.AddCartMessage --]'; 
+  window.empty_cart_loadmaskphrase='[-- VAR.EmptyCartMessage --]';
+  window.loadmaskimage = new Image(25,25); 
+  window.loadmaskimage.src = '[-- OUTPUT_DIRECTORY_URL --]/media/en-US/css/images/loadmask.gif';
+</script>
+
+<script type="text/javascript">
+[-- IF VAR.MiniCartType NE 5 --]
+ss_jQuery(function(){
+
+  window.minicart = {
+    serialnum: '[-- STORE_Serial_Number --]',
+    cartURL: "[-- SHOPPING_CART_URL --]?storeid=[-- STORE.ID --]&amp;function=show",
+    storeid: "[-- STORE.ID --]",
+    minicartIcon: "[-- ShopSite_Images --]/themesmedia/cart-black.gif",
+    cartvalues: "",
+    totals: [],
+    productCount: 0,
+    zip: '',
+    country: '',
+    cc: 0,
+    cookieSet: false,
+    subtotal: 0,
+        order_total: 0,
+    start1: 0,
+    end1: 0,
+    emptyMessage: "[-- VAR.NoItemsInCartMessage --]",
+    products:[],
+    textColor: "black",
+    backgroundColor: "transparent",
+    showCart: "no",
+    cartColor: "black",
+    textAlign: "left",
+    cart_form_values: [],
+    readCookie: function(){
+      var cookies=document.cookie;
+      var start = cookies.indexOf("ss_cart_" + this.serialnum + "="); 
+      var cartvalues = "";
+      var tmp;
+      var start = cookies.indexOf("=", start) +1;  
+      var end = cookies.indexOf(";", start);  
+      if (end == -1){
+        end = cookies.length;
+      }
+      this.cartvalues = unescape(cookies.substring(start,end));
+          if(this.cartvalues.length > 0){
+              this.cookieSet = true;
+          } else{
+              this.cookieSet = false;
+          }
+      if(this.cookieSet==false){
+        this.removeCookie("totals");
+      }
+      var tstart = cookies.indexOf("totals"); 
+      var tstart = cookies.indexOf("=", tstart) +1;  
+      var tend = cookies.indexOf(";", tstart);  
+      if (tend == -1){
+        tend = cookies.length;
+      }
+      var t = unescape(cookies.substring(tstart,tend));
+      var t_temp = t.split("|");
+      this.totals = new Array();
+      for(n=0; n<t_temp.length; n++){
+        var t_split = t_temp[n].split(":");
+        var name = t_split[0];
+        var value = t_split[1];
+        this.totals[name] = value;
+      }
+      
+    },
+    
+    parseCartValues: function(){
+      start = 0;
+      var linecount = 0;
+      var total_count = 0;
+      while ((start = this.cartvalues.indexOf("|", start)) != -1)
+      {
+        start++;
+        end = this.cartvalues.indexOf("|", start);
+        if (end != -1){
+          linecount++;
+        
+          if (linecount == 3){
+            this.start1 = start;
+            this.end1 = end;
+          }
+    
+          if (linecount > 3){
+            tmp = this.cartvalues.substring(start,end);
+            colon = tmp.indexOf(":", 0);
+                    
+                    var product_quantity = tmp.substring(0,colon);
+                    
+                    if(product_quantity > 0){
+              total_count += product_quantity / 1;
+              
+              colon2 = tmp.indexOf(":", colon+1);
+              var product_name = tmp.substring(colon2+1,end - start);
+              var product_price = tmp.substring(colon+1,colon2);
+              
+              var p_object = { name: product_name, price: product_price, quantity: product_quantity };
+              this.products.push(p_object);
+            }
+            }
+            start = end;
+        } else{
+            break;
+        }
+      }
+      
+      if(total_count==1){
+        this.productCount = total_count + " Item";
+      } else{
+        this.productCount = total_count + " Items";
+      }
+      
+          tmp = this.cartvalues.substring(this.start1,this.end1);
+          colon = tmp.indexOf(":", 0);
+          this.subtotal = tmp.substring(colon+1,this.end1 - this.start1);
+    },
+    setCookie: function(name, value, days){
+      if (days) {
+        var date = new Date();
+        date.setTime(date.getTime()+(days*24*60*60*1000));
+        var expires = "; expires="+date.toGMTString();
+      }
+      else{
+        var expires = "";
+        document.cookie = name+"="+value+expires+"; path=/";
+      }
+    },
+    
+    removeCookie: function(name){
+      this.setCookie(name,"",-1);
+    },
+    
+    getCookie: function(c_name){
+      var i,x,y,ARRcookies=document.cookie.split(";");
+      for (i=0;i<ARRcookies.length;i++){
+        x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+        y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+        x=x.replace(/^\s+|\s+$/g,"");
+        if (x==c_name){
+        return unescape(y);
+        }
+      } 
+    },
+    
+    addProductRow: function(qnty, pname, price){
+        var new_row = '<tr><td class="minicart_qnty">' + qnty + '</td><td class="minicart_name">' + pname + '</td><td class="minicart_price">' + price + '</td></tr>';
+        ss_jQuery("#minicart_4_ptable").append(new_row);
+    },
+  
+    updateMinicart: function(){
+      ss_jQuery.ajax({
+                              type: "POST",
+                              cache: false,
+                              url: "[-- SHOPPING_CART_URL --]",
+                              data: "&storeid=[-- STORE.ID --]&function=show",
+                              async: true,
+                              crossDomain: false,
+                              dataType: 'html',
+                              success: function(msg){
+                var ss_jQuerydoc = ss_jQuery(msg);
+
+                var f_input = ss_jQuerydoc.find("form[name='order']");
+                window.cart_data = f_input.serialize();
+                var form_values = f_input.serializeArray();
+                var subtotal_regex = /^Subtotal.*/;
+                
+                var total_regex = /^Total.*/;
+            
+                var subtotal = null;    
+          
+                var total = null;
+
+                ss_jQuery.each(form_values, function(i, field){
+                    window.minicart.cart_form_values[field.name] = field.value;
+                });
+                      
+                var totals_table = ss_jQuerydoc.find("table.totals > tbody > tr > td");
+                           
+                                var subtotal_index = null;
+              
+                                var total_index = null;
+                           
+                totals_table.each(function(i, field){
+                                 
+                                    if(subtotal_regex.test(field.innerHTML)){
+                                        subtotal_index = i + 1;
+                                    } else if(total_regex.test(field.innerHTML)){
+                                        total_index = i + 1;
+                                    }
+                
+                                    if(subtotal_index != null){
+                                        if(i == subtotal_index){
+                                            subtotal_value = field.innerHTML; 
+                                        } else{
+                      subtotal_value = null;
+                    }
+                                    } else{
+                    subtotal_value = null;
+                  }
+
+                                    if(total_index != null){
+                                        if(i == total_index){
+                                            total_value = field.innerHTML; 
+                                        }
+                                    }
+                });
+                
+                                if(subtotal_value != null){
+                  this.subtotal = subtotal_value; 
+                                } else{
+                                        this.subtotal = "$0";
+                                }
+
+                
+                
+                                if(total_value != null){
+                  this.order_total = total_value; 
+                                } else{
+                                        this.order_total = "$0";
+                                }
+
+                [-- IF VAR.MiniCartType 2 --]
+                  ss_jQuery("#minicart_subtotal_summary").text(this.order_total);
+                [-- END_IF --]
+                [-- IF VAR.MiniCartType 3 --]
+                  ss_jQuery("#minicart_subtotal_summary").text(this.order_total);
+                [-- END_IF --]
+                
+                [-- IF VAR.MiniCartType 4 --]
+                  ss_jQuery("#minicart_subtotal_summary").text(this.order_total);
+                [-- END_IF --]
+                              }
+      });
+    
+      this.products = new Array();
+      this.readCookie();
+                        if(this.cookieSet==true){
+                                this.parseCartValues();
+
+                                if(this.products.length > 0){
+
+                                        if(this.products.length==1){
+                                                ss_jQuery("#minicart_item_count").text(this.productCount);
+                                        } else{
+                                                ss_jQuery("#minicart_item_count").text(this.productCount);
+                                        }
+
+                                } else{
+
+                                        ss_jQuery("#minicart_item_count").text("");
+                                        ss_jQuery("#minicart_subtotal_summary").text("");
+
+                                }
+
+                        } else{
+                                ss_jQuery("#minicart_empty_wrap").show();
+                                ss_jQuery("#minicart_product_table_body").empty();
+                                ss_jQuery("#minicart_quantity").text("");
+                                ss_jQuery("#minicart_subtotal").text(this.emptyMessage);
+                        }
+  
+    }
+  }
+  
+    window.minicart.updateMinicart();
+  
+});
+
+function emptyCart(){
+    window.minicart.removeCookie("totals"); 
+    
+    ss_jQuery('body').mask(window.empty_cart_loadmaskphrase);
+    var ajaxTime= new Date().getTime();
+    ss_jQuery.ajax({
+       type: "POST",
+       cache: false,
+       url: "[-- SHOPPING_CART_URL --]",
+       data: window.cart_data + "&function=Empty Cart",
+       async: true,
+       crossDomain: false,
+       dataType: 'html',
+       success: function(msg){
+          var ss_jQuerydoc = ss_jQuery(msg);
+          window.minicart.updateMinicart();
+          ss_jQuery("#minicart_shipping_options").empty();
+          var totalTime = new Date().getTime()-ajaxTime;
+          var timeout = 1000 - totalTime;
+          
+          setTimeout('ss_jQuery("body").unmask()', timeout);
+      }
+    });
+}
+
+
+[-- ELSE --]
+ss_jQuery(function(){
+
+        if(ss_jQuery("#minicart").parent().innerWidth()<240){
+            ss_jQuery("#minicart").parent().css("max-width", "250px");
+            ss_jQuery("#minicart").parent().css("width", "250px");
+        }
+
+  window.minicart = {
+    serialnum: '[-- STORE_Serial_Number --]',
+    cartURL: "[-- SHOPPING_CART_URL --]?storeid=[-- STORE.ID --]&amp;function=show",
+    storeid: "[-- STORE.ID --]",
+    minicartIcon: "[-- ShopSite_Images --]/themesmedia/cart-black.gif",
+    cartvalues: "",
+    totals: [],
+    productCount: 0,
+    tax: -1,
+        shipping: null,
+    zip: '',
+    country: '',
+    cc: 0,
+    cookieSet: false,
+    subtotal: 0,
+                order_total: 0,
+    start1: 0,
+    end1: 0,
+    emptyMessage: "[-- VAR.NoItemsInCartMessage --]",
+    products:[],
+    textColor: "black",
+    backgroundColor: "transparent",
+    showCart: "no",
+    cartColor: "black",
+    textAlign: "left",
+    cart_form_values: [],
+    readCookie: function(){
+      var cookies=document.cookie;
+      var start = cookies.indexOf("ss_cart_" + this.serialnum + "="); 
+      var cartvalues = "";
+      var tmp;
+      var start = cookies.indexOf("=", start) +1;  
+      var end = cookies.indexOf(";", start);  
+      if (end == -1){
+        end = cookies.length;
+      }
+      this.cartvalues = unescape(cookies.substring(start,end));
+          if(this.cartvalues.length > 0){
+              this.cookieSet = true;
+          } else{
+              this.cookieSet = false;
+          }
+      if(this.cookieSet==false){
+        this.removeCookie("totals");
+      }
+      var tstart = cookies.indexOf("totals"); 
+      var tstart = cookies.indexOf("=", tstart) +1;  
+      var tend = cookies.indexOf(";", tstart);  
+      if (tend == -1){
+        tend = cookies.length;
+      }
+      var t = unescape(cookies.substring(tstart,tend));
+      var t_temp = t.split("|");
+      this.totals = new Array();
+      for(n=0; n<t_temp.length; n++){
+        var t_split = t_temp[n].split(":");
+        var name = t_split[0];
+        var value = t_split[1];
+        this.totals[name] = value;
+      }
+      
+    },
+    
+    parseCartValues: function(){
+      start = 0;
+      var linecount = 0;
+      var total_count = 0;
+      while ((start = this.cartvalues.indexOf("|", start)) != -1)
+      {
+        start++;
+        end = this.cartvalues.indexOf("|", start);
+        if (end != -1){
+          linecount++;
+        
+          if (linecount == 3){
+            this.start1 = start;
+            this.end1 = end;
+          }
+    
+          if (linecount > 3){
+            tmp = this.cartvalues.substring(start,end);
+            colon = tmp.indexOf(":", 0);
+                    
+                    var product_quantity = tmp.substring(0,colon);
+                    
+                    if(product_quantity > 0){
+              total_count += product_quantity / 1;
+              
+              colon2 = tmp.indexOf(":", colon+1);
+              var product_name = tmp.substring(colon2+1,end - start);
+              var product_price = tmp.substring(colon+1,colon2);
+              
+              var p_object = { name: product_name, price: product_price, quantity: product_quantity };
+              this.products.push(p_object);
+            }
+            }
+            start = end;
+        } else{
+            break;
+        }
+      }
+      
+      if(total_count==1){
+        this.productCount = total_count + " Item";
+      } else{
+        this.productCount = total_count + " Items";
+      }
+      
+          tmp = this.cartvalues.substring(this.start1,this.end1);
+          colon = tmp.indexOf(":", 0);
+          this.subtotal = tmp.substring(colon+1,this.end1 - this.start1);
+    },
+    setCookie: function(name, value, days){
+      if (days) {
+        var date = new Date();
+        date.setTime(date.getTime()+(days*24*60*60*1000));
+        var expires = "; expires="+date.toGMTString();
+      }
+      else{
+        var expires = "";
+        document.cookie = name+"="+value+expires+"; path=/";
+      }
+    },
+    
+    removeCookie: function(name){
+      this.setCookie(name,"",-1);
+    },
+    
+    getCookie: function(c_name){
+      var i,x,y,ARRcookies=document.cookie.split(";");
+      for (i=0;i<ARRcookies.length;i++){
+        x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+        y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+        x=x.replace(/^\s+|\s+$/g,"");
+        if (x==c_name){
+        return unescape(y);
+        }
+      } 
+    },
+    
+    addProductRow: function(qnty, pname, price){
+        var new_row = '<tr><td class="minicart_qnty">' + qnty + '</td><td class="minicart_name">' + pname + '</td><td class="minicart_price">' + price + '</td></tr>';
+        ss_jQuery("#minicart_product_table_body").append(new_row);
+    },
+
+    updateMinicart: function(){
+      ss_jQuery.ajax({
+                              type: "POST",
+                              cache: false,
+                              url: "[-- SHOPPING_CART_URL --]",
+                              data: "&storeid=[-- STORE.ID --]&function=show",
+                              async: true,
+                              crossDomain: false,
+                              dataType: 'html',
+                              success: function(msg){
+          var ss_jQuerydoc = ss_jQuery(msg);
+
+          var f_input = ss_jQuerydoc.find("form[name='order']");
+          window.cart_data = f_input.serialize();
+          var form_values = f_input.serializeArray();
+                                        var subtotal_regex = /^Subtotal.*/;
+                                        var ship_regex = /^Ship.*/;
+          var tax_regex = /^Tax.*/;
+                                        var total_regex = /^Total.*/;
+            
+                                        var subtotal = null;    
+          var ship_value = null;
+          var tax_value = null;
+                                        var total = null;
+
+          ss_jQuery.each(form_values, function(i, field){
+              window.minicart.cart_form_values[field.name] = field.value;
+          });
+                
+        var totals_table = ss_jQuerydoc.find("table.totals > tbody > tr > td");
+                           
+                                var subtotal_index = null;
+        var ship_index = null;
+                                var tax_index = null;
+                                var total_index = null;
+                           
+        totals_table.each(function(i, field){
+                                    if(ship_regex.test(field.innerHTML)){
+                                        ship_index = i + 1;
+                                    } else if(tax_regex.test(field.innerHTML)){
+                                        tax_index = i + 1;
+                                    } else if(subtotal_regex.test(field.innerHTML)){
+                                        subtotal_index = i + 1;
+                                    } else if(total_regex.test(field.innerHTML)){
+                                        total_index = i + 1;
+                                    }
+
+                                    if(ship_index != null){
+                                        if(i == ship_index){
+                                            ship_value = field.innerHTML;
+                                        }
+                                    }
+                                    
+                                    if(tax_index != null){
+                                        if(i == tax_index){
+                                            tax_value = field.innerHTML; 
+                                        }
+                                    }
+
+                                    if(subtotal_index != null){
+                                        if(i == subtotal_index){
+                                            subtotal_value = field.innerHTML; 
+                                        } else{
+                      subtotal_value = null;
+                    }
+                                    } else{
+                    subtotal_value = null;
+                  }
+
+                                    if(total_index != null){
+                                        if(i == total_index){
+                                            total_value = field.innerHTML; 
+                                        }
+                                    }
+        });
+                
+                                if(subtotal_value != null){
+                  this.subtotal = subtotal_value; 
+                                } else{
+                                        this.subtotal = "$0";
+                                }
+
+        if(ship_value != null){
+          this.shipping = ship_value; 
+                                } else{
+                                        this.shipping = "$0";
+                                }
+                
+        if(tax_value != null){
+          this.tax = tax_value;             
+                                } else{
+                                        this.tax = "$0";
+                                }
+
+                                if(total_value != null){
+          this.order_total = total_value; 
+                                } else{
+                                        this.order_total = "$0";
+                                }
+                                
+                                ss_jQuery("#minicart_tax_value").empty();
+        ss_jQuery("#minicart_tax_value").append(this.tax);
+        
+        ss_jQuery("#minicart_ship_value").empty();
+        ss_jQuery("#minicart_ship_value").append(this.shipping);
+
+                                ss_jQuery("#minicart_subtotal_value").empty();
+        ss_jQuery("#minicart_subtotal_value").append(this.subtotal);
+                              
+                                ss_jQuery("#minicart_grand_total_value").empty();
+        ss_jQuery("#minicart_grand_total_value").append(this.order_total);
+
+                                ss_jQuery("#minicart_subtotal_summary").text(this.order_total);
+
+                              }
+      });
+    
+      this.products = new Array();
+      this.readCookie();
+ if(this.cookieSet==true){
+                                this.parseCartValues();
+
+                                if(this.products.length > 0){
+
+                                        if(this.products.length==1){
+                                                ss_jQuery("#minicart_item_count").text(this.productCount);
+                                        } else{
+                                                ss_jQuery("#minicart_item_count").text(this.productCount);
+                                        }
+
+                                } else{
+
+                                        ss_jQuery("#minicart_item_count").text("");
+                                        ss_jQuery("#minicart_subtotal_summary").text("");
+
+                                }
+
+                        } else{
+                                ss_jQuery("#minicart_empty_wrap").show();
+                                ss_jQuery("#minicart_product_table_body").empty();
+                                ss_jQuery("#minicart_quantity").text("");
+                                ss_jQuery("#minicart_subtotal").text(this.emptyMessage);
+                        }
+      
+        ss_jQuery("#minicart_product_table_body").empty();
+        
+        for(n=0; n<this.products.length; n++){
+          this.addProductRow(this.products[n].quantity, this.products[n].name, this.products[n].price);
+        }
+        
+      } else{
+        ss_jQuery("#minicart_empty_wrap").show();
+        ss_jQuery("#minicart_product_table_body").empty();
+        ss_jQuery("#minicart_quantity").text("");
+        ss_jQuery("#minicart_subtotal").text(this.emptyMessage);
+      } 
+  
+    }
+  }
+  
+    window.minicart.updateMinicart();
+  
+});
+
+function emptyCart(){
+    window.minicart.removeCookie("totals"); 
+    ss_jQuery('body').mask(window.empty_cart_loadmaskphrase);
+                var ajaxTime= new Date().getTime();
+    ss_jQuery.ajax({
+                     type: "POST",
+                     cache: false,
+                     url: "[-- SHOPPING_CART_URL --]",
+                     data: window.cart_data + "&function=Empty Cart",
+                     async: true,
+                     crossDomain: false,
+                     dataType: 'html',
+                     success: function(msg){
+                            var ss_jQuerydoc = ss_jQuery(msg);
+                            window.minicart.updateMinicart();
+                            ss_jQuery("#minicart_shipping_options").empty();
+        var ajaxTime= new Date().getTime();
+                         var totalTime = new Date().getTime()-ajaxTime;
+                                                                var timeout = 1000 - totalTime;
+
+                                                                setTimeout('ss_jQuery("body").unmask()', timeout);
+         }
+                });
+}
+
+
+[-- END_IF --]
+</script>
+<!-- END MODULE BODY -->

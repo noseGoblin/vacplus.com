@@ -1,0 +1,33 @@
+<script type="text/javascript">
+function DisplayLogName(name) {
+  var account=(function(name){var b=" "+document.cookie;var c=b.search(new RegExp("\b"+name+"="));if(c==-1)c=b.indexOf(name+"=");if(c==-1)b=null;else{c=b.indexOf("=",c)+1;var d=b.indexOf(";",c);if(d==-1)d=b.length;b=unescape(b.substring(c,d));}return b;})(name);
+  var cust_name = "",signed_in = -1,d=document;
+
+  if (account != null) {
+    var v = account.split('|');
+    if(v.length == 3) {
+      signed_in = (v[2] == 'yes' ? 1 : 0);
+      cust_name = v[0];
+    }
+    /*d.write("<b>" + cust_name + "</b>");*/
+    if (signed_in == 1) {
+      /*d.write("<br>");*/
+      d.write("<li><a id=\"do-nothing\" href=\"https://www.vacplus.com/cgi-vacplus/sb/order.cgi?func=3&storeid=*1a55e44c50ad4a9e18c062cfd94a56&html_reg=html\">View/Edit Account</a></li>");
+      /*d.write("<br>");*/
+      d.write("<li><a id=\"do-nothing\" href=\"https://www.vacplus.com/cgi-vacplus/sb/order.cgi?func=4&storeid=*1a55e44c50ad4a9e18c062cfd94a56&html_reg=html\">Sign Out</a></li>");
+      /*d.write("<br>");*/
+    }
+    else if(signed_in == 0)
+    {
+      /*d.write(" - You are no longer signed in<br>");*/
+    }
+  }
+  if(signed_in != 1) {
+    /*d.write("• New Customer? <a href=\"https://www.vacplus.com/cgi-vacplus/sb/order.cgi?func=1&storeid=*1a55e44c50ad4a9e18c062cfd94a56&html_reg=html\">Click here to Register</a>");
+    d.write("<br>");*/
+    d.write("<li><a id=\"do-nothing\" href=\"https://www.vacplus.com/cgi-vacplus/sb/order.cgi?func=2&storeid=*1a55e44c50ad4a9e18c062cfd94a56&html_reg=html\">Sign In</a>");
+    /*d.write("<br>");*/
+  }
+}
+DisplayLogName("ss_reg_0001200073");
+</script>

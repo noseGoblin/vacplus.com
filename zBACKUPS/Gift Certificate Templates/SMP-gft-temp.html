@@ -1,0 +1,173 @@
+[-- DEFINE Gift_Certificate --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>[-- STORE.SC_GiftCertificate Remove_HTML --]</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"> 
+<link href="https://www.vacplus.com/css/smp-gift.css" rel="stylesheet" type="text/css" />
+<link href="https://www.vacplus.com/css/sewing-machines.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" language="JavaScript">
+<!-- 
+[-- SC_JAVASCRIPT  --]
+// -->
+</script>
+
+</head>
+<body>
+[-- INCLUDE ss-header --]
+[-- ShopSiteMessages --]
+
+[-- IF GiftCertHeader --]
+<div class="header">
+[-- GiftCertHeader --]
+</div>
+[-- END_IF --]
+[-- SC_FORM --]
+
+<div class="cert">
+<div class="instructions">
+[-- GiftCertInstruction --]
+</div>
+
+[-- GiftCertNumberAmount --]
+[-- GiftCertEmailMail --]
+[-- GiftCertToFromMsg --]
+
+<!--
+<div class="policy">
+[-- Store.GiftCert_Policy --]
+<br>
+[-- GiftCertPolicy --]
+</div>
+-->
+<div class="buttons">
+[-- BUTTON BackToStore --]&nbsp;[-- BUTTON BuyGiftCertificate --]
+</div>
+</div>
+</form>
+[-- IF GiftCertFooter --]
+<div class="footer">
+[-- GiftCertFooter --]
+</div>
+[-- END_IF --]
+</center>
+[-- INCLUDE ss-footer --]
+</body>
+</html>
+[-- END_DEFINE Gift_Certificate --]
+
+
+[-- DEFINE GIFT_CERTIFICATE_EMAIL --]
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<html>
+<head>
+<title>[-- STORE.SC_GiftCertificate Remove_HTML --]</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"> 
+[-- INCLUDE sc_shipping.css process --]
+</head>
+<body>
+<!-- SC Default -->
+<center>
+[-- Store.Name --]<br>
+[-- Store.GiftCert_For --] <b>[-- GiftCert_Amount --]</b><p>
+<table>
+
+<tr><td class="cert_text">
+[-- Store.GiftCert_To --]
+</td><td class="cert_value">
+[-- GiftCert_To --]
+</td></tr>
+
+<tr><td class="cert_text">
+[-- Store.GiftCert_From --]
+</td><td class="cert_value">
+[-- GiftCert_From --]
+</td></tr>
+
+[-- IF GiftCert_Message --]
+<tr><td class="cert_text">
+[-- Store.GiftCert_Message --]
+</td><td class="cert_value">
+[-- GiftCert_Message --]
+</td></tr>
+[-- END_IF --]
+
+</table>
+[-- STORE.GiftCert_ToRedeem --]<br>
+<a href="[-- STORE.OUTPUT_URL --]/index.html">
+[-- IF Store.Name --]
+  [-- Store.Name --]
+[-- ELSE --]
+  [-- STORE.OUTPUT_URL --]/index.html
+[-- END_IF --]
+</a><p>
+[-- STORE.GiftCert_OnOrderScreen --]<br>
+[-- Store.GiftCert_Number --]: <b>[-- GiftCert_Number --]</b> - [--Store.GiftCert_PIN --]: <b>[-- GiftCert_PIN --]</b><br>
+Expiration Date: [-- GiftCert_Date --]<br>
+
+</center>
+</body>
+</html>
+[-- END_DEFINE GIFT_CERTIFICATE_EMAIL --]
+
+# *****************************************
+# ***** GIFT_CERTIFICATE_MAIL DEFINE *****
+# *****************************************
+[-- DEFINE GIFT_CERTIFICATE_MAIL --]
+[-- IF FIRST_MAIL_GIFTCERT --]
+<html>
+<head>
+ <style media="print">   .noprint { display: none } </style><META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<title>[-- STORE.SC_GiftCertificate Remove_HTML --]</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"> 
+</head>
+<body bgcolor="#ffffe0">
+[-- END_IF --]
+
+<!-- SC Default -->
+<center>
+[-- Store.Name --]<br>
+[-- Store.GiftCert_For --] <b>[-- GiftCert_Amount --]</b><p>
+<table>
+
+<tr><td class="cert_text">
+[-- Store.GiftCert_To --]
+</td><td class="cert_value">
+[-- GiftCert_To --]
+</td></tr>
+
+<tr><td class="cert_text">
+[-- Store.GiftCert_From --]
+</td><td class="cert_value">
+[-- GiftCert_From --]
+</td></tr>
+
+[-- IF GiftCert_Message --]
+<tr><td class="cert_text">
+[-- Store.GiftCert_Message --]
+</td><td class="cert_value">
+[-- GiftCert_Message --]
+</td></tr>
+[-- END_IF --]
+
+</table>
+[-- STORE.GiftCert_ToRedeemCutPaste --]:<br>
+[-- STORE.OUTPUT_URL --]/index.html<p>
+[-- STORE.GiftCert_OnOrderScreen --]<br>
+[-- STORE.GiftCert_Number --]: <b>[-- GiftCert_Number --]</b> - [-- Store.GiftCert_PIN --]: <b>[-- GiftCert_PIN --]</b><br>
+Expiration Date: [-- GiftCert_Date --]<br>
+
+[-- IF LAST_MAIL_GIFTCERT --]
+<p>
+[-- SC_FORM --]
+</center>
+</body>
+</html>
+[-- ELSE --]
+<p class="noprint">----------------------------------------------------------</p>
+<p>
+</center>
+<P STYLE="{page-break-after:always;}">&nbsp;</P>
+[-- END_IF --]
+[-- END_DEFINE GIFT_CERTIFICATE_MAIL --]

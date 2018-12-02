@@ -1,0 +1,7 @@
+[-- DEFINE PRODUCT --]
+<tr>
+  <td colspan="2"><b><a href="[-- PRODUCT.MoreInformationFILENAME --]">[-- PRODUCT.Name --]</a></b></td>
+  <td>[-- IF PRODUCT.SaleOn --] <span style="text-decoration: line-through;">[-- PRODUCT.Price --]</span> <b>[-- PRODUCT.SaleAmount --]</b> [-- ELSE --] [-- PRODUCT.Price --] [-- END_IF --]</td>
+  <td>[-- IF AddImage? --]<a href="[-- PRODUCT.AddToCartURL --]"><img alt="Add to Cart" [-- AddImage --] border="0"></a>[-- END_IF --]</td>
+</tr>
+[-- END_DEFINE PRODUCT --]

@@ -1,0 +1,86 @@
+[-- DEFINE PRODUCT --]
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:6px; margin-bottom:12px;">
+  <tr>
+    <td><div class="search-line" style="width: 100%;"><img src="[-- VAR.MyImages --]/images/trans.gif" width="1" height="2" /></div></td>
+  </tr>
+</table>
+<table width="100%" cellpadding="6" cellspacing="0">
+  <tr>
+    <td>[-- IF PRODUCT.Graphic --]
+        [-- IF PRODUCT.DisplayMoreInformationPage --]
+          <a href="[--PRODUCT.MoreInfoURL--]" rel="nofollow"><img border="0" [--PRODUCT.Graphic REMOVE_HTML--] hspace="0" vspace="0"></a>
+        [-- ELSE --]
+          <img border="0" [--PRODUCT.Graphic REMOVE_HTML--] hspace="0" vspace="0">
+        [-- END_IF --]
+      [-- ELSE --]
+        [-- IF PRODUCT.DisplayMoreInformationPage --]
+          <a href="[--PRODUCT.MoreInfoURL--]"><img src="[-- VAR.MyImages --]/images/search_comingsoon.gif" border="0" hspace="0" vspace="0"></a>
+        [-- ELSE --]
+          <img src="[-- VAR.MyImages --]/images/search_comingsoon.gif" border="0" hspace="0" vspace="0">
+        [-- END_IF --]
+      [-- END_IF --]
+        </td>
+    <td width="70%" align="left" valign="top">
+          [-- IF PRODUCT.DisplayMoreInformationPage --]
+            <a href="[--PRODUCT.MoreInfoURL--]" class="search-description">[-- PRODUCT.Name --]</a>
+          [-- ELSE --]
+              <span class="search-description">[-- PRODUCT.Name --]</span>
+          [-- END_IF --] <br>
+      [-- IF STORE.Type "PROFESSIONAL" --]
+              <span class="search-description">[-- PRODUCT.ProductDescription --]</span><br>
+      [-- END_IF --]<br>
+    </td>
+    <td style="padding-left: 15px; width: 30%;" align="center" valign="top" class="search-priceblock">
+          [-- IF PRODUCT.DisplayPrice --]
+              [-- IF PRODUCT.SaleOn --]
+                <span class="search-oldprice">[-- PRODUCT.Price --]</span><br>
+          <span class="search-onsale">[-- PRODUCT.SaleAmount --]</span><br>
+          <form id="form[-- PRODUCT.RecordNumber --]" action="[-- SHOPPING_CART_URL BASE --]/order.cgi" method="post">
+          <input type=hidden name="storeid" value="[--Store.id--]">
+                                        <input type="hidden" class="4tellprodsku" value="[-- PRODUCT.SKU --]">
+          <input type=hidden name="dbname" value="products">
+          <input type="hidden" name="itemnum" value="[-- PRODUCT.RecordNumber --]">
+          <input type=hidden name="function" value="add">
+
+          <input class="addtocart_button" src="images/addtocart.gif" name="Add to Cart" type="image" />
+          [-- INCLUDE LexiConnAACSimpleProduct PROCESS --]<!--AJAX CART-->
+        </form>
+        [-- ELSE --]
+                <span style="search-onsale">[-- PRODUCT.Price --]</span><br>
+                <form id="form[-- PRODUCT.RecordNumber --]" action="[-- SHOPPING_CART_URL BASE --]/order.cgi" method="post">
+                <input type=hidden name="storeid" value="[--Store.id--]">
+                        <input type="hidden" class="4tellprodsku" value="[-- PRODUCT.SKU --]">
+                <input type=hidden name="dbname" value="products">
+          <input type="hidden" name="itemnum" value="[-- PRODUCT.RecordNumber --]">
+          <input type=hidden name="function" value="add">
+
+          <input class="addtocart_button" src="images/addtocart.gif" name="Add to Cart" type="image" />
+          <div style="clear:both;"></div>
+
+         [-- INCLUDE LexiConnAACSimpleProduct PROCESS --]<!--AJAX CART-->
+
+        </form>
+        [-- END_IF --]
+            [-- ELSE --]
+              <span class="search-price">Call 1-800-401-8151 for details.</span>
+            [-- END_IF --]
+            <div style="clear:both;"></div>
+            <p><a href="[-- PRODUCT.MoreInfoURL --]" style="font-size: 10pt; font-weight: bold;">More Info >></a></p>
+    </td>
+<!--    <td align="right" valign="top" style="white-space: nowrap;">
+          [-- IF PRODUCT.DisplayMoreInformationPage--]
+              <a href="[-- PRODUCT.MoreInfoURL --]"><strong>More Info >></strong></a>
+      [-- END_IF --]
+    </td>-->
+  </tr>
+  <tr>
+    <td colspan="4" class="search-foundin">Found In:</td>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr></td>
+
+
+
+[-- END_DEFINE PRODUCT --]

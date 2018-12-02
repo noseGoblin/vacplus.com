@@ -1,0 +1,158 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,800italic,300italic,600,700,800);
+@media (min-width: 0) {
+  body::before {
+    content: '{ "current" : "small", "all" : [small ], "position" : 0 }';
+    display: none;
+  }
+}
+
+/*! Grid based on https://github.com/necolas/griddle by Nicolas Gallagher (@necolas) */
+body {
+  font-size: 1em;
+}
+
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25em;
+  padding-right: 1.25em;
+}
+
+img {
+  max-width: 100%;
+}
+
+.no-js .responsive-image {
+  display: none;
+}
+
+.grid {
+  display: block;
+  padding: 0;
+  margin: 0 -0.625em;
+  text-align: left;
+  letter-spacing: -0.31em;
+  text-rendering: optimizespeed;
+}
+
+.opera:-o-prefocus,
+.grid {
+  word-spacing: -0.43em;
+}
+
+.grid > .grid {
+  overflow: hidden;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.grid__cell {
+  width: 100%;
+  display: -moz-inline-stack;
+  display: inline-block;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 0.625em;
+  /* controls vertical positioning of units */
+  vertical-align: top;
+  /* keeps unit content correctly aligned */
+  text-align: left;
+  /* reset text defaults */
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-rendering: auto;
+}
+
+.grid--center {
+  text-align: center;
+}
+
+.grid__cell--center {
+  display: block;
+  margin: 0 auto;
+}
+
+.modal-backdrop {
+  background-color: black;
+}
+
+.modal-backdrop.in {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=76);
+  opacity: 0.76;
+}
+
+.modal {
+  text-align: center;
+}
+
+.modal.in .modal-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.modal .modal-dialog {
+  width: 100%;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.modal .modal-dialog .modal-content {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.modal .modal-dialog .modal-header {
+  border: none;
+  margin: 0;
+  background-color: transparent;
+  text-align: right;
+}
+
+.modal .modal-dialog .modal-header button {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.modal .modal-dialog .modal-body {
+  padding: 0;
+  margin: 0 auto;
+  background-color: transparent;
+}
+
+.modal.videoModal .modal-dialog {
+  max-width: 940px;
+  width: 100%;
+}
+
+.modal.videoModal .modal-dialog .modal-content {
+  background-color: grey;
+}
+
+.modal.videoModal .modal-dialog .modal-body {
+  margin: 0 auto;
+  background-color: transparent;
+  max-width: 832px;
+  width: 100%;
+  padding: 4px 15px 50px 15px;
+}

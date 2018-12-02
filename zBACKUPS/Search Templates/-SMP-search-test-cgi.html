@@ -1,0 +1,234 @@
+[-- DEFINE SEARCH_RESULTS --]
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Remove + for adwords link search cz 08/28/2014-->
+    <script>
+      $("input[name=search_field]").ready(function(){
+        var searchVal=$('.productsearch').find('input[name=search_field]').val();
+        if(searchVal.indexOf("+")>-1){
+          searchVal=searchVal.replace(/\+/g,'');
+          $('input[name=search_field]').attr('value',searchVal);
+          titleVal=$('.body').find('h1').text();
+          titleVal=titleVal.replace(/\+/g,'');
+          $('.body').find('h1').text(titleVal)
+        }
+      });
+    </script>
+
+    [--IF PAGE.Title --]
+      <title>[--PAGE.Title REMOVE_HTML --]</title>
+    [--ELSE--]
+      <title>[-- PAGE.Name REMOVE_HTML --]</title>
+    [--END_IF--]
+
+    [-- IF PAGE.MetaKeywords --]
+      <meta name="Keywords" content="[-- PAGE.MetaKeywords --]" />
+    [--ELSE--]
+      <meta name="Keywords" content="[-- PAGE.Name REMOVE_HTML --]" />
+    [--END_IF--]
+
+    [--IF PAGE.MetaDescription --]
+      <meta name="Description" content="[-- PAGE.MetaDescription --]" />
+    [--ELSE--]
+      <meta name="Description" content="[--PAGE.Name REMOVE_HTML --]" />
+    [--END_IF--]
+
+    [-- INCLUDE newSEARCH PROCESS--]
+    <style type="text/css">
+      div.hide-search-field input{
+        visibility:hidden;
+      }
+
+      a.search-name {
+        font-family:inherit;
+        font-size:14px;
+        font-weight:bold;
+      }
+      a.search-name:visited {
+        font-family:inherit;
+        font-size:14px;
+        font-weight:bold;
+      }
+      a.search-name:hover {
+        font-family:inherit;
+        font-size:14px;
+        font-weight:bold;
+      }
+      a.search-name:active {
+        font-family:inherit;
+        font-size:14px;
+        font-weight:bold;
+      }
+
+      .search-name{
+        font-family:inherit;
+        font-size:14px;
+        font-weight:bold;
+      }
+
+      .search-description{
+        font-family:inherit;
+        font-size:16px;
+        color:#313131;}
+        
+      .search-foundin{
+        display:none;
+        font-family:inherit;
+        font-size:11px;
+        font-weight:bold;
+        color:#000000;
+        background-color:#EFEFEF;
+        padding:3px;}
+
+      a.foundin{
+        font-family:inherit;
+        font-size:11px;
+        font-weight:normal;
+        color:#0000FF;
+        padding:3px;}
+
+      a.foundin:hover{
+        font-family:inherit;
+        font-size:11px;
+        font-weight:normal;
+        color:#0000FF;
+        padding:3px;}
+
+      .search-pipeline{
+        font-family:inherit;
+        font-size:11px;
+        font-weight:bold;}
+
+      .search-priceblock{
+        font-family:inherit;
+        padding-right:12px;
+        padding-left:12px;
+        font-size:12px;}
+
+      .search-oldprice{
+        font-family:inherit;
+        text-decoration:line-through;}
+
+      .search-onsale{
+        font-family:inherit;
+        color:#FF0000;
+        font-weight:bold;}
+
+      .search-price{
+        font-family:inherit;
+        font-weight:bold;}
+
+      div.search-line{
+        background-color:#CCCCCC;
+        width:560px;
+        height:2px;}
+      td.cnt-bg{
+        padding: 10px 8px !important;
+      }
+      .pageLink img{display:none;}
+      .pageLink b{font-weight:normal; color:#000cff; text-decoration:underline; font-size:12px;}
+      td.pageLink{display:none;}
+    </style>
+
+    <script type="text/javascript">
+      [--CR_JAVASCRIPT--]
+    </script>
+    <!--CSS and JS links-->
+    <!-- Google Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Lato:400,100,300,700,900,900italic,700italic,400italic|Open+Sans" rel="stylesheet" type="text/css">
+    <!-- Bootstrap -->
+    <link href="/AE/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!--plugins-->
+    <link href="/AE/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/AE/custom-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <link href="/AE/css/yamm.css" rel="stylesheet">
+    <link href="/AE/css/hawksearch.css" rel="stylesheet">
+    <link href="/AE/css/navigation.css" rel="stylesheet">
+    <!--sky form pro css-->
+    <link href="/AE/sky-form/css/sky-forms.css" rel="stylesheet">           
+    <!--custom css file-->
+    <link href="/AE/css/fonts.css" rel="stylesheet">
+    <link href="/AE/css/style.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!--end CSS and JS links-->
+
+    <META NAME="GOOGLEBOT" CONTENT="INDEX, FOLLOW">
+    <META NAME="Robots" content="index,follow"> 
+    <meta name="rating" content="General" />
+      
+    [-- INCLUDE newSEARCH PROCESS--]
+    [--VAR.counter ""--]
+  </head>
+  <body>
+    <div class="site-wrap">
+      [--INCLUDE -SMP-svg--]
+      <!--header start-->
+      <header class="header">
+        [--INCLUDE -SMP-topbar-cgi PROCESS--]
+        [--INCLUDE -SMP-toolbar-cgi-search PROCESS--]
+        [--INCLUDE -SMP-header-minicart PROCESS--]
+      </header>
+      <!--header end-->
+      <div class="cmlla" id="cmlla">
+        [--INCLUDE -SMP-callouts--]
+        <main role="main">
+          <div class="container">
+            <h1>[--Store.SearchResults --]: [-- SearchString --]</h1>
+            [-- IF PAGE.TEXT1 --]
+              <br>[-- PAGE.TEXT1 --]<br>
+            [-- END_IF --]
+            [-- VAR.LAYOUT PAGE.LAYOUT --]
+
+            <div class="col-lg-6 col-md-6 col-sm-6" style="font-size:16px!important; text-align:left; padding-bottom:5px;">
+              [-- IF SearchResultCount --]
+                <strong>Showing:</strong> [-- SearchResultCount --]
+              [-- ELSE --]
+                <p>Please be specific in picking search terms: Brand of sewing machine and model number</p>
+              [-- END_IF --]
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6" style="font-size:16px!important; text-align:right; padding-bottom:5px;">
+              [-- SearchResultsPerPage --]
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6" style="font-size:16px!important; text-align:left;">
+              [-- IF SearchResultPrevNext --]
+                [-- SearchPrevNext --]
+              [-- ELSE --]
+                <p>For example: Janome DC2010</p>
+              [-- END_IF --]
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6" style="font-size:16px!important; text-align:right;">
+              [-- IF SearchSortBy --]
+                <strong>[-- SearchSortBy --]</strong>
+              [-- ELSE --]
+                &nbsp;
+              [-- END_IF --]
+            </div>
+            <hr>
+            
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              [-- VAR.pa_search_result "false" --]
+              [-- LOOP SEARCH --]
+                [-- SEARCHRESULT --]
+                [-- VAR.pa_search_result "true" --]
+              [-- END_LOOP SEARCH--]
+              [-- IF VAR.pa_search_result "true" --]
+                </td>
+                </tr>
+              [-- END_IF --]
+            </div>
+          </div><!--container-->
+        </main>
+      </div><!--cmlla-->
+    </div><!--site-wrap-->
+    [-- INCLUDE -SMP-mailing-list --]
+    [-- INCLUDE -SMP-footer-cgi PROCESS--]
+  </body>
+  [-- INCLUDE -SMP-AE-js-plugins --]
+</html>
+[-- END_DEFINE SEARCH_RESULTS --]

@@ -1,0 +1,204 @@
+[-- VAR.MiniCartTextColor "#000000" --]
+[-- VAR.MiniCartBackgroundColor "#ffffff" --]
+[-- VAR.MiniCartColor "black" --]
+#black or white
+[-- VAR.TextAlign "left" --]
+
+[-- IF VAR.MiniCartType 1 --]
+<div id="minicart" style="color: [-- VAR.MiniCartTextColor --]; background-color: [-- VAR.MiniCartBackgroundColor --]; text-align: [-- VAR.TextAlign --]; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt;">
+    <a href="[-- SHOPPING_CART_URL --]" style="text-decoration: none; color: [-- VAR.MiniCartTextColor --]; display: inline;">
+        <img src="[-- OUTPUT_DIRECTORY_URL --]/media/themesmedia/cart-[-- VAR.MiniCartColor --].gif" border="0" name="cart" align="top">
+    </a>
+    <a href="[-- SHOPPING_CART_URL --]" style="text-decoration: underline; color: [-- VAR.MiniCartTextColor --]; display: inline; ">
+        <span id="minicart_item_count" class="minicart_1"></span>
+    </a>
+</div>
+[-- ELSE_IF VAR.MiniCartType 2 --]
+<div id="minicart" style="color: [-- VAR.MiniCartTextColor --]; background-color: [-- VAR.MiniCartBackgroundColor --];  text-align: [-- VAR.TextAlign --]; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt;">
+        <a href="[-- SHOPPING_CART_URL --]" style="text-decoration: none; color: [-- VAR.MiniCartTextColor --]; display: inline;">
+                <img src="[-- OUTPUT_DIRECTORY_URL --]/media/themesmedia/cart-[-- VAR.MiniCartColor --].gif" border="0" name="cart" align="top">
+        </a>
+        <a href="[-- SHOPPING_CART_URL --]" style="text-decoration: underline; color: [-- VAR.MiniCartTextColor --]; display: inline;">
+                <span id="minicart_item_count" class="minicart_1"></span>&nbsp;<span id="minicart_subtotal_summary"></span>
+        </a>
+</div>
+[-- ELSE_IF VAR.MiniCartType 3 --]
+<style><!--CART POPUP STYLES OVERRIDE-->
+    div.ui-dialog-titlebar.ui-widget-header.ui-corner-all.ui-helper-clearfix{
+        background:#820000;
+    }
+    .ui-state-default, .ui-widget-content .ui-state-default {
+    border: 1px solid rgb(216, 220, 223);
+        border-top-width: 1px;
+        border-right-width-value: 1px;
+        border-right-width-ltr-source: physical;
+        border-right-width-rtl-source: physical;
+        border-bottom-width: 1px;
+        border-left-width-value: 1px;
+        border-left-width-ltr-source: physical;
+        border-left-width-rtl-source: physical;
+        border-top-style: solid;
+        border-right-style-value: solid;
+        border-right-style-ltr-source: physical;
+        border-right-style-rtl-source: physical;
+        border-bottom-style: solid;
+        border-left-style-value: solid;
+        border-left-style-ltr-source: physical;
+        border-left-style-rtl-source: physical;
+        border-top-color: rgb(216, 220, 223);
+        border-right-color-value: rgb(216, 220, 223);
+        border-right-color-ltr-source: physical;
+        border-right-color-rtl-source: physical;
+        border-bottom-color: rgb(216, 220, 223);
+        border-left-color-value: rgb(216, 220, 223);
+        border-left-color-ltr-source: physical;
+        border-left-color-rtl-source: physical;
+        -moz-border-top-colors: none;
+        -moz-border-right-colors: none;
+        -moz-border-bottom-colors: none;
+        -moz-border-left-colors: none;
+        border-image-source: none;
+        border-image-slice: 100% 100% 100% 100%;
+        border-image-width: 1 1 1 1;
+        border-image-outset: 0 0 0 0;
+        border-image-repeat: stretch stretch;
+    background: url("images/ui-bg_highlight-hard_100_eeeeee_1x100.png") repeat-x scroll 50% 50% rgb(238, 238, 238);
+        background-color: rgb(238, 238, 238);
+        background-image: url("images/ui-bg_highlight-hard_100_eeeeee_1x100.png");
+        background-repeat: repeat-x;
+        background-attachment: scroll;
+        background-position: 50% 50%;
+        background-clip: border-box;
+        background-origin: padding-box;
+        background-size: auto auto;
+    font-weight: bold;
+    color: rgb(100, 100, 100);
+    outline: medium none;
+        outline-width: medium;
+        outline-style: none;
+        outline-color: -moz-use-text-color;
+}
+</style>
+</td>
+
+<td class="right">
+        <div style="vertical-align:top; width:125px; margin: 4px 0px 0px; padding: 13px 0px 0px;">
+            <div>
+                <div>
+<div id="minicart" >
+    <div style="color: [-- VAR.MiniCartTextColor --]; background-color: [-- VAR.MiniCartBackgroundColor --]; text-align: [-- VAR.TextAlign --]; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt;">
+    [-- IF VAR.ShowCart "yes" --]
+    <a class="minicart_3" href="[-- SHOPPING_CART_URL --]?storeid=[-- STORE.ID --]&amp;function=show" style="text-decoration: none; color: [-- VAR.MiniCartTextColor --];"><img src="[-- OUTPUT_DIRECTORY_URL --]/media/themesmedia/cart-[-- VAR.MiniCartColor --].gif" border="0" name="cart" align="top"></a>
+    [-- END_IF --]
+    <div style="text-align:left; width:100%;"><a class="minicart_3" href="[-- SHOPPING_CART_URL --]?storeid=[-- STORE.ID --]&amp;function=show" style="text-decoration: underline; color: [-- VAR.MiniCartTextColor --]; "><span class="minicart_3" style="color:#ffffff; font-weight:bold;"><img src="/images/cart/shopping-cart-title.jpg" border="0"></span></a></div>
+  </div>
+  <div id="cart_contents" style="margin-top:5px; text-align:center;" align="center">
+        <span style="font-size:12px; color:#3f3f3f; font-family:arial;">[-- STORE.Contains --]:&nbsp;</span><span id="minicart_item_count" style="font-family:arial; font-size:12px; color:#3f3f3f; font-weight: bold;"></span>
+      <br />
+    <span style="font-family:arial; color:#4eac35; font-size:12px;">Subtotal:&nbsp;</span><span id="minicart_subtotal_summary" style="font-family:arial; color:#3f3f3f; font-size:12px; font-weight: bold;"></span><br>
+        <div style="text-align:center; width:125px; margin-top:8px; margin-bottom:8px;" align="center"><a class="minicart_3" href="[-- SHOPPING_CART_URL --]?storeid=[-- STORE.ID --]&amp;function=show" style="text-decoration: underline; color: [-- VAR.MiniCartTextColor --]; "><span class="minicart_3" style="color:#ffffff; font-weight:bold;"><img src="/images/cart/shopping-cart-checkout.jpg" border="0"></span></a></div>
+  </div>
+</div><br>
+[-- ELSE_IF VAR.MiniCartType 4 --]
+<div id="minicart" style="color: [-- VAR.MiniCartTextColor --]; background-color: [-- VAR.MiniCartBackgroundColor --]; text-align: [-- VAR.TextAlign --]; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt;">
+        <table>
+               <thead>
+                <tr>
+                        <th colspan="3" align="center">
+                                [-- IF VAR.ShowCart "yes" --]
+                                        <a href="[-- SHOPPING_CART_URL --]" style="text-decoration: none; color: [-- VAR.MiniCartTextColor --]; display: inline;">
+                                                <img src="[-- OUTPUT_DIRECTORY_URL --]/media/themesmedia/cart-[-- VAR.MiniCartColor --].gif" border="0" name="cart" align="top">
+                                        </a>
+                                [-- END_IF --]
+
+                                <a href="[-- SHOPPING_CART_URL --]" style="text-decoration: underline; color: [-- VAR.MiniCartTextColor --]; display: inline;">[-- STORE.SC_YourShoppingCart --]</a>
+                        </th>
+                </tr>
+
+
+                        <tr>
+                                <td>Qty</td>
+                                <td align="center">Product</td>
+                                <td align="center">Price</td>
+                        </tr>
+                </thead>
+
+                <tbody id="minicart_4_ptable"></tbody>
+
+                <tfoot>
+                        <tr>
+                                <td colspan="2" align="right">Subtotal</td>
+                                <td align="right">
+                                        <span id="minicart_subtotal_summary"></span>
+                                </td>
+                        </tr>
+                </tfoot>
+        </table>
+</div>
+[-- ELSE_IF VAR.MiniCartType 5 --]
+<div id="minicart">
+   <div id="minicart_product_table_wrap">
+        <table class="minicart_product_table" id="minicart_title" width="100%">
+           <thead>
+               <tr>
+                    <th scope="col" abbr="Medium" align="center">
+                           <span id="minicart_title_label">Shopping Cart</span>
+                           <span id="minicart_item_count"></span>
+                           <span id="minicart_subtotal_summary"></span>
+                   </th>
+               </tr>
+           </thead>
+        </table>
+        <table id="minicart_empty_message" width="100%" align="center">
+            <tbody>
+                <tr>
+                   <td width="100%"><center>[-- VAR.NoItemsInCartMessage --]</center></td>
+                </tr>
+            </tbody>
+        </table>
+        <table id="minicart_cart_table" class="minicart_product_table">
+             <thead id="minicart_table_head">
+                    <tr>
+                        <th scope="col" abbr="Starter">Quantity</th>
+                        <th scope="col" abbr="Medium">Product</th>
+                        <th scope="col" abbr="Business">Price</th>
+                    </tr>
+                </thead>
+                <tfoot id="minicart_totals">
+                    <tr>
+                                                <td id="minicart_sub" colspan="2" align="right">Subtotal: </td>
+                                                <td id="minicart_subtotal_value"></td>
+                                        </tr>
+                                        <tr>
+                                                <td id="minicart_tax" colspan="2" align="right">Tax: </td>
+                                                <td id="minicart_tax_value"></td>
+                                        </tr>
+                                        <tr>
+                                                <td id="minicart_ship" colspan="2" align="right">Shipping: </td>
+                                                <td id="minicart_ship_value"></td>
+                                        </tr>
+                                        <tr>
+                                                <td id="minicart_grand_total" colspan="2" align="right">Total: </td>
+                                                <td id="minicart_grand_total_value"></td>
+
+                                       </tr>
+                              </tfoot>
+                          <tbody id="minicart_product_table_body"></tbody>
+                        </table>
+                        <center>
+                        <table id="minicart_cartlinks" width="100%">
+                           <tbody>
+                                <tr>
+                                        <td align="center">
+                                                <input id="minicart_empty_cart_button" class="minicart_button" onclick="emptyCart()" type="button" value="empty cart">
+                                        </td>
+                                        <td align="center">
+                                                <input id="minicart_view_cart_button" class="minicart_button add" onclick="document.location.href='[-- SHOPPING_CART_URL --]?storeid=[-- STORE.ID --]&amp;function=show'" type="button" value="view cart">
+                                        </td>
+                               </tr>
+                            </tbody>
+                       </table>
+                       </center>
+        </div>
+</div>
+[-- END_IF --]

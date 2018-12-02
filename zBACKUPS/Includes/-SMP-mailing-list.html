@@ -1,0 +1,53 @@
+<script>
+  function validateForm(){                
+    var x = document.getElementById("userEmail").value;
+    var atpos=x.indexOf("@");
+    var dotpos=x.lastIndexOf(".");
+    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length){
+      alert("Bad Email!");
+      return false;
+    } else {
+      document.getElementById("emailSend").src='http://email.sewingmachinesplus.com/public/?q=direct_add&fn=Public_DirectAddForm&id=avzsfstznvdkdkabikpbbgcqhpwfbid&email='+x+'&list1=0bbe03ec000000000000000000000002bfff';
+      //hide form and display a thank you for registering
+      document.getElementById("email-signup-form").style.display="none";
+      document.getElementById("email-thank-you").style.display="block";
+      return false;
+    }
+  }
+</script>
+
+<section class="newsletter">
+<div class="space-20"></div>
+    <div class="container">
+      <div class="row" id="email-thank-you" style="display:none;">
+        <div class="col-md-6">
+          <h3>Let us know if you have any questions! We're happy to help</h3>
+        </div>
+        <div class="col-md-6">
+          <h2 style="text-align:center;">Thank You for Signing Up!</h2>
+          <img id="emailSend" src="" width="0" height="0" border="0" alt=""/>
+        </div>
+      </div>
+      <div class="row" id="email-signup-form">
+        <div class="col-md-6">
+          <h3>Join our mailing list for Coupons and Promotions!</h3>
+        </div>
+        <div class="col-md-6">
+          <form role="form" class="subscribe-form assan-newsletter" id="emailCaptureSignupForm">
+            <div class="row">
+              <div class="col-sm-8">
+                <div class="form-group">
+                  <input type="text" class="form-control" name="email" id="userEmail" placeholder="Email Address">
+                </div>
+              </div>
+              <div class="col-sm-4 text-center">
+                <div>
+                  <button class="newsletter-btn btn-block" name="submit" onClick="return validateForm();">Sign Up!</button>
+                </div>  
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>

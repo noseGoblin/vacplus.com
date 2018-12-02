@@ -1,0 +1,46 @@
+[-- DEFINE PRODUCT --]
+    [-- IF PRODUCT.DisplayGraphic--]
+      [-- IF PRODUCT.Graphic --]
+        [-- IF PRODUCT.DisplayMoreInformationPage --]
+          [-- IF PRODUCT.Field38 --]
+            <a href="[-- PRODUCT.MoreInfoURL --]"><img src="[-- PRODUCT.Field38 --]" class="img-responsive"></a>  
+          [-- ELSE --]
+            <a href="[-- PRODUCT.MoreInfoURL --]"><img [-- PRODUCT.Graphic Remove_HTML --] class="img-responsive"></a>
+          [-- END_IF --]
+        [-- ELSE --]
+          <img [-- PRODUCT.Graphic Remove_HTML --] class="img-responsive"> 
+        [-- END_IF --]
+      [-- END_IF --]
+    [-- END_IF --]
+    <div class="title">
+      [-- IF PRODUCT.DisplayMoreInformationPage --]
+        <h4><a href="[-- PRODUCT.MoreInfoURL --]">[-- PRODUCT.Brand --]</a></h4>
+      [-- END_IF --]
+      [-- IF PRODUCT.Name --]
+        <style>
+            .product-flag{max-height:20px;}
+        </style>
+        <h5>[-- PRODUCT.Name --]</h5>
+        <!--<span style="background-color:yellow;"><span style="font-weight:bold;">Black</span> <span style="color:red;font-weight:bold;">Friday Special!</span></span>-->
+        [-- IF PRODUCT.Field38 --]
+          <span style="color:red;font-weight:bold;">OUT OF STOCK!</span><br/>  
+        [-- ELSE --]
+          <img class="product-flag" src="/media/banners/2016-holidays/xms-flag.jpg">
+        [-- END_IF --]
+      [-- END_IF --]
+      [--IF PRODUCT.DisplayPrice--]
+        [-- IF PRODUCT.SaleAmount --]
+          <div class="price" style="color:black;"><strike>[-- PRODUCT.Price --]</strike></div>
+          <div class="price">[-- PRODUCT.SaleAmount --]</div>
+        [-- ELSE --]
+          <div class="price">[-- PRODUCT.Price --]</div>
+        [-- END_IF --]
+      [--ELSE--]
+        [-- IF PRODUCT.Field38 --]
+              
+        [-- ELSE --]
+          Call us for Details!
+        [-- END_IF --]
+      [--END_IF--]
+    </div>
+  [-- END_DEFINE PRODUCT --]

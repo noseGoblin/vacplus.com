@@ -1,0 +1,358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+[-- DEFINE SEARCH_RESULTS --]
+<html>
+
+<head>
+<script src="https://cdn.optimizely.com/js/3534250896.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Cabin:400italic" rel="stylesheet" type="text/css">
+
+ <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+ [-- INCLUDE LexiConnAACSimpleHeadDialog PROCESS --]<!--AJAX CART-->
+
+ <!--Remove + for adwords link search cz 08/28/2014-->
+ <script>
+
+  $("input[name=search_field]").ready(function(){
+    var searchVal=$('.productsearch').find('input[name=search_field]').val();
+    if(searchVal.indexOf("+")>-1){
+      searchVal=searchVal.replace(/\+/g,'');
+      $('input[name=search_field]').attr('value',searchVal);
+      titleVal=$('.body').find('h1').text();
+      titleVal=titleVal.replace(/\+/g,'');
+      $('.body').find('h1').text(titleVal)
+    }
+  });
+
+ </script>
+ 
+    [--IF PAGE.Title --]
+    <title>[--PAGE.Title REMOVE_HTML --]</title>
+  [--ELSE--]
+    <title>[-- PAGE.Name REMOVE_HTML --]</title>
+  [--END_IF--]
+
+  [-- IF PAGE.MetaKeywords --]
+    <meta name="Keywords" content="[-- PAGE.MetaKeywords --]" />
+  [--ELSE--]
+    <meta name="Keywords" content="[-- PAGE.Name REMOVE_HTML --]" />
+  [--END_IF--]
+
+  [--IF PAGE.MetaDescription --]
+    <meta name="Description" content="[-- PAGE.MetaDescription --]" />
+  [--ELSE--]
+    <meta name="Description" content="[--PAGE.Name REMOVE_HTML --]" />
+  [--END_IF--]
+    
+    <META NAME="GOOGLEBOT" CONTENT="INDEX, FOLLOW">
+  <META NAME="Robots" content="index,follow"> 
+  <meta name="rating" content="General" />
+    
+    [-- INCLUDE newSEARCH PROCESS--]
+
+<style type="text/css">
+
+div.hide-search-field input{
+  visibility:hidden;
+}
+
+a.search-name {
+  font-family:inherit;
+  font-size:14px;
+  font-weight:bold;
+}
+a.search-name:visited {
+  font-family:inherit;
+  font-size:14px;
+  font-weight:bold;
+}
+a.search-name:hover {
+  font-family:inherit;
+  font-size:14px;
+  font-weight:bold;
+}
+a.search-name:active {
+  font-family:inherit;
+  font-size:14px;
+  font-weight:bold;
+}
+
+.search-name{
+  font-family:inherit;
+  font-size:14px;
+  font-weight:bold;
+}
+
+.search-description{
+  font-family:inherit;
+  font-size:12px;}
+  
+.search-foundin{
+  font-family:inherit;
+  font-size:11px;
+  font-weight:bold;
+  color:#000000;
+  background-color:#EFEFEF;
+  padding:3px;}
+
+a.foundin{
+  font-family:inherit;
+  font-size:11px;
+  font-weight:normal;
+  color:#0000FF;
+  padding:3px;}
+
+a.foundin:hover{
+  font-family:inherit;
+  font-size:11px;
+  font-weight:normal;
+  color:#0000FF;
+  padding:3px;}
+
+.search-pipeline{
+  font-family:inherit;
+  font-size:11px;
+  font-weight:bold;}
+
+.search-priceblock{
+  font-family:inherit;
+  padding-right:12px;
+  padding-left:12px;
+  font-size:12px;}
+
+.search-oldprice{
+  font-family:inherit;
+  text-decoration:line-through;}
+
+.search-onsale{
+  font-family:inherit;
+  color:#FF0000;
+  font-weight:bold;}
+
+.search-price{
+  font-family:inherit;
+  font-weight:bold;}
+
+div.search-line{
+  background-color:#CCCCCC;
+  width:560px;
+  height:2px;}
+td.cnt-bg{
+  padding: 10px 8px !important;
+}
+</style>
+    
+  [-- INCLUDE DEV-header-search-results PROCESS --]
+  [-- INCLUDE DEV-leftbar --]
+
+
+<div style="font-size: 8pt; margin: 3px 10px 20px 5px; width:667px;">
+
+
+
+
+
+<!---------------------------------------BANNER-------------------------------------------------->
+
+<div id="nsm_banner" align="center" style="padding-top: 15px; padding-bottom: 15px;"><a href="https://www.vacplus.com/2016-national-sewing-month-sale.php"><img src="https://www.vacplus.com/media/email/2016-web-september-national-sewing-month/EVERY-PAGE-BANNER.jpg" alt="SewingMachinesplus.com National Sewing Month Sale" /></a></div>
+<!---------------------------------------BANNER-------------------------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+#Search form at top of page
+<h1>[--Store.SearchResults --]: [-- SearchString --]</h1>
+
+[-- IF PAGE.TEXT1 --]
+ <br>[-- PAGE.TEXT1 --]<br>
+[-- END_IF --]
+# set layout variable - save time looking up value repeatedly from the database
+
+[-- VAR.LAYOUT PAGE.LAYOUT --]
+
+#Start of the loop to output the search results - Products with associated Links
+[-- SEARCHRESULT_FORM FORM_ONLY --]
+
+
+<!-- TOP: Start New Search Block -->
+<br>
+<!-- Detailing how many search results have shown, page number, sort by relevance, results per page -->
+<div class="search_info">
+  <table width="560" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td nowrap class="search-count" width="100%">
+          [-- IF SearchResultCount --]
+          <strong>Showing:</strong> [-- SearchResultCount --]
+          [-- ELSE --]
+          <p>Please be specific in picking search terms: Brand of sewing machine and model number</p>
+          [-- END_IF --]
+        </td>
+        <td nowrap class="results-page" align="right">[-- SearchResultsPerPage --]</td>
+    </tr>
+     <tr>
+        <td width="100%" align="left">
+          [-- IF SearchResultPrevNext --]
+          [-- SearchPrevNext --]
+          [-- ELSE --]
+          <p>For example: Janome DC2010</p>
+          [-- END_IF --]
+        </td>
+        <td align="left" nowrap>
+          [-- IF SearchSortBy --]
+          <strong>[-- SearchSortBy --]</strong>
+          [-- ELSE --]
+          &nbsp;
+          [-- END_IF --]
+        </td>
+     </tr>
+  </table>
+</div>
+
+
+</form>
+
+<div class="hide-search-field">
+<!-- End New Search Block -->
+<table border="0" cellspacing="0" cellpadding="0" class="ProductsFound">
+<tr>
+    <td>
+<!--<img src="https://www.vacplus.com/search-banner.jpg" border="0">--></td>
+  </tr>
+  <tr>
+    <td>
+    [-- VAR.pa_search_result "false" --]
+    [-- LOOP SEARCH --]
+
+      [-- SEARCHRESULT --]
+
+    [-- VAR.pa_search_result "true" --]
+
+    [-- END_LOOP SEARCH--]
+    </td>
+  </tr>
+</table>
+
+[-- IF VAR.pa_search_result "true" --]
+    </td>
+  </tr>
+[-- END_IF --]
+
+<!------------------ 4 TELL SEARCH RESULTS PAGE ---------------------->
+<div id="tout1_srch_4Tell" ></div>
+<div id="data_4Tell" data-products="" data-blocked="" data-customer="" data-cart=""></div>
+<script type="text/javascript">
+var viewList = new Array();
+ss_jQuery("input[class='4tellprodsku']").each(function(i){
+if(i < 5){
+viewList[i] = ss_jQuery(this).val();
+}
+});
+document.getElementById("data_4Tell").setAttribute("data-products", viewList.toString());
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+    }
+    return "";
+}
+var fourTellCookieContents = getCookie("fourtellemail");
+document.getElementById("data_4Tell").setAttribute("data-customer", fourTellCookieContents);
+if(fourTellCookieContents) {
+  document.getElementById("emailSend").src='http://email.sewingmachinesplus.com/public/?q=direct_add&fn=Public_DirectAddForm&id=avzsfstznvdkdkabikpbbgcqhpwfbid&email='+fourTellCookieContents+'&list1=0bbe03ec0000000000000000000000042efe';
+}
+</script>
+<!---------------------- END 4 TELL SEARCH RESULTS PAGE ------------------>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Search form at bottom of page
+<!--search form here-->
+[-- SEARCHRESULT_FORM FORM_ONLY --]
+<table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:6px; margin-bottom:12px;">
+  <tr>
+    <td><div class="search-line" style="width: 100%;"><img src="[-- VAR.MyImages --]/images/trans.gif" width="1" height="2" /></div></td>
+  </tr>
+</table>
+</div>
+
+<!-- Start New Search Block -->
+<br>
+<div class="search_info search_info_bottom">
+  <table width="560" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+      <td nowrap class="search-count" width="100%">
+        [-- IF SearchResultCount --]
+        <strong>Showing:</strong> [-- SearchResultCount --]
+        [-- ELSE --]
+        &nbsp;
+        [-- END_IF --]
+      </td>
+      </tr>
+      <tr>
+      <td width="100%" align="left">
+        [-- IF SearchResultPrevNext --][-- SearchPrevNext --]
+        [-- ELSE --]
+        &nbsp;
+        [-- END_IF --]
+      </td>
+     </tr>
+  </table>
+</div>
+
+
+<!-- End New Search Block -->
+
+</form>
+
+</div>
+  [-- INCLUDE LexiConnSimpleMinicart PROCESS --]    <!--AJAX CART-->
+  [-- INCLUDE DEV-rightbar --]
+  
+
+[-- INCLUDE LexiConnAACSimpleBody_Dialog PROCESS --]<!--AJAX CART-->
+
+ 
+  
+  [-- INCLUDE DEV-footer --]
+<div id="callnowtap">
+  <a href="tel:18004018151"><img src="https://www.vacplus.com/media/callnowtap/callnow.png"/></a>
+</div>
+<script language="JavaScript">
+function calcTime(city, offset) {
+    d = new Date(); 
+    utc = d.getTime() + (d.getTimezoneOffset() * 60000); 
+    nd = new Date(utc + (3600000*offset));
+    if(nd.getHours() < 6 || nd.getHours() >= 18) {
+      document.getElementById("callnowtap").setAttribute('id', 'callnowtap2');
+    }
+}
+calcTime('Our Store', '-8');
+</script>
+</html>
+
+[-- END_DEFINE SEARCH_RESULTS --]

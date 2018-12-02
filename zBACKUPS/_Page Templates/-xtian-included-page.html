@@ -1,0 +1,300 @@
+[--DEFINE LINK_TO_PAGE--]
+  [--IF PAGE.NumItems 0--]
+    [-- IF PAGE.Field1 "no" --]
+      <!-- IGNORE PAGE LINK IF IT HAS NO ITEMS AND IS NOT A SUBDIRECTORY -->
+    [-- END_IF --]
+    [-- IF PAGE.Field1 "yes" --]
+      [-- IF VAR.counter "0" --]
+        <tr>
+      [-- END_IF --]
+      [-- VAR.counter INC --]
+      <div class="original-categories">
+        <td class="pageLink">
+          [--IF PAGE.LinkGraphic--]
+            <a href="[--OUTPUT_DIRECTORY_URL--]/[--Page.FileName--]">
+              <center>
+                <img [-- PAGE.LinkGraphic REMOVE_HTML --] /><br><b>[--PAGE.LinkName--]</b>
+              </center>
+            </a>
+          [--ELSE--]
+            <a href="[--OUTPUT_DIRECTORY_URL--]/[--Page.FileName--]"><center><b>[--PAGE.LinkName--]</b></center></a>
+          [--END_IF--]
+        </td>
+      </div>
+
+      <div class="new-categories">
+        <td class="pageLink">
+          [--IF PAGE.LinkGraphic--]
+            <a href="[--OUTPUT_DIRECTORY_URL--]/[--Page.FileName--]" class="include-page-link1">
+              <center>
+                <!--<img [-- PAGE.LinkGraphic REMOVE_HTML --] /><br>--><b>[--PAGE.LinkName--]</b>
+              </center>
+            </a>
+          [--ELSE--]
+            <a href="[--OUTPUT_DIRECTORY_URL--]/[--Page.FileName--]" class="include-page-link2"><center><b>[--PAGE.LinkName--]</b></center></a>
+          [--END_IF--]
+        </td>
+      </div>
+      [-- IF VAR.counter "5" --]
+        </tr>
+        [-- VAR.counter "0" --]
+      [-- END_IF --]
+    [-- END_IF --]
+  [--ELSE--]
+    [-- IF VAR.counter "0" --]
+      <tr>
+    [-- END_IF --]
+    [-- VAR.counter INC --]
+    <div class="original-categories">
+      <td class="pageLink">
+        [--IF PAGE.LinkGraphic--]
+          <a href="[--OUTPUT_DIRECTORY_URL--]/[--Page.FileName--]">
+            <center>
+              <img [-- PAGE.LinkGraphic REMOVE_HTML --]><br><b>[--PAGE.LinkName--]</b>
+            </center>
+          </a>
+        [--ELSE--]
+          <a href="[--OUTPUT_DIRECTORY_URL--]/[--Page.FileName--]"><center><b>[--PAGE.LinkName--]</b></center></a>
+        [--END_IF--]
+      </td>
+    </div>
+
+    <div class="new-categories">
+      <td class="pageLink">
+        [--IF PAGE.LinkGraphic--]
+          <a href="[--OUTPUT_DIRECTORY_URL--]/[--Page.FileName--]" class="include-page-link">
+            <div class="single-link-wrap">
+              <!--<center>-->
+                <!--<img [-- PAGE.LinkGraphic REMOVE_HTML --]><br>--><b>[--PAGE.LinkName--]</b>
+              <!--</center>-->
+            </div>
+          </a>
+        [--ELSE--]
+          <a href="[--OUTPUT_DIRECTORY_URL--]/[--Page.FileName--]" class="include-page-link4"><center><b>[--PAGE.LinkName--]</b></center></a>
+        [--END_IF--]
+      </td>
+    </div>
+    [-- IF VAR.counter "5" --]
+      </tr>
+      [-- VAR.counter "0" --]
+    [-- END_IF --]
+  [--END_IF--]
+[--END_DEFINE LINK_TO_PAGE--]
+
+
+
+
+[-- DEFINE PAGE --]
+  [-- IF PAGE.Field3 --]    
+    <div class="original-categories">
+      [-- IF PAGE.Field3 "b" --]
+        <div class="space-20"></div>
+        <section class="brand-list">
+          <div class="container">         
+            <h2 class="section-heading">
+              <span>
+                <span>Shop by</span><br /> Brand
+              </span> 
+            </h2>
+      [-- END_IF --]
+      [-- IF PAGE.Field3 "c" --]
+        <section class="category-list">
+          <div class="container">        
+            <h2 class="section-heading">
+              <span>
+                <span>Shop by</span><br /> Category
+              </span> 
+            </h2>
+      [-- END_IF --]
+    [--END_IF--]   
+    [-- IF PAGE.NumLinks 0 --]
+    [-- ELSE --]
+      <div class="inner-padding">
+        [-- VAR.counter "0" --]
+        [-- LOOP LINKS --]
+          <div class="col-md-15 col-sm-3 margin-b-20">
+            <div class="category-brand-list-thumb">
+              [-- LINK --]
+            </div>
+          </div>
+        [-- END_LOOP LINKS --]
+      </div>
+    </div>      
+  </section>
+</div>
+
+
+    <div class="new-categories">
+    [--IF PAGE.Field3 "b"--]
+      <div class="space-20"></div>
+      <h2 class="section-heading-include">
+        <span>
+          Shop by Brand
+        </span>
+      </h2>
+      <!--<div style="width:100%; text-align:center;">
+        <h2 class="section-heading2">
+          SHOP BY BRAND
+        </h2>
+      </div>-->
+    [--END_IF--]
+    [--IF PAGE.Field3 "c"--]
+      <section class="category-list">
+        <div class="space-20"></div>
+        <h2 class="section-heading-include">
+          <span>
+            Shop by Category
+          </span>
+        </h2>
+        <!--<div style="width:100%; text-align:center;">
+          <h2 class="section-heading2">
+            SHOP BY BRAND
+          </h2>
+        </div>-->
+    [--END_IF--]    
+  [--END_IF--]
+  [--IF PAGE.NumLinks 0--]
+  [--ELSE--]
+        <div class="link-container clearfix">
+          <div class="links-wrap clearfix" align="center">
+            [--VAR.counter "0"--]
+            [--LOOP LINKS--]
+              <div class="link-box">
+                [--LINK -xtian-included-page--]<!--to the past-->
+              </div>
+            [--END_LOOP LINKS--]
+          </div>
+        </div>
+      </section>
+      </div>
+      [-- IF VAR.counter "0" --]
+      [-- ELSE --]
+      [-- END_IF --]
+      [-- IF PAGE.NumProducts 0 --]
+      [-- ELSE --]
+      [-- END_IF --]    
+    [-- END_IF --]
+    [-- IF PAGE.NumProducts 0 --]
+    [-- ELSE --]
+      <table width="100%" style="margin: 0px;">
+        [--LOOP PRODUCTS 4--]
+          <td class="productListing">
+            <div style="height: 215px;"><center>[--PRODUCT--]</center></div>
+          </td>
+        [--END_LOOP PRODUCTS--]  
+      </table>
+    [--END_IF--]
+
+    <style>
+    .original-categories{display:none;}
+    .new-categories{display:block;}
+    .section-heading-include{
+      text-align:center;
+      margin-top:10px;
+      padding-bottom:0px;
+      text-transform:uppercase;
+      font-weight:700;
+      font-size:1.5em;
+      margin-bottom:15px;
+      color:#000;
+      position:relative;
+    }
+    .section-heading-include:before{
+      content:"";
+      height:1px;
+      border:1px solid #c8c7c9;
+      width:100%;
+      display:block;
+      position:absolute;
+      bottom:30%;
+      z-index:1;
+    }
+    .section-heading-include span{
+      padding-left:12px;
+      padding-right:12px;
+      background:#fff;
+      position:relative;
+      z-index:5;
+    }
+    .section-heading2{
+      padding-bottom: 10px;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 1.5em;
+      margin-bottom: 15px;
+      color: #000;
+      position: relative;
+    }
+    .section-heading2:before{
+      content: "";
+      /*display: block;*/
+      height: 1px;
+      /* border: 1px solid #c8c7c9; */
+      width: 100%;
+      display: block;
+      position: absolute;
+      bottom: 30%;
+      z-index: 1;
+    }
+    .link-wrap{
+      width:97%;
+      margin:0 auto;
+      text-align: center;
+      display:inline-;
+    }
+    .single-link-wrap{
+      /*float:left;*/
+      width:100%;
+      margin: 5px auto;
+      background-color: #fff;
+      border: solid thin #454545;
+      font-size: 13px;
+      text-transform:uppercase;
+      padding: 5px 10px;
+      height: 40px;
+      display: table-cell;
+      vertical-align: middle;
+    }
+    /*.single-link-wrap{float:left; margin:10px 15px; background-color:#fff; outline: thin solid #454545; padding: 0px 10px 15px 10px;}*/
+    .include-page-link{
+      color: #454545;
+      text-align: center;
+      display: table;
+      width: 100%;
+      margin-bottom: 5px;
+    }
+    .include-page-link:hover{
+      color:#fff;
+    }
+    .single-link-wrap:hover{
+      /*background-color:#454545;
+      color:#fff;*/
+      width: 100%;
+      margin: 5px auto;
+      background-color: #454545;
+      border: solid thin #454545;
+      font-size: 13px;
+      padding: 5px 10px;
+      height: 40px;
+      display: table-cell;
+      vertical-align: middle;
+    }
+    .link-box{
+      margin-right: 5px;
+      display:inline-block;
+    }
+    @media(min-width:1400px){
+      .link-box{width:15%;}
+    }
+    @media(min-width:694px) and (max-width:1399px){
+      .link-box{width:23%;}
+    }
+    @media(min-width:519px) and (max-width:693px){
+      .link-box{width:49%;}
+    }
+    @media(max-width:518px){
+      .link-box{width:97%;} 
+    }
+  </style>
+
+  [-- END_DEFINE PAGE --]

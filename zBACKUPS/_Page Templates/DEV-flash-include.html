@@ -1,0 +1,156 @@
+[--DEFINE LINK_TO_PAGE--]
+# This define is used to control how the link to this page will
+#     look on other pages
+[--END_DEFINE LINK_TO_PAGE--]
+
+[-- DEFINE PAGE --]
+
+<div id="finitto2">
+
+<!--countdown timer parts-->
+  <div id="timer2" style="font-family: 'Agency FB'; width: 650px; font-size: 37px; color: #fff; font-weight: bold; letter-spacing: 3px; clear:both;" align="center">
+        <div id="time-left2" style="float: left; padding-left: 130px; padding-top: 0px; padding-bottom: 0px; margin: 0px; line-height: 37px; color:#ff0000;">FLASH SALE:&nbsp;</div>
+        <div id="countdown2" style="float: left; line-height: 37px; color:#ff0000;"></div>
+    </div>    
+<!--end countdown timer parts-->
+
+  <div id="flash-sale-scroller" style="position:relative; max-width:655px; min-width:655px; height:235px; max-height:235px; overflow:hidden; clear:both;">
+    <div id="flash-sale-items" style="position:relative; right:0;" align="center">
+      <?php include('flash-sale.php'); ?>
+    </div><!--#flash-sale-items-->
+  </div><!--#flash-sale-scroller-->
+
+  <div id="scroller-btns" style="position:relative; z-index:50; height:60px; max-height:17px;">
+    <img src="https://www.vacplus.com/media/flash-sale/next.jpg" border="0" id="next-btn" style="float:right;">
+    <img src="https://www.vacplus.com/media/flash-sale/prev.jpg" border="0" id="prev-btn" style="float:left;">
+  </div><!--#scroller-btns-->
+  <div style="font-family: 'Cabin', sans-serif; font-size: 21px;" align="center">TAKE ADVANTAGE OF THESE DEALS WHILE THERE'S STILL TIME!</div>
+</div><!--div finitto2-->
+
+<!--countdown styles-->
+<style type="text/css">
+  @media screen and (max-device-width: 414px) {
+      #timer {letter-spacing: 1px !important;}
+      #time-left {padding-left: 130px !important;}
+    }
+
+  @font-face {
+      font-family: 'Agency FB';
+      src: url('/fonts/agency-fb/AGENCYB.eot?') format('eot'),
+      url('/fonts/agency-fb/AGENCYB.woff') format('woff'),
+      url('/fonts/agency-fb/AGENCYB.TTF') format('truetype');
+    }
+</style>
+
+<!--scroller script-->
+<script>
+  $('#next-btn').mouseover(function(){
+    $('#next-btn').attr('src', 'https://www.vacplus.com/media/flash-sale/over-next.jpg')
+  });
+
+  $('#next-btn').mouseout(function(){
+    $('#next-btn').attr('src', 'https://www.vacplus.com/media/flash-sale/next.jpg')
+  });
+
+  $('#prev-btn').mouseover(function(){
+    $('#prev-btn').attr('src', 'https://www.vacplus.com/media/flash-sale/over-prev.jpg')
+  });
+
+  $('#prev-btn').mouseout(function(){
+    $('#prev-btn').attr('src', 'https://www.vacplus.com/media/flash-sale/prev.jpg')
+  });
+
+  //scroll up/down
+  /*$('#next-btn').click(function(){
+    var boxPos=$('#flash-sale-items').css('bottom');
+    boxPos=parseFloat(boxPos);
+    var newPos=boxPos+235;
+    if(newPos<fullHght){
+      $('#flash-sale-items').css('bottom', newPos);
+    }
+  });
+
+  $('#prev-btn').click(function(){
+    var boxPos=$('#flash-sale-items').css('bottom');
+    boxPos=parseFloat(boxPos);
+    var newPos=boxPos-235;
+    if(newPos>-235){
+      $('#flash-sale-items').css('bottom',newPos);
+    }
+  });*/
+
+  var initPos=$('#flash-sale-items').css('right');
+  initPos=parseFloat(initPos);
+  if(initPos==0){
+    $('#prev-btn').css('display', 'none');
+  }
+
+  $('#next-btn').click(function(){
+    var boxPos=$('#flash-sale-items').css('right');
+    boxPos=parseFloat(boxPos);
+    var newPos=boxPos+163.5;
+    $('#prev-btn').css('display', 'block');
+    if(newPos<fullWdth){
+      $('#flash-sale-items').css('right', newPos);
+    }else{
+      $('#next-btn').css('display', 'none');
+    }
+  });
+
+  $('#prev-btn').click(function(){
+    var boxPos=$('#flash-sale-items').css('right');
+    boxPos=parseFloat(boxPos);
+    var newPos=boxPos-163.5;
+    $('#next-btn').css('display', 'block');
+    if(newPos>0){
+      $('#flash-sale-items').css('right',newPos);
+    }else{
+      $('#prev-btn').css('display', 'none');
+    }
+  });
+</script>
+
+<!--timer countdown script-->
+<script type="text/javascript">
+var barnicle2 = new Date('[-- PAGE.Field6 --]'); // set expiry date and time..
+
+var _second2 = 1000;
+var _minute2 = _second2 * 60;
+var _hour2 = _minute2 * 60;
+var _day2 = _hour2 * 24;
+var timer2;
+
+function showRemaining2()
+{
+    var now2 = new Date();
+    var distance2 = barnicle2 - now2;
+    if (distance2 < 0 ) {
+       // handle expiry here..
+       clearInterval( timer2 ); // stop the timer from continuing ..
+     document.getElementById('finitto2').style.display='none';
+        
+       return; // break out of the function so that we do not update the counters with negative values..
+    }
+    var days2 = Math.floor(distance2 / _day2);
+    var hours2 = Math.floor( (distance2 % _day2 ) / _hour2 );
+    var minutes2 = Math.floor( (distance2 % _hour2) / _minute2 );
+    var seconds2 = Math.floor( (distance2 % _minute2) / _second2 );
+    var milliseconds2 = Math.floor( (distance2 % _second2) / 10);
+    
+    if(days2 < 10){days2 = "0" + days2;}
+    if(hours2 < 10){hours2 = "0" + hours2;}
+    if(minutes2 < 10){minutes2 = "0" + minutes2;}
+    if(seconds2 < 10){seconds2 = "0" + seconds2;}
+    if(milliseconds2 < 10){milliseconds2 = "0" + milliseconds2;}
+   
+    document.getElementById('countdown2').innerHTML = days2+':';
+    document.getElementById('countdown2').innerHTML += hours2+':';
+    document.getElementById('countdown2').innerHTML += minutes2+':';
+    document.getElementById('countdown2').innerHTML += seconds2+':';
+    document.getElementById('countdown2').innerHTML += milliseconds2;
+}
+
+timer2 = setInterval(showRemaining2, 1);
+</script>
+
+[-- END_DEFINE PAGE --]
